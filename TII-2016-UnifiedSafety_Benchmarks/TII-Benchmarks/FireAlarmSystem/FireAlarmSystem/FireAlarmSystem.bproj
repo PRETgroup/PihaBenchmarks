@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3f848c4c-5a87-4f5a-bc55-8030b8007ea5}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>FireAlarmSystem</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'OpenRTM'">
+    <CompilationMode>OpenRTM</CompilationMode>
+    <OutputPath>Generated\OpenRTM\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Deploy'">
+    <CompilationMode>Deploy</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>arm-uclinux-elf-gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Verification'">
+    <CompilationMode>Verify</CompilationMode>
+    <OutputPath>Generated\Verification\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controller.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FloorLayout.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SmokeDetector.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Valve.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Sensors.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Environment.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Actuators.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SystemH.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Alarm.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SystemP.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ImmediateReset.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="AlarmBehaviour.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="AlarmFailure.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ActuatorsC.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ValveBehaviour.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="AlarmActivated.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="AlarmActivated.fb.checkDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>AlarmActivated.fb</DependentUpon>
+      <LinkedIntoProjectAt>checkDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="SensorsC.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SmokeDetectorD.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="FireIncidentSim.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ControllerD.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="AlarmActivated.fb.countDown.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>AlarmActivated.fb</DependentUpon>
+      <LinkedIntoProjectAt>countDown.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="AlarmActivated.fb.countUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>AlarmActivated.fb</DependentUpon>
+      <LinkedIntoProjectAt>countUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="AlarmActivated.fb.resetCount.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>AlarmActivated.fb</DependentUpon>
+      <LinkedIntoProjectAt>resetCount.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="AlarmBehaviour.fb.setAlarm.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>AlarmBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setAlarm.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="AlarmBehaviour.fb.unsetAlarm.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>AlarmBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>unsetAlarm.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="Observers.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="Controller.fb.evaluateSignals.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>evaluateSignals.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="SmokeDetectorBehaviour.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SmokeDetectorFailure.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ManualReset.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="FirePull.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="ControllerD.fb.evaluateSignals.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>ControllerD.fb</DependentUpon>
+      <LinkedIntoProjectAt>evaluateSignals.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FirePull.fb.setPull.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FirePull.fb</DependentUpon>
+      <LinkedIntoProjectAt>setPull.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FirePull.fb.unsetPull.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FirePull.fb</DependentUpon>
+      <LinkedIntoProjectAt>unsetPull.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SmokeDetectorBehaviour.fb.setDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SmokeDetectorBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SmokeDetectorBehaviour.fb.unsetDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SmokeDetectorBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>unsetDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SmokeDetectorD.fb.setDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SmokeDetectorD.fb</DependentUpon>
+      <LinkedIntoProjectAt>setDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SmokeDetectorD.fb.unsetDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SmokeDetectorD.fb</DependentUpon>
+      <LinkedIntoProjectAt>unsetDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SmokeDetectorFailure.fb.setFailure.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SmokeDetectorFailure.fb</DependentUpon>
+      <LinkedIntoProjectAt>setFailure.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SmokeDetectorFailure.fb.unsetFailure.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SmokeDetectorFailure.fb</DependentUpon>
+      <LinkedIntoProjectAt>unsetFailure.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="ValveFailure.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SprinklerActivated.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="SprinklerActivated.fb.checkDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SprinklerActivated.fb</DependentUpon>
+      <LinkedIntoProjectAt>checkDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SprinklerActivated.fb.countUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SprinklerActivated.fb</DependentUpon>
+      <LinkedIntoProjectAt>countUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SprinklerActivated.fb.resetCount.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SprinklerActivated.fb</DependentUpon>
+      <LinkedIntoProjectAt>resetCount.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="ValveBehaviour.fb.closeValve.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>ValveBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>closeValve.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="ValveBehaviour.fb.openValve.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>ValveBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>openValve.algo</LinkedIntoProjectAt>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(TimeMePath)\UoA.IEC61499.Compiler.targets" />
+</Project>

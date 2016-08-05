@@ -1,0 +1,1 @@
+me->gasValue = (me->venting && me->gasValue > 5) ? me->gasValue - 5 : me->gasValue;

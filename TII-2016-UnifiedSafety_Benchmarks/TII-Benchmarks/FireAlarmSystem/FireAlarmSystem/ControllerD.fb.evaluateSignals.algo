@@ -1,0 +1,5 @@
+me->alarm = (me->d0Detect || me->d1Detect || me->d2Detect);
+
+me->sprinkler = (me->d0Detect && me->d1Detect) || (me->d0Detect && me->d2Detect) || (me->d1Detect && me->d2Detect);
+
+me->needsReset = (me->d0Detect || me->d1Detect || me->d2Detect);

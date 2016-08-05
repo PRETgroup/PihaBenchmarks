@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="8af4026b-aa68-47aa-9428-54f92d860a4c" name="SystemH" organization="User-PC" date="2013-06-19" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="a9492bd2-c1e7-4d25-ba8f-cd0f06375563">
+      <functionBlockInterface Id="1fb5a921-d537-402c-9578-2d1f3e1c3146" name="SystemH" x="218.75" y="175" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="e0c7ebd3-79cf-43f2-934f-72410244a32f">
+      <functionBlockReference Id="48fdb926-20a0-4d41-bd2c-6de4bce60fb3" name="actuators" x="2581.25" y="1050" modelType="Composite" creationMode="Resource" referencedFile="Actuators.cfb">
+        <events>
+          <functionBlockHasEvents Id="bcbfc4ec-3563-4a8b-b020-1a1acf59c182">
+            <eventRef Id="fcfb2fae-57bc-40c3-ae27-bdf4e34a7a9c" name="trigger" scope="Input" referencedID="18a74d73-44e1-408b-afd9-97e27fda8422" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="50f90dde-ace3-4c12-9a18-e7584fe2e7df">
+            <variableRef Id="3f8f332d-997a-465b-a95d-205f664ffb6b" name="alarm1" scope="Input" referencedID="0c28950d-ae3e-4bed-9ab1-41fc83e9a875" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="1f02ee8d-abcb-4f7f-a78e-a23e253c091f">
+            <variableRef Id="8548dcba-1576-4d51-9395-097530270ae6" name="alarm2" scope="Input" referencedID="54df4b33-b907-430e-b884-a9c66fd8a070" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="764a0b25-1951-4579-9c9f-17c16db83124">
+            <variableRef Id="f8d136ba-c5cc-4024-9ee0-efc878123bd8" name="ctlValve" scope="Input" referencedID="9a1f9f5d-2c48-4d41-b975-d98b91981d4c" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="9f0342f5-d0be-4907-988d-df0ce7ad395d">
+            <inputEventPort Id="e10ea1fd-ed79-40d6-90d9-e2c94e656e1b">
+              <event>
+                <inputEventPortReferencesEvent Id="69adc685-d226-4f96-b3fd-afc2a0cf1d37">
+                  <eventRefMoniker name="/SystemH/actuators/trigger" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7e280a17-f661-4d80-bdca-79bf4570233d">
+            <inputVariablePort Id="33cac60d-2175-43aa-b6a2-3c374c9d63ab">
+              <variable>
+                <inputVariablePortReferencesVariable Id="3a132c10-c228-4929-831c-d9c7275b7512">
+                  <variableRefMoniker name="/SystemH/actuators/alarm1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="2c09dbf3-c7ff-4b57-a408-206489ee9d54">
+            <inputVariablePort Id="2d8ddab5-e142-4cc4-84e7-0fd82cd8c42d">
+              <variable>
+                <inputVariablePortReferencesVariable Id="5b88a8aa-41c8-489d-9983-f17324570dde">
+                  <variableRefMoniker name="/SystemH/actuators/alarm2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="56034a52-9534-4115-8b9e-23850adad948">
+            <inputVariablePort Id="99a91775-5d23-45aa-b914-c022b50485a2">
+              <variable>
+                <inputVariablePortReferencesVariable Id="f0504758-5aa9-45b4-b9fe-c9c9f104e153">
+                  <variableRefMoniker name="/SystemH/actuators/ctlValve" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="22894764-2a1e-457b-a1e1-196560fe255a">
+      <functionBlockReference Id="c99b266c-8684-4a33-ad13-91bd6784013a" name="controller" x="1837.5" y="831.25" creationMode="Resource" referencedFile="Controller.fb">
+        <events>
+          <functionBlockHasEvents Id="77f8d674-e98f-4d4d-8310-e769031dfe55">
+            <eventRef Id="560a558a-114a-4fc0-a987-9c31b5e4cc81" name="check" scope="Input" referencedID="55c6b875-2285-47a9-bba6-fcf66400a68c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5fc85444-dc3c-45e5-adbc-c9fe5a36178a">
+            <eventRef Id="736bdb0c-3894-41c2-aa5e-e21a39d29755" name="reset" scope="Input" referencedID="9335bd77-b2ab-4a57-b3d1-dd1401a6f31f" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b7ca619d-7462-4ef1-ab99-2a4098c293f4">
+            <eventRef Id="31ae4a43-b4f8-42a7-87aa-352fc92ee367" name="trigger" scope="Output" referencedID="4874aa57-9335-4ff7-ba9e-d817437efecd" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="a6bdc224-a54d-49b6-8caa-cf6326617bc1">
+            <variableRef Id="ef1b7596-e682-4268-8826-dbb73c9ff2d9" name="d0F1Z1" scope="Input" referencedID="fd1ee8e8-ab95-4876-8963-17bf46128cb4" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="239f0413-5fcd-4265-952e-713f17793715">
+            <variableRef Id="df820868-5177-4f86-8767-e54f5e66009c" name="d0F1Z2" scope="Input" referencedID="d1844e66-025a-4eb7-92e5-b6eec86745fb" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a3125161-3a95-4d03-84ea-0f372ccd5fcd">
+            <variableRef Id="8f2f638d-128d-489d-b165-bd80596c316a" name="d0F1Z3" scope="Input" referencedID="3ee5d02c-6f8d-406c-b5c8-095c36541c17" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="7dbf97f4-91d0-411a-b681-ab4b6dc79a5f">
+            <variableRef Id="1fbcc8b4-e8bc-4fc8-897b-832cb6e937ff" name="d0F1Z4" scope="Input" referencedID="9a91855b-718b-416d-9540-6c0971b6fe13" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="5948a3b1-06e2-4c91-8127-6b66ec671fb3">
+            <variableRef Id="6ddd3481-7661-4d0a-a303-c219785bad99" name="alarm" scope="Output" referencedID="752ec413-6cc5-4f1a-95db-a8648b920dc9" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6fb1d42d-a4a5-4ea8-9edb-7a4a5264179b">
+            <variableRef Id="d84b22c4-4bfa-4940-8dc3-31486689f043" name="sprinkle" scope="Output" referencedID="d71b8b5c-6e7f-4b33-a819-bda910080654" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="fcca3de7-fa20-4f93-bb69-379d52bb08d8">
+            <variableRef Id="68ba0c2c-7029-465b-9189-80e4c7f57466" name="manPull" scope="Input" referencedID="8225440e-130a-407f-9014-6a8cd63d038b" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="6a73f02d-64d0-429a-b66c-57e4c33cbf9b">
+            <inputEventPort Id="917a02a0-dc8d-44b0-a862-66859d377991">
+              <event>
+                <inputEventPortReferencesEvent Id="b7d61e29-471c-4b7a-bf1d-a37dd0aa53e1">
+                  <eventRefMoniker name="/SystemH/controller/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="2d21a6f3-d9cb-4f96-88e4-4231a3f94744">
+            <inputEventPort Id="6f1195e3-6dc7-4ca5-9ce3-96a55887ba1a">
+              <event>
+                <inputEventPortReferencesEvent Id="0406a176-f493-4d3a-98de-9a5a4066b745">
+                  <eventRefMoniker name="/SystemH/controller/check" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="4bc95561-428b-40c8-9ac8-34a0ed56bdad">
+            <outputEventPort Id="9dac0b36-524c-4699-ae9f-96beb04ce13e">
+              <wireTargetPorts>
+                <wireConnection Id="12141f7a-0a17-4a97-b68b-99659e61c44c" unitDelayed="false">
+                  <inputEventPortMoniker Id="dbc54e7b-ba0c-4cd9-ad6d-0d64eecec2e3" />
+                </wireConnection>
+                <wireConnection Id="aa967aca-e0fc-40c8-8633-ac28a1ea6682" unitDelayed="false">
+                  <inputEventPortMoniker Id="e10ea1fd-ed79-40d6-90d9-e2c94e656e1b" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="2e8ef392-a149-4c28-baa6-fdfcd6ec38b8">
+                  <eventRefMoniker name="/SystemH/controller/trigger" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="48fd7c2b-9b58-485d-9f67-44b5e59bdb11">
+            <inputVariablePort Id="d431c03d-9651-4d10-bb38-cb6d4439c41e">
+              <variable>
+                <inputVariablePortReferencesVariable Id="ce41052f-61fd-441d-94a9-1d55a3722d1c">
+                  <variableRefMoniker name="/SystemH/controller/d0F1Z1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="f474f495-4d76-4e40-8676-bccb53ec4e0c">
+            <inputVariablePort Id="5e2acfcd-e2cb-423e-8fac-7cf9fa056d4d">
+              <variable>
+                <inputVariablePortReferencesVariable Id="e89a3878-72d4-4fa7-9a2d-77d6e39a1ef2">
+                  <variableRefMoniker name="/SystemH/controller/d0F1Z2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="696ed1b0-f7c9-4ffa-a0ad-32e0abc7a995">
+            <inputVariablePort Id="e1ffe56d-6920-44fc-b08f-ff7112bffb48">
+              <variable>
+                <inputVariablePortReferencesVariable Id="3427e977-07bc-4efb-a84d-1269688d6f03">
+                  <variableRefMoniker name="/SystemH/controller/d0F1Z3" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="dd28d265-4770-41f2-926e-ad8bcd21dba5">
+            <inputVariablePort Id="4f451f9e-af03-45e5-85dc-62b88ddeae46">
+              <variable>
+                <inputVariablePortReferencesVariable Id="217ede9a-92c5-4142-8d43-5d265e17bf5b">
+                  <variableRefMoniker name="/SystemH/controller/d0F1Z4" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="20de0a6c-ab2e-44cb-b027-e4cb083cd11b">
+            <inputVariablePort Id="9ed4658c-7f73-4cfd-8714-43d99af1456e">
+              <variable>
+                <inputVariablePortReferencesVariable Id="ae8c55ee-7f4e-49e6-abbb-fbb49078654b">
+                  <variableRefMoniker name="/SystemH/controller/manPull" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="04c86c37-d02a-4eac-9297-26ee76d8f73e">
+            <outputVariablePort Id="826d8e7d-aaad-4321-9561-20a0555ee3a1">
+              <wireTargetPorts>
+                <wireConnection Id="637ba7e9-957a-4d0a-b098-4a4833f4e45a" unitDelayed="false">
+                  <inputVariablePortMoniker Id="33cac60d-2175-43aa-b6a2-3c374c9d63ab" />
+                </wireConnection>
+                <wireConnection Id="64c2a9c5-a29e-446f-9d60-41919a12cd16" unitDelayed="false">
+                  <inputVariablePortMoniker Id="2d8ddab5-e142-4cc4-84e7-0fd82cd8c42d" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="1c295142-9788-41e4-bbed-3c532db71ff4">
+                  <variableRefMoniker name="/SystemH/controller/alarm" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="e72b8c1d-f603-4bf5-bb86-2003ed107abc">
+            <outputVariablePort Id="8fdc3c50-1f4b-48c5-9d38-b3c2cf9e2aa7">
+              <wireTargetPorts>
+                <wireConnection Id="d9259304-e2bc-4c31-8d43-c031b8f09ab6" unitDelayed="false">
+                  <inputVariablePortMoniker Id="99a91775-5d23-45aa-b914-c022b50485a2" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="b7418ac7-b699-4429-b886-aeefc142bf14">
+                  <variableRefMoniker name="/SystemH/controller/sprinkle" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="2e62f52a-c5d7-444f-ba9d-f4b47ce1617a">
+      <functionBlockReference Id="472fe776-ed3d-496d-ab62-e6bfed756f55" name="sensors" x="1268.75" y="875" modelType="Composite" creationMode="Resource" referencedFile="Sensors.cfb">
+        <events>
+          <functionBlockHasEvents Id="9017d282-56eb-4e14-82ac-acf0b6016bfd">
+            <eventRef Id="7a049a3f-d090-4965-98f8-d71532e1dbb1" name="output" scope="Output" referencedID="833ead77-30cb-451b-8307-a140fee18a79" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="413aca7b-4169-4c39-b01e-d9a058d5dc21">
+            <variableRef Id="eb9c0647-f8c2-445b-8fd5-469c1a03c3ea" name="detector0" scope="Output" referencedID="6d76bcde-e615-48f3-9ad0-0dc3530efea6" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="129eb8d1-4f8d-4736-9396-482707ad358d">
+            <variableRef Id="395bf58c-dc46-4a28-b51c-ad89bac5256f" name="detector1" scope="Output" referencedID="2c301690-2d56-454d-b261-2d3d2a2629cb" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="f584bf7d-462d-4203-999a-64a74e8fb5b2">
+            <variableRef Id="ceb489b0-ffc7-4481-86a8-a1ed0dabb503" name="detector2" scope="Output" referencedID="159d146c-e65c-417e-bc62-49160e80903c" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="645a8579-ed40-4464-bd42-2971e9231cfa">
+            <variableRef Id="297516a2-155e-42f7-9d94-a524ebbc1578" name="detector3" scope="Output" referencedID="e32ca8bf-cbf0-4a6b-8411-3481433c21ca" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="75765075-2635-4d7d-b10e-8f6467effda5">
+            <outputEventPort Id="8f562943-7526-4160-94d1-72cde7b9554b">
+              <wireTargetPorts>
+                <wireConnection Id="d778be73-c4e3-4f48-85ab-ab98edee469f" unitDelayed="false">
+                  <inputEventPortMoniker Id="6f1195e3-6dc7-4ca5-9ce3-96a55887ba1a" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="4e4a2abc-3101-4c30-8fdc-cdd4afd9a800">
+                  <eventRefMoniker name="/SystemH/sensors/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="dba596d6-21fa-40bd-8c74-8cf7d76bb7d0">
+            <outputVariablePort Id="89e6bdea-1c3e-4068-adb4-6b64eb23c967">
+              <wireTargetPorts>
+                <wireConnection Id="d2bb57bd-ed78-4b38-a0e6-e91558f1d5ee" unitDelayed="false">
+                  <inputVariablePortMoniker Id="d431c03d-9651-4d10-bb38-cb6d4439c41e" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="21028585-ede2-433e-9e44-b09ea4216180">
+                  <variableRefMoniker name="/SystemH/sensors/detector0" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="1281fcc6-a18e-428f-bb91-631e77f13aee">
+            <outputVariablePort Id="a8fbd75f-732c-412e-8270-feb207e2278f">
+              <wireTargetPorts>
+                <wireConnection Id="49be1819-0994-48ae-9c61-f86f2eb7fe0f" unitDelayed="false">
+                  <inputVariablePortMoniker Id="5e2acfcd-e2cb-423e-8fac-7cf9fa056d4d" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="5a45559b-7643-4e76-a7fa-e3ad6e21157b">
+                  <variableRefMoniker name="/SystemH/sensors/detector1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="f46b66b0-d843-487b-b160-29f130f73c65">
+            <outputVariablePort Id="e1a46090-e96e-4671-8612-c1028f88e269">
+              <wireTargetPorts>
+                <wireConnection Id="66117937-d9e8-410b-a95c-fa71deb746d9" unitDelayed="false">
+                  <inputVariablePortMoniker Id="e1ffe56d-6920-44fc-b08f-ff7112bffb48" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="d6419f11-34e1-477a-80b8-7286b74c9d50">
+                  <variableRefMoniker name="/SystemH/sensors/detector2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="2bfa7812-6fe4-489c-80ee-b993f4572c2e">
+            <outputVariablePort Id="e35944db-100f-42ec-aa27-5b643f53041c">
+              <wireTargetPorts>
+                <wireConnection Id="101a0753-ce83-4084-bf65-6a741248982d" unitDelayed="false">
+                  <inputVariablePortMoniker Id="4f451f9e-af03-45e5-85dc-62b88ddeae46" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="c1aa0fd6-9a03-4e1e-b314-dd7c42eaabab">
+                  <variableRefMoniker name="/SystemH/sensors/detector3" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="cbb34236-e182-438c-baf7-8e15cc859ca5">
+      <functionBlockReference Id="a2b350c5-3cf0-48fe-b761-d0b92971ef44" name="reset" x="3062.5" y="1006.25" modelType="Stochastic" creationMode="Resource" referencedFile="ManualReset.fb">
+        <events>
+          <functionBlockHasEvents Id="300a5730-8b34-48cc-8203-cb8910e2a4ea">
+            <eventRef Id="fcbf19c1-896d-46a1-97f5-a3ce09b6420a" name="set" scope="Input" referencedID="89e24206-582e-43fa-8c9f-6e329acecd1e" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="281ade09-6a68-40d0-a8ff-f8ec2d058a60">
+            <eventRef Id="f4b2e15a-9cf9-4b25-9fcb-7d4b3075d4af" name="doReset" scope="Output" referencedID="59a931ac-d4be-40bb-bdda-6596e325dc58" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="25e2414a-8340-44eb-aa17-c6078dabb591">
+            <inputEventPort Id="dbc54e7b-ba0c-4cd9-ad6d-0d64eecec2e3">
+              <event>
+                <inputEventPortReferencesEvent Id="69e36d6b-f045-4e98-9e48-f0cdc329b04f">
+                  <eventRefMoniker name="/SystemH/reset/set" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ada00b54-f9a1-46d9-b540-ba1022c58f2b">
+            <outputEventPort Id="3cd2315c-5128-4f18-9b80-2b36171ebda2">
+              <wireTargetPorts>
+                <wireConnection Id="dafb6a86-324c-429e-808d-5fd8adfbf246" unitDelayed="false">
+                  <inputEventPortMoniker Id="917a02a0-dc8d-44b0-a862-66859d377991" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="295115a1-909b-4b4e-8a14-d1f2a9c7e04f">
+                  <eventRefMoniker name="/SystemH/reset/doReset" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="73b0a39f-e57a-490e-b4da-4fbeecfd06fc">
+      <functionBlockReference Id="7ace2d77-e113-468c-b598-0e9c094bbad7" name="pull" x="743.75" y="1137.5" modelType="Stochastic" creationMode="Resource" referencedFile="FirePull.fb">
+        <events>
+          <functionBlockHasEvents Id="db7ad636-1312-4f44-8242-08bd294f08e9">
+            <eventRef Id="652aa5f1-2713-450f-b3b3-0b64568971c8" name="update" scope="Output" referencedID="2c352652-2be6-4abf-b680-e477ac77bf1e" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="c280d1d9-b9e0-4fb3-a16a-55d01c1a6d22">
+            <variableRef Id="4f226b85-3b01-41bb-ab63-eaf2b70d85dc" name="status" scope="Output" referencedID="c0159be3-426c-4a85-a05a-673622cf78b5" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="303597a2-ff50-4afe-b0c4-d00486f9d6f9">
+            <outputEventPort Id="bb93d623-c173-4b6b-a0ba-35800545c087">
+              <wireTargetPorts>
+                <wireConnection Id="afec021d-2b33-4d1e-8bbb-529849617ee0" unitDelayed="false">
+                  <inputEventPortMoniker Id="6f1195e3-6dc7-4ca5-9ce3-96a55887ba1a" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="7d16141c-a99a-42aa-8ca9-92a638c0f757">
+                  <eventRefMoniker name="/SystemH/pull/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="005fbe27-09fa-4954-9c92-8d74de452b9f">
+            <outputVariablePort Id="4153e1ad-ffd9-4bec-8296-bef8769c1c21">
+              <wireTargetPorts>
+                <wireConnection Id="12c77683-6399-4f90-9ec3-41b78158f3be" unitDelayed="false">
+                  <inputVariablePortMoniker Id="9ed4658c-7f73-4cfd-8714-43d99af1456e" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="92e15857-eb63-4c83-a366-bce9276a2100">
+                  <variableRefMoniker name="/SystemH/pull/status" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

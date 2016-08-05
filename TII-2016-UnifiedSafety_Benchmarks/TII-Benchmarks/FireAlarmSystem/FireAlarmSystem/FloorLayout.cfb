@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="31fcb493-eab6-4868-9cd9-3b9a85acf68f" name="FloorLayout" organization="User-PC" date="2013-06-15" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="94f86146-a8c9-4e7f-bf23-8b10c148af82">
+      <functionBlockInterface Id="22252e5e-54fc-4cb2-b662-74d50be34260" name="FloorLayout" x="1006.25" y="306.25" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="e576b647-e86e-49e9-adf6-142481ae107e">
+            <event Id="91c50d2a-8b91-4f8f-acdd-9a1e528a494a" name="output1" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="6949323f-e99e-484f-a8e9-e37237b9ac7d">
+            <variable Id="3bbfefa6-902d-49d1-9dc0-816d20d5212f" name="d0Z1" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a4b80676-2172-4775-bd40-56fbf32f1f49">
+            <variable Id="4d702a3e-d4cd-4e80-844f-4d2b246bf938" name="d0Z2" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="7b84514f-38e9-42a9-8baa-a46ca3c4310b">
+            <variable Id="94fef4b6-8b6b-4ac7-81cd-81be1795d49b" name="d0Z3" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="726b51e8-5277-401c-b0ee-82920380da55">
+            <variable Id="596aa9cd-e0a4-4957-8fa5-10297a8c581a" name="d0Z4" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3fa99304-855e-4ae6-bce1-1288ba3cb139">
+            <outputEventPort Id="c816a66a-1666-42b7-b032-686a8cc559a0">
+              <proxyTargetPorts>
+                <proxyConnection Id="17d3b19e-0b20-49a1-89e4-4ca7fea368b8">
+                  <outputEventPortMoniker Id="415a0c1f-4643-4efb-b1e1-53562b449bd9" />
+                </proxyConnection>
+                <proxyConnection Id="c095f227-6ceb-4507-ad73-d9d180f87ad3">
+                  <outputEventPortMoniker Id="91d805f2-4678-4cfa-a8cb-abb306fdbc6f" />
+                </proxyConnection>
+                <proxyConnection Id="e7a3f38e-f8d4-435e-a3a1-34dc12ba771a">
+                  <outputEventPortMoniker Id="e102f11b-029d-4f18-9e59-2ce8ebb02cfe" />
+                </proxyConnection>
+                <proxyConnection Id="ef9a3cb7-4a7f-4e97-a561-9e778da82f2a">
+                  <outputEventPortMoniker Id="0e9f9288-2c5c-47c1-8a9c-bfc76c08200d" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="1ee7c085-a104-4b98-a158-c28f435be1a1">
+                  <eventMoniker name="/FloorLayout/FloorLayout/output1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="397f8691-79ca-4842-a5de-ff8ab3e1f8b4">
+            <outputVariablePort Id="8bd2ba39-ce6d-4e92-89a4-ac4c6eafedc1">
+              <proxyTargetPorts>
+                <proxyConnection Id="e1e76a67-45cc-4caf-99ee-923e3a59318e">
+                  <outputVariablePortMoniker Id="4a10b8b6-e423-45e0-bc8b-656dc9b2cd06" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="9aee58f5-1d87-4e51-b27c-bf589f2f3d63">
+                  <variableMoniker name="/FloorLayout/FloorLayout/d0Z1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="4cdc26c2-d521-45dc-b833-1a28073c228c">
+            <outputVariablePort Id="b346805f-55f5-4e19-86b9-4f56d947abea">
+              <proxyTargetPorts>
+                <proxyConnection Id="75038048-05ef-467b-8ee2-b74fc4aaf294">
+                  <outputVariablePortMoniker Id="018b58c5-bd07-4d2e-981b-0772aa0facca" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="eac5cb04-a2ba-4b24-bb99-6adcde86785d">
+                  <variableMoniker name="/FloorLayout/FloorLayout/d0Z2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="407345d7-7d88-494c-8e78-0cde0858913e">
+            <outputVariablePort Id="b18090dd-d5d8-43ee-baeb-64643d5d1427">
+              <proxyTargetPorts>
+                <proxyConnection Id="3880ebc1-8cf6-49ae-98b9-c27aa17a9339">
+                  <outputVariablePortMoniker Id="3b62c9e1-7304-4ab6-a63a-cb31ca6c3a46" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="179caa64-e171-46c3-bc7a-6da91f540229">
+                  <variableMoniker name="/FloorLayout/FloorLayout/d0Z3" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="16fedec2-8e28-40c0-bbfc-ddfa1bafb735">
+            <outputVariablePort Id="4e7389ce-66cd-4cb5-ae38-45b6194f7121">
+              <proxyTargetPorts>
+                <proxyConnection Id="b1eb13ee-d2fc-4226-9826-8a1c401bfd0c">
+                  <outputVariablePortMoniker Id="76a22cd4-30e8-4a99-906a-a1e079371a95" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="dd25c77a-afd1-491b-ad09-9ab6ecb1b6c8">
+                  <variableMoniker name="/FloorLayout/FloorLayout/d0Z4" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="f8fab52e-ab1a-4553-b010-35e5b04b2e91">
+      <functionBlockReference Id="84250c5c-69a5-4f80-9cdb-ff5d5e6c4b9c" name="d0North" x="831.25" y="175" modelType="Composite" creationMode="Resource" referencedFile="SmokeDetector.cfb">
+        <events>
+          <functionBlockHasEvents Id="a8c5e2d3-3e20-40f8-a53c-d0b3170d6c4b">
+            <eventRef Id="47b69ea1-6e3f-43cd-8355-86c8b17ae776" name="output" scope="Output" referencedID="bb389a18-1696-49f1-96b0-cbe1f1ec90be" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="90f7e4ef-5ec3-483c-9c0f-aa0230053f38">
+            <variableRef Id="b72d4bef-45e5-4639-99cd-e0910a8cb639" name="detected" scope="Output" referencedID="6d45ce64-167c-40aa-8158-2e63c172b6e2" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d92f18db-822a-4e5f-bffc-32c9c651f2b8">
+            <outputEventPort Id="415a0c1f-4643-4efb-b1e1-53562b449bd9">
+              <event>
+                <outputEventPortReferencesEvent Id="5a963fca-4ffa-4d89-a707-e722c6f4f6c7">
+                  <eventRefMoniker name="/FloorLayout/d0North/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="7042cc5a-cfcf-4fb0-b1a3-0c15e8714267">
+            <outputVariablePort Id="4a10b8b6-e423-45e0-bc8b-656dc9b2cd06">
+              <variable>
+                <outputVariablePortReferencesVariable Id="21bdc01c-6548-41a6-80a2-01e8f9ec33a4">
+                  <variableRefMoniker name="/FloorLayout/d0North/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="ed1691cf-7f44-44cc-bb92-f358700c9954">
+      <functionBlockReference Id="1fbf09ea-04ec-439a-b917-a88ce4af91f6" name="d0South" x="831.25" y="1050" modelType="Composite" creationMode="Resource" referencedFile="SmokeDetector.cfb">
+        <events>
+          <functionBlockHasEvents Id="d76b734f-677a-401f-8a63-a58a15836a9d">
+            <eventRef Id="dc594c5f-c863-460b-84ac-b29e9bd1f91b" name="output" scope="Output" referencedID="bb389a18-1696-49f1-96b0-cbe1f1ec90be" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="af7d398b-5629-4793-8a9b-7e876beb2d00">
+            <variableRef Id="913aa9f4-30b9-404b-9fa8-bf22b4c6104e" name="detected" scope="Output" referencedID="6d45ce64-167c-40aa-8158-2e63c172b6e2" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f5e1b0a2-d208-47aa-9800-afc607e71069">
+            <outputEventPort Id="91d805f2-4678-4cfa-a8cb-abb306fdbc6f">
+              <event>
+                <outputEventPortReferencesEvent Id="e4c8fcab-d881-4299-a04a-c45f9ec8f1db">
+                  <eventRefMoniker name="/FloorLayout/d0South/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="b8c916b9-668a-4acb-b07c-03e470c41c81">
+            <outputVariablePort Id="018b58c5-bd07-4d2e-981b-0772aa0facca">
+              <variable>
+                <outputVariablePortReferencesVariable Id="af15795f-50a2-4442-a25c-f4e44e789c19">
+                  <variableRefMoniker name="/FloorLayout/d0South/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="b80d142b-629b-46b7-9bcf-11fb512ab3ed">
+      <functionBlockReference Id="70306ba6-cb04-4095-939e-9db6ba8af9e8" name="d0East" x="1312.5" y="612.5" modelType="Composite" creationMode="Resource" referencedFile="SmokeDetector.cfb">
+        <events>
+          <functionBlockHasEvents Id="941ff09f-8e16-4994-a455-0cb5f420c731">
+            <eventRef Id="eba6d0de-1c62-4aad-8150-503b1a31c074" name="output" scope="Output" referencedID="bb389a18-1696-49f1-96b0-cbe1f1ec90be" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="df0f29c9-6b8b-455a-9e81-358a7d9e21fa">
+            <variableRef Id="86d290de-2603-40f5-919d-c3caedc45f47" name="detected" scope="Output" referencedID="6d45ce64-167c-40aa-8158-2e63c172b6e2" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e0a1564b-e5fa-4ca2-b824-6d3b24250343">
+            <outputEventPort Id="e102f11b-029d-4f18-9e59-2ce8ebb02cfe">
+              <event>
+                <outputEventPortReferencesEvent Id="a9a4b84f-02c9-4687-a6a4-01eaf099045f">
+                  <eventRefMoniker name="/FloorLayout/d0East/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="b4867ffc-55cf-4ca9-ae6d-30e8ab22e853">
+            <outputVariablePort Id="3b62c9e1-7304-4ab6-a63a-cb31ca6c3a46">
+              <variable>
+                <outputVariablePortReferencesVariable Id="c05c3161-9c09-4ec5-9abc-219e2a04cb4e">
+                  <variableRefMoniker name="/FloorLayout/d0East/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="2027a45b-db98-4332-a586-cc14849e176a">
+      <functionBlockReference Id="1019f326-5ccd-4abe-931f-ef520b1a946f" name="d0West" x="350" y="612.5" modelType="Composite" creationMode="Resource" referencedFile="SmokeDetector.cfb">
+        <events>
+          <functionBlockHasEvents Id="2f29bc6a-e76a-439c-873e-dc473582e932">
+            <eventRef Id="be78314f-d520-464d-b5f7-41003b59df85" name="output" scope="Output" referencedID="bb389a18-1696-49f1-96b0-cbe1f1ec90be" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="9783e6b5-20f5-489b-b8a0-a5f2f926351f">
+            <variableRef Id="ad4d034d-54da-40f7-b852-7b801399793f" name="detected" scope="Output" referencedID="6d45ce64-167c-40aa-8158-2e63c172b6e2" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="9f8932f1-c2ab-49ce-a806-1d11001350ef">
+            <outputEventPort Id="0e9f9288-2c5c-47c1-8a9c-bfc76c08200d">
+              <event>
+                <outputEventPortReferencesEvent Id="dfc62a27-c779-40cd-9fa0-c655fd301a10">
+                  <eventRefMoniker name="/FloorLayout/d0West/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="74a83c07-f4eb-4ee0-a388-e805283e69ca">
+            <outputVariablePort Id="76a22cd4-30e8-4a99-906a-a1e079371a95">
+              <variable>
+                <outputVariablePortReferencesVariable Id="f17b3abd-d582-49d8-8db6-1190ddbc7ea1">
+                  <variableRefMoniker name="/FloorLayout/d0West/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

@@ -1,0 +1,1 @@
+me->reachedCounter = (me->reachedCounter < 5) ? me->reachedCounter + 1 : me->reachedCounter;

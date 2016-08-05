@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="86db9e5c-a440-4b41-9b01-867c97389e52" name="ActuatorsC" organization="User-PC" date="2013-06-27" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="42f893f1-e05f-47b7-8f1a-cafeda317533">
+      <functionBlockInterface Id="ba4063d5-b934-49a4-a170-d29f2573c7c8" name="ActuatorsC" x="918.75" y="175" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="1dd111e3-b10a-4c24-94a2-e00b24aaf954">
+            <event Id="33cf70ac-3fdd-408f-9e94-cf681f3eb9c2" name="trigger" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ae91a8e2-f6a2-4952-a3b3-1683c7beae9a">
+            <event Id="73e0c0e9-1986-412d-9b67-0e4947aee277" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f9a2091b-09cb-49c6-8141-245eee459037">
+            <variable Id="70ee967f-7625-4e33-99a3-846d9d06a6c4" name="alarmCtl" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="21dc592a-5805-4cf8-8919-1239cf315937">
+            <variable Id="b8087401-ce39-423e-91c7-9b37a9f4d072" name="valveCtl" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="7aa0d75b-2345-4309-b95b-91a90cc2fb38">
+            <variable Id="e8f6b9dc-a1cf-485f-9178-1ba0aed24ce9" name="alarmOn" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="0a82554b-349b-46e7-9c33-2de2ffd5192b">
+            <variable Id="e608600b-ff39-4e0e-92e2-6d99689e41f1" name="sprinklerOn" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="f23ce43f-60b9-4e08-8c39-f4ceab02a693">
+            <inputEventPort Id="791104ff-1838-4918-ad22-8c0842cbb498">
+              <proxyTargetPorts>
+                <proxyConnection Id="dbe70e63-1091-4c34-ab2a-d524be589458">
+                  <inputEventPortMoniker Id="be3bbdc1-cdda-44ac-aad0-95d62abd011d" />
+                </proxyConnection>
+                <proxyConnection Id="5e04bc60-7a56-4181-8831-13ec5b3631a4">
+                  <inputEventPortMoniker Id="546c2a51-9d64-4710-9232-07929d79dc33" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="30378bae-f84e-40f9-be62-4d0b51f9c4b2">
+                  <eventMoniker name="/ActuatorsC/ActuatorsC/trigger" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="2790675c-536a-4588-b02e-13ccedd3c590">
+            <outputEventPort Id="cef60486-e8bc-4a5d-9f1c-b9c74af14272">
+              <proxyTargetPorts>
+                <proxyConnection Id="775c941c-f8d8-44f3-8ba1-10941613e3cf">
+                  <outputEventPortMoniker Id="d28e911a-3a10-4b88-9a96-0cbd3d4b1989" />
+                </proxyConnection>
+                <proxyConnection Id="9a6a619a-46be-4362-b712-437913f67a46">
+                  <outputEventPortMoniker Id="0b4f7fb1-2e6a-4473-9de6-d58efc3a4dce" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="5641ab2f-cebe-4081-891f-009b6711a3a3">
+                  <eventMoniker name="/ActuatorsC/ActuatorsC/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="77d30718-b3a9-4e13-b707-df3c4ec2afa2">
+            <inputVariablePort Id="b6c0458f-9ae1-4462-919d-e0164e61a6f2">
+              <proxyTargetPorts>
+                <proxyConnection Id="1275c0fa-ea4f-464d-a9f8-5147fa45d8f2">
+                  <inputVariablePortMoniker Id="2d4af418-ccb8-4f34-8c03-6063fd7079dd" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="608c1748-1e8f-4034-95bb-478f3cc3077e">
+                  <variableMoniker name="/ActuatorsC/ActuatorsC/alarmCtl" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="bc9e4205-9007-4f15-bdd0-984681382809">
+            <inputVariablePort Id="623cc225-290e-4170-ae15-103cc7208adf">
+              <proxyTargetPorts>
+                <proxyConnection Id="fa2c4c2a-c82b-490a-8714-6893b47643c3">
+                  <inputVariablePortMoniker Id="92e13f8d-f2e6-4bcb-b69d-e98a3a62ae74" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="d8023539-2255-4a0d-9aef-9ad5c156cc6b">
+                  <variableMoniker name="/ActuatorsC/ActuatorsC/valveCtl" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="c2f4f184-f3fc-4569-ac32-ec67ad2ff43e">
+            <outputVariablePort Id="525b9027-03d3-4725-a6e2-f6d3d70a9e31">
+              <proxyTargetPorts>
+                <proxyConnection Id="7072fae3-f6e2-4cb7-ad14-51bbcb14f6b3">
+                  <outputVariablePortMoniker Id="fd3de671-c050-4a18-b0ef-20864a813ae0" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="ad7a1531-697c-460c-b676-976344cde57c">
+                  <variableMoniker name="/ActuatorsC/ActuatorsC/alarmOn" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="dece5064-1e62-4959-8809-190fb98588be">
+            <outputVariablePort Id="92b2b2d4-e831-41ad-a354-35b1a9856864">
+              <proxyTargetPorts>
+                <proxyConnection Id="a7f4c586-00c9-4465-b9e0-7cb20c60889b">
+                  <outputVariablePortMoniker Id="55b0464f-0c09-4e58-8e09-b9ba89d789fe" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="70e380a1-a858-4c05-af74-d2e910994639">
+                  <variableMoniker name="/ActuatorsC/ActuatorsC/sprinklerOn" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="2f608bbb-2fd1-4a3b-aa9e-5a07b919dabb">
+      <functionBlockReference Id="da0a911c-1772-4faa-812a-9a9647803c1c" name="a1" x="401.04166666666657" y="218.75" creationMode="Resource" referencedFile="AlarmBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="8e1c8a8d-d9fa-4cfe-ba29-7a858dd7f006">
+            <eventRef Id="693d0072-6db1-47fd-9181-096aae48a9f6" name="reload" scope="Input" referencedID="c582aa5e-b2c9-4131-b05a-da7f5d8e64fc" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="8f4db5fb-7aef-4bb2-a202-0d0a4be5ce36">
+            <eventRef Id="ec76fba0-66f5-4632-8595-5bbb14f8dafc" name="update" scope="Output" referencedID="161de197-276c-411e-a426-9a2daa272bbd" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="d53cc620-3649-4c13-8398-91e6a143197c">
+            <variableRef Id="dcfded48-3c07-4e01-9fc9-8cce373f5ece" name="status" scope="Input" referencedID="0bffddf7-3c0e-4861-85fc-25f63647e82c" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="d8c8b87f-5342-4b72-9bfa-62b9108a94e1">
+            <variableRef Id="72c79bfa-dee5-4ba2-ba34-e7f0185e897a" name="isSound" scope="Output" referencedID="20cab649-798b-47d0-bf1b-4915307a9c2f" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="7f815644-78b1-428f-bd0e-9f7ca67f31ff">
+            <inputEventPort Id="be3bbdc1-cdda-44ac-aad0-95d62abd011d">
+              <event>
+                <inputEventPortReferencesEvent Id="e9ed1539-0c16-4fa6-a8eb-da5d7b58e497">
+                  <eventRefMoniker name="/ActuatorsC/a1/reload" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="aa358b46-8290-4e2e-8911-bf71db391cf0">
+            <outputEventPort Id="d28e911a-3a10-4b88-9a96-0cbd3d4b1989">
+              <event>
+                <outputEventPortReferencesEvent Id="e57727ba-0921-4ffe-984c-bd5e7cf1d376">
+                  <eventRefMoniker name="/ActuatorsC/a1/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="c9769d39-20a6-48ee-aa13-740f84cc802d">
+            <inputVariablePort Id="2d4af418-ccb8-4f34-8c03-6063fd7079dd">
+              <variable>
+                <inputVariablePortReferencesVariable Id="43174b35-c861-43d2-91da-3c16390ec96e">
+                  <variableRefMoniker name="/ActuatorsC/a1/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="7879b101-71a3-4b7d-b14b-df9626abd391">
+            <outputVariablePort Id="fd3de671-c050-4a18-b0ef-20864a813ae0">
+              <variable>
+                <outputVariablePortReferencesVariable Id="7f248ffb-615a-46f4-b9a4-da676ff5e4b6">
+                  <variableRefMoniker name="/ActuatorsC/a1/isSound" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="623f3ae3-1901-414c-96de-3af4f7817a57">
+      <functionBlockReference Id="cd976d36-3bed-4a2f-b3c2-ccfc7122793c" name="v1" x="393.75" y="831.25" creationMode="Resource" referencedFile="ValveBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="633f9231-2c8b-42a6-9ec4-8616abda5efd">
+            <eventRef Id="e155b0a2-5fb6-474c-9069-04af8ea6dc70" name="reload" scope="Input" referencedID="38010c2e-a84e-4e1f-be46-15eea37e8999" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="7e5ea7e0-4de7-4525-8eb1-3dc5c7cc87a6">
+            <eventRef Id="cf58e9fd-1491-45f0-8b7d-c63036728595" name="update" scope="Output" referencedID="4dfb8faa-f2c9-4860-886a-8c17c543dd26" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="2edc94ec-b2db-446f-8216-8466ef2efdfd">
+            <variableRef Id="0b99d33e-74f0-4f1a-8ea8-fed701788d10" name="status" scope="Input" referencedID="7bbdf446-6372-4439-97de-4e5f66669e9c" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e2a4168a-4c18-4598-a442-00cbb5e0247f">
+            <variableRef Id="e614b0f0-8f59-4bc2-9b2d-8c5b3a77b861" name="isOpen" scope="Output" referencedID="cc960b5a-ae4c-469e-b115-5662cd864f5d" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="75669cae-ef84-4bd7-bc1f-59a02efb7b35">
+            <inputEventPort Id="546c2a51-9d64-4710-9232-07929d79dc33">
+              <event>
+                <inputEventPortReferencesEvent Id="7d7ad783-5575-4206-8c1e-b55ffb52b6e0">
+                  <eventRefMoniker name="/ActuatorsC/v1/reload" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a4776b00-f033-42ae-90ae-2fe2df106844">
+            <outputEventPort Id="0b4f7fb1-2e6a-4473-9de6-d58efc3a4dce">
+              <event>
+                <outputEventPortReferencesEvent Id="aaa16df7-84d8-4808-9a85-353166a338bb">
+                  <eventRefMoniker name="/ActuatorsC/v1/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="3fc8472f-6aea-4d98-8b27-d22d79e6fda8">
+            <inputVariablePort Id="92e13f8d-f2e6-4bcb-b69d-e98a3a62ae74">
+              <variable>
+                <inputVariablePortReferencesVariable Id="ac1dfe71-cc27-453d-94c9-cdd22b3d08fc">
+                  <variableRefMoniker name="/ActuatorsC/v1/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="01546537-a4e8-4f0b-abb4-316b110ed4e4">
+            <outputVariablePort Id="55b0464f-0c09-4e58-8e09-b9ba89d789fe">
+              <variable>
+                <outputVariablePortReferencesVariable Id="fdf4276e-d4f5-409c-aff6-ddefede6ae51">
+                  <variableRefMoniker name="/ActuatorsC/v1/isOpen" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

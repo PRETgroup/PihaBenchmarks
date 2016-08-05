@@ -1,0 +1,1 @@
+me->counter = (me->counter < 5) ? me->counter + 1 : me->counter;

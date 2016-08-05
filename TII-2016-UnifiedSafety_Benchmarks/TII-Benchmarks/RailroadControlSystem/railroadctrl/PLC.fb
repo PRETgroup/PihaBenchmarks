@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="85789e7c-6594-422a-b754-13cb5b7616b1" name="PLC" comments="AB 1756-L61 : the MTBF is 1,000,000 (114 Years)" organization="User-PC" date="2013-06-29" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="e910e313-2307-4631-810f-88cf8beaaec9">
+      <state Id="d763e914-3149-41d7-9d3a-5cca7a9de657" name="NORMAL" x="350" y="175" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="df65f33e-ae16-4e46-a6b2-580e7b96e2d3">
+            <transitionNodeMoniker Id="9a68fe01-0a2f-4b60-9835-6d3b20df2694" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="971dcd2e-b845-4401-81ea-9ac5ca3e621d">
+      <state Id="26709e58-4506-4583-808a-04e2af0aafe1" name="FAILED" x="350" y="918.75" isInitial="false" />
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="9be4c8de-d3e3-46df-bb37-38b77262e3b0">
+      <state Id="ff7473c9-205f-4ba5-9694-58e95ca5b33e" name="CHECK" x="393.75" y="568.75" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="8a61429d-0f48-43c0-bd2b-5e9193fb3182">
+            <probabilisticTransitionNodeMoniker Id="29906f76-829b-409b-b7db-f179d5b4a043" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="10ca0e21-d24e-4974-8057-654fb5d75366">
+            <probabilisticTransitionNodeMoniker Id="0ca039b5-57d4-4bd8-8b6c-d403d82f0512" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="675790cc-eed0-484b-97e8-19a53b32cdae">
+      <functionBlockInterface Id="aa7b97d4-deaa-4dfe-b29f-6ad93184f3e6" name="PLC" x="1400" y="481.25" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="41799c90-9af2-4809-b38a-1b03785f725a">
+            <event Id="0f02db0b-c818-4de7-bce5-d6f6f0d57569" name="plcFailure" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="9aa1b1bf-1ab0-43fb-9fb6-94c06f63499d">
+            <outputEventPort Id="b59c7908-ca72-4359-9e61-21b9b78c37b7">
+              <event>
+                <outputEventPortReferencesEvent Id="64388b1f-db93-4d5f-9cbd-7c7c37f992b9">
+                  <eventMoniker name="/PLC/PLC/plcFailure" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="9b98f7b1-1413-4e2e-93f1-cfd4c71d86b6">
+      <transitionNode Id="9a68fe01-0a2f-4b60-9835-6d3b20df2694" x="369.875" y="350">
+        <targetState>
+          <transitionNodeConnectsToStates Id="9a924c26-4376-4a6d-b093-e8c1b35244f3">
+            <stateMoniker name="/PLC/CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="60fb4082-b2a2-467e-87cf-a758281a5348">
+      <probabilisticTransitionNode Id="29906f76-829b-409b-b7db-f179d5b4a043" x="370.875" y="369.875" probability="0.999999999997222">
+        <targetState>
+          <transitionNodeConnectsToStates Id="4a846807-3d51-4ec3-b120-a0026374a6d5">
+            <stateMoniker name="/PLC/NORMAL" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5d8afce1-c5a4-4c57-8c08-2bef16323e68">
+      <probabilisticTransitionNode Id="0ca039b5-57d4-4bd8-8b6c-d403d82f0512" x="369.875" y="757.75" probability="2.778E-12">
+        <targetState>
+          <transitionNodeConnectsToStates Id="2ebb1f9c-5375-4bef-b87e-698546ebfe32">
+            <stateMoniker name="/PLC/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

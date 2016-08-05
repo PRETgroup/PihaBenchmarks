@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="aac7092e-309b-495a-9bf8-582b43e6dffe" name="GasSensorD" organization="User-PC" date="2013-07-01" author="User">
+  <states>
+    <functionBlockModelHasStates Id="d4db92b7-9701-4321-b353-148359debc73">
+      <state Id="2b894520-5d02-408a-828d-8d7c45ddf92c" name="START" x="1268.75" y="262.5" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="8ae36611-7466-431e-b85e-78995058eb54">
+            <transitionNodeMoniker Id="fd1bf41c-3439-4e46-a9dd-d7a438d77812" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="dd4a6f76-3686-4e2a-828b-c8d38116ba94">
+      <state Id="ddea6668-2a04-47be-9416-e9fa252bab33" name="INPUT_REC" x="1225" y="612.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="0dba621f-be86-459d-aae1-08bd988d41a0">
+            <actionSetMoniker Id="c831970f-350e-45fb-b4db-935845ab68b4" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="6de043ac-6f97-4b32-ab90-40e2633b5be6">
+            <transitionNodeMoniker Id="6807afd1-a8b6-4dd6-b489-049928ad3a2c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="14ae957a-992f-4be1-889e-fe1c67512561">
+      <actionSet Id="c831970f-350e-45fb-b4db-935845ab68b4" x="1671.4094913005827" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="f12d4559-2c69-437a-b32f-bb6fe2908d27">
+            <actionEvent Id="11f77d13-f380-4410-a5b7-2ab259c96bbe">
+              <event>
+                <actionEventReferencesEvent Id="7940c788-54cc-40df-868e-056e7334ef5b">
+                  <eventMoniker name="/GasSensorD/GasSensorD/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="ec3b38cf-2d71-45fe-8fa4-dd0b6f373811">
+            <actionAlgorithm Id="a957ad70-bbd5-4bc2-9152-9db17d03b824">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="379c68fe-8ceb-4768-a7de-c420d828b487">
+                  <algorithmMoniker name="/GasSensorD/transmit" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="985d17a4-3219-41d6-9158-46599ddae07a">
+      <algorithm Id="874572b9-a7bd-4ef5-8f79-73809aaf4708" name="transmit" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="0a33cebe-df16-4f7d-be70-4d079ded51b8">
+      <functionBlockInterface Id="bd286cc0-3444-4491-8f20-38227a118322" name="GasSensorD" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="6658a4ba-47c9-4b4b-95ca-929207d719e1">
+            <event Id="7c03d313-e12b-4ae4-84e1-8f6581e63fb7" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6d29b5bc-fdbb-4287-b394-b273ac190a7c">
+            <event Id="fd695496-d1c7-43c6-b870-e8d5e7243082" name="output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="4fb4addc-8d24-4d72-a271-0e8a2ea8fca3">
+            <variable Id="a4e81ecc-eae6-4c7b-91d6-fb46e248ade5" name="inValue" scope="Input" initialValue="0" type="INT" minimumValue="0" maximumValue="100" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="65768c76-5bd7-44ba-96cc-be6e0ca80775">
+            <variable Id="fa56ae7a-a9dd-4e56-a988-8ad33b015940" name="outValue" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a7a6bede-990b-4b5f-9b77-7a7e53c814ee">
+            <variable Id="d8f639cd-fa52-449d-94f2-a134e849e67f" name="threshold" scope="Input" type="INT" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="31444598-bafa-45db-b902-97b55fb309c4">
+            <inputEventPort Id="6fafc326-713a-41c1-b9a6-f73732a94cf3">
+              <targetPort>
+                <association Id="2f155998-ad51-427d-91dc-d1b4b79afc4f">
+                  <inputVariablePortMoniker Id="418b5249-0a9e-4450-b687-7bcca019a17a" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="2c4e3478-ff43-4663-b345-809ec13846f4">
+                  <eventMoniker name="/GasSensorD/GasSensorD/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="bd20ac64-d926-4a66-8c76-fad9160981de">
+            <outputEventPort Id="9c12fe65-52e9-49d3-b7b0-720500205672">
+              <targetPort>
+                <association Id="23bf37a3-8c2c-49f2-90ca-33c764358daf">
+                  <outputVariablePortMoniker Id="ab2155e4-8c79-4601-80ca-f46052e3158a" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="e1c4b003-d5f9-4795-862a-d3bc50b85a95">
+                  <eventMoniker name="/GasSensorD/GasSensorD/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="1ab1431a-2fdc-420e-958d-bc217efa957d">
+            <inputVariablePort Id="418b5249-0a9e-4450-b687-7bcca019a17a">
+              <variable>
+                <inputVariablePortReferencesVariable Id="15eed3bd-5256-4cf8-94dd-15412b5769c7">
+                  <variableMoniker name="/GasSensorD/GasSensorD/inValue" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="cd869983-f457-4c59-a095-bb9f9c512a2e">
+            <inputVariablePort Id="1dfb30b4-fc5a-4309-983f-8dd591b73b99">
+              <variable>
+                <inputVariablePortReferencesVariable Id="408d099f-f90a-4807-9906-8dc087deb588">
+                  <variableMoniker name="/GasSensorD/GasSensorD/threshold" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="ea9b9db7-0409-4a92-88bf-083d2bcaa35d">
+            <outputVariablePort Id="ab2155e4-8c79-4601-80ca-f46052e3158a">
+              <variable>
+                <outputVariablePortReferencesVariable Id="348131dd-4403-4899-8c1b-8c2e296c82bb">
+                  <variableMoniker name="/GasSensorD/GasSensorD/outValue" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="df66879e-ef6d-40c4-bafe-b98c5d927104">
+      <transitionNode Id="fd1bf41c-3439-4e46-a9dd-d7a438d77812" x="1246.875" y="454.49999999999994" event="input">
+        <targetState>
+          <transitionNodeConnectsToStates Id="fdb22699-b639-4a8c-9bfe-10be0763ed2f">
+            <stateMoniker name="/GasSensorD/INPUT_REC" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ad7a0744-c1bc-412b-b0ba-cc9a2b716ced">
+      <transitionNode Id="6807afd1-a8b6-4dd6-b489-049928ad3a2c" x="1278" y="655.5" event="input">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f6760177-1e0e-4b97-9a74-74de0a9a666b">
+            <stateMoniker name="/GasSensorD/INPUT_REC" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="db62db81-4695-4fa8-896c-39953f5a7196" name="System" organization="User-PC" date="2013-07-02" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="ba979412-b708-4c1c-ae3e-0a15f48e92eb">
+      <functionBlockInterface Id="81950478-3233-4906-ba03-5ee1f3265165" name="System" x="1400" y="481.25" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="b5f96086-82d8-4a6a-b51d-0140c2f15a9b">
+      <functionBlockReference Id="614867ac-dfa0-49d4-bcd7-b51e7f3eab65" name="crossing" x="3106.25" y="1093.75" creationMode="Resource" referencedFile="Crossing.fb">
+        <events>
+          <functionBlockHasEvents Id="7d5f12fe-f1e2-4f39-9a97-d857a9461782">
+            <eventRef Id="2f098ef0-74a1-4239-8e02-90bd3d3d1d26" name="close" scope="Input" referencedID="e0d2fd45-24fc-4ba9-9b12-fa38379ad263" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6d2536dc-ab63-4971-8807-0a8217d5eb0f">
+            <eventRef Id="793d3647-3534-44c5-9cd0-c9d347e1c64b" name="open" scope="Input" referencedID="5101da7c-4437-4638-9f3f-4d58aa29cc85" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2fcd3364-2918-495b-935e-5a095dc41f43">
+            <eventRef Id="642d366d-655b-4dc4-a9f5-d77eba61d47c" name="closed" scope="Output" referencedID="a71a27b3-72c3-448e-b428-e2850c87a9db" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="2e4751a5-19cf-436c-b02d-96444b050ce8">
+            <inputEventPort Id="91c3b9f4-7cb5-41a8-ac80-ffb94a5d379b">
+              <event>
+                <inputEventPortReferencesEvent Id="03a5555b-e773-4ca3-9d29-5ecc6f2a9f16">
+                  <eventRefMoniker name="/System/crossing/close" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="e2d6364f-94da-4ed3-94bc-5b56000e78fa">
+            <inputEventPort Id="99d5132d-62ea-4f51-a21d-4c18ff45befe">
+              <event>
+                <inputEventPortReferencesEvent Id="2953f440-67c9-4701-937c-f1a671985d42">
+                  <eventRefMoniker name="/System/crossing/open" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d7b85d35-9fe1-4184-80af-7183fd61d73e">
+            <outputEventPort Id="3c36fdbf-ab9b-4c4b-ac23-a6bd012f05bc">
+              <wireTargetPorts>
+                <wireConnection Id="8af85590-6aab-4df9-9427-8a70f5f29602" unitDelayed="false">
+                  <inputEventPortMoniker Id="c57e2dd8-e33b-49cc-a3b5-0977b27fa058" />
+                </wireConnection>
+                <wireConnection Id="f1918d5f-7137-476a-8430-5e8cf5b08663" unitDelayed="false">
+                  <inputEventPortMoniker Id="7636a16a-3e1a-4f74-b096-96c2f71e2393" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="4f3fbeed-10d1-4099-92f0-e68dbbd1c7dd">
+                  <eventRefMoniker name="/System/crossing/closed" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="70fd0634-5476-48a6-ae10-e369e99e2601">
+      <functionBlockReference Id="82598a08-8be2-47e8-bac3-96fe8e02e002" name="source" x="612.5" y="787.5" creationMode="Resource" referencedFile="TrainEvents.fb">
+        <events>
+          <functionBlockHasEvents Id="64f0f2da-e62e-4a3a-88bf-838cb7332794">
+            <eventRef Id="9be1e8cd-aa61-43e2-84ba-6b2cc50efa5f" name="near" scope="Output" referencedID="f23d316f-a8a2-4df2-9a2c-6ede41e1f89c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="fa9bcbcf-5050-446b-8e18-5580e5fd020d">
+            <eventRef Id="efbc8e40-2788-400d-8e60-83656f27c93e" name="reached" scope="Output" referencedID="b22ee0f8-0393-4b02-920f-f813dc78f591" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="18568723-c746-4854-a902-f6dbffbcc2e8">
+            <eventRef Id="4ded673c-4660-405a-90b0-408e44ea9938" name="exit" scope="Output" referencedID="58806089-30b9-4547-8137-669d966025fb" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2a6c301f-6ed5-4a3c-8660-684ffb2412ef">
+            <eventRef Id="116c14a4-2ffd-483b-aa22-bb1f3725d644" name="reset" scope="Input" referencedID="536d3119-f7f6-4bb7-9af3-5bf992c10763" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b846f3c6-1990-4995-8aef-144d41da9f96">
+            <eventRef Id="95fa6a8e-8c01-4e8f-84b9-455ef2aa4b8c" name="secured" scope="Input" referencedID="6cdf9092-28de-4b67-93f4-1e611ff29a23" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="555c4467-7663-49c3-a8c4-99b9ca7e209c">
+            <inputEventPort Id="3ed76a7c-5a1c-4da8-9b7b-c5520f0a32c1">
+              <event>
+                <inputEventPortReferencesEvent Id="2466e1ab-b297-446b-98c2-3b60da7e2136">
+                  <eventRefMoniker name="/System/source/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="b5db2c27-d4f4-4260-aab4-0d3304107ea3">
+            <inputEventPort Id="66b5543f-4757-4292-83de-05de18819ec8">
+              <event>
+                <inputEventPortReferencesEvent Id="d5e8256c-f782-4f0d-9449-ad08fef70291">
+                  <eventRefMoniker name="/System/source/secured" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="476ce1d7-b276-4ccc-8b23-014dfabc1a32">
+            <outputEventPort Id="cdc22226-cd80-4fa8-a354-34b6fac8d37d">
+              <wireTargetPorts>
+                <wireConnection Id="9afeba49-2e66-409b-997d-db00639cdbea" unitDelayed="false">
+                  <inputEventPortMoniker Id="c56033a0-75f9-4897-926f-f5142c848b87" />
+                </wireConnection>
+                <wireConnection Id="847f247d-538e-4ce0-b566-638545d7b8dd" unitDelayed="false">
+                  <inputEventPortMoniker Id="406d15ac-c368-48c3-8c27-a779dc1415c7" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="53475d50-32d5-4908-8cfd-a66b5232d21f">
+                  <eventRefMoniker name="/System/source/near" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f327a89d-66b3-47e0-9513-63989680f065">
+            <outputEventPort Id="49eefae6-8b8b-46d7-90b1-cc48c0a9ff1e">
+              <wireTargetPorts>
+                <wireConnection Id="9c725e6f-814d-494b-8d68-571c20af4ad3" unitDelayed="false">
+                  <inputEventPortMoniker Id="74910abb-09d6-4d90-b8c3-a7f9ff03d1df" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="2abf106b-87ab-42c0-80f7-3fa90c80013a">
+                  <eventRefMoniker name="/System/source/reached" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="886fa6e5-ab62-4301-896e-23232031a7c1">
+            <outputEventPort Id="1fd6ce10-b8e1-41d1-87fb-66b44006566c">
+              <wireTargetPorts>
+                <wireConnection Id="f8a1b430-84e8-4c7e-a546-8c7ef6d915bc" unitDelayed="false">
+                  <inputEventPortMoniker Id="518ea115-f141-41fc-9b4c-6d77c8886648" />
+                </wireConnection>
+                <wireConnection Id="2f99e099-7dd7-4351-bb45-cd3ccac2c558" unitDelayed="false">
+                  <inputEventPortMoniker Id="8a2e3700-3a57-4b18-9564-d09b3f89e161" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="0029ef03-0017-4e97-a96c-b30ae318841b">
+                  <eventRefMoniker name="/System/source/exit" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="daff48df-d4a5-4839-bb01-c517ab6feeac">
+      <functionBlockReference Id="25114b58-08c4-4120-a3db-87bba44e9c26" name="train" x="1443.75" y="787.5" creationMode="Resource" referencedFile="TrainModel.fb">
+        <events>
+          <functionBlockHasEvents Id="9f001502-b722-4c2b-ade2-5712ebe2b731">
+            <eventRef Id="a64c97a0-dfe6-49c8-bd07-f42b39bb835d" name="pos_close_reached" scope="Input" referencedID="5131a1a2-044f-4155-b295-5398f321e0d0" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="9956a22e-601c-459b-8fe5-5f34bbe4a6bc">
+            <eventRef Id="6b2593de-55e5-4968-b471-6112b71f78fc" name="pos_status_reached" scope="Input" referencedID="f785c9f8-166b-43cc-8010-854e00d8c776" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="49ee1d21-b4f0-4a88-b887-2c34c6a4c3b6">
+            <eventRef Id="4e8f8df6-8bf1-4763-998e-7d832ca96bd8" name="rev_secured" scope="Input" referencedID="3fe9e837-10ef-49e8-8883-c2a78e0ace7e" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="631e45b4-a726-42c3-be8c-2edf6d8d225d">
+            <eventRef Id="b751d5c4-71e9-4861-bfe5-82b04fe93f07" name="pos_exit_reached" scope="Input" referencedID="61193182-2ccb-43bb-bca2-199b0f81c605" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0304497a-5138-47b5-a344-e927e25cd912">
+            <eventRef Id="4b31d9f7-977e-41ab-88bd-0c210d89c081" name="close" scope="Output" referencedID="be4a6252-3307-4192-8cfa-5a9df4280902" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c1d14e72-aa18-4aad-bbe2-fd2eb77fe8c0">
+            <eventRef Id="d56a86f7-df5e-4b94-8ac3-c67655d42a64" name="open" scope="Output" referencedID="6c7de2da-c86c-48f8-9d9b-03c962912989" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e464df9d-c011-4545-a4d2-5f1375d735f3">
+            <eventRef Id="dc18ab50-683c-4627-a436-df68036f2c55" name="secure" scope="Output" referencedID="404838de-c15c-46ee-9b36-319b7bb77931" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="fae3309d-be8c-40c8-a979-cbbc77b704fa">
+            <eventRef Id="9eacf46a-5af9-4053-83ca-332f0c7441f0" name="rev_closed" scope="Input" referencedID="9e82a364-a9e2-4e8a-aa5b-be1569c8a63d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e0a94276-163c-474f-bc9a-faa978e1992d">
+            <eventRef Id="467b41a2-c4af-4624-bcb4-bb0a52cfb380" name="brake" scope="Output" referencedID="51b49bca-cbb8-4194-819e-544a9932d704" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="2be3702f-0840-451a-be77-b24c598b0f14">
+            <inputEventPort Id="c56033a0-75f9-4897-926f-f5142c848b87">
+              <event>
+                <inputEventPortReferencesEvent Id="70a654b7-67cf-40b2-a5cb-a543bd889c9a">
+                  <eventRefMoniker name="/System/train/pos_close_reached" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="6358a246-c41a-43d0-b967-0724bfb86483">
+            <inputEventPort Id="74910abb-09d6-4d90-b8c3-a7f9ff03d1df">
+              <event>
+                <inputEventPortReferencesEvent Id="375263b7-b624-42bc-a9f1-ff2794f52d36">
+                  <eventRefMoniker name="/System/train/pos_status_reached" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="66d25c1d-0ec6-43bd-956d-a343d9820fd3">
+            <inputEventPort Id="518ea115-f141-41fc-9b4c-6d77c8886648">
+              <event>
+                <inputEventPortReferencesEvent Id="cec5de87-3985-4227-ba99-bebfee02d4c0">
+                  <eventRefMoniker name="/System/train/pos_exit_reached" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="b106a223-f005-43bc-bc20-8705ee484b85">
+            <inputEventPort Id="88e4391c-4c47-4d53-aac4-5ba4ee031717">
+              <event>
+                <inputEventPortReferencesEvent Id="4a6487d6-eae5-477e-8459-60d5d5921916">
+                  <eventRefMoniker name="/System/train/rev_secured" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="f390963f-463a-40b4-ae16-8ee1ca709c72">
+            <inputEventPort Id="4bd9c2c1-7838-4468-8a15-fee388212694">
+              <event>
+                <inputEventPortReferencesEvent Id="4f6732a2-486d-4448-a93e-90a74cddf57d">
+                  <eventRefMoniker name="/System/train/rev_closed" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="414d7ca9-1f0a-4a17-85cb-bb707e5e8cbd">
+            <outputEventPort Id="f1987c6d-c2ad-466c-9fa2-f3283f58e0a9">
+              <wireTargetPorts>
+                <wireConnection Id="c7d3b2a1-d01e-4baa-acd2-e54c07aef86e" unitDelayed="false">
+                  <inputEventPortMoniker Id="cbaf32c8-5baa-4748-a604-326cc48c1c22" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="f65b2a4b-0af4-444d-a105-6f425bbf500a">
+                  <eventRefMoniker name="/System/train/secure" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ddbcaf93-57bc-4a71-8a66-f515487f4342">
+            <outputEventPort Id="d6caf63d-fc9f-404c-8617-df13c97a685d">
+              <wireTargetPorts>
+                <wireConnection Id="656c8921-438e-44d2-9155-71f0c6caa9b7" unitDelayed="false">
+                  <inputEventPortMoniker Id="fb6d9790-7731-40fd-89fd-d0dfd3dbdb1a" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="5fdf5244-a951-42d6-b792-4d5e898cd7b9">
+                  <eventRefMoniker name="/System/train/close" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0c15deef-64a8-46eb-a176-4fd436016977">
+            <outputEventPort Id="81c768bc-d622-4eae-9bfb-fe2c538d5a1f">
+              <wireTargetPorts>
+                <wireConnection Id="3ab12d72-9066-474c-a833-2ccc152098d8" unitDelayed="false">
+                  <inputEventPortMoniker Id="3ed76a7c-5a1c-4da8-9b7b-c5520f0a32c1" />
+                </wireConnection>
+                <wireConnection Id="db81da53-9852-4816-a7fe-f4634d3778b4" unitDelayed="false">
+                  <inputEventPortMoniker Id="1d2f57ba-0205-4b7d-b774-96538de599de" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="1390fb29-0b81-44b6-b349-962a8a5cebc3">
+                  <eventRefMoniker name="/System/train/open" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="45b1caa7-2d58-428d-b4ae-ac53fc810d9c">
+            <outputEventPort Id="770dc6d1-cc4e-4acc-b457-4b270180596e">
+              <wireTargetPorts>
+                <wireConnection Id="8bf3cb54-8abe-47a1-8992-a704d953a0c1" unitDelayed="false">
+                  <inputEventPortMoniker Id="b33db79d-4df1-4644-afff-0b32fdd1d2d1" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="eca041fa-5981-45ea-a6d4-946febd26059">
+                  <eventRefMoniker name="/System/train/brake" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="e9cb84ba-c7ef-4d6d-b47c-330f9f08653c">
+      <functionBlockReference Id="332903e6-a86f-4553-a547-18f4af950fe1" name="signal" x="3106.25" y="568.75" creationMode="Resource" referencedFile="Signal.fb">
+        <events>
+          <functionBlockHasEvents Id="075e78b2-c374-4438-9fe7-62639aa153fb">
+            <eventRef Id="129c3c4e-af3b-43af-8da7-d026b120ad7e" name="secure" scope="Input" referencedID="661b16f2-7f65-4199-a15a-5d524faf7317" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="fe2c2cfd-715b-41cd-813f-376d11a1dc06">
+            <eventRef Id="326c7251-99c8-4454-9d04-b8db99d43ff1" name="allow" scope="Input" referencedID="bb41f147-fbe5-4c34-96d5-c94561ef7299" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a26889ff-fdc5-46e1-b17a-79496dd54a8b">
+            <eventRef Id="50002964-47c7-4d94-8c81-2fd699e04fc3" name="secured" scope="Output" referencedID="a3ae6c2a-7dd6-4a1e-bda8-e4c9b1e34799" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="33823c8b-ad4c-4f70-be40-167551e7fbab">
+            <inputEventPort Id="d8480d1c-222a-4dca-8d3a-37fa3062326c">
+              <event>
+                <inputEventPortReferencesEvent Id="d5015891-af0f-4251-bfed-0ab2eb0a94c0">
+                  <eventRefMoniker name="/System/signal/secure" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="787b945f-1294-4f9c-930b-dac0efb126c9">
+            <inputEventPort Id="073d5c73-df24-4300-8a0a-2436e659a479">
+              <event>
+                <inputEventPortReferencesEvent Id="c1ca2f35-d52c-4b2d-a88c-da2cefdc8e04">
+                  <eventRefMoniker name="/System/signal/allow" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0427541c-87c6-4091-b297-17c6b32981a0">
+            <outputEventPort Id="70380e5c-c25b-4672-bd21-2294192c600c">
+              <wireTargetPorts>
+                <wireConnection Id="affe0dcf-78b7-41cd-b0f7-725c43ecdccb" unitDelayed="false">
+                  <inputEventPortMoniker Id="611bf9b8-d480-45a1-ba70-4b372992704f" />
+                </wireConnection>
+                <wireConnection Id="1a037e28-4513-4e22-bc81-f8b26ea6fcac" unitDelayed="false">
+                  <inputEventPortMoniker Id="b5035220-6b4e-4a53-aa94-ca26071e13a0" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="dc8d1e02-75a4-438a-ab10-1feb3056b1f3">
+                  <eventRefMoniker name="/System/signal/secured" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="ba7941a8-5f91-40e6-9f2c-5a8ade17524a">
+      <functionBlockReference Id="44fc616c-d3c3-4f3d-bb72-276f7c8ea9b3" name="transmit" x="2362.5" y="787.5" creationMode="Resource" referencedFile="RadioLink.fb">
+        <events>
+          <functionBlockHasEvents Id="d264bef8-e288-4505-b1c5-3bcec77397f5">
+            <eventRef Id="dd99d0bb-b2d3-461e-bb7e-814e983c4554" name="rec_d0" scope="Input" referencedID="f0ed51bf-dd26-4503-b447-4772b857d85a" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f1aa1300-2217-4c89-989d-d3773cac3df2">
+            <eventRef Id="cc909e8a-406e-462b-954f-f77ccbc63a90" name="rec_d1" scope="Input" referencedID="3ef14d35-64d0-4949-829f-be1a05fa8223" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="db6f4cbb-00ef-40d9-99a6-c3b795ab9263">
+            <eventRef Id="84e1b1f8-fac3-4cc5-9f5f-4ae07caa3bbf" name="rec_d2" scope="Input" referencedID="2040ced9-105f-468a-bd65-eda7eb7cea74" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f056a9b4-e24b-402a-a66d-2c4694ac5233">
+            <eventRef Id="663588ee-44a4-4b65-a356-43e2ca310298" name="snd_d0" scope="Output" referencedID="b218ffc1-d961-42c3-b005-3c0ce4821c32" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="00ec9f71-85a4-45ed-b0f8-5bee1ae2d449">
+            <eventRef Id="2cdd527a-312e-450b-b303-af5b94a0ff36" name="snd_d1" scope="Output" referencedID="3aeeb6d8-17bb-4d28-8244-d4d2c8e996e9" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d75557cf-9c42-4f38-b650-f902d156c2f7">
+            <eventRef Id="56858f94-f958-4f13-93e1-49485f564bb9" name="snd_d2" scope="Output" referencedID="740950b5-b307-4cc9-a4b2-da1f5a5c05e8" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="08c949bc-059e-4b42-985f-b147b98ad44c">
+            <inputEventPort Id="cbaf32c8-5baa-4748-a604-326cc48c1c22">
+              <event>
+                <inputEventPortReferencesEvent Id="a3745614-689a-4164-9633-2169539f6139">
+                  <eventRefMoniker name="/System/transmit/rec_d0" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="ea1b0d2b-18da-4ebf-9f83-729e507c7c25">
+            <inputEventPort Id="fb6d9790-7731-40fd-89fd-d0dfd3dbdb1a">
+              <event>
+                <inputEventPortReferencesEvent Id="234cff3d-4b8d-451d-b626-b1480f79de66">
+                  <eventRefMoniker name="/System/transmit/rec_d1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d5b230fa-5877-4130-b709-ae212e177b49">
+            <inputEventPort Id="1d2f57ba-0205-4b7d-b774-96538de599de">
+              <event>
+                <inputEventPortReferencesEvent Id="d0559b26-1997-40b5-90c4-872d4b969c0b">
+                  <eventRefMoniker name="/System/transmit/rec_d2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="b01b1dbc-edb1-436d-a952-6492ba2cce97">
+            <outputEventPort Id="9db4c0d8-d40e-4f57-a5e1-fa7603a9964e">
+              <wireTargetPorts>
+                <wireConnection Id="49bd305e-b3bc-495a-aea9-ac47e8d8b493" unitDelayed="false">
+                  <inputEventPortMoniker Id="d8480d1c-222a-4dca-8d3a-37fa3062326c" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="b1b78337-6797-4171-b565-51106dd9568f">
+                  <eventRefMoniker name="/System/transmit/snd_d0" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="7ff50433-2325-42bb-a4cd-8d677235924f">
+            <outputEventPort Id="2e0831c2-b701-4730-beec-3782a9211234">
+              <wireTargetPorts>
+                <wireConnection Id="97a33448-d5e5-4e23-b7fb-0de873389054" unitDelayed="false">
+                  <inputEventPortMoniker Id="91c3b9f4-7cb5-41a8-ac80-ffb94a5d379b" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="4b1638c0-a05c-4294-8520-abe71c7ffea9">
+                  <eventRefMoniker name="/System/transmit/snd_d1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e4ac26e3-e08c-4d03-a7fc-e6378756b12a">
+            <outputEventPort Id="86a61c15-15fb-4c79-a8ae-ff98578d952a">
+              <wireTargetPorts>
+                <wireConnection Id="5111b8fa-2ef1-4d7a-a362-32d29bb5d16e" unitDelayed="false">
+                  <inputEventPortMoniker Id="073d5c73-df24-4300-8a0a-2436e659a479" />
+                </wireConnection>
+                <wireConnection Id="1e350ad5-f33f-4f84-9980-b396a4b65191" unitDelayed="false">
+                  <inputEventPortMoniker Id="99d5132d-62ea-4f51-a21d-4c18ff45befe" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="a109d52c-f825-45ed-9057-fb95c69f65fe">
+                  <eventRefMoniker name="/System/transmit/snd_d2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="2e194016-3be0-4aca-8ed1-795c70008b47">
+      <functionBlockReference Id="4b2f7a89-67ba-4158-8a10-61e877e166da" name="observer" x="3937.5" y="437.5" modelType="Observer" creationMode="Resource" referencedFile="SafetyObserver.fb">
+        <events>
+          <functionBlockHasEvents Id="bbd2a160-74e4-4424-a368-f42bc46f0f22">
+            <eventRef Id="b04b99c5-30a8-4c60-a3b1-613dc1eb62f1" name="arriving" scope="Input" referencedID="ad3f28bf-28df-440b-ad86-bb356d2e2df7" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="9764a411-9432-4163-b59e-72594cdcc318">
+            <eventRef Id="753a67d3-2110-499f-9979-644714264fc8" name="secured" scope="Input" referencedID="6d290a68-1479-4803-8325-34ee1560c695" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="08956bfc-9f25-461e-bfea-3db3677290e6">
+            <eventRef Id="ce425432-fd95-44a8-ab97-ad5b9495ad9c" name="closed" scope="Input" referencedID="0078115f-e2b5-44da-b7c2-aae85ac0abe0" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="610c23a7-8826-4691-bdde-384a783004b1">
+            <eventRef Id="62640b05-4c71-4721-bca6-89b2d63b8846" name="brake" scope="Input" referencedID="f49913fc-ab39-4f5f-83d5-ecb392dc6f86" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d8757afe-bf07-463d-afa1-f4457bb5ce3a">
+            <eventRef Id="badeb7b2-8731-4dfc-aff1-81c6c390d976" name="exit" scope="Input" referencedID="93905ac0-3dcc-4925-b233-4e7eb84ca733" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="32459855-2ac5-4baf-affb-2be44ae21dcb">
+            <inputEventPort Id="406d15ac-c368-48c3-8c27-a779dc1415c7">
+              <event>
+                <inputEventPortReferencesEvent Id="838e77da-c0f6-4bb4-90f8-e9cbdec4c7cd">
+                  <eventRefMoniker name="/System/observer/arriving" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="1459a812-1cd9-4f78-8460-9afe64e4c340">
+            <inputEventPort Id="611bf9b8-d480-45a1-ba70-4b372992704f">
+              <event>
+                <inputEventPortReferencesEvent Id="0ca85de0-6581-422b-a415-447ebbe4e234">
+                  <eventRefMoniker name="/System/observer/secured" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="44846fb2-f1dc-44d2-a5cb-b872b334e5b1">
+            <inputEventPort Id="7636a16a-3e1a-4f74-b096-96c2f71e2393">
+              <event>
+                <inputEventPortReferencesEvent Id="3f6dce1e-2650-47aa-842d-3cf2aea68d1e">
+                  <eventRefMoniker name="/System/observer/closed" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="fd27f053-f3ea-40f1-ac3d-094ffe6b065c">
+            <inputEventPort Id="b33db79d-4df1-4644-afff-0b32fdd1d2d1">
+              <event>
+                <inputEventPortReferencesEvent Id="ceb25644-2874-456a-abc3-28b0fe6d1c0e">
+                  <eventRefMoniker name="/System/observer/brake" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="82753e19-6552-4cb0-aab4-4a2c8857edff">
+            <inputEventPort Id="8a2e3700-3a57-4b18-9564-d09b3f89e161">
+              <event>
+                <inputEventPortReferencesEvent Id="627fa49c-a34d-4527-ab44-9706fa4d347e">
+                  <eventRefMoniker name="/System/observer/exit" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="4fddcb9b-8cb3-470a-bcf0-6e134ef9f62a">
+      <functionBlockReference Id="a75cab1e-ef26-4620-b052-2149fc9ccf05" name="recieve" x="3937.5" y="1181.25" creationMode="Resource" referencedFile="RadioLink.fb">
+        <events>
+          <functionBlockHasEvents Id="30dfb650-5da8-4bcb-9596-e0b231b1be9d">
+            <eventRef Id="dbb50ca7-43ae-44a5-a829-bc6361158aa2" name="rec_d0" scope="Input" referencedID="f0ed51bf-dd26-4503-b447-4772b857d85a" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e33249d9-2758-481d-b1a7-ef98aa9b3a40">
+            <eventRef Id="1252283e-4cb6-45dd-ba45-03494409c0cb" name="rec_d1" scope="Input" referencedID="3ef14d35-64d0-4949-829f-be1a05fa8223" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e49cdac4-99a8-4a7a-abd5-63b9bab83b29">
+            <eventRef Id="9294d8e9-4148-4acc-b067-3ec4a18b92dd" name="rec_d2" scope="Input" referencedID="2040ced9-105f-468a-bd65-eda7eb7cea74" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="49e94ade-b4a7-4bb5-bcff-1d355d8943f9">
+            <eventRef Id="a755f982-1cfc-42c1-9bf9-e5d3e3e28d2a" name="snd_d0" scope="Output" referencedID="b218ffc1-d961-42c3-b005-3c0ce4821c32" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="7e443043-3f26-4145-a9a7-73d5f7c72afb">
+            <eventRef Id="745dd322-58d1-4101-8b90-ee80fe3a1382" name="snd_d1" scope="Output" referencedID="3aeeb6d8-17bb-4d28-8244-d4d2c8e996e9" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b40d89b5-0081-4278-8ad6-e4a321ee4dee">
+            <eventRef Id="3d8856b3-e0a9-4154-b364-3abe0d571076" name="snd_d2" scope="Output" referencedID="740950b5-b307-4cc9-a4b2-da1f5a5c05e8" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="a0b6b65d-67a2-47af-aa5d-44a1e580b23d">
+            <inputEventPort Id="b5035220-6b4e-4a53-aa94-ca26071e13a0">
+              <event>
+                <inputEventPortReferencesEvent Id="13a2e768-142a-4ccc-a597-9b9d0af41e67">
+                  <eventRefMoniker name="/System/recieve/rec_d0" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d697edd1-aae0-4b65-b124-4e5226d07853">
+            <inputEventPort Id="c57e2dd8-e33b-49cc-a3b5-0977b27fa058">
+              <event>
+                <inputEventPortReferencesEvent Id="50f21c4b-c9f3-4183-b57e-ae635a2b5f05">
+                  <eventRefMoniker name="/System/recieve/rec_d1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="db83579a-fae8-4509-b616-2ca327d2cc83">
+            <inputEventPort Id="afa1e8c7-a0a0-449f-aba5-39db3864882e">
+              <event>
+                <inputEventPortReferencesEvent Id="54cda0ca-870d-47b6-8e3e-fa36a1ef194c">
+                  <eventRefMoniker name="/System/recieve/rec_d2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f432da17-0e47-4fe2-b3da-00c7438146f0">
+            <outputEventPort Id="8cc0e8cd-df4f-4b94-91b2-ee90d1d5b22b">
+              <wireTargetPorts>
+                <wireConnection Id="de907c65-9636-4a60-9df9-520d4fd9d5c1" unitDelayed="false">
+                  <inputEventPortMoniker Id="66b5543f-4757-4292-83de-05de18819ec8" />
+                </wireConnection>
+                <wireConnection Id="72ebb1f3-2eef-452a-b9e2-a42ccc596b06" unitDelayed="false">
+                  <inputEventPortMoniker Id="88e4391c-4c47-4d53-aac4-5ba4ee031717" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="4a1491d3-36eb-45cd-ad2a-e41d0bab8952">
+                  <eventRefMoniker name="/System/recieve/snd_d0" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3ac84721-d8f5-4e3e-91f7-32ec221f35b5">
+            <outputEventPort Id="9eef669e-a110-4072-a47d-827e947603b8">
+              <wireTargetPorts>
+                <wireConnection Id="dc2ac90a-2fd4-4536-b3fd-db60549dd9a1" unitDelayed="false">
+                  <inputEventPortMoniker Id="4bd9c2c1-7838-4468-8a15-fee388212694" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="e25fa0a9-e147-4dc8-946b-a84f2347b989">
+                  <eventRefMoniker name="/System/recieve/snd_d1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1a3b3138-6ac7-492b-8ba5-fb0da569c650">
+            <outputEventPort Id="2cd32b0c-bf8a-424f-b622-372f29f93be8">
+              <event>
+                <outputEventPortReferencesEvent Id="11b3e2cf-4070-444b-a436-84a8e66386dc">
+                  <eventRefMoniker name="/System/recieve/snd_d2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

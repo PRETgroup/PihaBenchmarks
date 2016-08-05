@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="530427df-15f6-4469-9f12-17983e565722" name="flowObserver" organization="User-PC" date="2013-02-17" author="User" modelType="Observer">
+  <states>
+    <functionBlockModelHasStates Id="2b8bfb59-fdc0-4fbb-b13e-7309cc9f9688">
+      <state Id="55a3d961-75b7-491a-8a42-7b7bd3f55404" name="IDLE" x="2012.5" y="525" isInitial="true">
+        <actionSet>
+          <actionLink Id="5d51664c-20a1-4af2-90db-6096c73597e7">
+            <actionSetMoniker Id="e226a972-9767-42e8-b9c6-f923bacd8edc" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="e026da12-adf1-4bb5-8a3e-3b2e04cc5b5a">
+            <transitionNodeMoniker Id="84eb8721-c27e-4c6b-aed0-31dd7b4fd7a6" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="0f80d5b8-950e-47d5-bc52-8a25d9c1b04d">
+      <state Id="6531faec-dac2-42d3-92b4-9a39824cbd4a" name="Violation" x="2012.5" y="1531.25" isInitial="false" />
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="393a346e-6856-4d02-bf2e-fb75bb935adf">
+      <state Id="43c3e267-5f58-4592-a8fb-e5c517638586" name="REQUEST" x="2012.5" y="875" isInitial="false">
+        <actionSet>
+          <actionLink Id="6f34c51f-8412-4dcb-ac0b-2f778446d236">
+            <actionSetMoniker Id="5eb31303-3ece-40f7-bb55-0ee1d9711568" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="d07c189b-ad62-47e5-9176-a196da1be039">
+            <transitionNodeMoniker Id="70f157ac-e33a-43d9-8e37-7ab40ed7a51e" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="27d3c219-2163-47a9-8d41-b08c5b76c965">
+            <transitionNodeMoniker Id="580a79e5-bde2-463e-8b6b-470b258eb4a8" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="eaac54fc-d1d6-4d37-aa88-fc70feaa6c66">
+      <state Id="0ac99d84-1cb6-4c37-ab98-d66e2fc08754" name="RESPONSE" x="2012.5" y="1225" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="2d493999-e95b-425e-9436-2bd0af70fe9a">
+            <transitionNodeMoniker Id="ea8edbdb-85af-4c11-85e2-629d0a6b6337" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="a0b6c456-3e1a-4f79-b9cc-56f8357d3c44">
+            <transitionNodeMoniker Id="ae6d61e7-7f44-4d40-a88c-6fe1ecdaa909" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="ec22c005-bb03-444c-bcbc-75cc012bd5e1">
+            <transitionNodeMoniker Id="cc0b4ea7-9feb-4acb-bcbb-8ce3385aff3c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="0a2cf011-f445-4a89-9f78-7c9981582f23">
+      <actionSet Id="e226a972-9767-42e8-b9c6-f923bacd8edc" x="2275" y="525">
+        <actionItems>
+          <actionSetHasActionItems Id="5d4e871a-464e-4e86-8d1f-6056786b9048">
+            <actionAlgorithm Id="6ad4314c-a895-4e71-a5db-2343519e6905">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="f7bfd3c5-260d-4673-9f4f-56fa64fdf69e">
+                  <algorithmMoniker name="/flowObserver/resetCount" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="c3b531f8-8453-4bc4-98cf-fca5762ef189">
+      <actionSet Id="5eb31303-3ece-40f7-bb55-0ee1d9711568" x="2318.75" y="875">
+        <actionItems>
+          <actionSetHasActionItems Id="e66730f8-6c1f-4c50-b28b-ca30483dfa54">
+            <actionAlgorithm Id="d6be7c76-5c86-4f13-aded-f48d171f2154">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="465e8714-910f-4c6e-ac02-787eda9ffcac">
+                  <algorithmMoniker name="/flowObserver/countUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="d553f1e7-b1b9-482e-8e63-6eb9602c67f2">
+      <algorithm Id="83e2f15a-69c4-4361-b830-9f68bcf21bac" name="countUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="d0f1d50e-27ef-49d0-9d94-4630c93d7d9b">
+      <algorithm Id="8ae9b130-ba0e-4601-afc4-074fd29e10a0" name="resetCount" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="36f25245-efcc-4c40-bfc5-e52a0b59c24b">
+      <functionBlockInterface Id="ee58d37c-b44d-4e0a-98c6-454ea6feaa71" name="flowObserver" x="481.25" y="218.75" modelType="Observer">
+        <events>
+          <functionBlockHasEvents Id="13ee8983-f405-49d0-84d2-dafc0b597051">
+            <event Id="90a7247b-2c5a-418c-a676-96b60eaa46e8" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="61f00017-ca1a-4fc6-a16b-3a931228cd8f">
+            <variable Id="64eb40b1-3432-46dc-a220-623dc619f54a" name="flowIndication" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="81141b7c-ea7d-42d0-8560-56eafa44c7e6">
+            <variable Id="abfd9bfc-ed9f-4b2a-81ca-bfc5a48183f7" name="pressure" scope="Input" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c9133932-c3c1-4978-a7bc-ca7793a2a295">
+            <variable Id="9468a997-0e82-470c-a157-5bdb0ccaaf45" name="warning" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="4cba13a9-4afc-4393-b75f-ce46e6444b02">
+            <variable Id="eb8f4b3f-ed6c-4611-bf35-9c6f4a08a3a6" name="threshold" scope="Input" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c019009b-046a-4e05-baf8-f4e0ceb5dad1">
+            <variable Id="4bf55bf7-0a6d-45af-bd14-1a112681c1d3" name="counter" scope="Internal" initialValue="0" type="INT" minimumValue="0" maximumValue="100" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="45ae8da5-c14a-4661-acb1-016cb1d829bb">
+            <inputEventPort Id="a18b45f6-7ecb-48b2-b44f-0aa327f5fbbf">
+              <targetPort>
+                <association Id="1e4e28ac-8ea8-4da1-94a0-26bb28be9bcf">
+                  <inputVariablePortMoniker Id="522038c5-9a5d-4d64-8109-64520f92fd93" />
+                </association>
+                <association Id="99e96600-32d4-4da9-9cd6-97a5493641a4">
+                  <inputVariablePortMoniker Id="5896a1ef-2dce-4c60-8722-1beb13705fcc" />
+                </association>
+                <association Id="b054dbac-1206-42b9-ba0a-0fd1c9da694b">
+                  <inputVariablePortMoniker Id="b519a992-7ffe-4811-9373-6ab975c53912" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="c7bd6618-ba19-4072-a579-c23f1979fb3c">
+                  <eventMoniker name="/flowObserver/flowObserver/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="ea6bc96d-42b3-4042-a3e2-b22ba0063f8d">
+            <inputVariablePort Id="b519a992-7ffe-4811-9373-6ab975c53912">
+              <variable>
+                <inputVariablePortReferencesVariable Id="8d11146f-2c44-480c-96e0-7e7cf5e9a539">
+                  <variableMoniker name="/flowObserver/flowObserver/warning" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="c4e4c6c5-971f-4649-9f80-dc2dcfb12823">
+            <inputVariablePort Id="522038c5-9a5d-4d64-8109-64520f92fd93">
+              <variable>
+                <inputVariablePortReferencesVariable Id="db727e43-b9e4-453e-9146-5351d78aab4e">
+                  <variableMoniker name="/flowObserver/flowObserver/pressure" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="30917ee5-8a2b-4acf-a615-4c2984844556">
+            <inputVariablePort Id="5896a1ef-2dce-4c60-8722-1beb13705fcc">
+              <variable>
+                <inputVariablePortReferencesVariable Id="80f61c99-9180-48c5-9454-6457311feeaa">
+                  <variableMoniker name="/flowObserver/flowObserver/flowIndication" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="511b61f9-165b-4da6-8c92-a2f0ccd21a6c">
+            <inputVariablePort Id="b74c6bfd-b8f4-498e-b4f9-1574f280c285">
+              <variable>
+                <inputVariablePortReferencesVariable Id="9daa3a3f-c341-4cf3-9046-80b50a30c128">
+                  <variableMoniker name="/flowObserver/flowObserver/threshold" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="9a0eb282-c991-411f-8d58-a50fb84c5254">
+      <transitionNode Id="84eb8721-c27e-4c6b-aed0-31dd7b4fd7a6" x="1706.25" y="700" event="update" expression="pressure &gt;= threshold">
+        <targetState>
+          <transitionNodeConnectsToStates Id="5d27b479-4553-4016-97b2-114713436e15">
+            <stateMoniker name="/flowObserver/REQUEST" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0674fc0e-ab90-4bd9-9095-b0ad730395b1">
+      <transitionNode Id="70f157ac-e33a-43d9-8e37-7ab40ed7a51e" x="1925" y="1050" expression="counter &gt; 4">
+        <targetState>
+          <transitionNodeConnectsToStates Id="4de6f6ab-cc82-4e5d-82cf-72b20f127144">
+            <stateMoniker name="/flowObserver/RESPONSE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6c8b734f-9dad-4c38-9252-38e888d304f9">
+      <transitionNode Id="ea8edbdb-85af-4c11-85e2-629d0a6b6337" x="2712.5" y="743.75" event="update" expression="pressure &lt; threshold">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f35636e8-7f16-4326-8181-5b0b2c8fc6a3">
+            <stateMoniker name="/flowObserver/IDLE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="7a8ffa24-bc5d-48c4-9e8e-599cbf692976">
+      <transitionNode Id="cc0b4ea7-9feb-4acb-bcbb-8ce3385aff3c" x="2012.5" y="1356.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="9e641c2a-a62c-46c7-9396-c8bd2fdbaf79">
+            <stateMoniker name="/flowObserver/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ff16ff89-31cd-49e1-accf-2e7caad4bd59">
+      <transitionNode Id="580a79e5-bde2-463e-8b6b-470b258eb4a8" x="1750" y="918.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="93ebf4db-b35b-4750-962a-40ad7f744044">
+            <stateMoniker name="/flowObserver/REQUEST" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="b50cf346-fbff-40cd-9309-f1b8d085a952">
+      <transitionNode Id="ae6d61e7-7f44-4d40-a88c-6fe1ecdaa909" x="2362.5" y="1225" event="update" expression="flowIndication || warning">
+        <targetState>
+          <transitionNodeConnectsToStates Id="dc971b7d-1549-4be9-840e-8f57fffab57e">
+            <stateMoniker name="/flowObserver/RESPONSE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

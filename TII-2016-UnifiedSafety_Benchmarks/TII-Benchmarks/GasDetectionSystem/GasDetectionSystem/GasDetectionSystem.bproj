@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ca048360-aec5-4e4f-a1e6-121d5a7f88f8}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>GasDetectionSystem</Name>
+    <ActivePlatform>gnu</ActivePlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'OpenRTM'">
+    <CompilationMode>OpenRTM</CompilationMode>
+    <OutputPath>Generated\OpenRTM\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Deploy'">
+    <CompilationMode>Deploy</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>arm-uclinux-elf-gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Verification'">
+    <CompilationMode>Verify</CompilationMode>
+    <OutputPath>Generated\Verification\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ControllerD.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Controller.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="Controller.fb.checkDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>checkDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.setFailure.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>setFailure.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="ControllerD.fb.checkDetection.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>ControllerD.fb</DependentUpon>
+      <LinkedIntoProjectAt>checkDetection.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="GasBuildUp.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="GasSensor.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="GasSensorD.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="HazardObserver.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="PFailureObserver.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="System.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="System_H.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SystemD.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="TFailureObserver.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Unit.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Ventilator.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="VentilatorD.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="GasEmission.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="GasBuildUp.fb.doBuildUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GasBuildUp.fb</DependentUpon>
+      <LinkedIntoProjectAt>doBuildUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GasBuildUp.fb.doVentilation.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GasBuildUp.fb</DependentUpon>
+      <LinkedIntoProjectAt>doVentilation.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GasEmission.fb.doGasBuildUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GasEmission.fb</DependentUpon>
+      <LinkedIntoProjectAt>Algorithm1.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GasEmission.fb.doGasVenting.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GasEmission.fb</DependentUpon>
+      <LinkedIntoProjectAt>Algorithm2.algo</LinkedIntoProjectAt>
+    </Content>
+  </ItemGroup>
+  <Import Project="UoA.IEC61499.Compiler.targets" />
+</Project>

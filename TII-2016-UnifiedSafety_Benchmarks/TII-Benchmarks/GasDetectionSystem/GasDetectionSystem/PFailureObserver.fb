@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="0228c026-a623-4155-97b3-58f7b9adca70" name="PFailureObserver" organization="User-PC" date="2013-05-31" author="User">
+  <states>
+    <functionBlockModelHasStates Id="73c5efe0-4820-4706-8466-e916d10de367">
+      <state Id="bc3eb0ce-6e12-4227-a9b9-685d910fd1e0" name="Start" x="131.25" y="262.5" isInitial="true" />
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="2da6d19f-481f-47ea-a86d-c51ba9a40345">
+      <functionBlockInterface Id="02f57970-0b2d-47ce-81a4-4e3fc7ea6805" name="PFailureObserver" x="1400" y="481.25" />
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+</functionBlockModel>

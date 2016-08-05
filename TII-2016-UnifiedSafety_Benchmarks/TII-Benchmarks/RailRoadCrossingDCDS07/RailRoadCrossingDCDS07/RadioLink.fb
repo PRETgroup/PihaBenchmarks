@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="3f163165-d54d-4eeb-b76b-3e9c19792896" name="RadioLink" organization="User-PC" date="2013-07-02" author="User">
+  <states>
+    <functionBlockModelHasStates Id="2bc5555b-90e6-4ab8-98b4-bdbd950e8ee5">
+      <state Id="0b31247d-0c18-48b4-a9e6-13f6e8b2c0b8" name="IDLE" x="1400" y="700" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="db2d2771-022c-4164-843c-5e5af59f2ec9">
+            <transitionNodeMoniker Id="3a70279a-82b4-45c9-be7b-f4e651d30caa" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="9ebd47f3-c244-4e7e-8a7c-b69daa845b62">
+            <transitionNodeMoniker Id="a3adeea5-76f9-44de-9256-c0ccb1937455" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0c034ba1-1f19-4a80-9692-a1b897c43d1b">
+            <transitionNodeMoniker Id="d3dbc836-466a-4289-8a2a-f31363f6d660" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="b3fe18bb-626d-4ecf-b701-eed916a675d4">
+      <state Id="24668c74-871d-4593-8b9d-625935777bd9" name="D0" x="2056.25" y="525" isInitial="false">
+        <actionSet>
+          <actionLink Id="0fa8d5f7-c68a-4877-837b-46e25f1beb06">
+            <actionSetMoniker Id="1d43c2c7-31f6-4114-8ba1-cc379a9519fe" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f21cfdc7-4b44-403e-a336-418a1c284d1b">
+            <transitionNodeMoniker Id="635e8956-3483-4005-aa43-076119ef33ed" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="3c21c537-8d76-4077-b040-a3ec60f218dc">
+            <transitionNodeMoniker Id="df0e7622-e7a4-4697-8229-5241988f2a5c" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="86a3e339-6a58-424d-acd4-cb8bdf4a8702">
+            <transitionNodeMoniker Id="8708c023-feba-4d3e-87c3-fe15518d6903" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="d30ecb7f-d6ce-4d07-b191-b6ac67c3e982">
+      <state Id="26c81036-a19e-4308-bc0b-5a401835b592" name="D1" x="2056.25" y="962.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="ceeffe6c-8e0d-4f50-953c-38d86555b7c2">
+            <actionSetMoniker Id="9aa0d919-a583-4788-8645-4ed027fe7752" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0eb216ff-98d6-4d66-8cce-a7ecd390a6b0">
+            <transitionNodeMoniker Id="c327ef18-c48f-4e69-badf-d350728199f3" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="87483fd0-a899-47f5-99f4-a8e276d47a9c">
+            <transitionNodeMoniker Id="cf15985b-9ff5-4f58-a053-9c482fc447b4" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0758df1a-9a2b-427d-9b24-6809806f1b2b">
+            <transitionNodeMoniker Id="d8e1a4a4-1752-44e1-ab29-3931b1623db7" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="51f38315-1452-4b0e-8b07-db7e902c5e8c">
+      <state Id="d96328c7-0b7f-49a5-89b4-8204e46bd9ec" name="D2" x="2056.25" y="1400" isInitial="false">
+        <actionSet>
+          <actionLink Id="d29cc23a-2be0-469f-ace4-7895de07e4cb">
+            <actionSetMoniker Id="598daf2f-02fe-425c-ab24-9fab592f4c85" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="88553321-5df6-41b5-b1e5-894154870b9b">
+            <transitionNodeMoniker Id="59723999-b0f9-4412-a480-a8f3818136b0" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0665d19a-8f79-4d3c-936e-8a7275b25597">
+            <transitionNodeMoniker Id="8c3dfe6a-eeed-46de-9355-44811e2d064b" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="5dc793a8-683d-4d52-9b2f-ba1c0b599fbe">
+            <transitionNodeMoniker Id="59dc4b49-146e-4672-84df-5c760ee94659" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="603816ab-c0e3-4036-88a9-5901170bd1b6">
+      <actionSet Id="1d43c2c7-31f6-4114-8ba1-cc379a9519fe" x="2336.7171189188957" y="525">
+        <actionItems>
+          <actionSetHasActionItems Id="c2befcd8-b481-4c1a-a65d-235e892a979f">
+            <actionEvent Id="c47d652d-69d5-425f-9a38-1e0feb42632e">
+              <event>
+                <actionEventReferencesEvent Id="b6c8b0cc-57dd-46b5-b50a-97e6be2c1cef">
+                  <eventMoniker name="/RadioLink/RadioLink/snd_d0" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="46c9b922-66fc-4690-8538-0951864da8e9">
+      <actionSet Id="9aa0d919-a583-4788-8645-4ed027fe7752" x="2336.7171189188957" y="962.5">
+        <actionItems>
+          <actionSetHasActionItems Id="717be10d-222e-4ecb-839d-578e08fe66f9">
+            <actionEvent Id="86fd6f6a-8391-40a3-8804-26d2e7812b07">
+              <event>
+                <actionEventReferencesEvent Id="31ea3992-e9a5-42ad-a522-466cbb299cd9">
+                  <eventMoniker name="/RadioLink/RadioLink/snd_d1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="1642eb48-eb24-4c82-9fcb-9686a5d2f072">
+      <actionSet Id="598daf2f-02fe-425c-ab24-9fab592f4c85" x="2336.7171189188957" y="1400">
+        <actionItems>
+          <actionSetHasActionItems Id="1528c39d-412c-4440-bb60-a4ec1198bf17">
+            <actionEvent Id="10ded65c-8193-4451-8ea8-d31485145245">
+              <event>
+                <actionEventReferencesEvent Id="4b94a9c9-2bcd-4659-9809-d61a0dad4413">
+                  <eventMoniker name="/RadioLink/RadioLink/snd_d2" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="5e563a9d-6976-4d8f-980e-68d79d5338a4">
+      <functionBlockInterface Id="69181448-9804-4dc1-ab20-b5f645757434" name="RadioLink" x="1400" y="437.5">
+        <events>
+          <functionBlockHasEvents Id="8f7c3e2f-2db1-4c6d-8897-9a7618a4a5a8">
+            <event Id="f0ed51bf-dd26-4503-b447-4772b857d85a" name="rec_d0" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d4a9232d-3fc1-47ce-8a42-f0a52526f0aa">
+            <event Id="3ef14d35-64d0-4949-829f-be1a05fa8223" name="rec_d1" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="8877b134-174f-4458-8c8e-34db07ff860b">
+            <event Id="2040ced9-105f-468a-bd65-eda7eb7cea74" name="rec_d2" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e805400d-1b64-4517-8daa-a5c17b55bc6c">
+            <event Id="b218ffc1-d961-42c3-b005-3c0ce4821c32" name="snd_d0" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="7d2d1e27-8b59-4033-b150-692176a0cf4d">
+            <event Id="3aeeb6d8-17bb-4d28-8244-d4d2c8e996e9" name="snd_d1" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="8ace6d06-eb1f-4727-bca2-0da8f84e2817">
+            <event Id="740950b5-b307-4cc9-a4b2-da1f5a5c05e8" name="snd_d2" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="a4818372-5ae9-4910-b993-e0a2eab8adf7">
+            <inputEventPort Id="42ca128d-d61f-4058-be62-ad60504229e7">
+              <event>
+                <inputEventPortReferencesEvent Id="12dcf8e6-562a-41d4-9adf-6edeff48a544">
+                  <eventMoniker name="/RadioLink/RadioLink/rec_d0" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="44a95670-8251-4a29-893b-ff4d653e19d0">
+            <inputEventPort Id="21237227-66dc-4b74-8bc7-d1238f812737">
+              <event>
+                <inputEventPortReferencesEvent Id="7ec06daf-f06b-4336-b979-c65f49cd9492">
+                  <eventMoniker name="/RadioLink/RadioLink/rec_d1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="84bb656e-e4b7-4220-b529-ab0dd226a3c6">
+            <inputEventPort Id="bb31c974-9421-46ee-b427-99cc719ea787">
+              <event>
+                <inputEventPortReferencesEvent Id="25262a95-dea5-4c32-8b9c-f0b9cc8f7fba">
+                  <eventMoniker name="/RadioLink/RadioLink/rec_d2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d838bee2-b133-4b95-8fb8-e254fdd11fc8">
+            <outputEventPort Id="92eb75e2-454c-47ce-b2dd-8d7a1f080ff0">
+              <event>
+                <outputEventPortReferencesEvent Id="e2abe1f9-5b18-46ea-8422-f30853488965">
+                  <eventMoniker name="/RadioLink/RadioLink/snd_d0" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f56b8650-0729-4c61-8042-e1feb941817a">
+            <outputEventPort Id="2c9debe8-7b77-432d-82fe-eff5ae7f1bd1">
+              <event>
+                <outputEventPortReferencesEvent Id="a19f9d30-ed2a-43da-96a7-31ed80a3cc6f">
+                  <eventMoniker name="/RadioLink/RadioLink/snd_d1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="85c53342-d1ed-432b-b36b-ea5e95e38611">
+            <outputEventPort Id="9c3e852f-1d46-413b-99ec-d36eb5a49c35">
+              <event>
+                <outputEventPortReferencesEvent Id="e7eee46a-2c80-42cc-ad6e-2544c0fe04ac">
+                  <eventMoniker name="/RadioLink/RadioLink/snd_d2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3996f4e2-0f2b-4f6e-9e4d-b3e7e5b880b4">
+      <transitionNode Id="3a70279a-82b4-45c9-be7b-f4e651d30caa" x="1741.0530490875244" y="515.49426990747452" event="rec_d0">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a6fa5767-83eb-4f98-b965-1372a1d5864c">
+            <stateMoniker name="/RadioLink/D0" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d86919db-20d1-4aab-bb24-8a50326ad780">
+      <transitionNode Id="a3adeea5-76f9-44de-9256-c0ccb1937455" x="1682.9909634590147" y="690.08050763607025" event="rec_d1">
+        <targetState>
+          <transitionNodeConnectsToStates Id="7217d565-ed34-4258-a998-5263ea53cde3">
+            <stateMoniker name="/RadioLink/D1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="152da407-9187-4a1e-82c3-c5f5bf452763">
+      <transitionNode Id="d3dbc836-466a-4289-8a2a-f31363f6d660" x="1792" y="926.74999999999989" event="rec_d2">
+        <targetState>
+          <transitionNodeConnectsToStates Id="56202ee9-b58b-4857-8246-d3aed7b4e3e6">
+            <stateMoniker name="/RadioLink/D2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="10cf4bb8-6eda-4a51-bb44-bc8eb580b146">
+      <transitionNode Id="df0e7622-e7a4-4697-8229-5241988f2a5c" x="2085.0440125465393" y="482.57477754354477" event="rec_d1">
+        <targetState>
+          <transitionNodeConnectsToStates Id="60742ce2-c611-427a-a724-425d27feb994">
+            <stateMoniker name="/RadioLink/D1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="45cd9aec-41b5-4e1b-b9c5-dd08a690405d">
+      <transitionNode Id="d8e1a4a4-1752-44e1-ab29-3931b1623db7" x="2087.9909634590149" y="944.83050763607025" event="rec_d2">
+        <targetState>
+          <transitionNodeConnectsToStates Id="4d163787-6bd2-4096-8f91-dfba5315bf10">
+            <stateMoniker name="/RadioLink/D2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="214dc4e4-ee8b-4051-bc09-379a1432d51d">
+      <transitionNode Id="8708c023-feba-4d3e-87c3-fe15518d6903" x="2099.0530490875244" y="659.24426990747452" event="rec_d2">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ed19d41d-e11c-4e70-9b43-a9be589d5e7a">
+            <stateMoniker name="/RadioLink/D2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4387e3d8-ac06-445e-aab7-d43b9775fc3d">
+      <transitionNode Id="635e8956-3483-4005-aa43-076119ef33ed" x="2118.1060981750488" y="350" event="rec_d0">
+        <targetState>
+          <transitionNodeConnectsToStates Id="74b99c00-b036-47d4-a018-083bd4f6dbca">
+            <stateMoniker name="/RadioLink/D0" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8bdf09b7-6515-4e9c-8e81-6e3ecb7f0814">
+      <transitionNode Id="59dc4b49-146e-4672-84df-5c760ee94659" x="2075" y="1051.5" event="rec_d2">
+        <targetState>
+          <transitionNodeConnectsToStates Id="6fd7698b-e079-4a2a-a921-1fd4ecc4ea66">
+            <stateMoniker name="/RadioLink/D2" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="83950634-d413-4365-a35e-1bc9ef7830be">
+      <transitionNode Id="cf15985b-9ff5-4f58-a053-9c482fc447b4" x="2080" y="626" event="rec_d1">
+        <targetState>
+          <transitionNodeConnectsToStates Id="845e458b-d45b-4852-ba76-c1a477d63255">
+            <stateMoniker name="/RadioLink/D1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="158b4710-9df9-4e1f-bfa4-363017587963">
+      <transitionNode Id="c327ef18-c48f-4e69-badf-d350728199f3" x="2056.25" y="783.75" event="rec_d0">
+        <targetState>
+          <transitionNodeConnectsToStates Id="35934f54-5a0b-40c2-b272-fe8079515ca4">
+            <stateMoniker name="/RadioLink/D0" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0ba03ab3-efcd-4f44-ada9-ad55a8ad203a">
+      <transitionNode Id="8c3dfe6a-eeed-46de-9355-44811e2d064b" x="2056.25" y="1176.25" event="rec_d1">
+        <targetState>
+          <transitionNodeConnectsToStates Id="507ad9de-a7ce-45a7-b999-2c4bb20f446d">
+            <stateMoniker name="/RadioLink/D1" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="b1f96fba-85e2-4ec1-a061-c542f373ebb5">
+      <transitionNode Id="59723999-b0f9-4412-a480-a8f3818136b0" x="2056.25" y="970.49999999999989" event="rec_d0">
+        <targetState>
+          <transitionNodeConnectsToStates Id="09bebea3-fdbb-476d-ab50-efa28f57f441">
+            <stateMoniker name="/RadioLink/D0" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="20275f23-6feb-448d-ac9f-6d3d15ca0c62" name="Alarm" organization="User-PC" date="2013-06-20" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="7c0d9bdc-68a1-457a-b4d1-0b7051d2e3f0">
+      <state Id="2ab9dc36-ef03-43fa-b669-e4de84549f73" name="OFF" x="831.25" y="262.5" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0b090208-90c1-4f19-a7ae-48ca1fc8c05e">
+            <transitionNodeMoniker Id="ca19a54c-3fc5-4a51-bdce-f3ead3eab7c0" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="04be142c-2971-476a-b7c9-89cda56e0d45">
+      <state Id="6a49bff0-d88c-49fe-8e38-0427b2cc1098" name="FAILED" x="218.75" y="1006.25" isInitial="false" />
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="eef5a5cf-758d-4455-8528-15a0a8dbb519">
+      <state Id="747dfe94-d708-4714-ad87-a3187e815d6c" name="SYSCHECK" comments="Model failure rate of twice a year." x="218.75" y="612.5" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="921b25b2-f91b-474f-9bb5-c562f420289d">
+            <probabilisticTransitionNodeMoniker Id="0587c1e3-b003-4093-8948-9e2d79be71bc" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="85a64759-0597-4524-b487-4fd8bbd75b0b">
+            <probabilisticTransitionNodeMoniker Id="21756601-860e-49e5-9ac9-6a54fefa8dbc" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="ee6c0f43-8c38-4faf-9313-82e853c45195">
+      <state Id="dfa9413f-f483-43f6-9236-18c1ab12d8d5" name="ON" x="831.25" y="1006.25" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="e878b560-c58d-4189-a4d4-9a4008acb236">
+            <transitionNodeMoniker Id="6b43b5b4-5c74-4fc4-b773-dd323a22956f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="2ec34c47-ce97-4af8-942c-f4dcd12d95f3">
+      <state Id="b53e8178-707f-4285-891f-f6b5535caa08" name="NORMAL" x="1268.75" y="612.5" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0a6de8b1-873a-463d-88cc-0839b8605146">
+            <transitionNodeMoniker Id="e827a5db-ffdc-4c5d-9fc5-2bf021c5c8e4" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="059d6ce1-a660-4c46-88aa-7bd061e1c0a7">
+            <transitionNodeMoniker Id="83ffc51f-a89b-4f31-9052-2a561f73195f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="5d4687e2-cea7-4a5a-a281-ba48ffa1c3b9">
+      <functionBlockInterface Id="b036ee72-699f-49bf-9516-74c5216bca2c" name="Alarm" x="481.25" y="175" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="fc8e6990-e652-44e6-b68e-3d883414ee70">
+            <event Id="af70c503-8086-41ed-a725-fd5b70841788" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="81138207-c05d-4196-996d-616095fe265b">
+            <variable Id="0c50a7f2-e74c-4aa2-bcc9-2b5dd1859efc" name="status" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d8a982c4-a9d4-4a5c-887d-920f121c2123">
+            <inputEventPort Id="848a354f-dba9-42c4-9dd5-822d3a0cf2b0">
+              <targetPort>
+                <association Id="dda2b6fa-e990-4423-b578-cf618bbaf7d7">
+                  <inputVariablePortMoniker Id="9aa901ea-6f57-4a08-918f-f0aa6c873bcf" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="638fa953-7f55-4f08-bc98-6033681f0996">
+                  <eventMoniker name="/Alarm/Alarm/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="acb68c41-52ea-40be-b654-b9030d4cdac5">
+            <inputVariablePort Id="9aa901ea-6f57-4a08-918f-f0aa6c873bcf">
+              <variable>
+                <inputVariablePortReferencesVariable Id="5cfe8687-6f40-4135-b1ae-29d880365ec2">
+                  <variableMoniker name="/Alarm/Alarm/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6be1cf66-0aec-400b-99b7-669a52698cad">
+      <probabilisticTransitionNode Id="0587c1e3-b003-4093-8948-9e2d79be71bc" x="700" y="612.5" probability="0.9999999993658">
+        <targetState>
+          <transitionNodeConnectsToStates Id="8333624d-e734-467e-8269-5fe8447abb01">
+            <stateMoniker name="/Alarm/NORMAL" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="19078b5e-fd06-41f4-a88f-7a6e0276043c">
+      <probabilisticTransitionNode Id="21756601-860e-49e5-9ac9-6a54fefa8dbc" x="218.75" y="787.5" probability="6.342E-10">
+        <targetState>
+          <transitionNodeConnectsToStates Id="30d47023-197c-4245-9724-bf1cb4133770">
+            <stateMoniker name="/Alarm/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="82900807-9c1d-475c-9561-16eb5cf67e77">
+      <transitionNode Id="e827a5db-ffdc-4c5d-9fc5-2bf021c5c8e4" x="1006.25" y="787.5" expression="status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ef238d91-03ef-44fa-8162-860a68306733">
+            <stateMoniker name="/Alarm/ON" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="63d7c797-9d20-4486-b5b3-9425539572a5">
+      <transitionNode Id="83ffc51f-a89b-4f31-9052-2a561f73195f" x="1050" y="437.5" expression="!status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="603ffe9e-a3ef-4e5e-b255-5f48710465ab">
+            <stateMoniker name="/Alarm/OFF" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8b961150-5904-4d5e-94e9-058efd412cf3">
+      <transitionNode Id="ca19a54c-3fc5-4a51-bdce-f3ead3eab7c0" x="568.75" y="437.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="74679b6b-ac60-4f4d-ad47-4dd69d1aeb00">
+            <stateMoniker name="/Alarm/SYSCHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="07525499-2dd7-48e6-bb0b-a8cdfb3fd9fa">
+      <transitionNode Id="6b43b5b4-5c74-4fc4-b773-dd323a22956f" x="612.5" y="831.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ecd37499-af67-4469-aea0-c07d2d016d70">
+            <stateMoniker name="/Alarm/SYSCHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

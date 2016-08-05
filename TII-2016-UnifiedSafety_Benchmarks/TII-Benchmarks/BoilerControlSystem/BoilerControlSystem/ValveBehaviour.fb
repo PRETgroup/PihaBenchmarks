@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="aecc6190-908c-46e3-b65f-3837f2039e87" name="ValveBehaviour" organization="User-PC" date="2013-06-27" author="User">
+  <states>
+    <functionBlockModelHasStates Id="594ba857-0f1f-4c52-b881-5d43458d4234">
+      <state Id="4eb4ccad-ed11-4c78-a158-3b0e5d636323" name="CLOSED" x="743.75" y="306.25" isInitial="true">
+        <actionSet>
+          <actionLink Id="ce14ae4c-1701-4b43-9b89-bb8b6ee8c119">
+            <actionSetMoniker Id="558c4c9c-95df-4fb4-9ab2-78ba93920e1f" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="3ad86862-5625-46a2-8147-8828c9ef4c98">
+            <transitionNodeMoniker Id="42513d80-c5ba-43e6-8a8a-22221b0701e6" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="69a2ec74-089d-4da9-b861-4fd15e99597c">
+      <state Id="644e66ae-cbcc-4d36-9fc6-467bdbdc418e" name="OPEN" x="743.75" y="831.25" isInitial="false">
+        <actionSet>
+          <actionLink Id="caafb547-4623-4146-b4fa-f700bf76c5b8">
+            <actionSetMoniker Id="05597207-df25-4ca7-9a50-4840ca7fe8ab" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="d83e3164-f680-4268-9417-c6f691a9cd63">
+            <transitionNodeMoniker Id="33f5c0fd-36ee-4685-8618-ab72b3371da0" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="3b9abb24-98a5-4048-b764-b26971124483">
+      <actionSet Id="558c4c9c-95df-4fb4-9ab2-78ba93920e1f" x="1129.7468936443327" y="306.25">
+        <actionItems>
+          <actionSetHasActionItems Id="32f2e457-b04a-4306-b212-be49f35dfeb9">
+            <actionAlgorithm Id="f75a6ff5-b65c-4764-b98b-7752238487a0">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="ba5db092-4e81-4d2f-84fd-998f741099ff">
+                  <algorithmMoniker name="/ValveBehaviour/setClosed" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="e5f730fd-b8e4-4e64-81c8-69d633c8bcb4">
+            <actionEvent Id="1556bcb9-b26c-46bf-a1d9-2dcd71c56d5c">
+              <event>
+                <actionEventReferencesEvent Id="2bc799e2-356a-478d-aa67-6395b82959b4">
+                  <eventMoniker name="/ValveBehaviour/ValveBehaviour/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="2ecbb3d5-be8d-4735-ad46-032b5108be2e">
+      <actionSet Id="05597207-df25-4ca7-9a50-4840ca7fe8ab" x="1084.0315720438955" y="831.25">
+        <actionItems>
+          <actionSetHasActionItems Id="78abcffb-c475-499e-8e15-08488170df47">
+            <actionAlgorithm Id="1fd02551-c23d-40c9-b6e7-1ff20faad3cc">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="86e18b12-21f8-4f9a-b0b5-9638d87ba41f">
+                  <algorithmMoniker name="/ValveBehaviour/setOpen" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="280cfe6c-f3be-4572-99ea-de2116b00db6">
+            <actionEvent Id="2657a597-06cd-4315-8561-c20320ff575a">
+              <event>
+                <actionEventReferencesEvent Id="06f1824b-a837-4e22-a98e-3c8a52683f95">
+                  <eventMoniker name="/ValveBehaviour/ValveBehaviour/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="be322b22-364e-411a-9f7c-8ae38d042a9a">
+      <algorithm Id="2dc92149-7bdb-4c6b-b4cc-9a472ab0176e" name="setOpen" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="387669dc-6fbc-4403-8e68-b304fda06d78">
+      <algorithm Id="6406205f-58b5-45b6-b7e3-5176530ae7d3" name="setClosed" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="090045d1-4a9e-496c-ad75-6472da4aaf67">
+      <functionBlockInterface Id="f509b62e-fb50-4a34-9383-0e9f1ac3d901" name="ValveBehaviour" x="831.25" y="306.25">
+        <events>
+          <functionBlockHasEvents Id="17cdb4ef-17ed-4001-864d-22585210fe0e">
+            <event Id="38010c2e-a84e-4e1f-be46-15eea37e8999" name="reload" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6aca00bc-938c-4a21-9604-e08a57b9df11">
+            <event Id="9336839f-d925-48aa-886b-8fb91c40f2b4" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="8a8584b0-8a14-4588-b200-8aa17dea7b49">
+            <variable Id="7bbdf446-6372-4439-97de-4e5f66669e9c" name="status" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="0b189c57-86d5-4e83-ac5d-48b5a8e0dd7b">
+            <variable Id="877b7fb0-047e-4cfd-89ec-2124a67fd4e2" name="isOpen" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="7a68ea96-61af-4b20-9d30-650302f6b73a">
+            <inputEventPort Id="55e9a28f-5957-4882-a109-8cfeb6eb72ba">
+              <targetPort>
+                <association Id="d24fe6c8-333a-4084-8d06-c229e9776cda">
+                  <inputVariablePortMoniker Id="786e341e-e881-4d0f-bda7-158c28c8e26f" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="5003e65e-327e-45e3-9ef3-a35e5dc7de12">
+                  <eventMoniker name="/ValveBehaviour/ValveBehaviour/reload" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5830ad67-84c5-44f7-b3ca-5ca1abedb8e3">
+            <outputEventPort Id="38d0df7a-6b92-4a1d-b9b1-e072da9abdae">
+              <targetPort>
+                <association Id="17373541-5fb9-4249-b709-ef4eaa7fc60d">
+                  <outputVariablePortMoniker Id="dc44e763-a0fa-46c0-9794-e4ef5fd35590" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="45b036ca-75e4-4f65-939a-1f1c48e8e0cd">
+                  <eventMoniker name="/ValveBehaviour/ValveBehaviour/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="1795f32d-b711-4607-86f3-31a2b64d1f25">
+            <inputVariablePort Id="786e341e-e881-4d0f-bda7-158c28c8e26f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="c8be3311-f63c-47d7-a83a-a6d60875ba66">
+                  <variableMoniker name="/ValveBehaviour/ValveBehaviour/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="a58a457a-7320-4010-97ac-83ad65b93b03">
+            <outputVariablePort Id="dc44e763-a0fa-46c0-9794-e4ef5fd35590">
+              <variable>
+                <outputVariablePortReferencesVariable Id="2a045841-1eb0-46d8-908c-b46128544739">
+                  <variableMoniker name="/ValveBehaviour/ValveBehaviour/isOpen" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="e7141f59-d6da-442e-bceb-79eead4f8efc">
+      <transitionNode Id="42513d80-c5ba-43e6-8a8a-22221b0701e6" x="437.5" y="612.5" expression="status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="db15b8dd-d0a2-4d74-bdd7-d2f65d79bb42">
+            <stateMoniker name="/ValveBehaviour/OPEN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ce4640a3-0f10-4a5b-bf6f-dea4e7a4d024">
+      <transitionNode Id="33f5c0fd-36ee-4685-8618-ab72b3371da0" x="831.25" y="525" expression="!status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="5b607a99-8149-4f3e-98ee-871dd8592fca">
+            <stateMoniker name="/ValveBehaviour/CLOSED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

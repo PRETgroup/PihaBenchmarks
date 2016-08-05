@@ -1,0 +1,4 @@
+me->down = false;
+me->up = false;
+me->goingUp = false;
+me->goingDown = false;

@@ -1,0 +1,1 @@
+me->needAlarm = (me->d0Detect || me->d1Detect || me->d2Detect);

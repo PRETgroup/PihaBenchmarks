@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="2ed9038c-95c1-4279-abfe-0d46728d3c62" name="Controller" organization="User-PC" date="2013-06-15" author="User">
+  <states>
+    <functionBlockModelHasStates Id="6e83d1f1-0f91-403d-983e-58b158127df9">
+      <state Id="56762165-4a85-4854-96c7-bfe1a96d793c" name="PROCESS" x="437.5" y="481.25" isInitial="true">
+        <actionSet>
+          <actionLink Id="f2202e96-98e9-40e1-86d1-71731d2f4853">
+            <actionSetMoniker Id="4bcc8d54-4a00-476f-b5c7-17960ed9e98b" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="aec53036-c35e-4fdd-a972-2017da43f678">
+            <transitionNodeMoniker Id="94290609-df2c-4ef3-8877-06118bb46c05" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="ac11f76a-84d7-4059-b78c-c4b967ec0763">
+            <transitionNodeMoniker Id="470992cc-9c0e-42a0-ab4d-42fcada28861" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="7f73b684-fccc-46ed-897d-871c7281df5f">
+      <state Id="dd695a31-1053-4ccf-a0a0-ea3eae35717f" name="ALARM" x="481.25" y="918.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="f4b6ff16-9926-475a-b088-d7d85d9d1414">
+            <actionSetMoniker Id="5bb2c422-857f-44e9-9214-b069b9a19f31" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="2a805420-8a75-4f0e-98e3-44b9ff732b12">
+            <transitionNodeMoniker Id="12538ddb-4276-43c6-995e-2bc97a0b81f0" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="ca2b6d49-9a07-459d-a6b9-9d5482a1c793">
+      <actionSet Id="4bcc8d54-4a00-476f-b5c7-17960ed9e98b" x="846.82453036308289" y="481.25">
+        <actionItems>
+          <actionSetHasActionItems Id="e31bc7a7-7291-43b8-9d0b-1a4f27704270">
+            <actionAlgorithm Id="039c46bf-d921-448d-bf1b-63407db91b31">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="8f4740d3-64d6-4d78-9aea-bbf7f660bb11">
+                  <algorithmMoniker name="/Controller/evaluateSignals" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="d6fcea92-073c-422f-be2c-78bcd5ea477f">
+      <actionSet Id="5bb2c422-857f-44e9-9214-b069b9a19f31" x="852.61372536420811" y="918.75">
+        <actionItems>
+          <actionSetHasActionItems Id="fce7a832-5091-42a9-ba3b-db00e42421e7">
+            <actionEvent Id="0cce05c7-d3cc-4527-867a-d573c61f1392">
+              <event>
+                <actionEventReferencesEvent Id="b98ba4ee-cb98-4de0-a58f-49839792e685">
+                  <eventMoniker name="/Controller/Controller/trigger" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="8e2c0aeb-46a8-4dad-b090-45a854eaaefc">
+      <algorithm Id="7bb280e6-6e03-45b8-b7c8-2b2c04350297" name="evaluateSignals" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="66a2bbfc-67c6-48e1-9986-748854ab2e2a">
+      <functionBlockInterface Id="65928121-4e5e-49a7-b82c-e35a030c088a" name="Controller" x="393.75" y="175">
+        <events>
+          <functionBlockHasEvents Id="f5e77c4a-05a7-4f00-9f22-8bb0d8481777">
+            <event Id="55c6b875-2285-47a9-bba6-fcf66400a68c" name="check" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="847f685e-0933-4351-b3d2-e730e3ed1638">
+            <event Id="4874aa57-9335-4ff7-ba9e-d817437efecd" name="trigger" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b1a033d6-1046-41f2-a422-b431408f9d06">
+            <event Id="9335bd77-b2ab-4a57-b3d1-dd1401a6f31f" name="reset" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="7ce8e6e9-1b3d-4e2d-84cb-3fe1de37868f">
+            <variable Id="fd1ee8e8-ab95-4876-8963-17bf46128cb4" name="d0F1Z1" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="8ccc0458-a614-4a95-b76b-f1f221ad2906">
+            <variable Id="d1844e66-025a-4eb7-92e5-b6eec86745fb" name="d0F1Z2" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="d5d3a11d-ea48-4ef6-86e1-301acae40d77">
+            <variable Id="3ee5d02c-6f8d-406c-b5c8-095c36541c17" name="d0F1Z3" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ba6c84ca-9fff-4f40-8a43-580343bbe994">
+            <variable Id="9a91855b-718b-416d-9540-6c0971b6fe13" name="d0F1Z4" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="dc67bec2-a306-45ae-8823-e7ed6f37e49e">
+            <variable Id="752ec413-6cc5-4f1a-95db-a8648b920dc9" name="alarm" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6c643bdf-7bfd-45ca-b511-ae9bebe730a6">
+            <variable Id="b332ed65-b1d1-47fa-8513-6550c3a18529" name="needsReset" scope="Internal" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6e678c83-8c80-4002-af99-7974e0123922">
+            <variable Id="d71b8b5c-6e7f-4b33-a819-bda910080654" name="sprinkle" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="829021b1-3735-41f6-96fb-1e353104222e">
+            <variable Id="8225440e-130a-407f-9014-6a8cd63d038b" name="manPull" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d75319aa-695b-42df-bd52-bea8f19f2a6f">
+            <inputEventPort Id="20a32a02-10ab-4987-8954-8628be8ddf90">
+              <event>
+                <inputEventPortReferencesEvent Id="03b5cbf8-3948-4b05-849d-c02e592ee648">
+                  <eventMoniker name="/Controller/Controller/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="75a19bec-2817-4c14-801c-05e72d7fd8cf">
+            <inputEventPort Id="8acf8543-b803-426d-b6ed-f64b667b3e3a">
+              <targetPort>
+                <association Id="161e9c69-9a51-4e9d-85bf-5d5d2e52527e">
+                  <inputVariablePortMoniker Id="e2e787e2-d92d-4ce6-b1c9-9568099ffa83" />
+                </association>
+                <association Id="7a49cbaa-1a14-4780-a989-4b8e95070c22">
+                  <inputVariablePortMoniker Id="b74851d7-fd5a-4a10-b92b-b2dbf3dc1f29" />
+                </association>
+                <association Id="d19b8554-9331-4156-bad3-3c2decf0853c">
+                  <inputVariablePortMoniker Id="fef89087-d1bf-4440-8c95-9308c30c0eca" />
+                </association>
+                <association Id="dc932339-3346-42e2-ad4f-1e6b6fd9c207">
+                  <inputVariablePortMoniker Id="7e2c71c8-f985-4168-a88c-f8a64ea3825f" />
+                </association>
+                <association Id="2062f46b-1d0e-4ad7-b6f5-a006941ccfe8">
+                  <inputVariablePortMoniker Id="e89b5116-ef2f-4d40-bff3-bb245ebc628f" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="f0bb0540-60a5-452c-86c5-1187471f35f5">
+                  <eventMoniker name="/Controller/Controller/check" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="422fa5e6-5a05-405b-9c4d-49417f9f65d4">
+            <outputEventPort Id="8a14af74-1f02-491c-aaaf-75059a681ae6">
+              <targetPort>
+                <association Id="53853a94-117c-4257-a35b-80a87206a644">
+                  <outputVariablePortMoniker Id="e0b9bc3a-96c2-481e-bdca-2d2ad955dc4c" />
+                </association>
+                <association Id="fcf2e490-00a8-48ba-a9c0-96172cef5269">
+                  <outputVariablePortMoniker Id="d0b9d423-5b36-44f9-ac9a-be6267bd80bd" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="1cdca08e-0e13-4fda-8644-427ca20ea976">
+                  <eventMoniker name="/Controller/Controller/trigger" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="ce4ce54e-a048-438c-9ec3-1768bdd20edf">
+            <inputVariablePort Id="e2e787e2-d92d-4ce6-b1c9-9568099ffa83">
+              <variable>
+                <inputVariablePortReferencesVariable Id="24e7e946-f694-4e6c-9e63-771908c317f5">
+                  <variableMoniker name="/Controller/Controller/d0F1Z1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="b7412cde-82a8-4ca0-9da6-f973066d6c8a">
+            <inputVariablePort Id="b74851d7-fd5a-4a10-b92b-b2dbf3dc1f29">
+              <variable>
+                <inputVariablePortReferencesVariable Id="df2b8985-34f4-4b72-835e-6c0cb81ff8df">
+                  <variableMoniker name="/Controller/Controller/d0F1Z2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="05fd1cf2-515d-4874-b34b-2f68a54b41ef">
+            <inputVariablePort Id="fef89087-d1bf-4440-8c95-9308c30c0eca">
+              <variable>
+                <inputVariablePortReferencesVariable Id="a5280ee7-6b6d-413a-b3d7-c28e7f6b284d">
+                  <variableMoniker name="/Controller/Controller/d0F1Z3" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="4eb13e6f-14c3-40c4-bc4c-514d38968976">
+            <inputVariablePort Id="7e2c71c8-f985-4168-a88c-f8a64ea3825f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="617544af-b564-4df5-9d30-141140e7ab9e">
+                  <variableMoniker name="/Controller/Controller/d0F1Z4" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="4277a1df-d0dc-4c1c-80f3-1291df7b6f52">
+            <inputVariablePort Id="e89b5116-ef2f-4d40-bff3-bb245ebc628f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="fbae36f2-2ed0-400c-89e0-4b33d5c93c2d">
+                  <variableMoniker name="/Controller/Controller/manPull" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="351c3141-3644-413d-ad13-d5a6792a05bb">
+            <outputVariablePort Id="e0b9bc3a-96c2-481e-bdca-2d2ad955dc4c">
+              <variable>
+                <outputVariablePortReferencesVariable Id="dfa41322-69c3-4199-9709-460bc23f0db2">
+                  <variableMoniker name="/Controller/Controller/alarm" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="f371e6f7-4722-43ed-ab2e-6973627f3928">
+            <outputVariablePort Id="d0b9d423-5b36-44f9-ac9a-be6267bd80bd">
+              <variable>
+                <outputVariablePortReferencesVariable Id="14495f61-4c91-4251-a2ea-064a905bab78">
+                  <variableMoniker name="/Controller/Controller/sprinkle" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c76e87ad-16df-4587-af8a-52e8ef2e52ff">
+      <transitionNode Id="470992cc-9c0e-42a0-ab4d-42fcada28861" x="437.5" y="262.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d92c6996-455d-4e5d-aedc-cb23c36feed6">
+            <stateMoniker name="/Controller/PROCESS" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="e26273ec-794c-4716-95e5-b342772bf789">
+      <transitionNode Id="94290609-df2c-4ef3-8877-06118bb46c05" x="612.5" y="683" expression="needsReset">
+        <targetState>
+          <transitionNodeConnectsToStates Id="bcc4ff06-b9a4-4a6f-ba11-bf530f30c927">
+            <stateMoniker name="/Controller/ALARM" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0a3759dd-61f2-4d02-8e14-338d06958bc2">
+      <transitionNode Id="12538ddb-4276-43c6-995e-2bc97a0b81f0" x="306.25" y="700" event="reset">
+        <targetState>
+          <transitionNodeConnectsToStates Id="c855d1a1-652f-4e33-99b1-5d59a0bbd25b">
+            <stateMoniker name="/Controller/PROCESS" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

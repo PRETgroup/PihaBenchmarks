@@ -1,0 +1,1 @@
+me->outValue = (me->inValue > me->threshold);

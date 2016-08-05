@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="abb0dfec-ed72-4039-9640-e953ede4c244" name="GateBehaviourD" organization="User-PC" date="2013-06-30" author="User">
+  <states>
+    <functionBlockModelHasStates Id="d026e109-89ff-4a64-b191-665c2aad1d2d">
+      <state Id="ae08d27c-3c82-4ffd-b5a7-48c21725462c" name="DOWN" x="525" y="262.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="e068c5dc-fbc9-4e3b-aaff-3fbe652ec8f0">
+            <actionSetMoniker Id="4777737f-5e69-4695-a9cb-9adb5fc11a52" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="5178cfb5-a61c-4e18-8cb3-74879d43d6da">
+            <transitionNodeMoniker Id="9fc3decd-56e4-4770-97be-c783acf0e57a" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="ad24dbb9-7b58-452a-b02b-0f46bcb9f603">
+      <state Id="24eb384f-dc2f-4298-900f-dd6410f67726" name="GOINGUP" x="525" y="568.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="4154592b-505d-4f3c-b34d-f60dd29c910c">
+            <actionSetMoniker Id="f8c3cffa-46e2-4f72-8eb1-ab6b46b71029" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0692e794-dc7e-4dad-b12f-4bb50020373b">
+            <transitionNodeMoniker Id="636a036e-edca-4905-8bb3-73f251234ff9" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="fb8d1af4-e6f2-4d48-8fde-90e4bda523b6">
+            <transitionNodeMoniker Id="7609351a-4c26-40ba-bbcd-65414c00e609" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="67789ef1-cda2-46af-a69e-d48c6c307718">
+            <transitionNodeMoniker Id="f1db454b-795e-406e-b907-da611c14221d" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="81b5b9b9-4ba6-45c6-aed8-f3144b62c9dd">
+      <state Id="c66e56ff-8f11-4251-b343-61427395bee4" name="GOINGDOWN" x="525" y="1137.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="b8bb14a1-352e-4bc4-995c-1cfed9c61718">
+            <actionSetMoniker Id="259ffe7c-59f2-4bca-b176-bae0415f4b0d" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="db50b605-b2c4-4252-84b9-3d4ca6c655fa">
+            <transitionNodeMoniker Id="742a9ff0-e45f-4933-91ac-32610b2299fa" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="4e0ac105-a190-4522-82a1-aa085b3666b9">
+            <transitionNodeMoniker Id="0bd34b9f-9dc8-4dda-b333-96459073ba5d" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="6a9b833a-fbd7-44cd-ac86-431b2a57a6d8">
+            <transitionNodeMoniker Id="9241ba15-2192-4cdd-8de9-13aa815f9a15" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="28ff7975-ea00-43ba-9ad3-4ce6571b4f9b">
+      <state Id="9ce6d2a3-ba24-4552-8c01-9eef844dfff6" name="UP" x="1312.5" y="831.25" isInitial="false">
+        <actionSet>
+          <actionLink Id="cba723e5-7db1-4545-aede-adb33bca53b4">
+            <actionSetMoniker Id="212e8e75-9560-4494-8822-f9d3c9c0fc81" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="3676fd59-a154-42d3-b607-08994091aa95">
+            <transitionNodeMoniker Id="1af118df-ad07-4185-b531-2d8ef4b2f60e" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="0bb53836-c8d6-4f6f-920a-e3d7412be653">
+      <actionSet Id="4777737f-5e69-4695-a9cb-9adb5fc11a52" x="1225" y="306.25">
+        <actionItems>
+          <actionSetHasActionItems Id="e66a60f6-6942-4a44-9230-7367905d0ec5">
+            <actionAlgorithm Id="eb4b90bc-a8e7-40e0-ac82-ce354ba3d9e8">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="2a382dbb-fec7-4adc-ae40-2641c1022b50">
+                  <algorithmMoniker name="/GateBehaviourD/setDown" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="575f7b1d-0f35-4198-ac1f-9b41e0566b2f">
+            <actionEvent Id="7552a763-19a8-4d7b-b086-dca7c432d053">
+              <event>
+                <actionEventReferencesEvent Id="a6c50af3-e951-45ac-a6ee-24870352dd03">
+                  <eventMoniker name="/GateBehaviourD/GateBehaviourD/status" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="7f9d66e2-f66a-4dc2-98a5-bb264cb93eee">
+      <actionSet Id="f8c3cffa-46e2-4f72-8eb1-ab6b46b71029" x="1225" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="f1d4ba64-ce93-44ad-ab3e-5db0d5b6fd23">
+            <actionAlgorithm Id="7149bb5e-0304-4b4e-ac47-2ff670145a65">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="0da15ef6-20c1-48a3-a9e7-668d5583b744">
+                  <algorithmMoniker name="/GateBehaviourD/setGoingUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="c60954df-9e71-4a6d-b63c-0ed989a6775c">
+            <actionEvent Id="00359f21-a680-40a3-9f68-a1b119e4f353">
+              <event>
+                <actionEventReferencesEvent Id="f138f55f-85b9-473b-b4b3-296371c2950f">
+                  <eventMoniker name="/GateBehaviourD/GateBehaviourD/status" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="c452ae50-30b9-45ce-9d33-b82a8c110737">
+      <actionSet Id="259ffe7c-59f2-4bca-b176-bae0415f4b0d" x="1312.5" y="1181.25">
+        <actionItems>
+          <actionSetHasActionItems Id="1d555318-c137-47bb-af7b-a0606e46d78c">
+            <actionAlgorithm Id="38c7e97a-fec8-49a5-b9e4-035304b62fc0">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="2942f8a4-a62d-4d43-b19f-36d26d75a210">
+                  <algorithmMoniker name="/GateBehaviourD/setGoingDown" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="eb243fdf-9252-4776-a8a0-de81567b1205">
+            <actionEvent Id="48e60891-186d-4ac8-9f2a-4119f1641271">
+              <event>
+                <actionEventReferencesEvent Id="fd57f421-8375-4dce-abf2-0fb9bac35794">
+                  <eventMoniker name="/GateBehaviourD/GateBehaviourD/status" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="f13d0bb8-9f3f-4c08-8dc6-e31cbeb29fd4">
+      <actionSet Id="212e8e75-9560-4494-8822-f9d3c9c0fc81" x="1881.25" y="918.75">
+        <actionItems>
+          <actionSetHasActionItems Id="6f3c3175-3a29-4d9f-9eff-f857c73d8527">
+            <actionAlgorithm Id="fae7e504-e657-4cf7-b6b1-3c09a8dbaa4f">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="23df6506-6118-4cc4-8638-a3295e911474">
+                  <algorithmMoniker name="/GateBehaviourD/setUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="7280b9a2-5c70-427c-b800-c2eaa3087b03">
+            <actionEvent Id="d84ea0e7-e742-4b92-aa5f-874088d0dea3">
+              <event>
+                <actionEventReferencesEvent Id="d92b26fb-ab1a-4582-a8f9-5d759b3ccc8e">
+                  <eventMoniker name="/GateBehaviourD/GateBehaviourD/status" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="09232aa4-683c-4293-b58a-a7c0f70e8f57">
+      <algorithm Id="5484b70c-81aa-4789-843f-88a82cc86b2f" name="setDown" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="5780aac6-ec29-4e8e-838b-dab789061d36">
+      <algorithm Id="988baf76-a971-43b6-8b57-c1d559514247" name="setUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="f0463879-ce55-4c18-bd6f-5b967be057d9">
+      <algorithm Id="2706cee3-4363-48c7-9f68-cc9e69f9b0d3" name="setGoingDown" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="52f5a7f4-86ad-429d-8348-f92a89c54b08">
+      <algorithm Id="983a2fe6-223f-4a54-a845-7a7e579151c9" name="setGoingUp" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="cd094b33-099b-4a03-a62d-6695e72ede14">
+      <functionBlockInterface Id="49b6af7b-1712-42b6-8579-ffc48c71a124" name="GateBehaviourD" x="918.75" y="175">
+        <events>
+          <functionBlockHasEvents Id="1a5ba992-5e8e-4742-942e-879183898819">
+            <event Id="33d296d8-e897-4eec-946e-a24834d3a0df" name="raise" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a4bf37c5-629e-48c9-b79a-d724627c7d2e">
+            <event Id="c2ad8921-cd55-4cf4-81ef-f434f1477e1a" name="lower" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4ca7f06b-f0b4-40aa-941c-bcd1f87f4d8d">
+            <event Id="520eaec5-9a63-4daf-95d5-362446b413e6" name="status" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="3c9764cb-b107-40cf-9364-c75854e43516">
+            <variable Id="8c12d3f6-8c2a-409e-adbd-7b9be4f769c3" name="down" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="497d978f-1979-4ff1-9f7b-d2a2c5017ed3">
+            <variable Id="c0e51db1-5168-41d8-a88f-fd1047df4360" name="up" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="be59d512-103c-4267-ac91-756182bc1a0c">
+            <variable Id="5364c270-d1b8-4bf5-8162-2ee612252469" name="goingDown" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="dde53250-6140-493e-b11b-e3f4d14b2111">
+            <variable Id="8c38437b-3e69-46e9-ba0d-13dce3c9ab1f" name="goingUp" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="7f22f8d0-10f5-4683-94ee-1c5f77dcc513">
+            <variable Id="41b7e326-46e5-406c-ad62-079aa3473623" name="upCounter" scope="Internal" initialValue="0" type="INT" minimumValue="0" maximumValue="5" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="02b203af-6699-4ad3-9281-08d1b7259cee">
+            <variable Id="09053982-fb75-416f-85ce-62c1071fc469" name="downCounter" scope="Internal" initialValue="0" type="INT" minimumValue="0" maximumValue="5" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="29a875b6-1f85-49ac-8117-6017780d09dd">
+            <inputEventPort Id="5ac88af7-6f28-4343-b3f2-7c2eae83f3aa">
+              <event>
+                <inputEventPortReferencesEvent Id="b602f700-f22f-4791-9c85-f73a2a8aee62">
+                  <eventMoniker name="/GateBehaviourD/GateBehaviourD/raise" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="7609f613-9021-434f-a19a-8d492b7ea3de">
+            <inputEventPort Id="e0766330-3407-4ff1-8c0e-3edc87fb5117">
+              <event>
+                <inputEventPortReferencesEvent Id="7c2d4e0a-f255-4dad-9a56-0bcf2ed9de67">
+                  <eventMoniker name="/GateBehaviourD/GateBehaviourD/lower" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5f747edd-db6f-4fe6-bc61-cb01977af1c9">
+            <outputEventPort Id="58c52385-6d64-4cc2-bf64-a2ad919f428b">
+              <targetPort>
+                <association Id="37edc21c-28d5-48c5-8b2f-b76deb831307">
+                  <outputVariablePortMoniker Id="3d159f1b-c9b9-4119-834b-43fb473ea84e" />
+                </association>
+                <association Id="b12b7f5b-19c9-4a1f-b6b4-6f7314658296">
+                  <outputVariablePortMoniker Id="0541b8cf-e54f-4c7a-be0c-9510564ed058" />
+                </association>
+                <association Id="d6880286-c6a5-40a5-b516-22a59604af31">
+                  <outputVariablePortMoniker Id="29d6ec07-e8d2-4432-836b-7f998e8ce665" />
+                </association>
+                <association Id="2b8f1f72-7dcb-4b53-bfb9-93893dc6c4cd">
+                  <outputVariablePortMoniker Id="dedc3d0a-a006-4fc1-8591-6c3747151375" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="d9aababe-b9eb-428c-9e83-2c80afe1916e">
+                  <eventMoniker name="/GateBehaviourD/GateBehaviourD/status" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="04ec3c1d-427c-47ed-93ef-457c6820835b">
+            <outputVariablePort Id="3d159f1b-c9b9-4119-834b-43fb473ea84e">
+              <variable>
+                <outputVariablePortReferencesVariable Id="1af38025-f0ac-41e8-b7ba-d0c14c2b60d5">
+                  <variableMoniker name="/GateBehaviourD/GateBehaviourD/down" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="87cb77bc-e5e4-4872-bd8e-dd2bf49c4c11">
+            <outputVariablePort Id="0541b8cf-e54f-4c7a-be0c-9510564ed058">
+              <variable>
+                <outputVariablePortReferencesVariable Id="921199a8-a05b-48af-b351-a42a5bffc91c">
+                  <variableMoniker name="/GateBehaviourD/GateBehaviourD/up" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="8d92582f-5d06-49ac-afac-4e25cf4d12cb">
+            <outputVariablePort Id="29d6ec07-e8d2-4432-836b-7f998e8ce665">
+              <variable>
+                <outputVariablePortReferencesVariable Id="2b0032ee-49df-4f6a-abdc-8fafb7fc84fe">
+                  <variableMoniker name="/GateBehaviourD/GateBehaviourD/goingDown" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="799ef381-1d6b-405e-a1cb-9377e9fde9eb">
+            <outputVariablePort Id="dedc3d0a-a006-4fc1-8591-6c3747151375">
+              <variable>
+                <outputVariablePortReferencesVariable Id="67d51f9d-c6c8-4fe8-8c35-119310a511c9">
+                  <variableMoniker name="/GateBehaviourD/GateBehaviourD/goingUp" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5a4385dc-7c26-4038-8d6e-d01e211d4514">
+      <transitionNode Id="9fc3decd-56e4-4770-97be-c783acf0e57a" x="525" y="401.625" event="raise">
+        <targetState>
+          <transitionNodeConnectsToStates Id="b731caf6-33cf-40d1-b4e5-2583fe8b0859">
+            <stateMoniker name="/GateBehaviourD/GOINGUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="37de4b71-d3cf-49a2-b727-32a8133efc7b">
+      <transitionNode Id="f1db454b-795e-406e-b907-da611c14221d" x="568" y="598.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="2e684f34-bf79-441a-9194-4def07bb916d">
+            <stateMoniker name="/GateBehaviourD/GOINGUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ac69015e-cd4e-48e4-a19a-9025d69d47de">
+      <transitionNode Id="636a036e-edca-4905-8bb3-73f251234ff9" x="525" y="859.12500000000011" event="lower">
+        <targetState>
+          <transitionNodeConnectsToStates Id="78b9c06a-06bd-462c-8294-407c94a3f813">
+            <stateMoniker name="/GateBehaviourD/GOINGDOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="e8b83416-5367-4149-8789-ee21bba26020">
+      <transitionNode Id="742a9ff0-e45f-4933-91ac-32610b2299fa" x="525" y="830.125" event="raise">
+        <targetState>
+          <transitionNodeConnectsToStates Id="127df966-8d57-4650-9934-573873fa5fca">
+            <stateMoniker name="/GateBehaviourD/GOINGUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d1f19443-01b0-4d2d-9aa6-2fe78f72116d">
+      <transitionNode Id="9241ba15-2192-4cdd-8de9-13aa815f9a15" x="637" y="1053.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d991b73a-eefe-4cee-8825-ff7bd2b76d12">
+            <stateMoniker name="/GateBehaviourD/GOINGDOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="b877f3d2-777e-4abe-9875-2654d393d992">
+      <transitionNode Id="1af118df-ad07-4185-b531-2d8ef4b2f60e" x="859.75" y="990.37500000000011" event="lower">
+        <targetState>
+          <transitionNodeConnectsToStates Id="716de727-25c9-4467-b4bd-a6fe36b226a9">
+            <stateMoniker name="/GateBehaviourD/GOINGDOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8b374229-abf3-4c72-ba10-91f83744b878">
+      <transitionNode Id="7609351a-4c26-40ba-bbcd-65414c00e609" x="883.75" y="680" expression="upCounter==3">
+        <targetState>
+          <transitionNodeConnectsToStates Id="eed96add-2428-4f9b-ac53-472feda394af">
+            <stateMoniker name="/GateBehaviourD/UP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="08e04909-54a7-48c3-9fd4-b1fef434be84">
+      <transitionNode Id="0bd34b9f-9dc8-4dda-b333-96459073ba5d" x="525" y="626" expression="downCounter==3">
+        <targetState>
+          <transitionNodeConnectsToStates Id="8ca6c973-866b-4fc2-a396-f6e8bbfe73ca">
+            <stateMoniker name="/GateBehaviourD/DOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

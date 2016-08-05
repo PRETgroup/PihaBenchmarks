@@ -1,0 +1,6 @@
+me->down = false;
+me->up = false;
+me->goingUp = false;
+me->goingDown = true;
+me->upCounter = 0;
+me->downCounter = (me->downCounter < 5) ? me->downCounter + 1 : me->downCounter;

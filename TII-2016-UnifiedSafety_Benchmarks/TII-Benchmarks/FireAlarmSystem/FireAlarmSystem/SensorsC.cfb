@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="10e8ba87-21cb-4346-8564-21cc634d3612" name="SensorsC" organization="User-PC" date="2013-06-29" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="147cca03-9907-48be-81d7-9a1d4c97bd04">
+      <functionBlockInterface Id="5f49620a-5a8f-440a-95d1-50dffaaee1b3" name="SensorsC" x="306.25" y="218.75" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="04f9e923-2f58-48d7-b6af-73b7ec11f37b">
+            <event Id="09e00bbc-90b1-4fc2-bb46-8b50c9ed2d50" name="output" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c4f25e2c-7743-4ac0-b72e-a83430b05de2">
+            <event Id="f7279e9f-814d-42fd-a4f1-a8b30feec7ef" name="reset" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="34ebf888-015f-4854-a56b-a0f68351bcdd">
+            <event Id="eaa281f9-7a54-4fce-97ca-77aee282a53a" name="incident" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="093dc833-6272-4415-9a42-03c13451bb3b">
+            <variable Id="8e4ac993-d0e4-4531-a82a-1980df2c44a7" name="detected0" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e34152db-cb2c-43d0-a86b-900ec6ba8231">
+            <variable Id="c85f5c76-7414-4134-9a84-1e825184166d" name="detected1" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="5c30bc77-c81f-4ec4-ab28-cd2f8808f9a8">
+            <variable Id="e6d17adf-99eb-44d6-9204-abdf45626fd1" name="detected2" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="bec5845e-3f08-4fe8-abd5-626e76b3f2e3">
+            <inputEventPort Id="5ca316fa-74c7-4d25-951d-62e881855131">
+              <proxyTargetPorts>
+                <proxyConnection Id="907a5b2a-7f56-4628-a402-2692fd5e788b">
+                  <inputEventPortMoniker Id="2847bf44-1ea2-41b3-b06a-35dd531315a3" />
+                </proxyConnection>
+                <proxyConnection Id="1fc1e03c-3cef-49f7-9555-fd270c19cab7">
+                  <inputEventPortMoniker Id="b9c18b68-625e-40ea-bbc1-eb67d588cbb4" />
+                </proxyConnection>
+                <proxyConnection Id="b1227d73-c90c-4b65-9a85-62478b63c1ff">
+                  <inputEventPortMoniker Id="9ce2e20a-459a-4f07-89a1-dc2cd2a4b17c" />
+                </proxyConnection>
+                <proxyConnection Id="d571756b-cbf2-4c34-b220-0ac6c8674c04">
+                  <inputEventPortMoniker Id="94722b27-2d76-4e86-b41e-1a0a71278eac" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="43d70a8f-21fd-4a0c-8d11-23fa72a22c8d">
+                  <eventMoniker name="/SensorsC/SensorsC/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a58accd0-bd2c-4a98-8d03-d51b3924e234">
+            <outputEventPort Id="a0fe0c10-f29f-41cd-b803-62c3370d1732">
+              <proxyTargetPorts>
+                <proxyConnection Id="c5d9f363-c2a0-46eb-b5f2-042ec324e374">
+                  <outputEventPortMoniker Id="54868fb0-2fa6-42d4-90b6-a3bf9a28214b" />
+                </proxyConnection>
+                <proxyConnection Id="ea7722fb-b57a-4416-a538-5c87713e41a8">
+                  <outputEventPortMoniker Id="b417bf74-e4f4-4f3a-8369-d5ae8de41de1" />
+                </proxyConnection>
+                <proxyConnection Id="832e16f6-0687-4f91-9cdd-9e56a4ac588f">
+                  <outputEventPortMoniker Id="b8a0f76f-6ded-45bc-bbf9-74f222790d89" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="2abed481-5b2e-46a2-9602-f88961c81d14">
+                  <eventMoniker name="/SensorsC/SensorsC/incident" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a05fb582-e54b-4acf-9016-c64a21568119">
+            <outputEventPort Id="cce54a1a-518d-4922-9249-6495af7b71c2">
+              <proxyTargetPorts>
+                <proxyConnection Id="014f1246-ca62-4dd3-ba5a-f396a638897f">
+                  <outputEventPortMoniker Id="8a775276-cfda-48a7-a828-e677d7871cf7" />
+                </proxyConnection>
+                <proxyConnection Id="1a3338ff-45e7-4024-8ebe-30a3a0935486">
+                  <outputEventPortMoniker Id="21b8e29e-6446-45ea-857b-6c0da12634c9" />
+                </proxyConnection>
+                <proxyConnection Id="47dd2d30-690e-4919-badc-b157d2e8b97d">
+                  <outputEventPortMoniker Id="17b0904b-af7e-4135-88ed-df3b719784bc" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="e9b261f0-414e-4461-9d81-1ee2d872742e">
+                  <eventMoniker name="/SensorsC/SensorsC/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="082d4d4c-36c4-49fe-9837-420652177fd4">
+            <outputVariablePort Id="919a2f83-44e1-4d67-b617-fee734401272">
+              <proxyTargetPorts>
+                <proxyConnection Id="77e10598-1bec-4743-bace-818f108503ec">
+                  <outputVariablePortMoniker Id="8f021337-846f-45a5-989a-b7e2ad3f71fd" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="1063ac02-efdc-459a-9503-e25a82cef93d">
+                  <variableMoniker name="/SensorsC/SensorsC/detected0" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="3adb77f7-97d3-4860-b87c-50080529b338">
+            <outputVariablePort Id="afff14f6-c364-40da-b86a-37097f37e16b">
+              <proxyTargetPorts>
+                <proxyConnection Id="2c09afc7-1061-4eeb-96de-624a8c984dcb">
+                  <outputVariablePortMoniker Id="0a34fa86-2857-4113-9e52-12c386a1c6d5" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="d6aba139-ee87-4d33-8a72-4e0985e4c040">
+                  <variableMoniker name="/SensorsC/SensorsC/detected1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="3de41b04-0d94-4815-bece-3787a6201a0e">
+            <outputVariablePort Id="c9ec971b-423c-4d19-93e1-567fd605d7b1">
+              <proxyTargetPorts>
+                <proxyConnection Id="fdcd8e28-75e7-4ea4-a44c-71c48b65a5d7">
+                  <outputVariablePortMoniker Id="69998a27-a619-4677-a55b-46936e019acb" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="3c4d429b-920f-4a2d-9197-24749af4d05f">
+                  <variableMoniker name="/SensorsC/SensorsC/detected2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="6202dc23-9868-47b3-a084-2191aab9f577">
+      <functionBlockReference Id="82c7f540-9591-4c8a-862e-c326b7363762" name="d0" x="962.5" y="175" creationMode="Resource" referencedFile="SmokeDetectorD.fb">
+        <events>
+          <functionBlockHasEvents Id="869bec8b-ee3b-4c3d-8ef2-29c3e34e1418">
+            <eventRef Id="b4a6b304-93df-4e5c-b05a-c563854046e0" name="fireIncident" scope="Input" referencedID="df3e03a3-bf34-4b24-a61c-a7a742bf8d0b" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e59e3bdf-f8fb-4dad-8319-7ef2c7b1e7b2">
+            <eventRef Id="4592593a-34b5-41c7-9955-422b30e0a538" name="output" scope="Output" referencedID="36addfb1-3446-4bb7-83ac-03a3861093c2" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="769e0c23-0121-4758-adcd-20d92839ad07">
+            <eventRef Id="8f93227b-aa07-4a40-82d9-9d9d7a86b8be" name="reset" scope="Input" referencedID="09f1807e-42d9-4b9c-a1a2-e148c7805f5a" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="8d594013-5d52-485e-a80d-bfa7c11f0562">
+            <variableRef Id="ab256b18-f778-436a-9e1c-05bca10e7b75" name="detected" scope="Output" referencedID="9099aaa3-0f11-42de-bf3d-b320e4424cfd" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="8d499578-98b3-4320-809c-4fc3880792b2">
+            <inputEventPort Id="2f837901-6e79-4bc2-948a-0f2ad34cbb33">
+              <event>
+                <inputEventPortReferencesEvent Id="91810bc4-dc9a-4c45-9725-cf38fcd6ddde">
+                  <eventRefMoniker name="/SensorsC/d0/fireIncident" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="16fa0553-0d54-4747-9866-9441e4d5b3f4">
+            <inputEventPort Id="b9c18b68-625e-40ea-bbc1-eb67d588cbb4">
+              <event>
+                <inputEventPortReferencesEvent Id="175cfed0-d477-44b7-8cf6-bd4c9c63f8a6">
+                  <eventRefMoniker name="/SensorsC/d0/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="bcbbe655-26e7-4d59-b649-32c73e52b228">
+            <outputEventPort Id="8a775276-cfda-48a7-a828-e677d7871cf7">
+              <event>
+                <outputEventPortReferencesEvent Id="5bf4ff11-f155-4161-b835-6ec9f0f246da">
+                  <eventRefMoniker name="/SensorsC/d0/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="33b2cae3-f048-4b6d-82dd-a24f7f0987cb">
+            <outputVariablePort Id="8f021337-846f-45a5-989a-b7e2ad3f71fd">
+              <variable>
+                <outputVariablePortReferencesVariable Id="e465c50c-3a42-45b6-ac3c-a27ccbbff203">
+                  <variableRefMoniker name="/SensorsC/d0/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="f5411189-e20f-49b0-b6dc-a0beb5855e5e">
+      <functionBlockReference Id="1c5cca41-000b-4047-836e-c4937db2311e" name="d1" x="962.5" y="787.5" creationMode="Resource" referencedFile="SmokeDetectorD.fb">
+        <events>
+          <functionBlockHasEvents Id="2538282b-9b82-429a-a2b6-01247d9c8cd4">
+            <eventRef Id="31c742dc-bf99-4e6b-8174-773188ae384d" name="fireIncident" scope="Input" referencedID="df3e03a3-bf34-4b24-a61c-a7a742bf8d0b" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c78a6d0a-e116-4af4-96ad-8b2ba8f4a313">
+            <eventRef Id="3eaf9dca-082d-483f-8a98-6c29715087e1" name="output" scope="Output" referencedID="36addfb1-3446-4bb7-83ac-03a3861093c2" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="876fdbad-ee2b-49fd-be34-46bc0141d226">
+            <eventRef Id="68149c4c-2a83-4999-83bf-9b9692cd70e4" name="reset" scope="Input" referencedID="09f1807e-42d9-4b9c-a1a2-e148c7805f5a" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="e28aefca-9218-4991-bccf-6f3f81f6e8bb">
+            <variableRef Id="d42389d2-356f-4c30-bb9b-572743fbbcd5" name="detected" scope="Output" referencedID="9099aaa3-0f11-42de-bf3d-b320e4424cfd" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="9388c209-c500-43d5-b54a-9fa3bb8faae4">
+            <inputEventPort Id="875a72ca-dbb5-43a3-89e1-2f718ba7f29f">
+              <event>
+                <inputEventPortReferencesEvent Id="d02bbe3e-7d30-4ca8-90a3-1220f88369ed">
+                  <eventRefMoniker name="/SensorsC/d1/fireIncident" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="7da79bc2-c25d-4dd8-9826-ec243c615f79">
+            <inputEventPort Id="9ce2e20a-459a-4f07-89a1-dc2cd2a4b17c">
+              <event>
+                <inputEventPortReferencesEvent Id="b2fae8d7-1fdc-4b50-91de-4cdafaf82bc6">
+                  <eventRefMoniker name="/SensorsC/d1/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3b074758-72eb-4bfb-8777-6e3cfbe328c3">
+            <outputEventPort Id="21b8e29e-6446-45ea-857b-6c0da12634c9">
+              <event>
+                <outputEventPortReferencesEvent Id="fa12a4eb-f0f3-4bcc-9d0d-0a578e829eb1">
+                  <eventRefMoniker name="/SensorsC/d1/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="3b240fa9-aa8e-46a1-8e83-07382ff851b6">
+            <outputVariablePort Id="0a34fa86-2857-4113-9e52-12c386a1c6d5">
+              <variable>
+                <outputVariablePortReferencesVariable Id="e2033b02-04bc-44f9-841c-0e47a768edde">
+                  <variableRefMoniker name="/SensorsC/d1/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="b41525cb-dec9-478e-aead-796d93cc33ef">
+      <functionBlockReference Id="f4d33ca2-09a2-40f3-b3ed-f44925cffc07" name="d2" x="962.5" y="1400" creationMode="Resource" referencedFile="SmokeDetectorD.fb">
+        <events>
+          <functionBlockHasEvents Id="54cb3960-c5cb-4515-9cb2-acd81f315bae">
+            <eventRef Id="77fc7c84-0802-4b78-96ba-c72c307d7d6b" name="fireIncident" scope="Input" referencedID="df3e03a3-bf34-4b24-a61c-a7a742bf8d0b" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d7531cc2-9f52-41e5-99be-ee4136763f8b">
+            <eventRef Id="2c3db2d9-a27c-4354-8ee3-5a1ad486b9ad" name="output" scope="Output" referencedID="36addfb1-3446-4bb7-83ac-03a3861093c2" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="069e8b87-12a4-417f-a6f5-bb5c23906237">
+            <eventRef Id="576571f9-61ce-4435-9a03-f05f27e5a9a4" name="reset" scope="Input" referencedID="09f1807e-42d9-4b9c-a1a2-e148c7805f5a" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="c255584d-a5fc-44c3-9574-e0dda2e98d78">
+            <variableRef Id="9201722d-3d4e-4650-a42e-cf20a3b4182a" name="detected" scope="Output" referencedID="9099aaa3-0f11-42de-bf3d-b320e4424cfd" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="44b8b2b3-9f3a-4842-ab2f-f0062d2eb664">
+            <inputEventPort Id="e3187885-3f73-4183-b70d-d242bb008108">
+              <event>
+                <inputEventPortReferencesEvent Id="7fcd8907-ac56-4049-b05a-6e9948449e53">
+                  <eventRefMoniker name="/SensorsC/d2/fireIncident" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="f86ab73d-bec6-4b1f-a7b0-1a35717e0dc3">
+            <inputEventPort Id="94722b27-2d76-4e86-b41e-1a0a71278eac">
+              <event>
+                <inputEventPortReferencesEvent Id="34e4ad15-e909-4ec0-8bb8-1202928c496e">
+                  <eventRefMoniker name="/SensorsC/d2/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="9ae2cb6d-b048-4302-8228-9ad2b848dd8c">
+            <outputEventPort Id="17b0904b-af7e-4135-88ed-df3b719784bc">
+              <event>
+                <outputEventPortReferencesEvent Id="6016d664-8b2e-49e4-8580-422b4cd3d838">
+                  <eventRefMoniker name="/SensorsC/d2/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="a1668f2b-88cd-4998-a5b8-954b0b98b650">
+            <outputVariablePort Id="69998a27-a619-4677-a55b-46936e019acb">
+              <variable>
+                <outputVariablePortReferencesVariable Id="690d1732-e148-4fe4-a5f9-016d3d95b2cb">
+                  <variableRefMoniker name="/SensorsC/d2/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="04df13ed-f065-4b57-8854-47b09ec4e658">
+      <functionBlockReference Id="25c5490a-4c9c-44a0-99d0-788c3e7b61f3" name="sim" x="175" y="175" creationMode="Resource" referencedFile="FireIncidentSim.fb">
+        <events>
+          <functionBlockHasEvents Id="447bdcce-f9dc-40df-b343-1bd1dadb88f5">
+            <eventRef Id="e740d066-4e20-41ec-8ca5-f56780c4fcb8" name="incident0" scope="Output" referencedID="c287ffa7-e4cb-4f83-8fa3-88ab83b3911c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="90cdf6ae-e0a4-4fb6-ac7b-48a43849624f">
+            <eventRef Id="beb86a5b-6ff0-4b36-9643-46e1cb17a9ef" name="incident1" scope="Output" referencedID="a66e6f96-ec5c-4e59-afda-42c4f826c710" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ba51654e-09bc-4301-be45-4d3c49d4895f">
+            <eventRef Id="88d9dbe9-762f-42cf-bd54-581e322d2809" name="incident2" scope="Output" referencedID="9830a33e-7aff-4816-8ef2-c0ff4b8c826e" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f1d16967-aa5d-4642-95bf-d822fe8bc32d">
+            <eventRef Id="3ebf46a8-866a-4de1-8b4d-e9c9b68ce5e0" name="reset" scope="Input" referencedID="cc316088-5999-4f27-999c-759421fdc05b" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="909ffb2b-db78-43a7-bfd0-7a10ed1056ef">
+            <inputEventPort Id="2847bf44-1ea2-41b3-b06a-35dd531315a3">
+              <event>
+                <inputEventPortReferencesEvent Id="451fa3cb-2dba-4bff-b5fa-c6cd87423116">
+                  <eventRefMoniker name="/SensorsC/sim/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="76dd92a9-95e3-4b84-a2f0-64d0824284cf">
+            <outputEventPort Id="54868fb0-2fa6-42d4-90b6-a3bf9a28214b">
+              <wireTargetPorts>
+                <wireConnection Id="7a42b614-435d-4ee4-8189-fd10449c31ba" unitDelayed="false">
+                  <inputEventPortMoniker Id="2f837901-6e79-4bc2-948a-0f2ad34cbb33" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="fdad3087-ad07-4ced-8bfb-01f242a1f9e7">
+                  <eventRefMoniker name="/SensorsC/sim/incident0" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0079b56b-fd0f-4f15-8401-70edb9fdc76f">
+            <outputEventPort Id="b417bf74-e4f4-4f3a-8369-d5ae8de41de1">
+              <wireTargetPorts>
+                <wireConnection Id="ce36ab88-1055-4244-9076-e14ccce482b2" unitDelayed="false">
+                  <inputEventPortMoniker Id="875a72ca-dbb5-43a3-89e1-2f718ba7f29f" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="1b054e4d-7067-4866-a038-dfeca8dc663b">
+                  <eventRefMoniker name="/SensorsC/sim/incident1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="99365c91-c62a-4bf4-ae6d-854bb00740b5">
+            <outputEventPort Id="b8a0f76f-6ded-45bc-bbf9-74f222790d89">
+              <wireTargetPorts>
+                <wireConnection Id="38fb4acb-0af2-4bd1-b585-c1393ec74c17" unitDelayed="false">
+                  <inputEventPortMoniker Id="e3187885-3f73-4183-b70d-d242bb008108" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="dad69330-7edc-4c70-8124-457fc1c6d8e2">
+                  <eventRefMoniker name="/SensorsC/sim/incident2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

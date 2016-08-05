@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="2474180d-35c8-4517-b592-b71e6eda41b9" name="Track" organization="User-PC" date="2013-06-26" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="82738b2e-7861-46cc-a322-013bb7247581">
+      <functionBlockInterface Id="12afe0a5-6e35-428e-901e-24a2e0c24ba6" name="Track" x="743.75" y="306.25" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="556eb8a9-9d31-4407-87b1-d0cc9876e860">
+            <event Id="ed1a2467-fe93-4bfa-a6eb-7019ae309829" name="enterR" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5967611a-ad04-42bf-9a8d-e7cabb83613c">
+            <event Id="214b5bb5-68f9-42ed-8d8c-270aa0f4c631" name="enterI" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="afc3987f-2923-49fc-a4a3-ea6f04635147">
+            <event Id="bbfefb3d-28ce-491a-ac9f-d7af858cc2b4" name="inR" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="19691306-9d4f-4e0b-9e5d-4fa4e2ec4bf9">
+            <event Id="42feba95-46dc-4664-845d-ad4850d5d636" name="inI" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e50b1702-49a9-49a0-8747-24e68f37315e">
+            <event Id="042e994d-9341-4e18-a55d-44d3652ea522" name="exited" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4ec8aa22-180e-4bfb-8f9c-584d816c03e2">
+            <event Id="4ae1d389-86ff-4c84-931b-bb61e1c46ad5" name="approach" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2ad0230d-3159-4302-bd20-54f6a97a10cc">
+            <event Id="fda01f95-2de0-4a91-b4a6-9956c5c53e48" name="sensorFailure" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="9fb31247-edb2-4e33-b1c4-3fc5eb5faaff">
+            <inputEventPort Id="251913d3-c258-4756-a909-210fee93041d">
+              <proxyTargetPorts>
+                <proxyConnection Id="6727c396-0de5-483f-bbcd-0ad1276516da">
+                  <inputEventPortMoniker Id="7fc8d7c6-57a6-4d4f-9073-94635f249cbe" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="e061b709-9f83-4f00-b1fd-32266f057c3e">
+                  <eventMoniker name="/Track/Track/approach" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="c8817858-eb3b-4921-acb2-ddfe27cb9bbc">
+            <outputEventPort Id="4577d1d4-60ef-41ce-81a3-876b3b5a5dad">
+              <proxyTargetPorts>
+                <proxyConnection Id="6616ebdf-7543-4b2f-9aa9-a3cad9fa81dd">
+                  <outputEventPortMoniker Id="2fff553d-9e2f-420f-b21a-c90cb36221a6" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="c828e761-f60b-43f5-8ccd-ccb0ea1f75fb">
+                  <eventMoniker name="/Track/Track/enterR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="6d875d0e-e49b-4de4-8ec3-c0fc4852ac97">
+            <outputEventPort Id="c8bbdef9-abde-4d4c-8247-8e57c41942a6">
+              <proxyTargetPorts>
+                <proxyConnection Id="a07ddf58-4ef5-445a-8a8f-8422efdb3da0">
+                  <outputEventPortMoniker Id="ef052992-cceb-425c-bdc0-9f6e32f6bbe4" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="986489a3-ff49-4ca1-a483-345966dea1ea">
+                  <eventMoniker name="/Track/Track/enterI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="da48d283-f56b-4597-b042-a623d9c89fdc">
+            <outputEventPort Id="abf768a8-bbba-4a45-94a2-224c30c49faf">
+              <proxyTargetPorts>
+                <proxyConnection Id="cdcfcd62-971a-4f08-b375-1d4debde6be6">
+                  <outputEventPortMoniker Id="5ff3bb1d-2849-4146-8d4b-b0b64413b306" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="eafabe77-b11b-422c-b16d-53a248940b55">
+                  <eventMoniker name="/Track/Track/inR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="cbed73d3-27c4-4394-8e2e-5cb377bccd76">
+            <outputEventPort Id="2334d3e7-bce4-4674-8326-9cdb29675e2a">
+              <proxyTargetPorts>
+                <proxyConnection Id="a3c111a3-be41-4a1f-9753-532f4c1a86ef">
+                  <outputEventPortMoniker Id="449dbf70-29da-4535-a621-8eb5d353c702" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="1d684b8f-efa8-4783-9735-e27dcc5222b6">
+                  <eventMoniker name="/Track/Track/inI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8fc6195c-1e8d-40e9-a51f-160a07d6d898">
+            <outputEventPort Id="dcbc08da-4d10-465a-acda-2f429c69651a">
+              <proxyTargetPorts>
+                <proxyConnection Id="bab40214-9c3d-415c-9c2d-e5d8b8126dee">
+                  <outputEventPortMoniker Id="82c73407-b5f9-496b-8383-61df25ba1a6f" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="b09817f6-8cf7-4891-88f7-c760016bda9d">
+                  <eventMoniker name="/Track/Track/exited" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="2ebf6759-022f-4cb6-a837-5226865bab78">
+            <outputEventPort Id="38e8cb0c-8b0f-4183-8a42-f2292f84e198">
+              <proxyTargetPorts>
+                <proxyConnection Id="cfbf0315-64a0-4c50-aee9-98eb8b2bcb1d">
+                  <outputEventPortMoniker Id="22689d50-7404-4053-9d55-03751eac6e2d" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="96edb4de-0b54-47c4-b216-fdd102d40345">
+                  <eventMoniker name="/Track/Track/sensorFailure" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="997658e1-a842-45e8-a3fb-580b70840a77">
+      <functionBlockReference Id="153a2af3-b734-4cd2-b0c2-d3d4abdbf546" name="behaviour" x="1225" y="175" creationMode="Resource" referencedFile="TrackBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="712a86c3-5ee0-4f44-b919-d6c3613b532c">
+            <eventRef Id="f8b90529-27c5-488a-8bbc-e6626171a62b" name="update" scope="Input" referencedID="026ff245-6fbb-4926-8275-27b73a53e817" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2b7d3d8b-66af-4002-804a-430b3f69cd81">
+            <eventRef Id="98618fe3-dc41-4aaf-a1e3-f7fe166de996" name="approach" scope="Input" referencedID="b18e07c3-50aa-4aa3-aee9-63e4e2fddf0b" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="1da57731-f7b1-418b-9b51-9080c8555dbb">
+            <eventRef Id="2f1f1d1a-7748-4ed5-b3f8-c75fea88b93d" name="enterR" scope="Output" referencedID="2f217897-de91-4bb3-9eef-416aa161a206" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="95b03ff6-5dd8-4b2a-83d8-b23cbb08d985">
+            <eventRef Id="581a609b-f422-4737-8257-6b1429bb3226" name="enterI" scope="Output" referencedID="a90108ab-b3de-4f5d-ab47-2646d6080645" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="854c4d6c-4568-4113-b601-b99f3165ad77">
+            <eventRef Id="c5b0088c-b652-4be2-b8bf-bffef85d6017" name="inR" scope="Output" referencedID="6e7abaf7-dccf-499a-bfb6-f4c30eb55bb1" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5a07aa69-8885-446d-9d80-b48949f1a2a4">
+            <eventRef Id="99c0b6fa-6180-498f-9efe-59e31d32f5c8" name="inI" scope="Output" referencedID="fd84386a-9b7c-438b-ab75-a37dea700db4" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6b6c9090-576b-419b-945c-d29197fa3071">
+            <eventRef Id="838dd380-cc3e-430f-8d3d-b4eb7b6e0bb9" name="exited" scope="Output" referencedID="f296bdd6-e561-434a-92ab-580de9a94cd5" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="9b219360-4903-4a99-bcf6-09e8a3a00cc6">
+            <variableRef Id="a156c7bd-3b34-4853-af63-9154765e4bd3" name="failed" scope="Input" referencedID="ec016d05-65c3-457f-af0c-6884f4149a54" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="5f964cfd-1efa-4ddd-9b31-2305a39a436b">
+            <inputEventPort Id="37b4f161-55dc-40c8-9c33-cf454344a456">
+              <event>
+                <inputEventPortReferencesEvent Id="a6d34bd4-c19a-4dfb-9808-94d71829de59">
+                  <eventRefMoniker name="/Track/behaviour/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="28386793-0632-4c71-b034-a745b1f599d4">
+            <inputEventPort Id="7fc8d7c6-57a6-4d4f-9073-94635f249cbe">
+              <event>
+                <inputEventPortReferencesEvent Id="e27c828c-3608-412c-8d34-b251dd7b9dea">
+                  <eventRefMoniker name="/Track/behaviour/approach" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="eaf3c38a-494d-47e6-b6d7-bb68b60f485e">
+            <outputEventPort Id="2fff553d-9e2f-420f-b21a-c90cb36221a6">
+              <event>
+                <outputEventPortReferencesEvent Id="51988380-e2f3-470c-8da2-cf4b12ea020e">
+                  <eventRefMoniker name="/Track/behaviour/enterR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="82b3ce2d-a782-4f41-b98d-a4d4df293523">
+            <outputEventPort Id="ef052992-cceb-425c-bdc0-9f6e32f6bbe4">
+              <event>
+                <outputEventPortReferencesEvent Id="8033da5c-6130-4ae7-ba6d-c2b6fcbbb505">
+                  <eventRefMoniker name="/Track/behaviour/enterI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a405693f-0d27-43f6-9268-5955c3e8335d">
+            <outputEventPort Id="5ff3bb1d-2849-4146-8d4b-b0b64413b306">
+              <event>
+                <outputEventPortReferencesEvent Id="cb2fc613-8441-48f7-8f0c-7e5664ceec69">
+                  <eventRefMoniker name="/Track/behaviour/inR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0b85719d-c5eb-439c-93f7-85a35ad3b32d">
+            <outputEventPort Id="449dbf70-29da-4535-a621-8eb5d353c702">
+              <event>
+                <outputEventPortReferencesEvent Id="9b12b3e2-24c8-40a7-8595-bff94fe49146">
+                  <eventRefMoniker name="/Track/behaviour/inI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="82521e2b-64ba-40ac-abda-5c27a3edd878">
+            <outputEventPort Id="82c73407-b5f9-496b-8383-61df25ba1a6f">
+              <event>
+                <outputEventPortReferencesEvent Id="919a479c-8ba2-4d26-bede-12c1a432edb9">
+                  <eventRefMoniker name="/Track/behaviour/exited" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="cea4227b-653f-4be0-a1f3-4d0a5c287b95">
+            <inputVariablePort Id="2ea18a6d-a71a-4bee-a4ee-93ada71c089c">
+              <variable>
+                <inputVariablePortReferencesVariable Id="e1358f08-78b9-45a3-aad2-948e9949ba8d">
+                  <variableRefMoniker name="/Track/behaviour/failed" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="f69df964-353e-4e14-8dbb-90ac08fd6722">
+      <functionBlockReference Id="dffb4a9d-6a66-44a4-a6f2-788bfee32608" name="failure" x="437.5" y="262.5" modelType="Stochastic" creationMode="Resource" referencedFile="TrackFailure.fb">
+        <events>
+          <functionBlockHasEvents Id="082201c7-54a2-496c-bdb5-796898837c79">
+            <eventRef Id="dd6b51de-371a-4361-adb9-4d1852623569" name="update" scope="Output" referencedID="0055fa5e-09e2-4115-ad10-6623dd57ce31" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6a1f8ae4-660a-40dc-be06-83e30bd6b17f">
+            <eventRef Id="a51d786c-aa93-47df-8e43-027c8d435806" name="failure" scope="Output" referencedID="3332eed8-d15f-4d0d-9b1b-bcfc5523aa99" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="70d437b8-fdcf-4735-89b8-d29888763ccf">
+            <variableRef Id="a9696418-3895-4617-9d78-6f13e9b2c3df" name="failed" scope="Output" referencedID="0eab8093-8904-46a5-afcb-885a9f84b049" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f057cf30-721d-4a6a-ac15-6e3bc8d76fc7">
+            <outputEventPort Id="9f078bd9-a5c6-4477-8174-94247f560c9a">
+              <wireTargetPorts>
+                <wireConnection Id="d7ab22dd-c7d7-4b69-a6e7-9c59b9c403d2" unitDelayed="false">
+                  <inputEventPortMoniker Id="37b4f161-55dc-40c8-9c33-cf454344a456" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="811000ae-e223-43bb-93b6-3d5e2bb1b6b9">
+                  <eventRefMoniker name="/Track/failure/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3733d796-5a90-4707-8ff1-86f74fabd400">
+            <outputEventPort Id="22689d50-7404-4053-9d55-03751eac6e2d">
+              <event>
+                <outputEventPortReferencesEvent Id="c106d014-75e9-485f-9cfa-ae993623a307">
+                  <eventRefMoniker name="/Track/failure/failure" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="8d227c9d-bd4f-4746-82fe-7cbf1cf641db">
+            <outputVariablePort Id="4734fd73-f70e-470a-8fe2-49564eb6b030">
+              <wireTargetPorts>
+                <wireConnection Id="ba1874e5-7665-4afc-8c18-97a5c847141a" unitDelayed="false">
+                  <inputVariablePortMoniker Id="2ea18a6d-a71a-4bee-a4ee-93ada71c089c" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="6d40dad2-e13d-4282-81b5-ece5bd018272">
+                  <variableRefMoniker name="/Track/failure/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

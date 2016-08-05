@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e797d725-e63d-4b67-8ba8-87c811d36f0d}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>railroadctrl</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'OpenRTM'">
+    <CompilationMode>OpenRTM</CompilationMode>
+    <OutputPath>Generated\OpenRTM\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Deploy'">
+    <CompilationMode>Deploy</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>arm-uclinux-elf-gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Verification'">
+    <CompilationMode>Verify</CompilationMode>
+    <OutputPath>Generated\Verification\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controller.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GateBehaviour.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TrackBehaviour.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Track.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="Gate.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="TrainTracks.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="SystemD.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="TrainTracksD.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="TrackBehaviourD.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="GateBehaviourD.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="GateBehaviour.fb.setDown.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setDown.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateBehaviour.fb.setGoingDown.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setGoingDown.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateBehaviour.fb.setGoingUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setGoingUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateBehaviour.fb.setUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateBehaviour.fb.unsetAll.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>unsetAll.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="GateFailure.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="GateDown.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="GateBehaviourD.fb.setDown.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviourD.fb</DependentUpon>
+      <LinkedIntoProjectAt>setDown.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateBehaviourD.fb.setGoingDown.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviourD.fb</DependentUpon>
+      <LinkedIntoProjectAt>setGoingDown.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateBehaviourD.fb.setGoingUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviourD.fb</DependentUpon>
+      <LinkedIntoProjectAt>Algorithm4.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateBehaviourD.fb.setUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateBehaviourD.fb</DependentUpon>
+      <LinkedIntoProjectAt>setUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateFailure.fb.setFailed.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateFailure.fb</DependentUpon>
+      <LinkedIntoProjectAt>setFailed.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="GateFailure.fb.unsetFailed.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>GateFailure.fb</DependentUpon>
+      <LinkedIntoProjectAt>unsetFailed.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="PLC.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="TrackBehaviour.fb.incCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrackBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>incCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrackBehaviour.fb.initCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrackBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="TrackFailure.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="TrackBehaviourD.fb.incCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrackBehaviourD.fb</DependentUpon>
+      <LinkedIntoProjectAt>incCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrackBehaviourD.fb.initCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrackBehaviourD.fb</DependentUpon>
+      <LinkedIntoProjectAt>initCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrackFailure.fb.setFailed.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrackFailure.fb</DependentUpon>
+      <LinkedIntoProjectAt>setFailed.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="TrainApproach.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(TimeMePath)\UoA.IEC61499.Compiler.targets" />
+</Project>

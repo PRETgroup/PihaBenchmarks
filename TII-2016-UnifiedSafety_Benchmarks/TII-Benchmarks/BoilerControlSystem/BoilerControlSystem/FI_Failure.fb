@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="c6e2defc-d9bb-4e16-a8e2-b28b0c435e19" name="FI_Failure" organization="User-PC" date="2013-05-13" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="7b6e7dc8-eac9-40e0-82ca-612a22fb2f80">
+      <state Id="446cdd6d-ea56-4637-b3b6-8a7280e37e13" name="OK" x="525" y="875" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="12ce97d9-3354-4180-aa96-25cff644d276">
+            <probabilisticTransitionNodeMoniker Id="d5313e9d-3b4f-4776-965a-b098f30c041e" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="b91638c1-8ae2-40d9-b2e6-70ad64bd2e80">
+            <probabilisticTransitionNodeMoniker Id="19d1d665-0ea6-46c3-92e0-8b3961a77a6e" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="61c3584e-ffa6-4dde-9b4d-ebad474bb298">
+      <state Id="f2f9a038-9ec5-43a8-81c9-efe6a1f81cef" name="FAILED" x="481.25" y="1268.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="dc6e2c42-8017-4e93-8bcd-9d06c6a0ef52">
+            <actionSetMoniker Id="9c26e873-cbac-46f4-9530-1a87a28249b9" />
+          </actionLink>
+        </actionSet>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="05e77dc4-a316-47b8-8deb-c1f3657b4e27">
+      <state Id="d0602bff-f4f0-471f-9a94-3f58aa9404a3" name="START" x="481.25" y="481.25" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="9004b95e-195a-4f61-b9fb-cadd98637468">
+            <transitionNodeMoniker Id="94d0ee90-f5c1-4388-8850-ac81c0a168f4" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="58549888-4d79-49e7-9fe8-8ff3182e76c0">
+      <actionSet Id="9c26e873-cbac-46f4-9530-1a87a28249b9" x="831.25" y="1268.75">
+        <actionItems>
+          <actionSetHasActionItems Id="03747dee-2e98-48a4-b371-ee832f1d767e">
+            <actionEvent Id="bdcb29ad-51b1-48f8-8e71-640b27e18969">
+              <event>
+                <actionEventReferencesEvent Id="cda823b9-3b93-4628-accf-b605c68b97ab">
+                  <eventMoniker name="/FI_Failure/FI_Failure/failed" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="ff378092-3c49-429f-b52e-154bd2798d5c">
+      <functionBlockInterface Id="978e7f14-3efd-418f-97f6-e419c6cedb22" name="FI_Failure" x="1400" y="481.25" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="939cdad3-6dbe-4478-87cb-3fa15fddee35">
+            <event Id="d6e799f9-ff2e-4410-9b7d-563542ca7457" name="failed" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="b7f40843-9284-438f-b482-d19b12f70fc9">
+            <outputEventPort Id="f9d59977-4cfe-4cc7-a7b9-728f965e2399">
+              <event>
+                <outputEventPortReferencesEvent Id="d23f9013-5422-423a-8a0d-2cbca1fbcb56">
+                  <eventMoniker name="/FI_Failure/FI_Failure/failed" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4de9b23e-6889-424e-9713-8b1315776cba">
+      <probabilisticTransitionNode Id="d5313e9d-3b4f-4776-965a-b098f30c041e" x="480.352783203125" y="1061.0000000000002" probability="2.022E-11">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ff9dff92-2c3f-451b-92b4-43b15754f685">
+            <stateMoniker name="/FI_Failure/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0d23c8f5-d582-4d88-97b1-362f23244d91">
+      <transitionNode Id="94d0ee90-f5c1-4388-8850-ac81c0a168f4" x="306.25" y="656.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="7f63ba6a-fa74-42d4-911d-681949c9033d">
+            <stateMoniker name="/FI_Failure/OK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="77cb47db-d42d-4a2d-98c7-e25daf04024e">
+      <probabilisticTransitionNode Id="19d1d665-0ea6-46c3-92e0-8b3961a77a6e" x="612.5" y="656.25" probability="0.99999999997978">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f8318322-dfd1-4fad-966b-956be0d4b257">
+            <stateMoniker name="/FI_Failure/START" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

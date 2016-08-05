@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="c22e07ed-053f-4b89-ab3f-3e071133bbf8" name="BoilerMVC" organization="User-PC" date="2014-08-08" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="c784b929-604c-4900-85b7-07f1bee113e9">
+      <functionBlockInterface Id="1f8b0d2b-d545-4f40-8256-0aa65e7277ec" name="BoilerMVC" x="1793.75" y="612.5" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="6f016c1b-2c5d-407a-960f-c1f069ff481d">
+            <event Id="9d721d6e-6634-452d-9e93-d2660ed443a7" name="trigger" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="1de43a19-b914-414c-9457-13f059757539">
+            <variable Id="42a528b6-b57e-487f-af67-c9e9ad147559" name="warning" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="b4bf0f4a-3ba7-40d1-a0ff-bc40251b1b42">
+            <outputEventPort Id="dab840e5-5b14-4cf9-8708-aa64ac25e583">
+              <proxyTargetPorts>
+                <proxyConnection Id="eef1230c-ab51-42ac-96cd-47b5d33d0da7">
+                  <outputEventPortMoniker Id="ec07db22-2edf-4033-be6e-ac263e79dbcf" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="6189d7bb-4ce4-4432-96a4-d83c9e1e0f3b">
+                  <eventMoniker name="/BoilerMVC/BoilerMVC/trigger" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="e78edc08-6721-421b-9482-4176e5feb1fa">
+            <outputVariablePort Id="9683fee4-07b7-4d56-b2d0-675845679e93">
+              <proxyTargetPorts>
+                <proxyConnection Id="7a95ae3a-1d7b-4a1d-a801-2b6161f52471">
+                  <outputVariablePortMoniker Id="400dffaf-26e9-472d-8d2d-7f73909b80eb" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="540b1e96-d669-4383-b402-9f51832bbffc">
+                  <variableMoniker name="/BoilerMVC/BoilerMVC/warning" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="6713c845-61ea-4df0-8cbe-557522ab3309">
+      <functionBlockReference Id="502b4a1f-8d2b-42c0-93b3-8c2a068c60d1" name="plant" x="1531.25" y="918.75" modelType="Composite" creationMode="Resource" referencedFile="BoilerSystem_Plant.cfb">
+        <events>
+          <functionBlockHasEvents Id="f32504d3-0d64-48fa-91dd-7c416c96a516">
+            <eventRef Id="4599837b-dcac-4813-b6ff-5fa05fbca237" name="reload" scope="Input" referencedID="b453ef2e-53d8-401f-9035-8212990ac930" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="03d35d9b-52ad-43d7-88fc-305d39a35afa">
+            <eventRef Id="abaf7666-96e3-4a88-92a1-7a8db71031ee" name="pt_update" scope="Output" referencedID="ba5acf18-4e1e-42fb-a9c8-e5c84b134c78" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d600bc91-00a4-4177-812a-62a86d4951e7">
+            <eventRef Id="de383709-9b6d-4cb7-911b-2430d8f69094" name="fl_output" scope="Output" referencedID="1bb304ad-b802-4b2a-919a-4df887477a36" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="21ed2915-2e25-43f2-9e0a-24fc7064d8e4">
+            <variableRef Id="959c9c99-57c1-4eea-ba10-9cee699931b2" name="status" scope="Input" referencedID="49871416-969a-4f9b-b066-f62bf9ffa780" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="4345d996-a171-49e8-8f4f-9410189794fa">
+            <variableRef Id="d39f6d43-7248-4fb6-9684-e2e9295ad5da" name="pressure" scope="Output" type="INT" referencedID="1ecdfd89-33b3-485b-866a-34dbc8c1b1a2" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="171b214e-8baf-4c93-b5a9-0883ab9db267">
+            <variableRef Id="a454e3d1-a07a-4dde-a323-2405d65ffda4" name="flow" scope="Output" referencedID="9df9d52f-acf2-41e1-9543-517fe09fa771" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="bd195b08-7196-47ad-a03b-c2dd1c0bf34d">
+            <inputEventPort Id="a24f7eb4-386d-43a7-a194-8c23ef008267">
+              <event>
+                <inputEventPortReferencesEvent Id="aef3f5bb-1457-4845-b136-47c5a628e209">
+                  <eventRefMoniker name="/BoilerMVC/plant/reload" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="7446f1a3-612f-4552-b983-4506b970d007">
+            <outputEventPort Id="05186fc5-37df-416c-8d79-ecb9b19bd282">
+              <wireTargetPorts>
+                <wireConnection Id="d125e6f5-49d9-4e30-b57c-fa3b45bd6947" unitDelayed="false">
+                  <inputEventPortMoniker Id="bef395d5-d2a0-4f7c-a1eb-2bbf8f8f1932" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="05ba8452-126b-41ba-b5ca-9bca4bf45cda">
+                  <eventRefMoniker name="/BoilerMVC/plant/pt_update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="42ca08b4-35a1-44ad-b4a0-58afb3079d9e">
+            <outputEventPort Id="fc3c1a89-2360-4e51-bb73-db252d7a7c46">
+              <wireTargetPorts>
+                <wireConnection Id="51d108f9-b9bd-462a-86ff-a6528f6842a5" unitDelayed="false">
+                  <inputEventPortMoniker Id="a5fd321d-4abc-44df-9294-6bf4e53a9192" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="c7bc3333-a4f3-445b-a27c-62ee30551c35">
+                  <eventRefMoniker name="/BoilerMVC/plant/fl_output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="fe810dd2-d40a-4834-a4ca-70ff7e9d5857">
+            <inputVariablePort Id="f13f307b-1e34-417a-8065-a4818a4e5a2e">
+              <variable>
+                <inputVariablePortReferencesVariable Id="02eec3fa-ea1e-4973-a014-b6fed6a259fa">
+                  <variableRefMoniker name="/BoilerMVC/plant/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="c5ab40ce-2404-4ae7-bf50-ccd3a08910c1">
+            <outputVariablePort Id="494cfcbc-c7be-445d-925e-4af3505b56eb">
+              <wireTargetPorts>
+                <wireConnection Id="2aee7e70-b667-4df7-8a2e-1db1d166ecce" unitDelayed="false">
+                  <inputVariablePortMoniker Id="4061404e-b812-4d73-a1f5-4605e38af10d" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="927ddfc1-b8c5-46ec-910d-5de05edbe021">
+                  <variableRefMoniker name="/BoilerMVC/plant/pressure" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="389d15c7-08a9-426b-a7ba-46195da5b100">
+            <outputVariablePort Id="d7bc5246-fe52-4a32-b694-9f230a98c1b3">
+              <wireTargetPorts>
+                <wireConnection Id="a482f25d-cd10-48f6-bac4-0e9f87fcfe51" unitDelayed="false">
+                  <inputVariablePortMoniker Id="c3f76e6a-6e4b-406a-805b-4d3f9635ebc2" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="9676fc02-1a15-4df6-b177-2656f357eb93">
+                  <variableRefMoniker name="/BoilerMVC/plant/flow" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="f7694c23-53f3-4803-8179-60d675d8ce21">
+      <functionBlockReference Id="168add11-ae63-47c6-8a66-59891e2fa04e" name="controller" x="2231.25" y="918.75" creationMode="Resource" referencedFile="Controller.fb">
+        <events>
+          <functionBlockHasEvents Id="321bb07d-02fb-4004-a4f3-aa1da876ab3f">
+            <eventRef Id="f9da68ec-778d-4ecf-9215-869c96f49895" name="rChange" scope="Input" referencedID="10073403-dea6-443f-ae2f-11be65af6140" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="98d7b154-b95f-4dfd-8aa0-9297f17209dd">
+            <eventRef Id="716aa080-547e-44b2-91bf-11fdc30e2597" name="pChange" scope="Input" referencedID="e3fdb741-8be0-4fe8-b8ae-975b3ddfa7b8" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="9ce1a434-bd7b-4c6a-b5c0-6a0135caef2a">
+            <eventRef Id="39093d0a-af86-4f56-8dc7-cedd52281a79" name="trigger" scope="Output" referencedID="b9d2cfd1-f9d3-4ff8-8358-d1813d437e9d" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="8be963ab-e446-4f1d-81a7-52004343ed0e">
+            <variableRef Id="e4bece0d-be30-45d3-a192-3dae5f2f8089" name="pressure" scope="Input" initialValue="0" type="INT" referencedID="025d5fc8-8527-404f-89c0-b0e19593b425" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ba366a50-2361-48fd-bbe6-f50377cc0de3">
+            <variableRef Id="aae043d8-502b-4a4c-953e-3ef52115b452" name="relief" scope="Input" referencedID="4d04329f-e968-4a40-bc34-d14bf8723647" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="319b4368-3820-49b1-8223-cda6fc0125f9">
+            <variableRef Id="9a0832d5-37f5-458b-a6a4-21303f11fd31" name="threshold" scope="Input" initialValue="0" type="INT" referencedID="96e0ff8d-7daa-4b01-b819-c0ac1a743f42" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="92eb8a52-7f81-4801-aebf-27652f6ec341">
+            <variableRef Id="941045c2-08e0-4a79-aa09-a3ff265f50a7" name="warning" scope="Output" referencedID="77e65e6f-5aae-4281-acb2-eb3abedd1b4c" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="5b66d013-dd50-4eff-ac95-3eb6633d52ed">
+            <variableRef Id="239994b8-bb0c-42fe-afca-ed0e414a75f4" name="valveCtl" scope="Output" initialValue="false" referencedID="8976999d-86f8-4bb7-94fa-2a755e4daeb0" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="c31e68c3-6967-441d-8170-a69594f948f6">
+            <inputEventPort Id="bef395d5-d2a0-4f7c-a1eb-2bbf8f8f1932">
+              <event>
+                <inputEventPortReferencesEvent Id="fd20cf9f-26f6-4cea-9079-da83db0c1a99">
+                  <eventRefMoniker name="/BoilerMVC/controller/pChange" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="e65141f8-b323-4fbc-8c4e-bf7fe4892380">
+            <inputEventPort Id="a5fd321d-4abc-44df-9294-6bf4e53a9192">
+              <event>
+                <inputEventPortReferencesEvent Id="3bda7210-c6bd-4cbd-b3b1-c69585853da4">
+                  <eventRefMoniker name="/BoilerMVC/controller/rChange" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="c4893fbc-7bc5-45db-b5f7-69bd543ee247">
+            <outputEventPort Id="ec07db22-2edf-4033-be6e-ac263e79dbcf">
+              <wireTargetPorts>
+                <wireConnection Id="c0c4f762-7414-42be-aadf-f0b3fd59f6c2" unitDelayed="false">
+                  <inputEventPortMoniker Id="a24f7eb4-386d-43a7-a194-8c23ef008267" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="8bf04a2d-4dda-42ea-9734-d04e43f1ac33">
+                  <eventRefMoniker name="/BoilerMVC/controller/trigger" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="551b4091-c31d-4584-9687-2f789ffc6c9d">
+            <inputVariablePort Id="4061404e-b812-4d73-a1f5-4605e38af10d">
+              <variable>
+                <inputVariablePortReferencesVariable Id="03e4ba3f-1f46-4969-ab3a-232819ecb793">
+                  <variableRefMoniker name="/BoilerMVC/controller/pressure" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="3bc06f47-1bf6-43d0-b449-0e15cc933e24">
+            <inputVariablePort Id="c3f76e6a-6e4b-406a-805b-4d3f9635ebc2">
+              <variable>
+                <inputVariablePortReferencesVariable Id="8f9021e8-2256-41ce-9dc9-a25625f63af6">
+                  <variableRefMoniker name="/BoilerMVC/controller/relief" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="6824a36e-abfa-42b7-b6c4-035b21a9134c">
+            <inputVariablePort Id="a900759a-d326-4153-8894-7152ee29b5ab">
+              <variable>
+                <inputVariablePortReferencesVariable Id="8b109e00-524c-4e44-ac7c-6e2c365ec085">
+                  <variableRefMoniker name="/BoilerMVC/controller/threshold" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="a9308664-2b01-465f-bc1e-57ee84e097f0">
+            <outputVariablePort Id="400dffaf-26e9-472d-8d2d-7f73909b80eb">
+              <variable>
+                <outputVariablePortReferencesVariable Id="37a49170-d740-4c4e-af07-737deb7b2b29">
+                  <variableRefMoniker name="/BoilerMVC/controller/warning" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="d5ae628d-2e33-4dae-a14a-48f4696f1086">
+            <outputVariablePort Id="1b2bf91e-65f2-40bd-8b2e-34aa81fcb2d2">
+              <wireTargetPorts>
+                <wireConnection Id="138aa5c9-122f-42d9-8080-54c7e354267c" unitDelayed="false">
+                  <inputVariablePortMoniker Id="f13f307b-1e34-417a-8065-a4818a4e5a2e" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="9d2bfc15-377b-44b1-ad8a-a3551378e4c9">
+                  <variableRefMoniker name="/BoilerMVC/controller/valveCtl" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

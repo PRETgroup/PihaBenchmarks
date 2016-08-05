@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="481e4640-b534-41b4-a485-104f8556b5d6" name="Valve" organization="User-PC" date="2013-06-19" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="06f38804-b93b-4428-b342-b995443d981b">
+      <state Id="eb9eabd6-4d7f-4d7b-b8b5-4cdecc85ee6e" name="CLOSE" x="1006.25" y="568.75" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="a1cc9a9e-33c4-4f6e-811e-5abf3c901227">
+            <transitionNodeMoniker Id="25b220ef-8594-423f-ae45-55975906a81c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="3cd5a6f2-c080-4996-b27a-9fb3296e9438">
+      <state Id="77f872fb-fb69-4347-9184-96e70116a124" name="OPEN" x="1050" y="1268.75" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="41cb4b8f-0e6b-4a36-a9fa-4be0ca53c36c">
+            <transitionNodeMoniker Id="72f55e23-7332-42fe-97a4-bed32c158a28" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="c5fbaa7f-54f8-49ca-b21f-7c251da82916">
+      <state Id="de508f8c-844e-4245-982a-c67f0c170aec" name="SYSCHECK" comments="Models 7.27 failures per 10^6 hours" x="371.875" y="907.8125" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="54cc298e-d04f-45da-b6c2-44ce734da1ba">
+            <probabilisticTransitionNodeMoniker Id="a595802a-e7c4-49b4-864e-ab03245da49c" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="31a8ccc5-efd2-4df0-bdda-4e5e63f934c9">
+            <probabilisticTransitionNodeMoniker Id="e4929c87-3203-407c-b6fa-902b46c42202" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="a51e4e51-2f4e-4167-ac2f-c4479c6e2ec2">
+      <state Id="31437771-c428-4f88-884e-6bdccbd8a21c" name="NORMAL" x="1575" y="918.75" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="22722a69-d223-41d1-81f6-f06058be10a0">
+            <transitionNodeMoniker Id="16f74695-8a80-4b3c-8475-d9fd220f434d" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="5f6913a9-5233-4f5e-9ab7-b4882c758e19">
+            <transitionNodeMoniker Id="c244d8a0-14db-49fa-a1fe-550a0b768668" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="4614210c-0af4-4714-932a-826ec64273f2">
+      <state Id="29f27fa7-a0fd-40a9-b69a-66f1ceb199f5" name="FAILED" x="393.75" y="1268.75" isInitial="false" />
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="a6f835dc-fa43-491a-bd2d-69e847af54cb">
+      <functionBlockInterface Id="95a433d0-b0f2-498f-9ba4-5ccc25c1782b" name="Valve" x="437.5" y="218.75" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="ca7318a7-19e7-4075-af74-852d1698c0cc">
+            <event Id="36ff64e7-88e0-47c6-a74e-df988a4c8783" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="27c8e153-3199-4ad7-8b1d-68d2ac6b5ca3">
+            <variable Id="0ef60934-a2a6-418c-ba0d-47a778d1d8f3" name="status" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="01dea439-887a-4e17-a4fc-41084c5cafcc">
+            <inputEventPort Id="10b6a135-18ab-483c-bd51-aaf719549409">
+              <targetPort>
+                <association Id="f009bd6a-af15-40dc-a72e-48573803089d">
+                  <inputVariablePortMoniker Id="888610b2-417d-4e17-a3e0-122ff6b453ca" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="ba1b5d11-33c5-44c2-83e8-fc043c0641be">
+                  <eventMoniker name="/Valve/Valve/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="0c92665d-6f47-4480-8c9d-d12f6a9622b1">
+            <inputVariablePort Id="888610b2-417d-4e17-a3e0-122ff6b453ca">
+              <variable>
+                <inputVariablePortReferencesVariable Id="c5e2dea0-c35f-49c7-b952-991d45480ae4">
+                  <variableMoniker name="/Valve/Valve/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="67316d34-be82-4b82-ba2b-79009dcead07">
+      <probabilisticTransitionNode Id="a595802a-e7c4-49b4-864e-ab03245da49c" x="942.4375" y="912.28125000000011" probability="0.99999999997981">
+        <targetState>
+          <transitionNodeConnectsToStates Id="65c31b1e-f53d-4827-9bc6-33830812d935">
+            <stateMoniker name="/Valve/NORMAL" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="73add578-357e-4c84-96ae-45ab8ff8be67">
+      <probabilisticTransitionNode Id="e4929c87-3203-407c-b6fa-902b46c42202" x="383.8125" y="1076.28125" probability="2.019E-11">
+        <targetState>
+          <transitionNodeConnectsToStates Id="84179b7c-436b-43e4-a28a-f2b6d63890f4">
+            <stateMoniker name="/Valve/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="1c99f0ff-32cf-4677-ae8e-04f76ba0fa54">
+      <transitionNode Id="16f74695-8a80-4b3c-8475-d9fd220f434d" x="1249.625" y="730.75000000000011" expression="!status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="2a0b3592-3b24-47ce-8afe-c9f7be73329a">
+            <stateMoniker name="/Valve/CLOSE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="e4df07f6-8373-4e30-814a-52a20de3213f">
+      <transitionNode Id="c244d8a0-14db-49fa-a1fe-550a0b768668" x="1302.5" y="1119.75" expression="status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="6733444d-d8a8-42a7-9d57-9c96090be21e">
+            <stateMoniker name="/Valve/OPEN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="893bd708-7554-4793-b9d1-e788d546c9c6">
+      <transitionNode Id="25b220ef-8594-423f-ae45-55975906a81c" x="742.06249999999989" y="727.28125">
+        <targetState>
+          <transitionNodeConnectsToStates Id="c61fcbab-917e-4a7b-9d13-540648f7a0c1">
+            <stateMoniker name="/Valve/SYSCHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d943a3e4-f547-4423-b127-336b7cd08657">
+      <transitionNode Id="72f55e23-7332-42fe-97a4-bed32c158a28" x="770.93749999999989" y="1119.28125">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f35fc6f0-508f-4d5f-9758-7d39e61fbc6b">
+            <stateMoniker name="/Valve/SYSCHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

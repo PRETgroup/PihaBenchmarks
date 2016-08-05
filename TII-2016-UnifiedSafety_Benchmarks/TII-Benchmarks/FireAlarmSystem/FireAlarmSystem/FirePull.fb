@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="b0ada1d9-13d8-466e-ab36-244226eb5bde" name="FirePull" organization="User-PC" date="2013-06-19" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="a66b7ae3-0f4c-4577-ab01-367cdcbd01a2">
+      <state Id="bd6f7d14-94b7-4a8f-850d-9e2611a009e9" name="UP" x="437.5" y="262.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="60ddfb2d-6295-4e70-84fa-11a8c89ebddf">
+            <actionSetMoniker Id="7fa838a1-811b-494b-b030-d56aebc9bd6d" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="7593dc3e-a2dc-427b-a472-99b08075de81">
+            <transitionNodeMoniker Id="cfbd4289-3267-43d8-8903-db65959c6acd" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="6ca2b307-6aec-453f-bbe1-143e4a088539">
+      <state Id="a20c68da-bfdd-4208-b087-6f5976a6116e" name="PULLDOWN" x="302.60416666666663" y="528.64583333333326" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="2937adc0-e57e-4f0d-ac62-74f3c544ca8a">
+            <nondeterministicTransitionNodeMoniker Id="69523aa9-722c-4b9d-a6ab-39c33a1b283d" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="da9558fe-11fb-4471-b853-e721843fdb91">
+            <nondeterministicTransitionNodeMoniker Id="71e280ca-a241-4315-ad2f-96b1390deb43" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="3a897ccc-f1bf-4ca1-87e1-2bea9feff618">
+      <state Id="2448e428-eba1-4cbe-9cf8-8406c5c0bb51" name="DOWN" x="350" y="962.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="8671661d-fd82-44ed-8f2b-e0e0a00e0b5b">
+            <actionSetMoniker Id="0f7d8974-ea67-47eb-a4f7-c9aa4b5db0a2" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f662b9ec-0ebc-492c-9856-fa924c8db968">
+            <transitionNodeMoniker Id="c0233410-abda-4b72-9052-ab9c8e26eb46" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="1349464f-dc6d-4c93-88d0-7d1a52fd620f">
+      <state Id="a3fc7424-0f4e-48dd-b1b4-c44059114933" name="PULLUP" x="1294.2708611488342" y="998.95836114883423" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="09c3eb77-6989-4e24-8dbc-b9fb1bd61938">
+            <nondeterministicTransitionNodeMoniker Id="730a1d48-314a-4090-bada-fe19bbb84d70" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="362d5ff6-0e53-4f9f-9575-485720b46def">
+            <nondeterministicTransitionNodeMoniker Id="ba1921ca-ed9d-4261-9b26-a07299d2b4bc" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="246c59cd-8a66-4ff3-a82a-e60c00968643">
+      <actionSet Id="7fa838a1-811b-494b-b030-d56aebc9bd6d" x="1618.75" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="47fa3182-a555-4067-9ff4-96e43d9182ee">
+            <actionAlgorithm Id="4ca4db0b-07d5-402d-9c62-294ab4a34477">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="a516077f-fe5c-422b-96eb-b5ba64fedc37">
+                  <algorithmMoniker name="/FirePull/unsetPull" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="7c2182d1-2677-48cb-bd3a-c623332e8d19">
+            <actionEvent Id="d72c755e-8b01-451b-abb8-cdf0d814726e">
+              <event>
+                <actionEventReferencesEvent Id="de280531-3ca9-4f6a-8e05-19511a518a73">
+                  <eventMoniker name="/FirePull/FirePull/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="652d4e46-8a46-4831-8ad6-d01eeb81bdf8">
+      <actionSet Id="0f7d8974-ea67-47eb-a4f7-c9aa4b5db0a2" x="1662.5" y="1312.5">
+        <actionItems>
+          <actionSetHasActionItems Id="851762fe-cc09-42bb-a13a-823240918a05">
+            <actionAlgorithm Id="92c373eb-083f-4ebe-ade2-469446bf2b82">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="e35d655c-f915-4376-b930-257bae009e9a">
+                  <algorithmMoniker name="/FirePull/setPull" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="f197da26-271e-42ab-968d-63aaf8914272">
+            <actionEvent Id="f67ef2df-d563-4ce4-9dd6-4de10f281c84">
+              <event>
+                <actionEventReferencesEvent Id="b682f9f5-9fe1-4f3e-b837-2a0f402ccd7d">
+                  <eventMoniker name="/FirePull/FirePull/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="7fc7b9cb-68de-4d18-b215-831bfd5b2d61">
+      <algorithm Id="ff656685-adfc-49af-8898-1e92054fb34c" name="setPull" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="6046aec0-2032-4427-9396-f3624d050d42">
+      <algorithm Id="10911ba6-5399-4738-921b-17eac6ea04fc" name="unsetPull" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="bcd606d8-95c1-4cba-b6cd-618dd4c7b61e">
+      <functionBlockInterface Id="cda6cd75-0325-4f38-9973-b3f5d02cd0bb" name="FirePull" x="1400" y="481.25" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="1c8909f3-875e-4895-bbe1-d85d05668635">
+            <event Id="2c352652-2be6-4abf-b680-e477ac77bf1e" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="402fd905-4729-4eeb-bc88-8b474a1b0a52">
+            <variable Id="c0159be3-426c-4a85-a05a-673622cf78b5" name="status" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="9bcc82c9-19d8-4397-a84c-f4c30b6fda7e">
+            <outputEventPort Id="0c7a2a72-6599-4bf1-b798-2acaca763bea">
+              <targetPort>
+                <association Id="b5ef240f-c57d-4d64-b1dc-f6b19176502a">
+                  <outputVariablePortMoniker Id="5f6b3d85-729c-476a-89af-bdfb9c0dcd66" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="2461c8a4-9533-4bc1-afc0-030376b069de">
+                  <eventMoniker name="/FirePull/FirePull/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="e56671c6-f13f-4d29-bf0e-4905f15237cd">
+            <outputVariablePort Id="5f6b3d85-729c-476a-89af-bdfb9c0dcd66">
+              <variable>
+                <outputVariablePortReferencesVariable Id="0b2aa0ba-b3c9-4fcd-8f1b-60a8cb669df5">
+                  <variableMoniker name="/FirePull/FirePull/status" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6d844062-7ed5-4f5e-b94f-53af606304a3">
+      <nondeterministicTransitionNode Id="69523aa9-722c-4b9d-a6ab-39c33a1b283d" x="396.15624999999989" y="672.18749999999989">
+        <targetState>
+          <transitionNodeConnectsToStates Id="54943203-d18b-4f42-a68c-a12584421b09">
+            <stateMoniker name="/FirePull/DOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4f43f09b-a237-47fb-b30f-b4159a5c8783">
+      <nondeterministicTransitionNode Id="71e280ca-a241-4315-ad2f-96b1390deb43" x="371.05208333333331" y="409.57291666666663">
+        <targetState>
+          <transitionNodeConnectsToStates Id="620e924c-9bb7-4e49-a703-733c5dcaedcc">
+            <stateMoniker name="/FirePull/UP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="31b567ca-fcfa-4565-a400-f460c9405537">
+      <transitionNode Id="cfbd4289-3267-43d8-8903-db65959c6acd" x="363.05208333333337" y="395.57291666666663">
+        <targetState>
+          <transitionNodeConnectsToStates Id="26201e72-2ec8-438b-b2b2-fcd7ac2cc28e">
+            <stateMoniker name="/FirePull/PULLDOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="16a6fb10-ec3d-47e1-92da-ccbc1f948fab">
+      <nondeterministicTransitionNode Id="730a1d48-314a-4090-bada-fe19bbb84d70" x="804.88543057441711" y="639.72918057441711">
+        <targetState>
+          <transitionNodeConnectsToStates Id="051b07eb-372e-4920-9944-e0f393ca83d0">
+            <stateMoniker name="/FirePull/UP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="184e965a-1586-4ca9-8891-3e0b9673c904">
+      <nondeterministicTransitionNode Id="ba1921ca-ed9d-4261-9b26-a07299d2b4bc" x="794.13543057441711" y="977.72918057441711">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d81d842e-e9f5-46d0-84ac-3f3f3d9b6339">
+            <stateMoniker name="/FirePull/DOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6e1aa620-18a4-4c42-864e-dcd8528f3e5f">
+      <transitionNode Id="c0233410-abda-4b72-9052-ab9c8e26eb46" x="885.13543057441711" y="978.72918057441711">
+        <targetState>
+          <transitionNodeConnectsToStates Id="08d53be2-5924-4c62-845b-c7efcdb30517">
+            <stateMoniker name="/FirePull/PULLUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

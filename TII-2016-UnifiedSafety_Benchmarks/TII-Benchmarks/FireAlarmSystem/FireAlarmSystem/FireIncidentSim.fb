@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="0add2e07-425e-418e-bc65-12215c391421" name="FireIncidentSim" organization="User-PC" date="2013-06-29" author="User">
+  <states>
+    <functionBlockModelHasStates Id="ed2e8372-1d6c-4a35-b65a-f95c41206cef">
+      <state Id="5f10d93d-cafe-4f2f-a8d3-3abf079910dd" name="START" x="175" y="175" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="4d0765ca-c64b-44bd-93b6-a6211538ae17">
+            <transitionNodeMoniker Id="f7e4ee16-a88a-4989-a0cc-b09bd0f6ef5f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="d514cbc3-08f9-45ea-a963-573bc6dd1f36">
+      <state Id="94ae11ba-6b19-4fac-933a-32204aa2cf9f" name="ONE" x="459.375" y="488.54166666666663" isInitial="false">
+        <actionSet>
+          <actionLink Id="0aac6b5a-e873-47f4-a27e-02b2339aab2f">
+            <actionSetMoniker Id="0aca2b34-6713-4525-bb09-09a37eacabec" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f90fb291-2500-4baa-943a-91ef6f302472">
+            <transitionNodeMoniker Id="eaebb973-fbfd-4904-9823-18a9d7fb9f0a" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="7cb2d1ad-6dcc-4378-83ff-b370bd501727">
+      <state Id="21733e44-52af-4424-8914-b7669a7a0c1d" name="TWO" x="926.04166666666652" y="809.375" isInitial="false">
+        <actionSet>
+          <actionLink Id="b1645a88-074e-47ce-a48a-e65be744b2de">
+            <actionSetMoniker Id="9483cacd-fa7f-4377-be4c-89ccbd8b71be" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="53385a98-2357-46c7-8a27-8275e60061d1">
+            <transitionNodeMoniker Id="c29e0a88-be4c-4801-be48-9cab2778d1bf" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="459939da-7ffb-4f09-9f91-daf7eab847f7">
+      <state Id="13b8cdfe-99d6-4206-9b73-f5ac51a21e63" name="THREE" x="1093.75" y="1391.887451171875" isInitial="false">
+        <actionSet>
+          <actionLink Id="2192ef4b-40a2-46b7-a259-ec68aa06ce1c">
+            <actionSetMoniker Id="90c65ff3-e777-4acd-b47c-9af2f3b76f02" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="596a9d1d-2f56-48f9-a86d-b0f75646b541">
+            <transitionNodeMoniker Id="2ce48ebb-7c14-40bf-a5a0-ba352051954e" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="e54b457e-38db-4606-bbe3-46b57d736bdf">
+      <state Id="be075ba7-ba6c-435e-ac5c-5d10b39f7a79" name="NONE" x="831.25" y="306.25" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="c7dd4d65-6299-4ea0-9ecd-1f4f618afe35">
+            <transitionNodeMoniker Id="a1785285-26d6-44e3-bf4f-9e629eb26212" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="1f20279f-d21d-4e43-8be6-00755ff25a48">
+      <actionSet Id="0aca2b34-6713-4525-bb09-09a37eacabec" x="1356.25" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="fca66c29-ca53-481f-a147-b2f9c6f73bc2">
+            <actionEvent Id="2f3b9dcd-41fd-4839-86a9-b80a52532b77">
+              <event>
+                <actionEventReferencesEvent Id="9fbb2c34-6f49-497e-b172-bf4b1a8b49e0">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident0" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="f4aab5a9-86d2-460a-a87f-647bc32cfdc3">
+      <actionSet Id="9483cacd-fa7f-4377-be4c-89ccbd8b71be" x="1356.25" y="962.5">
+        <actionItems>
+          <actionSetHasActionItems Id="398ded43-f8c7-471b-abd5-b57d88b20a5a">
+            <actionEvent Id="4ae76750-3f81-45af-afe4-ec583acb6aa1">
+              <event>
+                <actionEventReferencesEvent Id="231cfa3b-c48e-4ed7-b79d-686cc27db8e2">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="a18c950f-7ee8-48d0-af71-82236c121e21">
+            <actionEvent Id="67aa0069-a179-4eea-909c-35fcc84770e1">
+              <event>
+                <actionEventReferencesEvent Id="ea4a7a89-1235-4cb6-a582-e5fbfe0c874a">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident0" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="65199f9b-e57b-480b-ba5d-e7b2d0341242">
+      <actionSet Id="90c65ff3-e777-4acd-b47c-9af2f3b76f02" x="1400" y="1312.5">
+        <actionItems>
+          <actionSetHasActionItems Id="f61a1022-ed30-40e5-a31b-668ffc34f02d">
+            <actionEvent Id="5b80c702-5047-4f0f-8dcd-e0968af0b751">
+              <event>
+                <actionEventReferencesEvent Id="b58cd5b7-9772-4bf7-abf3-c2f8d902b594">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident2" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="dbced52c-90b8-45cd-ab52-35919f149dac">
+            <actionEvent Id="e37d82cb-39e6-4deb-bcc2-c2001edd23cc">
+              <event>
+                <actionEventReferencesEvent Id="f3a9152e-40d1-4ffc-aecf-4074789872fd">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident0" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="e7c06579-cc10-4776-864a-22e2021b15ee">
+            <actionEvent Id="d819a0d4-872a-4edc-a258-65f09a87f6e7">
+              <event>
+                <actionEventReferencesEvent Id="7fd1768d-6385-453b-aca8-39409e1908df">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident1" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="76d748d9-fa25-41f8-b32f-b9c9432baf5e">
+      <functionBlockInterface Id="5b574a00-7b0b-44fd-bde9-280555490485" name="FireIncidentSim" x="743.75" y="437.5">
+        <events>
+          <functionBlockHasEvents Id="521c7feb-3a11-4594-94cf-46ac3740e745">
+            <event Id="c287ffa7-e4cb-4f83-8fa3-88ab83b3911c" name="incident0" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c7623c67-4b07-4a0b-84e0-8272dbef7881">
+            <event Id="a66e6f96-ec5c-4e59-afda-42c4f826c710" name="incident1" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="82383342-2baf-471c-8ba8-5d5d6ea99b25">
+            <event Id="9830a33e-7aff-4816-8ef2-c0ff4b8c826e" name="incident2" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d8f72519-d709-446a-92e4-d080255f373d">
+            <event Id="cc316088-5999-4f27-999c-759421fdc05b" name="reset" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="6572815a-e40d-4e7a-b1da-680e0724b35e">
+            <inputEventPort Id="d30b5e76-43fb-4d5b-9097-e5644bbf5260">
+              <event>
+                <inputEventPortReferencesEvent Id="6320ec9a-9cdb-4bfe-a214-dde326c50b0d">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ec44babb-3ac3-4df8-b21f-3a6035725d87">
+            <outputEventPort Id="2104b80a-0555-443e-8237-c1901ac198e5">
+              <event>
+                <outputEventPortReferencesEvent Id="3a74d6a0-b923-41a8-b69b-18df8c53a38b">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident0" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="b0db164b-3356-4c2d-b50f-c08f02009fb6">
+            <outputEventPort Id="2f425dcd-29b3-466c-b6be-68db2e6ae669">
+              <event>
+                <outputEventPortReferencesEvent Id="e9d89fbe-67a3-41ef-b6f8-fbccfadf86f1">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="21ae6c47-a636-4cf8-ace2-c9c59f64fafb">
+            <outputEventPort Id="93c0eba5-51c1-42dd-9894-ce04aa68eab2">
+              <event>
+                <outputEventPortReferencesEvent Id="c342ed99-5ae5-42ad-8c71-50bf847d5e22">
+                  <eventMoniker name="/FireIncidentSim/FireIncidentSim/incident2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="becc5459-dcbb-48b3-9eee-ea9995e908e3">
+      <transitionNode Id="eaebb973-fbfd-4904-9823-18a9d7fb9f0a" x="712.70833333333326" y="662.95833333333326" event="reset">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f727e09a-20f2-4898-ae49-7c2f451411d6">
+            <stateMoniker name="/FireIncidentSim/TWO" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="a7efadcb-f07d-4d47-b294-1859fb3664f1">
+      <transitionNode Id="c29e0a88-be4c-4801-be48-9cab2778d1bf" x="954.03124999999989" y="947.67708333333326" event="reset">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0ee896d6-6217-4664-baba-7ee31c3b0819">
+            <stateMoniker name="/FireIncidentSim/THREE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="94491d37-d1b5-4c49-91f3-ed863c273b3a">
+      <transitionNode Id="f7e4ee16-a88a-4989-a0cc-b09bd0f6ef5f" x="537.80206942558289" y="350">
+        <targetState>
+          <transitionNodeConnectsToStates Id="423d2e90-a6d5-485e-b4da-9a66daf5c1e7">
+            <stateMoniker name="/FireIncidentSim/NONE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="7a6f4230-b78e-4f6a-9abc-f7327be27d76">
+      <transitionNode Id="a1785285-26d6-44e3-bf4f-9e629eb26212" x="698.98956942558289" y="407.21875347693759">
+        <targetState>
+          <transitionNodeConnectsToStates Id="354aaf23-205e-4f66-b22f-9e56b6b8e03a">
+            <stateMoniker name="/FireIncidentSim/ONE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8659515c-7c40-42b3-8e04-01c1375a7956">
+      <transitionNode Id="2ce48ebb-7c14-40bf-a5a0-ba352051954e" x="975.49999999999989" y="873.0687255859375" event="reset">
+        <targetState>
+          <transitionNodeConnectsToStates Id="5b563706-6ad1-4c67-9836-a855b5112fc6">
+            <stateMoniker name="/FireIncidentSim/NONE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

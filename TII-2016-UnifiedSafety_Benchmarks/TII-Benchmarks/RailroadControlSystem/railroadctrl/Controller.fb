@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="0ee13fb0-e422-4228-9ba6-ad6fe999d161" name="Controller" organization="Rockwell Automation" version="0" date="2000-05-30" author="JHC" header="package fb.rt.benchmarks.railroadctrl;">
+  <states>
+    <functionBlockModelHasStates Id="be24e3dc-091f-4823-9519-1852ca6716b2">
+      <state Id="b585e8dc-0085-4eb7-b7e6-06693b1d1a0d" name="RAISE" x="1181.25" y="612.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="1fbeb75a-3d0a-4de8-84b8-0809a3d27f46">
+            <actionSetMoniker Id="685a347f-edc0-44c4-b28c-5ce176a25b05" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="9a4d0ca8-82c2-443b-a6b0-dcbd5b8ba868">
+            <transitionNodeMoniker Id="b4e02060-f063-4cfc-afb6-eed75c5f61f8" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="9afea904-6516-48ca-8e70-d503d4145557">
+            <transitionNodeMoniker Id="69be19b1-a020-4d3a-952a-e72cf772e9e0" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="69b92225-5c66-4fd6-8d71-02499d827ff8">
+      <state Id="54926726-3934-41d4-a768-5be6ba6d0ede" name="LOWER" x="1181.25" y="1225" isInitial="false">
+        <actionSet>
+          <actionLink Id="3bf23a7a-68c3-4acd-b9ef-9f75705d8d8b">
+            <actionSetMoniker Id="2bba9c40-e62a-4a64-8bcb-6bd93f074630" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="03cbcce2-c975-4b82-9762-9366be46889a">
+            <transitionNodeMoniker Id="b43932a2-57d5-45b8-bd90-e4d4352fbdb1" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="c6d665ab-049e-4771-ac52-40c1b7c6df98">
+            <transitionNodeMoniker Id="148a96fc-7b49-424a-95fa-2ee379411fb2" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="72067462-b136-4466-ae11-75a53c652cb7">
+            <transitionNodeMoniker Id="08764ce8-7b1b-457c-b4f5-05f0263b7830" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="47e449d6-b74b-424f-b2a4-fac142d61b05">
+      <actionSet Id="685a347f-edc0-44c4-b28c-5ce176a25b05" x="1487.5" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="a58cc9bf-f6ab-4a3a-862e-ee6cd860cf45">
+            <actionEvent Id="d9d40075-1f0f-4a1b-80db-ca131fae6d34">
+              <event>
+                <actionEventReferencesEvent Id="af23350f-f74d-4045-80c5-40f6a680fa04">
+                  <eventMoniker name="/Controller/Controller/raise" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="262c04a3-ca42-4865-a077-e7fc49ca5775">
+      <actionSet Id="2bba9c40-e62a-4a64-8bcb-6bd93f074630" x="1487.5" y="1225">
+        <actionItems>
+          <actionSetHasActionItems Id="29f3a07e-f3bb-489a-976a-9f467463ec86">
+            <actionEvent Id="4636fe91-a0e9-47ab-b554-8f7563c296c8">
+              <event>
+                <actionEventReferencesEvent Id="e721938b-6ebb-477c-ba91-25d2d179abcf">
+                  <eventMoniker name="/Controller/Controller/lower" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="478996a8-34ea-4336-b5d8-6777d2c5fd17">
+      <functionBlockInterface Id="7e4bc550-cfb9-42b3-9e7b-64d47fc483f5" name="Controller" x="500" y="500">
+        <events>
+          <functionBlockHasEvents Id="f557a533-2c59-4575-9c76-be40fe214f2b">
+            <event Id="d0f8ae0b-49d4-4c8b-a664-e4e2aa195d8e" name="inR" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="bdb284ee-7c34-4fd4-af64-c8c7f81c0f9a">
+            <event Id="8f0a8b19-6e1d-405c-9e91-7d5518f470b8" name="inI" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="37fa088a-4e20-4027-8f23-eeac78acf0f6">
+            <event Id="daaa528c-a276-4d0b-9114-df925ea7ac68" name="exited" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d144b707-5bea-434a-b53d-d8bf88c0ff3f">
+            <event Id="526eb554-c110-4194-93f7-b6fb3391aa65" name="raise" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6b15285d-8c9d-4e01-a3c9-57fbad220217">
+            <event Id="0c8d451e-7aac-4da6-849a-029fcd90dc73" name="lower" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b7f28dde-c956-4d6c-838e-64eb43a5e3ab">
+            <event Id="4c3cd63c-e33c-4871-b423-90448923f88d" name="failure" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="def951ac-3152-4461-95fe-1a4e94f1dfd9">
+            <inputEventPort Id="297188e4-d53c-4461-9e49-78d9840bfea3">
+              <event>
+                <inputEventPortReferencesEvent Id="0c465fad-d1f0-42f5-ba08-1798ee166c20">
+                  <eventMoniker name="/Controller/Controller/inR" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="51b39a4b-2252-4526-a1b2-48c9fa592554">
+            <inputEventPort Id="99bbfd09-8551-401f-9cda-4be783aa536e">
+              <event>
+                <inputEventPortReferencesEvent Id="ac2d0d22-2609-4524-bc00-4e88208afcda">
+                  <eventMoniker name="/Controller/Controller/inI" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="713cea92-0031-48a6-bc07-b53a9f73eb6f">
+            <inputEventPort Id="871224d2-2ba8-4406-85ef-16955aad86d0">
+              <event>
+                <inputEventPortReferencesEvent Id="6c84f388-65ba-4603-9ff0-dcbd5392c13d">
+                  <eventMoniker name="/Controller/Controller/exited" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="eafbb338-326f-437e-aa43-e5818e7c04ec">
+            <inputEventPort Id="32761cd1-1c7c-4c61-bde5-326c8025f55f">
+              <event>
+                <inputEventPortReferencesEvent Id="45502846-34a6-4ebb-8e59-6c8fcb65fe90">
+                  <eventMoniker name="/Controller/Controller/failure" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5227ead6-70af-4506-b6d2-9e444a9027e4">
+            <outputEventPort Id="54c9c1c1-86fb-4497-8c6c-e084f2e9cbe7">
+              <event>
+                <outputEventPortReferencesEvent Id="42a600fa-21be-4cdc-bbd2-51342acc914e">
+                  <eventMoniker name="/Controller/Controller/raise" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8ae49958-78d6-4ccc-a586-ba71d64e8a9c">
+            <outputEventPort Id="af641de0-f248-43ca-b0b4-d97a580db0b9">
+              <event>
+                <outputEventPortReferencesEvent Id="5597e249-9f9e-478e-be5e-1afca88e9227">
+                  <eventMoniker name="/Controller/Controller/lower" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3c35b794-4c8f-4f6e-8c7e-f6510e4900c5">
+      <transitionNode Id="b4e02060-f063-4cfc-afb6-eed75c5f61f8" x="1137.5" y="962.5" event="inR">
+        <targetState>
+          <transitionNodeConnectsToStates Id="505ccd76-c8cc-4435-860d-56e96caddfd3">
+            <stateMoniker name="/Controller/LOWER" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="65563739-d669-40ad-8fce-f533e5b26a1c">
+      <transitionNode Id="69be19b1-a020-4d3a-952a-e72cf772e9e0" x="1268.75" y="831.25" event="inI">
+        <targetState>
+          <transitionNodeConnectsToStates Id="295da5f5-d193-48bc-adb5-476fb1fdf8c8">
+            <stateMoniker name="/Controller/LOWER" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="11350016-6386-44e8-9ac0-9afcc0042a58">
+      <transitionNode Id="08764ce8-7b1b-457c-b4f5-05f0263b7830" x="1487.5" y="962.5" event="exited">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e1a33ab0-0218-4e11-9f5c-9f82f49f1c9b">
+            <stateMoniker name="/Controller/RAISE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="e6d2e676-000b-43e4-954f-008795644882">
+      <transitionNode Id="b43932a2-57d5-45b8-bd90-e4d4352fbdb1" x="1225" y="1400" event="inR">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e43b1b32-b0e0-449c-afef-fb48e77068a9">
+            <stateMoniker name="/Controller/LOWER" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="570fa7a8-1f95-4bf9-89f0-a9f3f0fd74db">
+      <transitionNode Id="148a96fc-7b49-424a-95fa-2ee379411fb2" x="1200.25" y="1243" event="inI">
+        <targetState>
+          <transitionNodeConnectsToStates Id="51ada623-fd8f-45d8-92de-1d9880fc43e3">
+            <stateMoniker name="/Controller/LOWER" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

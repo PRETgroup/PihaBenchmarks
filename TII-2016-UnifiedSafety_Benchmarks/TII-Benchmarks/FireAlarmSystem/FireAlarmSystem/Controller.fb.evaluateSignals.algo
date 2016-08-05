@@ -1,0 +1,6 @@
+me->alarm = (me->d0F1Z1 || me->d0F1Z2 || me->d0F1Z3 || me->d0F1Z4 || me->manPull);
+
+me->sprinkle = (me->d0F1Z1 && me->d0F1Z2) || (me->d0F1Z1 && me->d0F1Z3) || (me->d0F1Z1 && me->d0F1Z4) 
+	|| (me->d0F1Z2 && me->d0F1Z3) || (me->d0F1Z2 && me->d0F1Z4) || (me->manPull);
+
+me->needsReset = (me->d0F1Z1 || me->d0F1Z2 || me->d0F1Z3 || me->d0F1Z4 || me->manPull);

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="fe23e72a-4216-4f63-85b1-3abcbad7f301" name="Environment" organization="User-PC" date="2013-06-19" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="7da64a51-013a-4b75-8aa7-96fd72c7dfe2">
+      <functionBlockInterface Id="cb1f65af-302d-43ec-b9ab-a31f0ca922cd" name="Environment" x="1400" y="481.25" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+</compositeFunctionBlockModel>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="c71bc9ea-4226-4ab4-a405-f1a10ac15238" name="ResourceType1" date="2014-08-12" author="ZeeshanEjaz" version="0.1" modelType="Resource" organization="ZEEPC">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="99d38e19-8439-4353-9a1a-a04cee889b12">
+      <functionBlockInterface Id="27572199-1603-4313-9505-b98d282d0383" name="ResourceType1" x="131.25" y="175" modelType="Resource" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+</compositeFunctionBlockModel>

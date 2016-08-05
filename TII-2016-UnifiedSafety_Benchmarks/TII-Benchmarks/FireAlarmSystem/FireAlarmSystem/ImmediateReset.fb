@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="b67891e3-9c7a-4b1c-8d75-eed6aa22d662" name="ImmediateReset" organization="User-PC" date="2013-06-27" author="User">
+  <states>
+    <functionBlockModelHasStates Id="f4e8f486-ef35-4c42-b0f3-037dac049e6f">
+      <state Id="5b2105e6-db42-49dc-b6dc-746b1d95b1c2" name="IDLE" x="525" y="218.75" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="62be8e44-43b4-46cf-a31b-5f7469ea880e">
+            <transitionNodeMoniker Id="26f9aaa3-c091-43c8-a1ee-823d41fa4716" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="d4a5bbec-9f20-43d5-b3bc-8203cad6b3fa">
+      <state Id="da40ef6d-b8d7-49ba-b6d9-40bfd12df1fe" name="RESET" x="481.25" y="656.25" isInitial="false">
+        <actionSet>
+          <actionLink Id="3bf9d42b-ff59-4db0-997d-edf422b8e2e6">
+            <actionSetMoniker Id="ee5c69d4-be73-4f65-8a89-21a4e4b72410" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="cbebe1e2-c449-4be7-bffa-0307e62c510f">
+            <transitionNodeMoniker Id="0d2fa51e-2c4f-40eb-a2f3-be8410391b36" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="2b68fc34-f7e8-4fb3-8855-7abf4d4462e1">
+      <actionSet Id="ee5c69d4-be73-4f65-8a89-21a4e4b72410" x="825.93220680952061" y="656.25">
+        <actionItems>
+          <actionSetHasActionItems Id="cc9b416b-f869-4ff9-881c-1e5973ad83db">
+            <actionEvent Id="b6fec95c-18c1-4168-a463-ea1b1c10e9db">
+              <event>
+                <actionEventReferencesEvent Id="93acd7fb-0db4-4a29-8bb9-76710c5f67d9">
+                  <eventMoniker name="/ImmediateReset/ImmediateReset/doReset" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="edbb81ea-9500-4cfa-a3a5-1f6fc405345e">
+      <functionBlockInterface Id="3e7a43cc-d4be-47ec-94f8-c4dbe87750bb" name="ImmediateReset" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="b873cb74-127b-457f-bb8c-2f10781c4f88">
+            <event Id="4d04be34-347c-4cd6-afc5-666fcc2a7ef4" name="set" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="524e38a6-6c36-4cdd-9195-0c30c710548f">
+            <event Id="dd1fa590-6fd6-4ac1-ae27-60be88a68ab4" name="doReset" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="999c93ba-605e-451c-8c25-55e4acb2f3aa">
+            <inputEventPort Id="a97ab872-298c-4af6-8371-561395a7cbac">
+              <event>
+                <inputEventPortReferencesEvent Id="a5fe669d-4534-4295-af11-6b1dc56b3ba4">
+                  <eventMoniker name="/ImmediateReset/ImmediateReset/set" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="70e058eb-2d65-4d88-bf3a-d4c3bc248f6d">
+            <outputEventPort Id="f1fbac46-8ff2-4021-8c27-451ebc1eb23d">
+              <event>
+                <outputEventPortReferencesEvent Id="47e6670f-a038-4039-b2b6-c7a587112e48">
+                  <eventMoniker name="/ImmediateReset/ImmediateReset/doReset" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c7a10dfa-6d27-4a81-a6c8-3ef5897ab50f">
+      <transitionNode Id="26f9aaa3-c091-43c8-a1ee-823d41fa4716" x="504.125" y="407.50000000000006" event="set">
+        <targetState>
+          <transitionNodeConnectsToStates Id="af5b1afa-511c-4d18-856b-140c2aa559bc">
+            <stateMoniker name="/ImmediateReset/RESET" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="9b09358a-4857-45db-a41a-57f5e88252d1">
+      <transitionNode Id="0d2fa51e-2c4f-40eb-a2f3-be8410391b36" x="502.125" y="413.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="9a97e70c-5a5a-4c92-afcb-6dcce73874fd">
+            <stateMoniker name="/ImmediateReset/IDLE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

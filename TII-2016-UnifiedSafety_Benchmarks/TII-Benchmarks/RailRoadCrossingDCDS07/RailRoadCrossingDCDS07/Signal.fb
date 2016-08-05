@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="8aac6cda-a2f2-419a-9bf8-e89bb3447a78" name="Signal" organization="User-PC" date="2013-07-02" author="User">
+  <states>
+    <functionBlockModelHasStates Id="42423e01-662b-4168-956d-875c711740b4">
+      <state Id="7c644560-6ed3-4747-9c97-25e7fd038800" name="IDLE" x="1531.25" y="262.5" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="71ecb0c6-079e-4678-991f-5386744c40ce">
+            <transitionNodeMoniker Id="2936a941-78ba-43ae-9c88-888a685fd5f7" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="33adf762-5b9a-474a-99a7-032c21da0591">
+      <state Id="45d48ec8-4076-4919-bb21-5e431d6d98c6" name="SECURE" x="1487.5" y="656.25" isInitial="false">
+        <actionSet>
+          <actionLink Id="e5ba17d8-44fa-4518-8cb0-ad0ea331f434">
+            <actionSetMoniker Id="a5c2d5b5-cbb9-4c29-8b85-7e58f6c32897" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="d81ab902-6895-4f69-a5a2-e834c1f9ddc3">
+            <transitionNodeMoniker Id="cc4539a7-3703-49a6-838a-80064c971326" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="99e6aee3-272b-453b-b635-310972742135">
+      <actionSet Id="a5c2d5b5-cbb9-4c29-8b85-7e58f6c32897" x="1867.4300095438955" y="656.25">
+        <actionItems>
+          <actionSetHasActionItems Id="b2bf9a1c-0fb2-496b-8599-46540d08c605">
+            <actionEvent Id="898566ca-6eb7-46f5-8a05-3ebbad23172e">
+              <event>
+                <actionEventReferencesEvent Id="0c09e963-e79b-42d1-9d27-60af225225ea">
+                  <eventMoniker name="/Signal/Signal/secured" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="373658ea-31ec-4401-8582-94597e4daadb">
+      <functionBlockInterface Id="d83bb7dd-088e-4d80-a698-eb961998e3bd" name="Signal" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="e478540b-28cf-4d3d-9c6a-8e562e913388">
+            <event Id="661b16f2-7f65-4199-a15a-5d524faf7317" name="secure" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="adb469db-b65d-40fd-9848-0b09c5c6df2e">
+            <event Id="bb41f147-fbe5-4c34-96d5-c94561ef7299" name="allow" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6c179a62-0c2c-4648-a46e-28b432cd9b91">
+            <event Id="a3ae6c2a-7dd6-4a1e-bda8-e4c9b1e34799" name="secured" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="16e11819-eadc-46dc-9ec6-96a517046b99">
+            <inputEventPort Id="5b9a08b9-d002-4066-9c88-5a2145952d9a">
+              <event>
+                <inputEventPortReferencesEvent Id="071aa955-a0cd-432f-a0e1-360e184aef52">
+                  <eventMoniker name="/Signal/Signal/secure" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="2cba8726-357f-4ad3-85d8-2ee9c2e77e1d">
+            <inputEventPort Id="f68590cf-7c83-4c80-8e6c-813fb759e3aa">
+              <event>
+                <inputEventPortReferencesEvent Id="3e43f5c8-7192-43ac-b994-2961fb4d087a">
+                  <eventMoniker name="/Signal/Signal/allow" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="6502ea42-0f0a-4919-9dc9-89bfb38c388f">
+            <outputEventPort Id="150e2011-358b-42d9-a8c7-12ba9aed78b7">
+              <event>
+                <outputEventPortReferencesEvent Id="084960c3-5a1f-4bb6-9852-d66d4cd4a3a3">
+                  <eventMoniker name="/Signal/Signal/secured" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d353fff9-d98c-413f-adcd-9d0ace24363c">
+      <transitionNode Id="2936a941-78ba-43ae-9c88-888a685fd5f7" x="1508.375" y="421.375" event="secure">
+        <targetState>
+          <transitionNodeConnectsToStates Id="876b0cd5-e11e-45e0-841f-7ed7a3409118">
+            <stateMoniker name="/Signal/SECURE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="29752a5a-81d5-48b3-aa9f-15f99f049db9">
+      <transitionNode Id="cc4539a7-3703-49a6-838a-80064c971326" x="1511.3749999999998" y="458.375" event="allow">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e4dc296b-5b57-44c0-9c3b-a645101038c4">
+            <stateMoniker name="/Signal/IDLE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

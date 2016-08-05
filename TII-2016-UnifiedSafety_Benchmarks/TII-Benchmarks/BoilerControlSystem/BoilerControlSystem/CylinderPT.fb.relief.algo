@@ -1,0 +1,1 @@
+me->pressure = (me->pressure > 10) ? me->pressure - 10 : 0;

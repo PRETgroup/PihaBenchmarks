@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{92B81AF7-8D03-46D0-9C71-430DAE7A074E}") = "railroadctrl", "railroadctrl\railroadctrl.bproj", "{E797D725-E63D-4B67-8BA8-87C811D36F0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Deploy|gnu = Deploy|gnu
+		OpenRTM|gnu = OpenRTM|gnu
+		Remote|gnu = Remote|gnu
+		Run|gnu = Run|gnu
+		Simulation|gnu = Simulation|gnu
+		Verification|gnu = Verification|gnu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Deploy|gnu.ActiveCfg = Deploy|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Deploy|gnu.Build.0 = Deploy|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.OpenRTM|gnu.ActiveCfg = OpenRTM|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.OpenRTM|gnu.Build.0 = OpenRTM|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Remote|gnu.ActiveCfg = Remote|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Remote|gnu.Build.0 = Remote|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Run|gnu.ActiveCfg = Run|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Run|gnu.Build.0 = Run|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Simulation|gnu.ActiveCfg = Simulation|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Simulation|gnu.Build.0 = Simulation|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Verification|gnu.ActiveCfg = Verification|gnu
+		{E797D725-E63D-4B67-8BA8-87C811D36F0D}.Verification|gnu.Build.0 = Verification|gnu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

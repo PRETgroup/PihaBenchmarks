@@ -1,0 +1,1 @@
+me->gasValue = (me->gasValue < 100) ? me->gasValue + 1 : me->gasValue;

@@ -1,0 +1,56 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- override -->
+  <Target Name="ResolveAssemblyReferences"></Target>
+  
+  <UsingTask TaskName="UoA.IEC61499.Compiler.CompilationTask" AssemblyFile="$(TimeMePath)\UoA.IEC61499.Compiler.dll" />
+ 
+  <!--Compile target (this is the target that calls the compiler task)-->  
+ 
+  <Target Name="Build">
+    <Message Text="Building using UoA.IEC61499.Compiler" Importance="high" />
+    <CompilationTask SourceFiles="@(Compile)" 
+                     ProjectPath="$(MSBuildProjectDirectory)"
+                     ProjectReferences="@(Reference)"
+                     OutputPath ="$(OutputPath)"
+                     OutputFormat="$(OutputFormat)"
+                     CompilationMode="$(CompilationMode)"
+                     Platform="$(Platform)"
+                     CodeSortingMode="$(CodeSortingMode)"
+                     MaxStringLength="$(MaxStringLength)"
+                     AddtionalFBCParameters="$(AddtionalFBCParameters)"                     
+                     ExecuteMakeScript="$(ExecuteMakeScript)"
+                     CompilerLocation="$(CompilerLocation)"
+                     CompilerName="$(CompilerName)"
+                     AdditionalLibraryPath="$(AdditionalLibraryPath)"
+                     AdditionalIncludePath="$(AdditionalIncludePath)"
+                     CompilerParameters="$(CompilerParameters)"
+                     LinkerParameters="$(LinkerParameters)" />
+  </Target>
+  
+  <Target Name="ReBuild">
+    <Message Text="Building using UoA.IEC61499.Compiler" />
+    <CompilationTask SourceFiles="@(Compile)"
+                     ProjectPath="$(MSBuildProjectDirectory)"
+                     ProjectReferences="@(Reference)"
+                     OutputPath ="$(OutputPath)"
+                     OutputFormat="$(OutputFormat)"
+                     CompilationMode="$(CompilationMode)"
+                     Platform="$(Platform)"
+                     CodeSortingMode="$(CodeSortingMode)"
+                     MaxStringLength="$(MaxStringLength)"
+                     AddtionalFBCParameters="$(AddtionalFBCParameters)"
+                     ExecuteMakeScript="$(ExecuteMakeScript)"
+                     CompilerLocation="$(CompilerLocation)"
+                     CompilerName="$(CompilerName)"
+                     AdditionalLibraryPath="$(AdditionalLibraryPath)"
+                     AdditionalIncludePath="$(AdditionalIncludePath)"
+                     CompilerParameters="$(CompilerParameters)"
+                     LinkerParameters="$(LinkerParameters)" />
+  </Target>
+
+  <Target Name="Clean">
+    <Message Text="Cleaning process is not yet defined." Importance="high"/>    
+  </Target>
+  
+</Project>

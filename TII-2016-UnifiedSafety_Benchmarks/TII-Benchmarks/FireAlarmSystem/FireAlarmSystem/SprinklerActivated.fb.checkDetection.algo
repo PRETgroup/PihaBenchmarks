@@ -1,0 +1,1 @@
+me->needSprinkler = (me->d0Detect && me->d1Detect) || (me->d0Detect && me->d2Detect) || (me->d1Detect && me->d2Detect);

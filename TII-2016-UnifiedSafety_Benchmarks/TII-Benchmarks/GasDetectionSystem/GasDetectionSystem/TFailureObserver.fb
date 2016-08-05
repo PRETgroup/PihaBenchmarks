@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="d3282989-d841-45fc-9ea1-51d88c4d1601" name="TFailureObserver" organization="User-PC" date="2013-05-31" author="User">
+  <states>
+    <functionBlockModelHasStates Id="2f301551-59f8-497e-b741-5a1214dca90d">
+      <state Id="fd761a72-9a3e-4173-840e-c3555fc4afa7" name="OK" x="131.25" y="262.5" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="de1d4bae-e7c1-49a1-907d-c97de1df45a0">
+            <transitionNodeMoniker Id="b773216a-5b5e-40e2-b0f3-94aa60f110a3" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="0abfc410-a2c1-4b06-a1d2-1bd592732fbc">
+      <state Id="96b8c2d9-41c7-492b-88d4-d9c91330ab35" name="Violation" x="645.3125" y="528.64583333333326" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="3f8bc698-ceee-4a8a-8e04-5ba9c5727a28">
+            <transitionNodeMoniker Id="497c7c79-6677-4dc5-9237-1aa8d9271786" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="8f6f731e-16f4-4753-9927-7920d39284d4">
+      <functionBlockInterface Id="e18dca42-90f9-4f8c-9b56-45e5645c6877" name="TFailureObserver" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="16168c01-585f-464f-becd-fd8fcf6490e0">
+            <event Id="a2633292-f263-485e-85c0-1c3bcf3d483b" name="read" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="091886dc-af10-4f3d-bf76-6a1e86011c13">
+            <variable Id="71529001-e41f-480f-943a-ac96b215e10c" name="tfailure" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="9d09c362-8de7-415e-9bbf-42d22cdb2071">
+            <inputEventPort Id="1093ecdb-04a5-4d84-8c46-304422a3daed">
+              <targetPort>
+                <association Id="142d8e5b-ff86-4b73-bc2e-772462c66307">
+                  <inputVariablePortMoniker Id="1c2a203e-c750-478c-ba05-35340758bb98" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="0828ba1a-a8d6-4a95-8d35-4b171df3e666">
+                  <eventMoniker name="/TFailureObserver/TFailureObserver/read" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="8e4f208e-2f89-43f1-9385-fea2ea755919">
+            <inputVariablePort Id="1c2a203e-c750-478c-ba05-35340758bb98">
+              <variable>
+                <inputVariablePortReferencesVariable Id="e8818842-2549-4df4-a2a8-8513e49a33d5">
+                  <variableMoniker name="/TFailureObserver/TFailureObserver/tfailure" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ee5b669d-e381-4ebf-8e82-b36fe1b18050">
+      <transitionNode Id="b773216a-5b5e-40e2-b0f3-94aa60f110a3" x="423.28125000000006" y="392.57291666666663" event="read" expression="tfailure">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f4f4be6f-a4a9-4bfd-93a7-68bef230a9a9">
+            <stateMoniker name="/TFailureObserver/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="6b21dc52-f6d6-449d-a921-f3f80cc82f0d">
+      <transitionNode Id="497c7c79-6677-4dc5-9237-1aa8d9271786" x="365.28125000000006" y="376.57291666666663" event="read" expression="!tfailure">
+        <targetState>
+          <transitionNodeConnectsToStates Id="5af0bd1b-f1b7-4dab-814a-f1a6470f2c54">
+            <stateMoniker name="/TFailureObserver/OK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

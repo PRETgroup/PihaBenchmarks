@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="ddc4145b-7fd7-4207-906d-b0f2267ca291" name="GasSensor" organization="User-PC" date="2013-05-29" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="01ccf007-62cf-4d5e-83a9-9cbf945af9e7">
+      <state Id="a5a19efb-64d7-4ddd-b762-e3842bae5397" name="NORMAL" x="1356.25" y="306.25" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="8f9d0721-e4d1-4526-ba4f-793bc3a502b5">
+            <transitionNodeMoniker Id="cb6bea7b-3b33-432e-8f80-40cb65baccd4" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="bad74534-c44c-4065-99bf-409307539bac">
+            <transitionNodeMoniker Id="a6594e6d-623e-498e-9827-6d8d81a7686a" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="ed94569b-8b99-4d26-ac0f-7dc16d13bafc">
+      <state Id="33bbd657-a6cf-4546-a71f-4058df4a5a98" name="FAILED" x="1356.25" y="1050" isInitial="false">
+        <actionSet>
+          <actionLink Id="86ae132d-61fd-44dd-93ae-59e5fa754238">
+            <actionSetMoniker Id="9e8a208f-592a-4c2e-a1ac-26b76fbf6033" />
+          </actionLink>
+        </actionSet>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="8ffe1101-3de1-42c6-acc0-276a6e5d928b">
+      <state Id="e76260b2-98c4-4218-80ca-717d667d169a" name="INPUTREC" x="2012.5" y="306.25" isInitial="false">
+        <actionSet>
+          <actionLink Id="05c29b04-e28d-43f8-8658-b49705bf745a">
+            <actionSetMoniker Id="36abf846-042e-4fde-b3e5-7cfaabca2d03" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="dc204429-ff6a-44e8-ab2b-3196ae9b2424">
+            <transitionNodeMoniker Id="54713be5-ccad-400b-a217-45eae07f1fc5" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="c80082a0-3558-4a63-825f-cffcbf34545d">
+      <state Id="365d96c7-c8bc-4536-a443-b38bcab406dc" name="CHECK" x="1356.25" y="656.25" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="d723c3fb-42e7-47ae-ab0d-f0c777986403">
+            <probabilisticTransitionNodeMoniker Id="b8ffd38a-3553-4253-b49d-f570aae7ac27" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="5180c246-bb62-4255-8f44-ea1c2a2b50b8">
+            <probabilisticTransitionNodeMoniker Id="0ce01d48-7a41-4db3-8370-d3f6ce6f6aaf" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="3adf713f-0620-4337-8064-fe9f1645d7f0">
+      <actionSet Id="36abf846-042e-4fde-b3e5-7cfaabca2d03" x="1662.5" y="787.5">
+        <actionItems>
+          <actionSetHasActionItems Id="025de40d-7d93-4f63-8f4a-fb12defccad5">
+            <actionAlgorithm Id="752f6a1d-d3eb-44b1-9713-76a92425d2f5">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="8dda2c1d-e447-448a-90e2-4a4ff0cac14d">
+                  <algorithmMoniker name="/GasSensor/transmit" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="be70cbe3-9796-4062-a8e7-5f0fc5d98b44">
+            <actionEvent Id="48a690bf-2157-4a0c-bece-b015c039ccee">
+              <event>
+                <actionEventReferencesEvent Id="61494821-6413-4402-a5db-32de5c911648">
+                  <eventMoniker name="/GasSensor/GasSensor/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="56265dbe-ab66-4839-8b0d-464cecff324e">
+      <actionSet Id="9e8a208f-592a-4c2e-a1ac-26b76fbf6033" x="1662.5" y="1006.25">
+        <actionItems>
+          <actionSetHasActionItems Id="dde43539-e699-4f5a-b444-52ac8f27789a">
+            <actionAlgorithm Id="03728eff-274f-4993-9283-465867f9b496">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="b872300e-2e9a-450a-9599-9030d0416c98">
+                  <algorithmMoniker name="/GasSensor/setFailure" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="1e89b8dc-809e-43c9-b483-1a1b8f9e25b7">
+            <actionEvent Id="b1a7dac5-cd72-48b8-805a-fc9eb4d5b773">
+              <event>
+                <actionEventReferencesEvent Id="39e2316a-a5fd-4bee-810b-0bcbfcc6b9bb">
+                  <eventMoniker name="/GasSensor/GasSensor/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="be6b4234-85f3-4574-86ee-0e7194191508">
+      <algorithm Id="e4b8aedc-3533-46f2-9151-68c12ec68b3f" name="transmit" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="ebb1537f-6131-476d-be64-7e536e04ba5c">
+      <algorithm Id="da2e9929-24ba-4b38-b941-0745f46eae6a" name="setFailure" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="cb8cba5c-357c-45a2-b718-cb4ecbf52f90">
+      <functionBlockInterface Id="96715bb6-531c-4887-adee-f4e61a470fcc" name="GasSensor" x="1400" y="481.25" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="2802d091-296d-4c1f-80e8-68f4db9a2f92">
+            <event Id="ef858859-9862-46c6-b48e-11a26a8bc7c4" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0d1640da-efe5-454b-8de2-2e53f7032e47">
+            <event Id="440d840d-d061-4edb-9a0c-1642490e5d79" name="output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="9cd193d8-18f5-44b3-bd18-69678496b168">
+            <variable Id="6ba1baa2-a114-4601-95b1-cd03e206a03b" name="inValue" scope="Input" initialValue="0" type="INT" minimumValue="0" maximumValue="100" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a70269bc-3757-4943-9db1-d31614379274">
+            <variable Id="bca3c476-f484-4ae2-9a06-cc341ea74b6f" name="outValue" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="36942dcf-f3f1-4fd2-8fb1-8f0a1a1d59e4">
+            <variable Id="13c2e974-9729-4986-b733-6f21f3c5325b" name="failed" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="48f24139-b0a2-4c94-9c60-37bb3d0c50de">
+            <variable Id="9024c895-dc51-4d44-9097-7ff1eaae011e" name="threshold" scope="Input" initialValue="0" type="INT" minimumValue="0" maximumValue="100" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="8585f738-9a12-4adf-923e-24b245a215c1">
+            <inputEventPort Id="057da4d8-10fd-4eeb-b23e-43f2c835f005">
+              <targetPort>
+                <association Id="82631c79-4d5b-4ae4-b5f0-8c0c9fc22d5e">
+                  <inputVariablePortMoniker Id="af63560c-75e2-447e-94e6-ea0b001020f2" />
+                </association>
+                <association Id="3bd9095e-f270-4b44-bb22-90d25c88a641">
+                  <inputVariablePortMoniker Id="0be4f69c-9156-4193-8868-c13ac3d802e1" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="419ca322-b0cf-47da-bcfd-44a1e83a752f">
+                  <eventMoniker name="/GasSensor/GasSensor/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d57afa5d-b1bb-4bcb-b13f-dc0d5b948c9e">
+            <outputEventPort Id="b45f23eb-b9bf-4498-b659-c82176888fe3">
+              <targetPort>
+                <association Id="c9c80551-8575-4ef9-a23c-cc0e3a473319">
+                  <outputVariablePortMoniker Id="096f4af9-1748-4b05-9f6f-b42dfbf680fe" />
+                </association>
+                <association Id="618ecc27-79a8-46ac-b3cc-1e09bd8be70a">
+                  <outputVariablePortMoniker Id="31a56a5d-15dc-49f2-a8d9-e719b9b4f640" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="968130df-5edc-4d6d-a584-e242bee49fd0">
+                  <eventMoniker name="/GasSensor/GasSensor/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="540e0e5b-6de2-4822-b4c3-629e6b5b12a9">
+            <inputVariablePort Id="af63560c-75e2-447e-94e6-ea0b001020f2">
+              <variable>
+                <inputVariablePortReferencesVariable Id="d55287e2-0881-426d-b4d6-d0214b54815b">
+                  <variableMoniker name="/GasSensor/GasSensor/inValue" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="76abf272-381d-47a9-b535-0779ccae916f">
+            <inputVariablePort Id="0be4f69c-9156-4193-8868-c13ac3d802e1">
+              <variable>
+                <inputVariablePortReferencesVariable Id="c56e7fbd-5e82-45d7-861c-1bed2bacf625">
+                  <variableMoniker name="/GasSensor/GasSensor/threshold" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="fa96ac33-1feb-47dd-84f9-3a0c7f943928">
+            <outputVariablePort Id="096f4af9-1748-4b05-9f6f-b42dfbf680fe">
+              <variable>
+                <outputVariablePortReferencesVariable Id="4c16e171-488d-43c0-ba5d-b15f0b2abd69">
+                  <variableMoniker name="/GasSensor/GasSensor/outValue" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="88f8f048-462f-4ade-bccf-580f7093f820">
+            <outputVariablePort Id="31a56a5d-15dc-49f2-a8d9-e719b9b4f640">
+              <variable>
+                <outputVariablePortReferencesVariable Id="0af6229c-d141-44d1-b04b-a2cea26de118">
+                  <variableMoniker name="/GasSensor/GasSensor/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5b59906e-eaa8-4e77-9fda-361400e70cbc">
+      <probabilisticTransitionNode Id="b8ffd38a-3553-4253-b49d-f570aae7ac27" x="1050" y="831.25" probability="2.8E-10">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ceb18df4-5b8d-4035-9b39-6cdff9e73024">
+            <stateMoniker name="/GasSensor/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="04220b27-71ae-4da0-8d9f-7dce44d6d6a5">
+      <probabilisticTransitionNode Id="0ce01d48-7a41-4db3-8370-d3f6ce6f6aaf" x="831.25" y="393.75" probability="0.99999999972">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d9e84e9e-5956-4e9d-b6a9-6d49cec36663">
+            <stateMoniker name="/GasSensor/NORMAL" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5d8a38a9-bce3-43d5-aa9f-087fb5fd6b9f">
+      <transitionNode Id="a6594e6d-623e-498e-9827-6d8d81a7686a" x="1181.25" y="568.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="01b0cf79-52d9-46ce-883b-ff982e07a770">
+            <stateMoniker name="/GasSensor/CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8efa61db-9928-47a8-a1d6-a5b2ce8de68a">
+      <transitionNode Id="cb6bea7b-3b33-432e-8f80-40cb65baccd4" x="1575" y="568.75" event="input">
+        <targetState>
+          <transitionNodeConnectsToStates Id="39dcc988-9a2b-48d6-94ec-db42a36499b5">
+            <stateMoniker name="/GasSensor/INPUTREC" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8651c266-9b56-4a75-ac7d-c856b05f64bf">
+      <transitionNode Id="54713be5-ccad-400b-a217-45eae07f1fc5" x="1639.3749999999998" y="496.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="bdbac311-9b60-4ce2-b4a5-1ba6e95180d9">
+            <stateMoniker name="/GasSensor/CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

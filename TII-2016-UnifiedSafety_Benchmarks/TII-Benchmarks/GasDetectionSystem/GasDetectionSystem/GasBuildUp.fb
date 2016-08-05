@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="6a0b546b-ba51-4fdb-ade4-31d1652a9295" name="GasBuildUp" organization="User-PC" date="2013-05-29" author="User" modelType="Basic">
+  <states>
+    <functionBlockModelHasStates Id="3d433301-c073-4551-ba52-ffab87b6d0dd">
+      <state Id="afbec291-7cae-4474-b2c3-98a6065aa293" name="START" x="1662.5" y="1093.75" isInitial="true">
+        <actionSet>
+          <actionLink Id="d2723159-7617-4527-8c6f-4e10818ba59b">
+            <actionSetMoniker Id="126fb78d-a6b5-4d00-aac4-3a079d7a3903" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="731b20e0-6bfa-496a-ae37-d1ea24f85b29">
+            <transitionNodeMoniker Id="1f37c7e4-dcf7-4a69-b652-94a9355b2e11" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="55e2e907-ce24-4c16-a784-bb689b87c588">
+      <state Id="7d1a99b1-abcc-4438-bf6e-6e54d977aaf9" name="BUILDUP" x="1618.75" y="700" isInitial="false">
+        <actionSet>
+          <actionLink Id="f697165d-f43a-4b41-a1c6-e749a5d4c3c5">
+            <actionSetMoniker Id="723e2843-4e62-479a-9efe-672b36a57acf" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="af276c92-09da-4749-9ea1-5acafad28975">
+            <transitionNodeMoniker Id="c03d8d50-bbf9-42b6-ac47-443cbc9196e9" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="f887cf2d-82b3-49cc-9e4b-280b46d8ae86">
+      <actionSet Id="723e2843-4e62-479a-9efe-672b36a57acf" x="1968.75" y="700">
+        <actionItems>
+          <actionSetHasActionItems Id="2781f7f2-aa3b-47a8-b6d4-628e7bc182ee">
+            <actionEvent Id="473c776f-90b6-4a4c-9bc6-7dd35036937b">
+              <event>
+                <actionEventReferencesEvent Id="ee61d543-4c49-41c5-8890-f82f954356a0">
+                  <eventMoniker name="/GasBuildUp/GasBuildUp/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="b4734b38-e0c1-455b-b0c4-12007645bcc8">
+            <actionAlgorithm Id="6de703d3-42a8-4545-adfe-edb8cf19ec41">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="19356c25-b4b2-4f15-b5c1-3b08f86e2e23">
+                  <algorithmMoniker name="/GasBuildUp/doBuildUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="7345c493-9c75-4fe2-9101-9be9d3f49c39">
+      <actionSet Id="126fb78d-a6b5-4d00-aac4-3a079d7a3903" x="1968.75" y="1093.75">
+        <actionItems>
+          <actionSetHasActionItems Id="c20f517d-f395-431c-b3c0-40145ba2fe52">
+            <actionAlgorithm Id="17a7b116-b13f-4688-a644-be50cbe112e3">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="f855d370-42a0-4722-892c-1e3cdbf697f2">
+                  <algorithmMoniker name="/GasBuildUp/doVentilation" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="42c287fc-c508-4653-9995-6a017180b494">
+            <actionEvent Id="3e23bcf1-f14c-448e-a641-557730304e69">
+              <event>
+                <actionEventReferencesEvent Id="5c67fb52-07fc-45e4-8c16-23915c9c5116">
+                  <eventMoniker name="/GasBuildUp/GasBuildUp/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="9f3d0111-12b2-42b6-9b4d-71271c105e0c">
+      <algorithm Id="108a5d6d-96e1-4ecd-829c-b2b24107d798" name="doBuildUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="d2384c94-a5fd-47a3-989b-9e529204c483">
+      <algorithm Id="7ae3ea3e-e818-43db-98a2-2d9e7b35e4b6" name="doVentilation" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="d7964859-caa7-4e99-b55d-12f047d134b9">
+      <functionBlockInterface Id="f46c0299-4e1c-4fe7-8fcb-1e05871f202d" name="GasBuildUp" x="1400" y="481.25" modelType="Basic">
+        <events>
+          <functionBlockHasEvents Id="6160b127-c428-4c9b-aaf1-b5487fc3f761">
+            <event Id="fdbced81-6d5b-4ed0-84f7-915b177d5878" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="1943a571-30ee-4f11-84a4-0d4b00479349">
+            <event Id="1d672245-d881-41a6-bc35-5983f37911c6" name="output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="b3ec9e92-a025-4b50-9cfc-9cdbff72356e">
+            <variable Id="6a6db267-5c07-43d2-af08-504298272441" name="gasValue" scope="Output" initialValue="0" type="INT" minimumValue="0" maximumValue="100" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="f01a163b-3bbb-471c-b620-8e07f781757e">
+            <variable Id="749bafb9-3fec-4fb9-98c4-c626871e5f20" name="venting" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="f3b6cd25-79c6-4e6b-b2d5-6f66714554ef">
+            <inputEventPort Id="fdc5330f-2959-4c66-a882-6988ba55ba08">
+              <targetPort>
+                <association Id="4e6e8fda-2193-4a12-8ec5-e1ac2895a7b1">
+                  <inputVariablePortMoniker Id="0d71c63c-9e02-4bb3-b66d-1111c6542b67" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="4cfa53fc-bc0d-4bf2-9b22-8f6335e5db73">
+                  <eventMoniker name="/GasBuildUp/GasBuildUp/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="15e6ffdc-89f5-4649-8d37-0a74f382e003">
+            <outputEventPort Id="d816604c-5d54-45a1-9858-73a118168586">
+              <targetPort>
+                <association Id="322069d9-837e-4f4d-83fa-b8d4324949ef">
+                  <outputVariablePortMoniker Id="6de51045-9707-459c-b0e4-9e614494bbdb" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="c4f92379-bafe-4201-a1d5-56a63b735f44">
+                  <eventMoniker name="/GasBuildUp/GasBuildUp/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="36f136e9-0f79-4c30-a83f-acf6ed193f15">
+            <inputVariablePort Id="0d71c63c-9e02-4bb3-b66d-1111c6542b67">
+              <variable>
+                <inputVariablePortReferencesVariable Id="7e8d64b6-6a99-4aed-85a8-fb82c39a5bb1">
+                  <variableMoniker name="/GasBuildUp/GasBuildUp/venting" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="9be8d75f-b28b-46be-8587-d609ac27c53c">
+            <outputVariablePort Id="6de51045-9707-459c-b0e4-9e614494bbdb">
+              <variable>
+                <outputVariablePortReferencesVariable Id="4b1cf01c-1495-4605-9b6c-8c2f0dd1258a">
+                  <variableMoniker name="/GasBuildUp/GasBuildUp/gasValue" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4f69e651-915e-4d7d-856d-a78f0e65a169">
+      <transitionNode Id="c03d8d50-bbf9-42b6-ac47-443cbc9196e9" x="1487.5" y="875">
+        <targetState>
+          <transitionNodeConnectsToStates Id="50091460-574b-4d32-854d-2a989cd0396c">
+            <stateMoniker name="/GasBuildUp/START" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="b86dbc1c-65c0-4fc6-adc9-a872c0a1c5da">
+      <transitionNode Id="1f37c7e4-dcf7-4a69-b652-94a9355b2e11" x="1881.25" y="918.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f0294064-7bd2-402c-a0b8-11a0f8420c6b">
+            <stateMoniker name="/GasBuildUp/BUILDUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

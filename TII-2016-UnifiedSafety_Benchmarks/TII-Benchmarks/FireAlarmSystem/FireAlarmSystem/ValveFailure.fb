@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="b40886a2-de69-4c0b-ae9d-2535baa92d8b" name="ValveFailure" organization="User-PC" date="2013-06-27" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="7c1d3cc0-61fd-4977-baf9-98a081e1ef37">
+      <state Id="ac5e1005-fdcf-42a0-a468-31c9d7ced94c" name="NORMAL" x="794.79166666666674" y="229.6875" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="a09c56ff-5324-447f-b95d-605438165450">
+            <transitionNodeMoniker Id="439138af-4b8c-49e8-be5b-2c58d51bea6c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="abb2d3f3-b15e-4cf5-82ee-5775dee621d2">
+      <state Id="a00bc26c-55bb-4687-a4b5-9360dadfea7c" name="CHECK" x="831.25" y="612.5" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="892fd1f0-f1c7-4b5f-9eed-ce0416439a11">
+            <probabilisticTransitionNodeMoniker Id="e9dc6778-4ba7-46fa-93c6-6221b07d7d19" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="92d739ee-f15f-4506-bee3-c822bda8e9ac">
+            <probabilisticTransitionNodeMoniker Id="57693e23-e823-430f-a520-5344fa3ee20c" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="1e8c7ae1-983d-41f2-b1c6-a2c4302c3b71">
+      <state Id="567fc676-f99d-4820-ab46-3d5913a82c97" name="FAILED" x="787.5" y="1006.25" isInitial="false" />
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="e3acabe3-c0ba-492d-981c-68f47e799c98">
+      <functionBlockInterface Id="cbdfaeea-8cbe-447f-8f0a-bbbe1719946b" name="ValveFailure" x="568.75" y="262.5" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="c97dbce0-16df-4f47-8095-be73a7f871b6">
+            <event Id="214dfe61-9dcc-443d-9fbe-5971f44e6c04" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="7917d7e1-5df9-44be-bbbc-f3d8d740f93b">
+            <variable Id="b014863b-6525-439d-ab84-064cfd34f815" name="failed" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a1e07de6-64ba-4b4c-8db4-de55253bcece">
+            <outputEventPort Id="2430b2ac-f0c1-485c-8095-f048cf90b068">
+              <targetPort>
+                <association Id="281aa10a-62ef-4f89-a31e-3f1959ea6642">
+                  <outputVariablePortMoniker Id="5e4392d9-8e59-4154-ac3c-28764e6614a7" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="0168a8a3-bcbc-4b1c-8cb7-9fd4d91f7b0a">
+                  <eventMoniker name="/ValveFailure/ValveFailure/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="70687dee-6c70-4a4f-9703-ce7ed4d55688">
+            <outputVariablePort Id="5e4392d9-8e59-4154-ac3c-28764e6614a7">
+              <variable>
+                <outputVariablePortReferencesVariable Id="c4fd7234-fb29-4f5c-a531-d3f4600e1bad">
+                  <variableMoniker name="/ValveFailure/ValveFailure/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="845bf6fc-e348-4dba-a5a5-70368cc8e8be">
+      <transitionNode Id="439138af-4b8c-49e8-be5b-2c58d51bea6c" x="812.02083333333337" y="417.09375000000006">
+        <targetState>
+          <transitionNodeConnectsToStates Id="2e8ff9bd-d7fe-4bad-a126-bf317848a5bc">
+            <stateMoniker name="/ValveFailure/CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ea6ddfbe-2b22-433e-8d50-320609af8330">
+      <probabilisticTransitionNode Id="e9dc6778-4ba7-46fa-93c6-6221b07d7d19" x="815.02083333333326" y="441.09375" probability="0.99999999997981">
+        <targetState>
+          <transitionNodeConnectsToStates Id="8258f7d9-70d6-4860-a8c3-e753ce7f32a2">
+            <stateMoniker name="/ValveFailure/NORMAL" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="73d7aa54-7efc-4039-9222-44e941a1f451">
+      <probabilisticTransitionNode Id="57693e23-e823-430f-a520-5344fa3ee20c" x="805.375" y="794.375" probability="2.019E-11">
+        <targetState>
+          <transitionNodeConnectsToStates Id="907ac426-29ef-4e8e-b8e2-469afaf1bd0c">
+            <stateMoniker name="/ValveFailure/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

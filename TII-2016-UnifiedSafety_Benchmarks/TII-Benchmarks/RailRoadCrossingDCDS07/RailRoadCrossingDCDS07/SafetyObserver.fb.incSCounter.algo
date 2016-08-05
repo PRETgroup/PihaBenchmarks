@@ -1,0 +1,1 @@
+me->secureCounter = (me->secureCounter < 5) ? me->secureCounter + 1 : me->secureCounter;

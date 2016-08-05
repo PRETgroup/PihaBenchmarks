@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{92B81AF7-8D03-46D0-9C71-430DAE7A074E}") = "RailRoadCrossingDCDS07", "RailRoadCrossingDCDS07\RailRoadCrossingDCDS07.bproj", "{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Deploy|gnu = Deploy|gnu
+		OpenRTM|gnu = OpenRTM|gnu
+		Remote|gnu = Remote|gnu
+		Run|gnu = Run|gnu
+		Simulation|gnu = Simulation|gnu
+		Verification|gnu = Verification|gnu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Deploy|gnu.ActiveCfg = Deploy|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Deploy|gnu.Build.0 = Deploy|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.OpenRTM|gnu.ActiveCfg = OpenRTM|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.OpenRTM|gnu.Build.0 = OpenRTM|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Remote|gnu.ActiveCfg = Remote|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Remote|gnu.Build.0 = Remote|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Run|gnu.ActiveCfg = Run|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Run|gnu.Build.0 = Run|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Simulation|gnu.ActiveCfg = Simulation|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Simulation|gnu.Build.0 = Simulation|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Verification|gnu.ActiveCfg = Verification|gnu
+		{2D334FC6-BF6A-45D1-A0BA-9E0890C2DC66}.Verification|gnu.Build.0 = Verification|gnu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

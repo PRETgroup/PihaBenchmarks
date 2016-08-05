@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="6d2c40aa-2159-4125-971d-c9504048e02b" name="AlarmActivated" organization="User-PC" date="2013-06-27" author="User" modelType="Observer">
+  <states>
+    <functionBlockModelHasStates Id="a5031f03-a69a-4c75-aba7-df346cfe854c">
+      <state Id="3f7a4e3a-9b90-42d0-8883-5ed6881ee23a" name="IDLE" x="481.25" y="393.75" isInitial="true">
+        <actionSet>
+          <actionLink Id="a83c67ee-d624-4f25-840c-786b97b8f697">
+            <actionSetMoniker Id="588ed1a7-1fd5-4d0d-ad20-d2458134e829" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="4351a8e9-2229-42c4-91dc-6339cad2d64e">
+            <transitionNodeMoniker Id="2e279129-af0d-45bf-9c40-5dd5fc6842ee" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="cde8202f-a22c-480b-a430-b319a06c6a86">
+      <state Id="2a7615cf-8214-4150-8891-2b49678b7acd" name="Violation" x="1837.5" y="1137.5" isInitial="false" />
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="1a52f8ce-2016-4e4f-bcf3-0e2c0de2ae85">
+      <state Id="6dec3bd8-649d-4c4b-b0b8-ca792d33165e" name="DETECT" x="1225" y="743.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="c0117911-d896-4d0d-b015-3d3d15da1e83">
+            <actionSetMoniker Id="e8d9e151-ac97-4bdc-a819-f888de98d83c" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="52980db6-3933-43fd-94cc-65ae3eb8e3b1">
+            <transitionNodeMoniker Id="2d45ed2a-1e80-4dc9-9e6a-4bfb5848e456" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="c62db196-71f3-4c6d-99d5-e2d395795b2e">
+            <transitionNodeMoniker Id="e44afe9d-e547-4857-89ac-0ca8be479846" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="8c762196-1899-45c6-a072-0a4782eec9bb">
+            <transitionNodeMoniker Id="3fb069d2-9ad9-4a83-bbe4-1b4ca2dbdc32" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="c9a29dca-823f-4b3c-9325-e7c0d49fd71e">
+      <actionSet Id="e8d9e151-ac97-4bdc-a819-f888de98d83c" x="1093.75" y="525">
+        <actionItems>
+          <actionSetHasActionItems Id="2cb048b9-85c3-4ce2-8e07-7249818e46ca">
+            <actionAlgorithm Id="6ce97429-f44d-46e4-af69-ce958fed53a0">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="8c2a5c04-4dd2-4a38-9607-1db0cb0ea7fa">
+                  <algorithmMoniker name="/AlarmActivated/checkDetection" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="86b6a9d3-5b01-41e3-9e46-dde0a4ab27ea">
+            <actionAlgorithm Id="848153d6-73b2-4ace-8142-91a7adc553bc">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="d043935c-41eb-45df-aa45-00cbf8ea62ef">
+                  <algorithmMoniker name="/AlarmActivated/countUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="2a9e814c-6eac-4542-8a70-fa7013cd7587">
+      <actionSet Id="588ed1a7-1fd5-4d0d-ad20-d2458134e829" x="1093.75" y="175">
+        <actionItems>
+          <actionSetHasActionItems Id="e7231593-3b51-43f9-b290-fd35dfd0e46e">
+            <actionAlgorithm Id="d2a5badf-0533-4c74-bb95-733ab4e2711f">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="49fa33e1-aba9-4628-9277-067af7ab4152">
+                  <algorithmMoniker name="/AlarmActivated/resetCount" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="24509269-0bc5-411e-babf-cef75bbc7fd7">
+      <algorithm Id="34df5c1c-e334-4ddd-96bd-c1d0c57409a0" name="checkDetection" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="743fd7b1-22c4-47b0-9ac4-864d25bb2f86">
+      <algorithm Id="99f7a18e-3664-4b7b-851f-6bda8c05ac97" name="countUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="678cd3ec-49b1-4f61-ade5-d7ddc3af8686">
+      <algorithm Id="62865833-2d0a-432f-b02b-049371ffa309" name="resetCount" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="96d8b6a4-076a-4363-9e42-be4980418aea">
+      <algorithm Id="44f0b48d-9896-415b-8713-478e50bdd5d1" name="countDown" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="a4672305-d1a2-43be-958a-ce8e62e3ee98">
+      <functionBlockInterface Id="8d49f026-b1da-4c39-a21e-b8aa8f6d5167" name="AlarmActivated" x="525" y="175" modelType="Observer">
+        <events>
+          <functionBlockHasEvents Id="1cb299e4-0f23-4c13-8066-dc1162d5e4ed">
+            <event Id="c039bc97-abc1-4e61-9040-555c8da9f3c0" name="incident" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6a3a16e1-bd41-4d22-a8f5-8fa01d470a68">
+            <event Id="f1f383cc-621e-4b62-baa6-953b65b3e591" name="trigger" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f8646dcb-cf70-45a0-91a8-c1a2c2e36b46">
+            <event Id="5cb86826-1521-4cb6-9458-aea54afbe5ed" name="reset" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0328d788-288f-4fb2-bb60-6fd5900a1155">
+            <event Id="26ac2f9e-983c-4cfa-b3ab-41deacf6cf1a" name="detection" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="e8d32f83-1a42-4da5-9bb0-3f0c1065ff24">
+            <variable Id="137a89eb-76c3-4056-9abb-cbf9228bc419" name="alarm" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e827c179-fed1-4abb-a572-d99b9afc6264">
+            <variable Id="5e757e1c-7b2e-4c7e-b18f-1bddcfa48322" name="d0Detect" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="bc92935e-1f3d-4547-81d0-9b2d609cee19">
+            <variable Id="25012acf-f26d-481d-9185-3a0ddbafc11f" name="d1Detect" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="048fe05e-4c84-4c4b-a3b5-93d9b849d2d2">
+            <variable Id="321b9f1f-e9a8-4833-bfdf-a6b926fa4466" name="d2Detect" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="236b40b8-8099-4847-b178-7301a5c6013d">
+            <variable Id="628ce6b5-99f4-408f-ad1a-a724d3251894" name="needAlarm" scope="Internal" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="729fe878-8fa0-412e-8ad4-df854133a7b5">
+            <variable Id="e0ab51ba-10ac-4862-a7a9-6093dbaed3cd" name="counter" scope="Internal" initialValue="0" type="INT" minimumValue="0" maximumValue="5" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="ce6c84e7-8bba-4c82-b411-d12e338ffc63">
+            <inputEventPort Id="d1827e69-e602-46e9-8dbf-6facc73a7836">
+              <event>
+                <inputEventPortReferencesEvent Id="9c95d7e4-5daa-4626-ada0-25d71d504a64">
+                  <eventMoniker name="/AlarmActivated/AlarmActivated/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="3add2aa2-2076-4175-88de-8a8bcdecdc5e">
+            <inputEventPort Id="6a27c7e2-fa2b-42a9-8631-454bc1af378d">
+              <event>
+                <inputEventPortReferencesEvent Id="b4231fbe-e092-4538-a507-b093da142974">
+                  <eventMoniker name="/AlarmActivated/AlarmActivated/incident" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="0e787f2e-925f-4f5a-bfc3-1101f42299c4">
+            <inputEventPort Id="49e68e0a-54b6-4074-8409-232a142d89f3">
+              <targetPort>
+                <association Id="03ae09d5-9dd1-415e-92d0-af648796f2d9">
+                  <inputVariablePortMoniker Id="6780efc7-2f27-4b6a-b073-49e8506809c3" />
+                </association>
+                <association Id="6b088eae-d092-4a98-afbd-e87408b19439">
+                  <inputVariablePortMoniker Id="c6cd48c0-8e5e-4b58-90dd-98bb52c44d41" />
+                </association>
+                <association Id="d460a110-8eae-4168-807e-0444c87c2af8">
+                  <inputVariablePortMoniker Id="3f4bf2de-b453-45ad-9fab-c4d1a2319300" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="d8518317-ff5d-4223-a877-80cac0ed327c">
+                  <eventMoniker name="/AlarmActivated/AlarmActivated/detection" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="9acb4656-1e60-4acf-a8fe-2c37e0daac03">
+            <inputEventPort Id="f8e914fe-cf3a-4bee-9d98-fb58b83d3fb6">
+              <targetPort>
+                <association Id="cf1e096d-b90a-4077-83be-90320fb516d9">
+                  <inputVariablePortMoniker Id="7ae3ae9f-f64e-44a2-a4a2-5a7f5a5f516f" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="01c5ed52-4553-4e4c-9bba-15e2a2a9965f">
+                  <eventMoniker name="/AlarmActivated/AlarmActivated/trigger" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="39cc8b33-c69c-4d6e-9884-58d09f94e590">
+            <inputVariablePort Id="7ae3ae9f-f64e-44a2-a4a2-5a7f5a5f516f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="dd8fe336-7b87-45cf-b33f-18d7e7cdebf1">
+                  <variableMoniker name="/AlarmActivated/AlarmActivated/alarm" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="0cf34b02-18fa-4764-b0d6-627883a2e2f1">
+            <inputVariablePort Id="6780efc7-2f27-4b6a-b073-49e8506809c3">
+              <variable>
+                <inputVariablePortReferencesVariable Id="060d3eac-e4ab-4196-8f3b-599d2b9a561e">
+                  <variableMoniker name="/AlarmActivated/AlarmActivated/d0Detect" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="624057a3-5649-40de-b3cb-f7b1567411c2">
+            <inputVariablePort Id="c6cd48c0-8e5e-4b58-90dd-98bb52c44d41">
+              <variable>
+                <inputVariablePortReferencesVariable Id="2a371b20-3d58-46a6-9a0e-cd3856289800">
+                  <variableMoniker name="/AlarmActivated/AlarmActivated/d1Detect" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7f31475d-c817-433f-81f6-c658dd546e4e">
+            <inputVariablePort Id="3f4bf2de-b453-45ad-9fab-c4d1a2319300">
+              <variable>
+                <inputVariablePortReferencesVariable Id="3a69928f-3b10-4fcb-910a-9252bdc43ecf">
+                  <variableMoniker name="/AlarmActivated/AlarmActivated/d2Detect" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="44bd4803-c8ff-434a-8810-23df623773d5">
+      <transitionNode Id="e44afe9d-e547-4857-89ac-0ca8be479846" x="1397" y="904.625" expression="(counter&gt;=3) &amp;&amp; (needAlarm != alarm)">
+        <targetState>
+          <transitionNodeConnectsToStates Id="9df65b2e-2f39-4273-bc40-b55e62783d1e">
+            <stateMoniker name="/AlarmActivated/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="27e7f7ce-8082-412d-8e1a-7ef7a0913926">
+      <transitionNode Id="2e279129-af0d-45bf-9c40-5dd5fc6842ee" x="912.125" y="546.75" event="incident">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d29be5ad-3f74-49fd-9c23-51235ba1c1a6">
+            <stateMoniker name="/AlarmActivated/DETECT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="9dce03ed-6f5d-48f4-8734-9256f72b93ff">
+      <transitionNode Id="2d45ed2a-1e80-4dc9-9e6a-4bfb5848e456" x="1200" y="770.74999999999989" expression="(counter&lt;3) &amp;&amp; (needAlarm != alarm)">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a4e49e56-445c-4843-9ad3-c2ec23815f2a">
+            <stateMoniker name="/AlarmActivated/DETECT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="1dfc8946-e92d-4f09-904b-579ac3236fb3">
+      <transitionNode Id="3fb069d2-9ad9-4a83-bbe4-1b4ca2dbdc32" x="838.125" y="571.75" event="reset">
+        <targetState>
+          <transitionNodeConnectsToStates Id="8e2e3531-51fa-41d0-a969-6ac50048d307">
+            <stateMoniker name="/AlarmActivated/IDLE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

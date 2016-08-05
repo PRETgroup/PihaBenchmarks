@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="9782b992-532b-472f-85cf-35afa3261c83" name="GateFailure" organization="User-PC" date="2013-06-26" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="6554215c-26ce-4bea-84e7-87490d53380d">
+      <state Id="8271467b-1b41-4cdd-bc34-f4d26c55e856" name="NORMAL" x="700" y="262.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="0b90ae21-0911-4963-9bcc-e65d6b38acb5">
+            <actionSetMoniker Id="06bee252-15ad-405d-aa56-0c0e5e27ede1" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="9ac6d5d1-d811-48af-bcb8-4c36d86e6e0d">
+            <transitionNodeMoniker Id="89de16af-ee60-44c7-9de2-1e72d66b8bab" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="fe687491-fa65-4577-9826-87092eaf3a8c">
+      <state Id="61ad6b3c-7605-483e-8ce4-7ecb316976be" name="CHECK" x="743.75" y="700" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="37cc739c-4f6a-4c74-aeac-d7ed28b87b9d">
+            <probabilisticTransitionNodeMoniker Id="83a7073f-51d2-4544-bce8-82db62a81f36" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="55a5c42f-627d-4b66-bd5a-caebf667efd6">
+            <probabilisticTransitionNodeMoniker Id="cfbbd0e7-1dac-4914-92f5-73dee3fb50b6" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="b9583da8-ccdd-4844-ae72-2bd17b9d51e6">
+      <state Id="c74907a5-c6ce-4991-8513-c39fcc156702" name="FAILED" x="743.75" y="1137.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="c4e497b1-39d1-48bb-ac0a-7e3a6f88a85d">
+            <actionSetMoniker Id="f9d19465-b51b-440e-a3d8-b9d0f89d965e" />
+          </actionLink>
+        </actionSet>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="6b4d6a38-ca24-44c6-89ce-b68d02a40fb4">
+      <actionSet Id="06bee252-15ad-405d-aa56-0c0e5e27ede1" x="1093.75" y="262.5">
+        <actionItems>
+          <actionSetHasActionItems Id="7d008ae3-152f-410b-9105-02d09db2b7e3">
+            <actionEvent Id="f3aafce4-1cd2-4c6c-8d05-ecc10578c3b5">
+              <event>
+                <actionEventReferencesEvent Id="999fabef-442d-4417-8017-c7a0cdaa1390">
+                  <eventMoniker name="/GateFailure/GateFailure/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="d1e3fd0c-34c9-4593-875a-0cf4179da1ce">
+      <actionSet Id="f9d19465-b51b-440e-a3d8-b9d0f89d965e" x="1106.996049582958" y="1137.5">
+        <actionItems>
+          <actionSetHasActionItems Id="6c88046a-ba52-4243-b1c8-7e227e290d64">
+            <actionAlgorithm Id="130177b9-c27d-4ff1-a5f1-2248dd504414">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="bb885eb1-e067-4127-8a5f-92adb664f109">
+                  <algorithmMoniker name="/GateFailure/setFailed" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="ea32fbfd-86da-4c77-9930-3226c188981c">
+            <actionEvent Id="9a2f48a5-e465-4df2-9262-3ee7ace51fdc">
+              <event>
+                <actionEventReferencesEvent Id="240e4b4e-18b5-4be3-b16a-d3746224adc0">
+                  <eventMoniker name="/GateFailure/GateFailure/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="0530da2d-9942-4950-87f5-03a5c7f74f58">
+      <algorithm Id="0c8449d7-2c37-434b-b518-83b1989db3d3" name="setFailed" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="4031ec1d-4c62-4548-8a60-3e8757863b6d">
+      <algorithm Id="adef6eba-1ba2-4175-8765-868da1661e43" name="unsetFailed" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="90273345-846c-4eeb-8df5-d87e51025e4f">
+      <functionBlockInterface Id="ec8f934c-84ad-4361-bad8-6c09a584b49f" name="GateFailure" x="481.25" y="262.5" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="179fb5f7-1fb5-49b9-aa98-6adf90fc99bd">
+            <event Id="ceccd15b-cc37-4052-a6a6-1c668ca4404d" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="fab5ec59-0509-4552-b44e-ae3c23367465">
+            <variable Id="9f7d4bb9-e62a-4655-ad1f-f4ea5219a6c9" name="failed" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="246f30db-5720-4cc5-a45c-ed8951b44a27">
+            <outputEventPort Id="93d1abc8-23a9-419f-af66-2267dcc1d904">
+              <targetPort>
+                <association Id="14460917-c0cd-430c-a50a-325e4c624700">
+                  <outputVariablePortMoniker Id="f1c46efd-6e94-455d-9e8a-c9a2c61eaae5" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="d862facc-15b8-4625-961a-71594d6fb5da">
+                  <eventMoniker name="/GateFailure/GateFailure/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="b92a8022-14fe-4579-94e8-4551fc57cf80">
+            <outputVariablePort Id="f1c46efd-6e94-455d-9e8a-c9a2c61eaae5">
+              <variable>
+                <outputVariablePortReferencesVariable Id="46f651b8-e4cb-4bfb-a3f3-47170c789a48">
+                  <variableMoniker name="/GateFailure/GateFailure/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5cd91189-2eab-4765-b075-e03014aa3b9a">
+      <probabilisticTransitionNode Id="83a7073f-51d2-4544-bce8-82db62a81f36" x="568.75" y="918.75" probability="2.8E-10">
+        <targetState>
+          <transitionNodeConnectsToStates Id="70c57a5a-ec4b-4fc5-ab16-2e52fb19139c">
+            <stateMoniker name="/GateFailure/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c21f8be7-acf9-4745-a699-30a0ae40b006">
+      <probabilisticTransitionNode Id="cfbbd0e7-1dac-4914-92f5-73dee3fb50b6" x="405.07202669978142" y="481.25" probability="0.99999999972">
+        <targetState>
+          <transitionNodeConnectsToStates Id="b04e96cf-f805-402d-9694-00298e12ada7">
+            <stateMoniker name="/GateFailure/NORMAL" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="aecf2492-fd6d-4478-bbe8-4821666af1b1">
+      <transitionNode Id="89de16af-ee60-44c7-9de2-1e72d66b8bab" x="962.5" y="481.25">
+        <targetState>
+          <transitionNodeConnectsToStates Id="23252b5e-6297-4731-b068-85f9f9f6386c">
+            <stateMoniker name="/GateFailure/CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

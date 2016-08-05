@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="eef1f73b-28ac-484d-9c24-a9a33a80f30a" name="Crossing" organization="User-PC" date="2013-07-02" author="User">
+  <states>
+    <functionBlockModelHasStates Id="96586c6d-c870-461a-a1b3-19532780f400">
+      <state Id="dad4d5ed-3f6a-4b5c-a2d2-ab648256bfb4" name="OPEN" x="1181.25" y="262.5" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="913f0951-7227-4d5d-a906-ab7362e37fb5">
+            <transitionNodeMoniker Id="458c9ba0-9826-4648-9fbd-b48268954b27" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="52036325-fdc5-48ab-8547-f82cfc5926e6">
+      <state Id="7b2469b6-cf9c-45d3-ad32-a24ddf84f85f" name="CLOSE" x="1225" y="787.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="3bf7110b-0c02-4b41-b757-3ce9fb3f2465">
+            <actionSetMoniker Id="1f6aac3b-3c6d-43b7-95f1-e719aafc7e62" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="61d72dd6-d0a9-4d6a-b0f7-e436aaeeb114">
+            <transitionNodeMoniker Id="8285d99e-9cd4-4645-90f6-c22aecef51cd" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="ffc0f31b-26c0-41a5-b1bc-14243ea8a137">
+      <actionSet Id="1f6aac3b-3c6d-43b7-95f1-e719aafc7e62" x="1579.402055442333" y="787.5">
+        <actionItems>
+          <actionSetHasActionItems Id="01f41a15-bd33-40cb-9ac5-a4b2af8ede44">
+            <actionEvent Id="5eb28227-af64-4f17-a2a6-38c4cf76aaff">
+              <event>
+                <actionEventReferencesEvent Id="090483c4-9848-4275-982d-c446e86152b8">
+                  <eventMoniker name="/Crossing/Crossing/closed" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="fb8fb7b5-4eac-4628-bbf4-95d7d7cf8e08">
+      <functionBlockInterface Id="ba0ed46c-d7ef-49c7-889b-ce848415f83c" name="Crossing" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="64033e3c-0543-4f9c-8701-998d056b0486">
+            <event Id="e0d2fd45-24fc-4ba9-9b12-fa38379ad263" name="close" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c41cebcd-4243-46a3-ba86-ccba529c4a88">
+            <event Id="5101da7c-4437-4638-9f3f-4d58aa29cc85" name="open" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f01da09c-53c9-4631-8acb-5cf6f88fadf3">
+            <event Id="a71a27b3-72c3-448e-b428-e2850c87a9db" name="closed" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="076bbcfa-1744-4096-9b58-8d9579aae9e8">
+            <inputEventPort Id="18d173db-145d-4c00-ac26-226712e66b51">
+              <event>
+                <inputEventPortReferencesEvent Id="797bb557-767e-4898-8227-80563d215fba">
+                  <eventMoniker name="/Crossing/Crossing/close" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="dda8aa2d-b0f6-4521-93ee-c8ebe242ff50">
+            <inputEventPort Id="0c9600c2-9bf0-4e11-9acd-5d4ba0c9f8c4">
+              <event>
+                <inputEventPortReferencesEvent Id="e4ce1ebf-f436-4a96-ab0d-df9d3c5e5452">
+                  <eventMoniker name="/Crossing/Crossing/open" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a4037a78-f002-4870-b1c0-1910dc323442">
+            <outputEventPort Id="23382e8a-bf20-4f35-bb6a-dc7262b682d4">
+              <event>
+                <outputEventPortReferencesEvent Id="898dd104-bd7a-4627-8b8a-34004faefd68">
+                  <eventMoniker name="/Crossing/Crossing/closed" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="14c0e3d4-ce95-4a20-b885-36e636deaaf2">
+      <transitionNode Id="458c9ba0-9826-4648-9fbd-b48268954b27" x="1181.25" y="517.125" event="close">
+        <targetState>
+          <transitionNodeConnectsToStates Id="9c5216fd-8c46-4a93-9265-3c61de094c68">
+            <stateMoniker name="/Crossing/CLOSE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="be78a08b-5550-413d-bdab-765d7f23a5b3">
+      <transitionNode Id="8285d99e-9cd4-4645-90f6-c22aecef51cd" x="1181.25" y="519.125" event="open">
+        <targetState>
+          <transitionNodeConnectsToStates Id="037b897a-4376-4e13-a43e-c1b5c265bc04">
+            <stateMoniker name="/Crossing/OPEN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

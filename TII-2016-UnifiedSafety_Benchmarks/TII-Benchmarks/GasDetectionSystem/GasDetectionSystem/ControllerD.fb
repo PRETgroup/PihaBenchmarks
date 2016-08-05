@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="981576d2-ff05-478a-9a1f-f27ab841e82b" name="ControllerD" organization="User-PC" date="2013-07-01" author="User">
+  <states>
+    <functionBlockModelHasStates Id="f1ed6fbd-1496-43f0-98e6-10fdba55c616">
+      <state Id="02a2c93d-8ccf-412b-a1b5-4a0d08b2c8f0" name="START" x="393.75" y="175" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="fa17d70d-f672-4860-9120-ea3cddbd762b">
+            <transitionNodeMoniker Id="058b4e78-7597-4f6c-9484-8ed18782aa0d" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="a8fd2c86-db02-4dd8-a980-3145c34a600a">
+      <state Id="e0afee98-324f-4fa8-ac74-7eb6fdcf486a" name="DETECT" x="393.75" y="612.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="79f0fbf1-ced9-4954-80cb-8519cff376dd">
+            <actionSetMoniker Id="8eff90f7-f3b2-4e54-91f5-b0010083dcf9" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="b70c8334-e827-49dc-8e49-33ff0d998c32">
+            <transitionNodeMoniker Id="37874127-1e31-42e7-a5bf-2834ad6acc13" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="e27c591c-09b4-449b-b94a-bafa22dfb5fd">
+      <actionSet Id="8eff90f7-f3b2-4e54-91f5-b0010083dcf9" x="770.62519997358322" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="076a4903-8d10-4556-a3f9-14f1aff60677">
+            <actionAlgorithm Id="cd14bedb-0787-4f23-8e25-aff0707a64be">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="5de5d2e1-5b56-4d5e-b181-8114f5ffc97e">
+                  <algorithmMoniker name="/ControllerD/checkDetection" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="d0b10a03-a72b-441a-91d0-a66b7905e7d6">
+            <actionEvent Id="8d1e6cd0-e89e-4a31-8039-23d1798ff9db">
+              <event>
+                <actionEventReferencesEvent Id="6413e187-2db8-48a2-aa32-b4c049eea6f7">
+                  <eventMoniker name="/ControllerD/ControllerD/ouput" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="d3f0979f-857a-4aa5-b884-7c5fc9b02d58">
+      <algorithm Id="6e0dcb71-edb5-4a0d-bd34-659daf5d0095" name="checkDetection" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="12d7c766-7e22-45ce-aaeb-d4e3a252df6e">
+      <functionBlockInterface Id="e9373a45-2a9d-45d9-8d6c-6696511f88c0" name="ControllerD" x="1093.75" y="350">
+        <events>
+          <functionBlockHasEvents Id="ae5452a3-fd63-46ed-a8cc-14d0ddbc1595">
+            <event Id="0d2a9cb2-44f7-4cf4-a4af-d2ea9ac2f450" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="50b4cded-7574-4d1e-8633-f826c69108bd">
+            <event Id="d0405aee-1ab8-4ea5-9bb1-46bd366369bc" name="ouput" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="4826b968-1fd4-4c8f-b200-0bc9e1d31da8">
+            <variable Id="5cb8839b-80c8-4e55-89c8-afd6bc30e237" name="sensor1" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a49c1522-0bab-4a5a-ade5-c0f37cc1ff11">
+            <variable Id="00d27a24-279b-4520-aa74-bf53e8635923" name="sensor2" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="2145a7f1-f518-4ba5-a161-ef8ffa3db7a1">
+            <variable Id="123a0e91-a6c9-4775-9b04-d2e1df19bb84" name="ventilation" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d705ab63-035b-4804-aa31-149f0e52a061">
+            <inputEventPort Id="f9752bb7-16db-4015-aa68-e3fe6c0ec43d">
+              <targetPort>
+                <association Id="60e8465c-de61-4af5-a48d-f64f9b42afd2">
+                  <inputVariablePortMoniker Id="d80f52b8-afc6-43ac-8379-da26f8cb380c" />
+                </association>
+                <association Id="0a57c211-efc2-4179-8f18-c212ececc3d7">
+                  <inputVariablePortMoniker Id="c896b0b2-bfd9-49b2-8202-2b067c1a2542" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="dc61cc4f-3755-48c2-8add-b465c68fc490">
+                  <eventMoniker name="/ControllerD/ControllerD/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f1e22acc-070f-4a1b-b5c3-c5ac3fd956f9">
+            <outputEventPort Id="b512b53b-8da0-4274-a6f5-ee831fddf6dc">
+              <targetPort>
+                <association Id="48a99585-5368-44b4-bc0f-b066afa3458e">
+                  <outputVariablePortMoniker Id="3910cc9c-6609-41dd-a548-0ed1ac018b46" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="1bbe5969-4f87-4fd6-9cf4-9da9e3d5a2df">
+                  <eventMoniker name="/ControllerD/ControllerD/ouput" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="d6667570-c451-4fb5-9b44-77ba9658b333">
+            <inputVariablePort Id="d80f52b8-afc6-43ac-8379-da26f8cb380c">
+              <variable>
+                <inputVariablePortReferencesVariable Id="50c2a9ab-b8a8-4abc-bc4a-609332588789">
+                  <variableMoniker name="/ControllerD/ControllerD/sensor1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="e56ca91a-4fc7-44df-97a3-9987ecc02442">
+            <inputVariablePort Id="c896b0b2-bfd9-49b2-8202-2b067c1a2542">
+              <variable>
+                <inputVariablePortReferencesVariable Id="7b340902-db23-4220-af16-41ca59bae612">
+                  <variableMoniker name="/ControllerD/ControllerD/sensor2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="8a0b590c-f66c-4bdb-a8e2-55d6cc25b750">
+            <outputVariablePort Id="3910cc9c-6609-41dd-a548-0ed1ac018b46">
+              <variable>
+                <outputVariablePortReferencesVariable Id="17f98198-9ed3-48ff-880e-e4ba919153d8">
+                  <variableMoniker name="/ControllerD/ControllerD/ventilation" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="732540c1-4240-44eb-89da-ae0bafb97fae">
+      <transitionNode Id="058b4e78-7597-4f6c-9484-8ed18782aa0d" x="393.75" y="411.75" event="input">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0825ee4b-88f1-43a5-8b15-cf1afb186871">
+            <stateMoniker name="/ControllerD/DETECT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="7245327d-bab8-471b-b009-cbde3c5da0af">
+      <transitionNode Id="37874127-1e31-42e7-a5bf-2834ad6acc13" x="350" y="555.5" event="input">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f5b95ee8-b62c-4756-a13a-60c598b3d3c1">
+            <stateMoniker name="/ControllerD/DETECT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

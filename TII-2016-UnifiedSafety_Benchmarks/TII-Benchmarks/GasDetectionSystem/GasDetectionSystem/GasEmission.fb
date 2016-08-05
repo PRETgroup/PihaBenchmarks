@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="3bd7874c-7f1f-4f4f-9b23-e8a3f6a1c01e" name="GasEmission" organization="User-PC" date="2014-11-23" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="6b732b5e-9fd0-44a8-8959-28097406df7b">
+      <state Id="688ebd1d-beb6-4c3d-8718-a11cf8202b89" name="STARTUP" x="962.5" y="350" isInitial="true">
+        <actionSet>
+          <actionLink Id="d4ff042e-3b81-4d68-b101-210aeca703cf">
+            <actionSetMoniker Id="ea21cef1-e903-43b6-beee-ca98c4b9e7e1" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="8e7ff0f1-6f2a-4930-8a5e-58a22032c28d">
+            <transitionNodeMoniker Id="32531f85-6a28-471e-8a02-19126ebf81a9" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="846db8df-f019-4f3d-9c9d-5c17b55932ad">
+      <state Id="bc15d0ba-49b3-4b35-b60f-d0894631091d" name="BUILDUP" x="962.5" y="1093.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="5b381861-796a-46a4-9d59-03c61d17f2b5">
+            <actionSetMoniker Id="9987466e-b73b-4a78-96b8-cd930aa28bf4" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="8af781e9-f5c2-4277-9ff7-047495b62eb9">
+            <transitionNodeMoniker Id="149bf9eb-0816-4c3b-83f9-1181ddb4f0d1" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="8778c6cb-966b-495b-b2f5-c035ac2f076c">
+      <state Id="9a157602-feca-4a9c-86b3-ee220e4073ac" name="EMISSION" x="962.5" y="700" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="b1201221-20fd-4026-b711-eee08b75a80f">
+            <nondeterministicTransitionNodeMoniker Id="a751ea65-3905-460d-b67b-9510bec9c021" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="a77283cc-f75b-468e-a0cf-eb070be9109d">
+            <nondeterministicTransitionNodeMoniker Id="0b98adbd-d3d0-489b-8b80-5b1d8cf4e9e2" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="fad337a2-10bb-4935-a567-ec18e48d49b1">
+      <actionSet Id="9987466e-b73b-4a78-96b8-cd930aa28bf4" x="1312.5" y="1006.25">
+        <actionItems>
+          <actionSetHasActionItems Id="02f35038-7b8f-4bf7-960a-1faee5bdd519">
+            <actionAlgorithm Id="81a065b8-e59a-4ac0-acb5-5f3ad3931a81">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="64a1a9c2-b1d0-4f2c-bd20-37833853698d">
+                  <algorithmMoniker name="/GasEmission/doGasBuildUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="0b77e287-34ad-4f74-bc08-ea18b7e74647">
+            <actionEvent Id="6185e056-e294-468d-8a1d-d40f31cc491b">
+              <event>
+                <actionEventReferencesEvent Id="730d51f4-5f3e-4289-bf7e-bddfe3961b0a">
+                  <eventMoniker name="/GasEmission/GasEmission/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="3e0e64aa-3800-420b-9bec-6b319a6c7f10">
+      <actionSet Id="ea21cef1-e903-43b6-beee-ca98c4b9e7e1" x="1312.5" y="350">
+        <actionItems>
+          <actionSetHasActionItems Id="b2152d5f-7d53-43a8-a0d2-906e414a4abd">
+            <actionAlgorithm Id="56d40cf2-a4b7-4215-aefe-27868cd4ebd4">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="c66e8086-00a1-4d9b-a05a-e2ad021af471">
+                  <algorithmMoniker name="/GasEmission/doGasVenting" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="28a4816b-984a-43e4-9c47-cafb105be0a8">
+            <actionEvent Id="c4ddfa65-e32e-4d0c-b95f-02bcf34a6cd1">
+              <event>
+                <actionEventReferencesEvent Id="ae1c8eb4-c1b0-4d46-8164-9b6a918b3021">
+                  <eventMoniker name="/GasEmission/GasEmission/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="655c6000-6a98-4ad1-9e56-a0fb2dd686e6">
+      <algorithm Id="a9dd7d68-656a-4d1f-9aa0-882052bf1bb8" name="doGasBuildUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="06f135a9-f18e-42a8-9f87-7448a170c266">
+      <algorithm Id="e539a5af-cfe4-402f-bf9d-6b4e6d999c11" name="doGasVenting" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="8ade49b5-7a01-435a-9277-d9f945eef8ea">
+      <functionBlockInterface Id="83bc1041-af62-4a88-9957-d6ee42b3c0a7" name="GasEmission" x="1400" y="481.25" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="afe41464-b2b5-4a6f-bea0-dd72e2cd42f3">
+            <event Id="e3dbf65b-e592-4612-a99a-806145075cf8" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e02b029d-1554-4ab4-b43c-b88610b6b5f8">
+            <event Id="f549123a-89e1-47a9-86fa-8a4ddf7ec46d" name="output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="51de8ed2-2994-4d87-a6c8-6debad7fe33b">
+            <variable Id="3e20f3fa-0d83-4342-995b-4e45318dec34" name="venting" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="5be9a0f8-bc3b-4aee-9d8f-76e5bf6ec30a">
+            <variable Id="47151b1b-c9d3-49c0-9472-ace5c512717d" name="gasValve" scope="Output" type="INT" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="fc7ca823-a56a-49a4-b0f6-624921f18605">
+            <inputEventPort Id="c13af30c-61d3-468b-8d2f-40c0c491b37a">
+              <targetPort>
+                <association Id="d31e90b9-fd28-47b7-bb6b-34ad7d78fd1f">
+                  <inputVariablePortMoniker Id="14a8bd18-341b-44f8-aa36-868bbdaa54e9" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="f4009da8-acb2-416f-834e-d364ac8f45b9">
+                  <eventMoniker name="/GasEmission/GasEmission/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0a28a9ae-e699-427c-9b4f-a705f5d1d70c">
+            <outputEventPort Id="29f5701f-b311-42a1-99ff-b39fa482e748">
+              <targetPort>
+                <association Id="bfe74b4f-800d-42d2-9bb2-420ec7a7c342">
+                  <outputVariablePortMoniker Id="bccde351-6d8a-4930-88ad-a11a601e6364" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="743fa1a9-e4d0-4eaa-8c3d-d77f3c436709">
+                  <eventMoniker name="/GasEmission/GasEmission/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="caba944d-d6f8-403c-ad85-42918c0a8ddc">
+            <inputVariablePort Id="14a8bd18-341b-44f8-aa36-868bbdaa54e9">
+              <variable>
+                <inputVariablePortReferencesVariable Id="0f39400a-79e9-472f-9575-4d4217bb58b9">
+                  <variableMoniker name="/GasEmission/GasEmission/venting" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="62c716dd-bf06-4716-b560-94294df291eb">
+            <outputVariablePort Id="bccde351-6d8a-4930-88ad-a11a601e6364">
+              <variable>
+                <outputVariablePortReferencesVariable Id="e07d97e7-33f3-4896-8636-dcc07cf80a89">
+                  <variableMoniker name="/GasEmission/GasEmission/gasValve" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c286bd19-177e-4e40-990f-15163d777a30">
+      <nondeterministicTransitionNode Id="a751ea65-3905-460d-b67b-9510bec9c021" x="962.5" y="909.87499999999989">
+        <targetState>
+          <transitionNodeConnectsToStates Id="514a3343-4c52-4d3c-a03a-2367e1fc1229">
+            <stateMoniker name="/GasEmission/BUILDUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="49f6ebd4-6246-429e-bafb-c51eaddbed8a">
+      <nondeterministicTransitionNode Id="0b98adbd-d3d0-489b-8b80-5b1d8cf4e9e2" x="962.5" y="499">
+        <targetState>
+          <transitionNodeConnectsToStates Id="e3423a13-125e-4f08-83b2-b545cc3c33a9">
+            <stateMoniker name="/GasEmission/STARTUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="f3346609-f8f2-4f84-88f4-18883682e6c0">
+      <transitionNode Id="32531f85-6a28-471e-8a02-19126ebf81a9" x="962.5" y="528">
+        <targetState>
+          <transitionNodeConnectsToStates Id="b7bde7d8-e134-4986-93ff-f02d01de8ff8">
+            <stateMoniker name="/GasEmission/EMISSION" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="b2a27886-21e9-4d68-8355-9bee10971805">
+      <transitionNode Id="149bf9eb-0816-4c3b-83f9-1181ddb4f0d1" x="962.5" y="709.875">
+        <targetState>
+          <transitionNodeConnectsToStates Id="507d678e-68e9-442b-b572-5e3b8cf0254a">
+            <stateMoniker name="/GasEmission/STARTUP" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

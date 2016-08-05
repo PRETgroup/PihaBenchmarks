@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="e9f36278-7c40-457f-8efe-d59f5d5ff3a9" name="AlarmFailure" organization="User-PC" date="2013-06-27" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="4b76d6dc-4dae-4492-a179-efb0de6eb07d">
+      <state Id="bd7a6d70-eb67-442b-91ba-be442dfe12d2" name="NORMAL" x="175" y="262.5" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="03ea341b-d4df-478a-a2ad-9ed77490bdb7">
+            <transitionNodeMoniker Id="f277f256-f5a5-4038-87ff-a9c9ef3e10d3" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="e30dd41b-bda6-466d-ba27-320c86313249">
+      <state Id="88eb2fce-a9d6-4382-b86d-fe89cf3321c0" name="CHECK" x="481.25" y="568.75" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="54276c9a-f082-470e-a7df-8c69baf0a1df">
+            <probabilisticTransitionNodeMoniker Id="a166ca1a-09bd-41e2-b3c7-a31f565d0fab" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0d939f17-e578-4394-9882-3be9884a464b">
+            <probabilisticTransitionNodeMoniker Id="3f8aa70c-8c7f-4c4e-a2f3-1c585b02248f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="5551a667-0307-401f-bf9d-adb1abea5d36">
+      <state Id="d5c8902d-f3a4-4584-9bd6-66ccd941350c" name="FAILED" x="481.25" y="918.75" isInitial="false" />
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="8cfb5564-1435-4d76-9239-3ff840a23897">
+      <functionBlockInterface Id="08b67ce0-2608-4665-8b24-75b1c52af628" name="AlarmFailure" x="787.5" y="262.5" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="5f862f30-321c-4d8d-8d19-d5d29233cc02">
+            <event Id="3f493949-b1c6-4ff1-9d75-9bf00a39870f" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f34787ce-10b0-4480-9dde-3e4c147965ef">
+            <variable Id="c359461a-a057-44d7-a75b-7bfa0bcdce9a" name="failed" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0e617a77-8b60-4631-9c66-d0d6f1133bc0">
+            <outputEventPort Id="fe06d94e-f3d0-4f2d-833e-26585f3d5005">
+              <targetPort>
+                <association Id="29182aa6-52ff-49a8-acb6-d0656cdd792d">
+                  <outputVariablePortMoniker Id="fe87c86b-a1aa-4367-a301-abdf5571d9c0" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="0a2fffec-55f0-4bb7-9d4c-4b3a1b372bad">
+                  <eventMoniker name="/AlarmFailure/AlarmFailure/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="498bb619-41ea-418e-9b97-46a7bd5e9871">
+            <outputVariablePort Id="fe87c86b-a1aa-4367-a301-abdf5571d9c0">
+              <variable>
+                <outputVariablePortReferencesVariable Id="139e11a3-2e50-4643-9528-4a002b95951a">
+                  <variableMoniker name="/AlarmFailure/AlarmFailure/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d1aa951d-d800-4cdc-9707-246889471431">
+      <transitionNode Id="f277f256-f5a5-4038-87ff-a9c9ef3e10d3" x="350" y="442.625">
+        <targetState>
+          <transitionNodeConnectsToStates Id="6a035f8b-64dd-4546-840a-698fc54309cb">
+            <stateMoniker name="/AlarmFailure/CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0c96e4a4-56de-4065-ad64-90de13b09939">
+      <probabilisticTransitionNode Id="a166ca1a-09bd-41e2-b3c7-a31f565d0fab" x="350" y="422.625" probability="0.9999999993658">
+        <targetState>
+          <transitionNodeConnectsToStates Id="5efdfce9-e5eb-414e-9480-fa2e1c669410">
+            <stateMoniker name="/AlarmFailure/NORMAL" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="7726bbb2-c2db-4a5e-b1e9-09de3ec4012e">
+      <probabilisticTransitionNode Id="3f8aa70c-8c7f-4c4e-a2f3-1c585b02248f" x="481.25" y="751.74999999999989" probability="6.342E-10">
+        <targetState>
+          <transitionNodeConnectsToStates Id="463d48fa-a5bc-40ad-8006-c596fabf9e75">
+            <stateMoniker name="/AlarmFailure/FAILED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

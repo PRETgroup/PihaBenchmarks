@@ -1,0 +1,1 @@
+me->closeCounter = (me->closeCounter < 5) ? me->closeCounter + 1 : me->closeCounter;

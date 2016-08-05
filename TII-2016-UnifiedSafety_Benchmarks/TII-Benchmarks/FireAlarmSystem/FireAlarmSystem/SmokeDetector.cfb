@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="7b602c3f-21bd-4847-8e50-8cbe02411413" name="SmokeDetector" organization="User-PC" date="2013-06-17" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="d3f17535-ba87-4584-8be9-0200d54606b6">
+      <functionBlockInterface Id="fb851674-827a-44dd-926d-0567e2744176" name="SmokeDetectorComponent" x="131.24999999999997" y="131.25" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="50003b19-69bd-4040-b276-4d554cd4537c">
+            <event Id="bb389a18-1696-49f1-96b0-cbe1f1ec90be" name="output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="cbfa40ef-2352-4767-9779-aa4ff825f9d8">
+            <variable Id="6d45ce64-167c-40aa-8158-2e63c172b6e2" name="detected" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="70042213-d3b2-4b45-ad89-70eada724c21">
+            <variable Id="f7d575c0-cce2-4204-a210-b754f64bd5bb" name="failed" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e1b536ed-ca52-42e1-96f0-7796d53ddfc8">
+            <outputEventPort Id="8bc1c427-e356-43bd-9e2c-d2a181b57175">
+              <proxyTargetPorts>
+                <proxyConnection Id="7a3a014b-26a9-4051-85f0-b7b245c3a4a8">
+                  <outputEventPortMoniker Id="e408e6d0-068b-4a77-a37e-27ad73cf85f1" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="a7ed54cd-2d96-4334-91bc-f9a506ef9e4c">
+                  <eventMoniker name="/SmokeDetector/SmokeDetectorComponent/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="80e3fc8d-5dac-4438-9467-bcd9f1a5c565">
+            <outputVariablePort Id="028f347f-ecb4-490b-b900-cf1f809d4ef0">
+              <proxyTargetPorts>
+                <proxyConnection Id="69309978-2fb7-4401-b574-9d64f8c66731">
+                  <outputVariablePortMoniker Id="3512b99f-0add-4c2e-a82d-f54c7868c501" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="fc63ae05-bb0d-4efb-bc65-6c3eaddabbc4">
+                  <variableMoniker name="/SmokeDetector/SmokeDetectorComponent/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="beec3174-58a3-4c13-a528-eeac40af110c">
+            <outputVariablePort Id="54c54c7f-0b21-420d-ab7d-c5f3730f96f9">
+              <proxyTargetPorts>
+                <proxyConnection Id="e952aaff-b166-41ab-b953-08609539286d">
+                  <outputVariablePortMoniker Id="c7ea1aa9-74e3-4bf0-b739-16e2fec6582d" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="ba761fc3-daa5-4b20-a4fe-d70f6029d0a4">
+                  <variableMoniker name="/SmokeDetector/SmokeDetectorComponent/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="500b311c-0628-4362-9d1d-29e2a6afd496">
+      <functionBlockReference Id="3dce9d4d-42b8-4e94-aa21-3a062562cee7" name="behaviour" x="962.5" y="175" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="2a6cf197-ce58-4af8-8670-639f0d116929">
+            <eventRef Id="8355eeaf-08d9-4cb1-a4bd-6b4daa54fe18" name="input" scope="Input" referencedID="e3d66bac-436c-401d-996e-8a68ebfb390d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="33175850-be70-487c-afef-a297af92230f">
+            <eventRef Id="b8f1d4d8-b126-4361-bf5b-fd5be2fd78f8" name="output" scope="Output" referencedID="093e86aa-5c32-411e-aaae-5741df5824d2" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="1937cbc6-67d2-4597-b45b-1fe7eba8938b">
+            <variableRef Id="428c835d-c7ea-4913-a8ee-6aedcfeef94b" name="failed" scope="Input" referencedID="cfd44b66-7cfb-45d6-bf21-c33474b2b2b8" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6e7c2c7d-04e5-404a-9423-8976e29e2c59">
+            <variableRef Id="37745530-b765-43c1-b775-3a6884894394" name="detected" scope="Output" referencedID="da9fb88b-9c4d-4f8c-a587-93435fef2837" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="6b4b0cb4-98f1-4c83-a5d0-c0030547b196">
+            <inputEventPort Id="243abae1-7bf8-4d02-b3b9-a3f772b5c9a9">
+              <event>
+                <inputEventPortReferencesEvent Id="45600f6a-a7f4-492f-b2e8-ee170c5a1798">
+                  <eventRefMoniker name="/SmokeDetector/behaviour/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1b6b09dd-6d38-45ba-beed-2f1cf9153946">
+            <outputEventPort Id="e408e6d0-068b-4a77-a37e-27ad73cf85f1">
+              <event>
+                <outputEventPortReferencesEvent Id="a4fe7f25-6d73-42b8-83fb-cc2ac0324ded">
+                  <eventRefMoniker name="/SmokeDetector/behaviour/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="288edaea-4deb-49b2-8418-3540e4916f84">
+            <inputVariablePort Id="1763e8a1-2d78-4ab5-94c9-1288bb37745f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="b07efed9-d1da-4d4d-9951-81ff11cfbf48">
+                  <variableRefMoniker name="/SmokeDetector/behaviour/failed" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="5b443f0c-0cc5-4399-823c-0913cfdea623">
+            <outputVariablePort Id="3512b99f-0add-4c2e-a82d-f54c7868c501">
+              <variable>
+                <outputVariablePortReferencesVariable Id="fcb2eccf-22b4-4b08-a533-d0e24a8b5b8a">
+                  <variableRefMoniker name="/SmokeDetector/behaviour/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="fa01d21e-4380-4a44-b20b-c8d69e500310">
+      <functionBlockReference Id="3a2f75a7-7e20-4277-88ae-23913e051025" name="failure" x="218.75" y="175" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorFailure.fb">
+        <events>
+          <functionBlockHasEvents Id="d2472ae5-c3ce-4c62-a82c-1dcb55936b5f">
+            <eventRef Id="a1c4509d-fd00-45a3-8981-a017fbe02547" name="output" scope="Output" referencedID="e1397a8b-e650-4307-9ab7-be5c98d0b8c4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="30363efd-d139-4a6e-8f16-f151c318971e">
+            <variableRef Id="cd0b268f-f0fd-4fdf-81aa-72c45ab8277a" name="failed" scope="Output" referencedID="18087442-a03d-43ad-afd5-9cf1356f6985" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a83c8ead-8e7d-4ed3-8a2b-29ae377d39ba">
+            <outputEventPort Id="11c07e91-7fda-4830-aef9-951cf33e2932">
+              <wireTargetPorts>
+                <wireConnection Id="18b9da1a-dce0-4a2a-9f88-f410b937e7ad" unitDelayed="false">
+                  <inputEventPortMoniker Id="243abae1-7bf8-4d02-b3b9-a3f772b5c9a9" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="0bb681a0-44fd-42d0-8695-211f2f661ec3">
+                  <eventRefMoniker name="/SmokeDetector/failure/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="d99a48ae-acf2-4080-b264-0c2f1e5deff6">
+            <outputVariablePort Id="c7ea1aa9-74e3-4bf0-b739-16e2fec6582d">
+              <wireTargetPorts>
+                <wireConnection Id="bc87ea21-b294-42a8-ade1-22ed9816ad41" unitDelayed="false">
+                  <inputVariablePortMoniker Id="1763e8a1-2d78-4ab5-94c9-1288bb37745f" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="f3889cf6-2ffa-4f93-9580-97d432ceb254">
+                  <variableRefMoniker name="/SmokeDetector/failure/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

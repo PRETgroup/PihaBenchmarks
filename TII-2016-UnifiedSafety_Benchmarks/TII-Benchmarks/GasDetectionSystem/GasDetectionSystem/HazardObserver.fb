@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="139db2f2-785f-4c32-920d-4c6d8ad94ee7" name="HazardObserver" organization="User-PC" date="2013-07-01" author="User" modelType="Observer">
+  <states>
+    <functionBlockModelHasStates Id="4205f321-36f7-40c5-84a1-b7dc4dd58b10">
+      <state Id="5023218b-c57e-4c46-a9a0-b19462e3e39e" name="IDLE" x="1050" y="262.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="877d97ed-3c7d-4bb8-988b-660366fbc443">
+            <actionSetMoniker Id="b4b4ca45-e009-4ba8-8b6f-4d3014cb43bc" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="4af99500-4a40-4867-a310-33c1db6eadea">
+            <transitionNodeMoniker Id="75944b0c-b480-455c-81f9-bf8fe9f1620f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="23a23577-0eda-4305-9eaa-fbccf9d3bce4">
+      <state Id="797feb0e-a92c-473b-9c1f-b7a9b9656059" name="SHOULDVENT" x="962.5" y="612.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="93eb2629-091d-4e6e-b434-dfff0ddef80d">
+            <actionSetMoniker Id="29768155-1234-431a-9040-50a060cda7c9" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1d014945-e3db-4a9d-b444-147a68b7d547">
+            <transitionNodeMoniker Id="21553733-a09a-4465-b8ee-816a492d6642" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="8e93d90f-0c92-4771-be72-67d6aaf9301c">
+            <transitionNodeMoniker Id="996fb931-cd39-4a2f-8b00-26b1f640e7f6" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="fea37025-c7eb-478a-9d1a-93367483662b">
+            <transitionNodeMoniker Id="0a874274-e485-4932-bc8b-18bf2f26fd99" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="a524e7b9-8196-4a0d-8026-6b466dba8c78">
+      <state Id="bf7c603c-b317-4ff1-bd5c-c1408299897f" name="Violation" x="1050" y="1006.25" isInitial="false" />
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="3d03710b-1630-43bc-8894-7d92782e85bb">
+      <actionSet Id="29768155-1234-431a-9040-50a060cda7c9" x="1400" y="612.5">
+        <actionItems>
+          <actionSetHasActionItems Id="9810eea3-c005-486d-bb6e-0fe01f706bee">
+            <actionAlgorithm Id="65571b6b-a124-420d-8e88-3d0bb47482fc">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="cb926785-dc2d-4b89-9411-c8e341667208">
+                  <algorithmMoniker name="/HazardObserver/countUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="33093853-44ec-4e4b-b2d3-5e42fdc2e533">
+      <actionSet Id="b4b4ca45-e009-4ba8-8b6f-4d3014cb43bc" x="1312.5" y="262.5">
+        <actionItems>
+          <actionSetHasActionItems Id="bf4ee6fd-0d5f-429d-883a-fa5daafa97c0">
+            <actionAlgorithm Id="05138ab7-1214-4846-99eb-406dc4590cc3">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="fe3ebf49-197c-4520-9ea1-03aee9a5feb0">
+                  <algorithmMoniker name="/HazardObserver/resetCount" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="35f6a9f1-dc2b-401a-befc-a157f82226a3">
+      <algorithm Id="da936c52-ec7f-4d65-b568-c7cc84af5c39" name="countUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="7c2892e1-d4ed-49ef-ad42-7c86abbcdc6b">
+      <algorithm Id="68c180ef-72c8-43f7-b6d4-0e860ef69b07" name="resetCount" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="52184b66-ef53-4e25-a696-6defdce0dc71">
+      <functionBlockInterface Id="38d7e2b7-cae9-4cec-8c50-455b2742c742" name="HazardObserver" x="1400" y="481.25" modelType="Observer">
+        <events>
+          <functionBlockHasEvents Id="4a966388-03f3-4b5b-9604-ec44ccd1c64b">
+            <event Id="05de772e-845a-404d-bcc1-67726d1ba57b" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ed179775-5e5e-4a16-b01c-341afd4364f2">
+            <event Id="d4f7fe53-f714-4892-a66e-23798eba79c4" name="trigger" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="e983f9b1-c15a-4fa1-b673-598ef73f812a">
+            <variable Id="5552cf29-4607-4e8a-b323-d9cc6ad2ce37" name="buildUp" scope="Input" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="1595f529-4fec-446a-a351-92bc5911095c">
+            <variable Id="0233267c-b8a5-4f7a-813a-b8c8997748cf" name="venting" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="f5f5a994-5577-4b4a-9f48-821df7b39062">
+            <variable Id="ac5c8f0c-9dbd-407e-a76d-71f351c86356" name="threshold" scope="Input" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="55ca3ba9-3d88-464c-89b9-4b8e9c554175">
+            <variable Id="08000796-2e90-42c6-b30e-9896f5258303" name="counter" scope="Internal" initialValue="0" type="INT" minimumValue="0" maximumValue="5" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="48d89451-8a4a-4da4-bb4b-34fe57d53bbc">
+            <inputEventPort Id="e1831285-3a62-46af-83e9-89fbd07aca47">
+              <targetPort>
+                <association Id="5e57a1bf-3efd-4c0b-a235-46681652c07b">
+                  <inputVariablePortMoniker Id="71adbf18-7643-493b-b467-b48a4594e9e6" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="3c0b5243-8cef-4e28-80a6-4cf8986e3e9f">
+                  <eventMoniker name="/HazardObserver/HazardObserver/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="1aefd81e-fdf0-40cd-9c41-5e0e77ce8e86">
+            <inputEventPort Id="2a3d4967-7c23-4147-b7c3-4a5e576ed7e7">
+              <targetPort>
+                <association Id="e5a61013-7953-40ad-be95-4afe55af9ea4">
+                  <inputVariablePortMoniker Id="a0c87393-627a-4813-b066-31f328d78a17" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="0d2f79aa-80c8-4a0a-af53-035e15e750f1">
+                  <eventMoniker name="/HazardObserver/HazardObserver/trigger" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="adec48be-0111-4af0-83c8-144b9a063d52">
+            <inputVariablePort Id="a0c87393-627a-4813-b066-31f328d78a17">
+              <variable>
+                <inputVariablePortReferencesVariable Id="62b57f20-63c4-480d-b12a-680e20c10ccd">
+                  <variableMoniker name="/HazardObserver/HazardObserver/venting" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="05bc0ad6-f536-44ef-9569-81c7ad1c1abe">
+            <inputVariablePort Id="89f107a9-576c-4c82-b444-8d426c96cabc">
+              <variable>
+                <inputVariablePortReferencesVariable Id="8eb12702-360f-474b-8db2-411b571908cc">
+                  <variableMoniker name="/HazardObserver/HazardObserver/threshold" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="5a27318a-7605-4092-9f26-a0bc3fb2ff74">
+            <inputVariablePort Id="71adbf18-7643-493b-b467-b48a4594e9e6">
+              <variable>
+                <inputVariablePortReferencesVariable Id="622bd35c-4071-4176-ac46-9ffff07c1f82">
+                  <variableMoniker name="/HazardObserver/HazardObserver/buildUp" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="93e2ec97-8d49-4ba1-bd36-022b1fdac9f6">
+      <transitionNode Id="75944b0c-b480-455c-81f9-bf8fe9f1620f" x="962.5" y="420.50000000000006" expression="buildUp &gt;= threshold">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d0a890f4-a2f5-468a-b7fb-e210b05bf2bc">
+            <stateMoniker name="/HazardObserver/SHOULDVENT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4a041804-0f2f-4138-8790-7b6b0e4fbb52">
+      <transitionNode Id="0a874274-e485-4932-bc8b-18bf2f26fd99" x="814.49999999999989" y="542.5" expression="(counter &lt; 5) &amp;&amp; (!venting)">
+        <targetState>
+          <transitionNodeConnectsToStates Id="008ae078-67bb-44ae-a0c3-5a4b5175bbbd">
+            <stateMoniker name="/HazardObserver/SHOULDVENT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="fb641b3f-cf96-461c-afce-2da109810666">
+      <transitionNode Id="996fb931-cd39-4a2f-8b00-26b1f640e7f6" x="1007.2499999999999" y="836.37499999999989" expression="(counter == 5) &amp;&amp; (!venting)">
+        <targetState>
+          <transitionNodeConnectsToStates Id="78c8d61e-3f39-454d-9ffb-d997d91f9aad">
+            <stateMoniker name="/HazardObserver/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4702d3fe-939e-4798-ac76-8ea4852cb48c">
+      <transitionNode Id="21553733-a09a-4465-b8ee-816a492d6642" x="1010.25" y="445.5" expression="buildUp &lt; threshold">
+        <targetState>
+          <transitionNodeConnectsToStates Id="7a22fb0f-87e4-4c2d-9ba7-0543768fd89d">
+            <stateMoniker name="/HazardObserver/IDLE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="342c2094-0855-462c-a0f6-217874218fab" name="ManualReset" organization="User-PC" date="2013-06-19" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="578a522f-3375-4768-b9ca-0a6aeb3090e8">
+      <state Id="da5870d1-c21f-440a-aa07-4e1bb4f4ec1c" name="IDLE" x="306.25" y="218.75" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="000e3a25-702a-4e58-afbc-c49ec4879ca3">
+            <transitionNodeMoniker Id="07014964-3209-432f-bbfa-2b5c2dab7eeb" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="03689125-a1e1-45dc-a0f2-4c47a65871ff">
+      <state Id="cf59e09c-46cc-4e74-89f0-833773423168" name="SHOULDRESET" x="612.5" y="437.5" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="e9aeea39-c361-4fe3-b791-461a159e406f">
+            <nondeterministicTransitionNodeMoniker Id="964d49a1-1cf8-4139-b4c9-5ff3036316b2" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="665c3ca8-b963-4dd6-b054-4842b871e176">
+            <nondeterministicTransitionNodeMoniker Id="596cee82-99f2-4c6e-b113-c1cba308d1e7" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="7736fc96-e8eb-4743-bb76-658f1fd70781">
+      <state Id="6544b809-9d99-49eb-9161-f49631f5fe87" name="RESET" x="1181.25" y="218.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="778b6682-8be2-47f3-962f-3e5deaef291e">
+            <actionSetMoniker Id="db2fbf95-b9c9-486d-beb2-70a4342730f0" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0cc964b5-e539-40ba-a264-0205dc7bddc5">
+            <transitionNodeMoniker Id="c073cfaa-414b-4039-bb82-412d078d6423" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="da95fa5f-9269-4199-a0e9-d84cb935f73a">
+      <state Id="aea36e44-aad3-4d16-bab6-6a09498b19e4" name="NOTRESET" x="1181.25" y="656.25" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="47aef82d-6847-46f2-ad1c-a63f8fc6325c">
+            <transitionNodeMoniker Id="48417738-adb4-4ce3-8f61-79a4b725b486" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="9334ac2d-cbc3-4f0e-ab2b-291fddda7f91">
+      <actionSet Id="db2fbf95-b9c9-486d-beb2-70a4342730f0" x="1482.1822068095205" y="875">
+        <actionItems>
+          <actionSetHasActionItems Id="f0e70772-0d55-4563-bf29-13207b2db9a2">
+            <actionEvent Id="4ec2cdf3-affc-4eb2-a09a-a2a63c8487fb">
+              <event>
+                <actionEventReferencesEvent Id="ab47b1a1-830e-4a92-acae-08511da9dbcc">
+                  <eventMoniker name="/ManualReset/ManualReset/doReset" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="05886371-67ab-4712-bd56-2bd8881e2781">
+      <functionBlockInterface Id="5347f3f0-4334-41f9-b324-6996ce1d5bdf" name="ManualReset" x="1400" y="481.25" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="197a3a5b-d526-4fd9-8951-cca5134ad707">
+            <event Id="59a931ac-d4be-40bb-bdda-6596e325dc58" name="doReset" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="fcba9d3e-d796-4135-bd59-34dfd81646f6">
+            <event Id="89e24206-582e-43fa-8c9f-6e329acecd1e" name="set" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="976cce15-ba31-457b-806e-57646e893974">
+            <inputEventPort Id="a5df087f-3a75-4064-8304-9680551748b2">
+              <event>
+                <inputEventPortReferencesEvent Id="0b26fb73-96e3-42da-9b03-4b24d304f4fd">
+                  <eventMoniker name="/ManualReset/ManualReset/set" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="d1609700-559a-43d8-80b2-8a4c9b68f92d">
+            <outputEventPort Id="669e48a2-41d7-4c7f-bd01-4eead1765c6b">
+              <event>
+                <outputEventPortReferencesEvent Id="854de1eb-1c55-443c-a026-2d7246becaa5">
+                  <eventMoniker name="/ManualReset/ManualReset/doReset" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c739f750-da78-4296-8e27-e04fa8af1cd2">
+      <nondeterministicTransitionNode Id="964d49a1-1cf8-4139-b4c9-5ff3036316b2" x="906.875" y="350">
+        <targetState>
+          <transitionNodeConnectsToStates Id="da3117d4-4fbd-48eb-879d-7502852b2850">
+            <stateMoniker name="/ManualReset/RESET" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5fe55b85-2aa3-41b2-9e06-23759851140f">
+      <nondeterministicTransitionNode Id="596cee82-99f2-4c6e-b113-c1cba308d1e7" x="889.875" y="530.875">
+        <targetState>
+          <transitionNodeConnectsToStates Id="6d60b1c3-05ff-470f-b8d1-561337884cc7">
+            <stateMoniker name="/ManualReset/NOTRESET" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </nondeterministicTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c92469a0-ffff-49a6-8146-48697858d1c4">
+      <transitionNode Id="48417738-adb4-4ce3-8f61-79a4b725b486" x="846.875" y="566.875">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ee97fefc-4e3b-44ea-8865-ff0b2977f388">
+            <stateMoniker name="/ManualReset/SHOULDRESET" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="1f702eb1-de01-4052-8e68-d4f26f29c20f">
+      <transitionNode Id="c073cfaa-414b-4039-bb82-412d078d6423" x="656.75" y="350">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a76f03b6-83c7-4d5a-b4c2-ebc9d651c3b8">
+            <stateMoniker name="/ManualReset/IDLE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="26463179-b65e-4d34-839e-28d4e279ca15">
+      <transitionNode Id="07014964-3209-432f-bbfa-2b5c2dab7eeb" x="452.375" y="350" event="set">
+        <targetState>
+          <transitionNodeConnectsToStates Id="60c0ec74-763c-47c1-aaa2-022d01b67878">
+            <stateMoniker name="/ManualReset/SHOULDRESET" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

@@ -1,0 +1,1 @@
+me->exitCounter = (me->exitCounter < 5) ? me->exitCounter + 1 : me->exitCounter;

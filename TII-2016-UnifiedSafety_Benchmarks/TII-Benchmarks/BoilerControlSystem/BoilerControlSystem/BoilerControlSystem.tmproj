@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58db6d2a-e1b0-4d1f-b976-be2e4e5bc2b6}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>BoilerSystem</Name>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Set the TimeMePath property by proving in different locations where TimeMe could be installed -->
+    <DevEnvPath>$(VS100COMNTOOLS)..\IDE</DevEnvPath>
+    <TimeMeAppExtPath>$(DevEnvPath)\Extensions\TimeMeVS2010\</TimeMeAppExtPath>
+    <TimeMeAppExtPath2>$(DevEnvPath)\Extensions\BlokTech\TimeMeVS2010\1.0\</TimeMeAppExtPath2>
+    <TimeMeUsrExtPath>$(LocalAppData)\Microsoft\VisualStudio\10.0\Extensions\BlokTech\TimeMeVS2010\1.0\</TimeMeUsrExtPath>
+    <TimeMeUsrExpExtPath>$(LocalAppData)\Microsoft\VisualStudio\10.0Exp\Extensions\BlokTech\TimeMeVS2010\1.0\</TimeMeUsrExpExtPath>
+    <!-- Shell App extension (when installed using MSI) -->
+    <TimeMePath Condition=" Exists('$(BlokIDEExtPath)\UoA.IEC61499.Compiler.targets')">$(BlokIDEExtPath)</TimeMePath>
+    <!-- Regular App extension (when installed using MSI) -->
+    <TimeMePath Condition=" '$(TimeMePath)' == '' AND Exists('$(TimeMeAppExtPath)\UoA.IEC61499.Compiler.targets')">$(TimeMeAppExtPath)</TimeMePath>
+    <!-- Regular LocalAppData (when installed using VSIX) -->
+    <TimeMePath Condition=" '$(TimeMePath)' == '' AND Exists('$(TimeMeUsrExtPath)\UoA.IEC61499.Compiler.targets')">$(TimeMeUsrExtPath)</TimeMePath>
+    <!-- Experimental LocalAppData -->
+    <TimeMePath Condition=" '$(TimeMePath)' == '' AND Exists('$(TimeMeUsrExpExtPath)\UoA.IEC61499.Compiler.targets')">$(TimeMeUsrExpExtPath)</TimeMePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Verification'">
+    <CompilationMode>Verify</CompilationMode>
+    <OutputPath>Generated\Verification\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Open RTM'">
+    <CompilationMode>OpenRTM</CompilationMode>
+    <OutputPath>Generated\OpenRTM\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <Import Project="$(TimeMePath)\UoA.IEC61499.Compiler.targets" />
+  <ItemGroup>
+    <Compile Include="BoilerSource.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoilerController.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OrValue.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoilerSystem.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlowIndicator.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FlowIndicator_F.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="CylinderPT.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="BoilerController.fb.closeValve.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>BoilerController.fb</DependentUpon>
+      <LinkedIntoProjectAt>closeValve.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="BoilerController.fb.openValve.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>BoilerController.fb</DependentUpon>
+      <LinkedIntoProjectAt>openValve.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="Controller.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="BoilerSystem_Plant.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="Controller.fb.closeValve.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>closeValve.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.resetWarning.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>resetWarning.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.setCondWarning.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>condWarning.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="Controller.fb.openValve.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>Controller.fb</DependentUpon>
+      <LinkedIntoProjectAt>openValve.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="BoilerSource.fb.setHigh.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>BoilerSource.fb</DependentUpon>
+      <LinkedIntoProjectAt>setHigh.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="BoilerSource.fb.setLow.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>BoilerSource.fb</DependentUpon>
+      <LinkedIntoProjectAt>setLow.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="BoilerSource.fb.wait.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>BoilerSource.fb</DependentUpon>
+      <LinkedIntoProjectAt>wait.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="FI_Failure.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="BoilerSystemF.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="PlantModel.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="BoilerSystemH.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="BoilerSystemS.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="CylinderPT.fb.buildUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>CylinderPT.fb</DependentUpon>
+      <LinkedIntoProjectAt>pressureBuildUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="CylinderPT.fb.relief.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>CylinderPT.fb</DependentUpon>
+      <LinkedIntoProjectAt>relief.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="FlowIndicator.fb.transmitValue.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FlowIndicator.fb</DependentUpon>
+      <LinkedIntoProjectAt>transmitValue.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="BoilerCertifier.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="FlowIndicator_F.fb.transmitValue.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FlowIndicator_F.fb</DependentUpon>
+      <LinkedIntoProjectAt>transmitValue.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="FlowIndicator_S.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="FlowIndicator_S.fb.transmitValue.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>FlowIndicator_S.fb</DependentUpon>
+      <LinkedIntoProjectAt>transmitValue.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="BoilerCertifier.fb.countUp.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>BoilerCertifier.fb</DependentUpon>
+      <LinkedIntoProjectAt>countUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="BoilerCertifier.fb.resetCount.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>BoilerCertifier.fb</DependentUpon>
+      <LinkedIntoProjectAt>resetCount.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="OrValue.fb.emitValue1.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>OrValue.fb</DependentUpon>
+      <LinkedIntoProjectAt>emitValue1.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="OrValue.fb.emitValue2.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>OrValue.fb</DependentUpon>
+      <LinkedIntoProjectAt>Algorithm1.algo</LinkedIntoProjectAt>
+    </Content>
+    <Compile Include="Valve.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="PLC.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Compile Include="ValveBehaviour.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="ValveBehaviour.fb.setClosed.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>ValveBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setClosed.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="ValveBehaviour.fb.setOpen.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>ValveBehaviour.fb</DependentUpon>
+      <LinkedIntoProjectAt>setOpen.algo</LinkedIntoProjectAt>
+    </Content>
+  </ItemGroup>
+</Project>

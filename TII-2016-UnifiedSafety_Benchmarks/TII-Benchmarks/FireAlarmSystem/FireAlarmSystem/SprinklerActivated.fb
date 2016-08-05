@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="02f347d1-93db-47d9-81c1-93076ee638ae" name="SprinklerActivated" organization="User-PC" date="2013-06-30" author="User" modelType="Observer">
+  <states>
+    <functionBlockModelHasStates Id="8e7c7839-f4f2-43ff-aef6-9d8c4ff0091e">
+      <state Id="412f4863-0125-4ec3-ba08-351580f14cc1" name="IDLE" x="700" y="218.75" isInitial="true">
+        <actionSet>
+          <actionLink Id="99e746a5-6567-453f-9ce3-8ac73971f6fc">
+            <actionSetMoniker Id="0f328adb-0035-43bd-8caa-96d875bb875a" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="4c26a24e-e9bc-4a5b-86a7-0bf6cefd0e6b">
+            <transitionNodeMoniker Id="d0c5776f-a372-4647-9c18-834a7af32324" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="6e1fcdb8-7277-4a56-855b-58f7d4280bb7">
+      <state Id="7bddc754-a306-4838-ba5f-13e790bd24fc" name="DETECT" x="700" y="743.75" isInitial="false">
+        <actionSet>
+          <actionLink Id="7b7873e4-4b6b-4cfa-a834-136f65160cdf">
+            <actionSetMoniker Id="14d6c50d-cf88-48a3-900b-16ef3e008b2b" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="746e236e-1e09-4095-9273-8906129733a2">
+            <transitionNodeMoniker Id="2de520dc-c00c-4692-a690-a3af235e633f" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="350eac5a-87d8-489e-9616-90d82ed00f95">
+            <transitionNodeMoniker Id="a4c1db0d-63e5-4b8e-8988-1123a1da3fe4" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="67e576ba-5744-4340-933f-e5524eaa3d80">
+            <transitionNodeMoniker Id="38f9cf16-0c8b-4790-89f0-47954d44456f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="40b82175-3673-4ac5-82d1-2bf451563887">
+      <state Id="ab9cc615-bda1-4f7b-9c8b-bea41ff07581" name="Violation" x="1706.25" y="393.75" isInitial="false" />
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="6266acf1-c441-4aa5-a9cc-39e15f1f2fb7">
+      <actionSet Id="14d6c50d-cf88-48a3-900b-16ef3e008b2b" x="1033.125199973583" y="743.75">
+        <actionItems>
+          <actionSetHasActionItems Id="7039adbd-2248-481f-aaab-f44a15142730">
+            <actionAlgorithm Id="9cde644d-bda8-4e08-b729-c9c240dc3b25">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="d4fa663e-9b06-4201-b015-5413ccca47b9">
+                  <algorithmMoniker name="/SprinklerActivated/checkDetection" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="f8ef317d-7f2a-466a-ba10-281df5acbe34">
+            <actionAlgorithm Id="3d50b11d-ca71-44f7-a1ec-c54940d58eee">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="6cb1228d-d6fc-4f57-8cac-c52e463edafa">
+                  <algorithmMoniker name="/SprinklerActivated/countUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="357b565f-a26e-436c-9536-52369df83089">
+      <actionSet Id="0f328adb-0035-43bd-8caa-96d875bb875a" x="1006.25" y="306.25">
+        <actionItems>
+          <actionSetHasActionItems Id="cd42888c-34cc-4f00-9b3f-def5ea250c79">
+            <actionAlgorithm Id="b69a1c26-c5c2-406b-bf6f-ea79bf8d3217">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="1226c463-f0f1-45ed-b176-6874108caced">
+                  <algorithmMoniker name="/SprinklerActivated/resetCount" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="9b4866e3-2140-40a0-8945-23c269f53f1b">
+      <algorithm Id="e03b20be-9e2f-400b-967e-1886ecc7a0ef" name="checkDetection" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="42fdad16-96b7-4a49-8773-5e14e939c99d">
+      <algorithm Id="df9ee34d-e184-48da-950f-3bd96045dd85" name="countUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="975d1473-9ee6-4709-bcd3-8135aa1de45b">
+      <algorithm Id="1b06aeb0-852c-4430-a9d9-327690b78bc1" name="resetCount" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="cb9ba37c-a7f0-46d6-8d62-5071dd4346fa">
+      <functionBlockInterface Id="7da57902-1938-43bd-8977-b223dc4e353d" name="SprinklerActivated" x="612.5" y="262.5" modelType="Observer">
+        <events>
+          <functionBlockHasEvents Id="16f0754d-a6c6-49d3-9937-bc21b2df9c1e">
+            <event Id="2f919e72-1176-4305-a67a-c291d8fc4ebd" name="reset" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a5259038-bc7f-4334-b55a-2acf6bdfe24b">
+            <event Id="d3f294b6-b294-4267-bc9b-26598746cbe5" name="incident" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6550599e-a2d7-4966-b64d-4091390b3854">
+            <event Id="9ce8b2b8-768b-424a-bb63-9913b9dd402b" name="detection" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="94520908-3b92-445d-9364-fee1d23ea6f8">
+            <event Id="42494351-71f3-44e1-b5b4-b802cc52a7fc" name="trigger" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="fb6af019-c77c-4df3-9538-943e97c6615e">
+            <variable Id="2520d55b-e7d8-4b1b-84ce-c253516a47a7" name="sprinkler" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="48c47e89-0c26-4ca8-ac04-a51e8c782001">
+            <variable Id="1549bcd2-b78e-4ccf-aff6-97a76e1e9074" name="d0Detect" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="1d50360d-6c7f-4bcd-8711-44c0f0597007">
+            <variable Id="f12cd7d6-e95b-4f5f-8083-16ddebccda63" name="d1Detect" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="32367713-5172-4bd4-97f4-4d23d9465474">
+            <variable Id="265f427a-b68f-4df1-b35c-35a2077ed973" name="d2Detect" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="cb3448ff-0536-476f-b3d8-d3e47ee51837">
+            <variable Id="187b711a-43c1-4f40-be02-5bf22d29a677" name="counter" scope="Internal" initialValue="0" type="INT" minimumValue="0" maximumValue="5" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="254f2340-0c21-476b-bc56-7816a7c44962">
+            <variable Id="7773f3dd-7f57-4425-a665-f7aa0a0a0207" name="needSprinkler" scope="Internal" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="cc4d6d2d-7008-4da5-95ef-0cff9c6859e5">
+            <inputEventPort Id="9f4e51c9-1079-45c9-8587-f36f48534f74">
+              <event>
+                <inputEventPortReferencesEvent Id="affe54e3-5da6-4840-8f38-3026c7a3f4bc">
+                  <eventMoniker name="/SprinklerActivated/SprinklerActivated/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d42747e0-6ae8-4534-afde-6fdec55532d5">
+            <inputEventPort Id="623e4e9c-3f0f-42bc-8b9f-22e20799d0b5">
+              <event>
+                <inputEventPortReferencesEvent Id="c29c94c2-e84c-4bc7-9bf6-61333cb2a3ba">
+                  <eventMoniker name="/SprinklerActivated/SprinklerActivated/incident" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c497135c-e3ad-4e82-9026-6a9187a5279d">
+            <inputEventPort Id="b818afd4-8831-48c1-97c9-95c633ff68b1">
+              <targetPort>
+                <association Id="579cb2bd-4c5c-4ecc-832a-0084bb775ae5">
+                  <inputVariablePortMoniker Id="9aca105a-8c5f-40aa-805d-5b72d3ccc46b" />
+                </association>
+                <association Id="25f7c4b9-7f1d-4b12-aeea-f77fc2160214">
+                  <inputVariablePortMoniker Id="996b3572-f316-41be-8a48-1d2e656b5bcc" />
+                </association>
+                <association Id="4665a094-ce1f-4542-b062-0b6b2ec7d202">
+                  <inputVariablePortMoniker Id="58b40bab-d62c-47c1-b93c-5bd19ef45306" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="1d4ed33b-32e0-4c49-a2c5-d08e1fa19742">
+                  <eventMoniker name="/SprinklerActivated/SprinklerActivated/detection" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="7df33f7d-e670-4c19-91b6-666a86210539">
+            <inputEventPort Id="e458cc75-2cf4-46ea-bd41-5b2cd1e29196">
+              <targetPort>
+                <association Id="924d4491-d919-4217-9533-cfcbe06144a3">
+                  <inputVariablePortMoniker Id="bb5288bf-73f5-421f-8eee-10c7ce96d21f" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="89520dc6-f5be-48a7-8fde-1dca76271d4c">
+                  <eventMoniker name="/SprinklerActivated/SprinklerActivated/trigger" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="0e87ee9a-2d60-40bd-983b-ebef93d44ded">
+            <inputVariablePort Id="bb5288bf-73f5-421f-8eee-10c7ce96d21f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="9a21baa4-77ac-42bf-9965-9cfa174f3aba">
+                  <variableMoniker name="/SprinklerActivated/SprinklerActivated/sprinkler" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="3836be7f-c0a4-4d20-a809-70363c2ade08">
+            <inputVariablePort Id="9aca105a-8c5f-40aa-805d-5b72d3ccc46b">
+              <variable>
+                <inputVariablePortReferencesVariable Id="d4f47036-14ff-48d4-9e50-6327b6271d40">
+                  <variableMoniker name="/SprinklerActivated/SprinklerActivated/d0Detect" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="76230d88-e19f-4517-9b32-3a932e36eb0e">
+            <inputVariablePort Id="996b3572-f316-41be-8a48-1d2e656b5bcc">
+              <variable>
+                <inputVariablePortReferencesVariable Id="6ff72061-e578-4fe7-974b-73e5d7d1ead4">
+                  <variableMoniker name="/SprinklerActivated/SprinklerActivated/d1Detect" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="08a2b43f-bdc7-4141-8c9a-4731c8939415">
+            <inputVariablePort Id="58b40bab-d62c-47c1-b93c-5bd19ef45306">
+              <variable>
+                <inputVariablePortReferencesVariable Id="2c9462ce-abc1-4119-bd0a-094cefd83dd2">
+                  <variableMoniker name="/SprinklerActivated/SprinklerActivated/d2Detect" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="d523e124-f73b-467e-95df-d7c747679522">
+      <transitionNode Id="d0c5776f-a372-4647-9c18-834a7af32324" x="681.125" y="436.25" event="incident">
+        <targetState>
+          <transitionNodeConnectsToStates Id="fdc98851-90af-4cdd-8a82-305961f4beca">
+            <stateMoniker name="/SprinklerActivated/DETECT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4088b521-cad5-4951-a9e8-12090e697b51">
+      <transitionNode Id="2de520dc-c00c-4692-a690-a3af235e633f" x="679.125" y="510.25000000000006" event="reset">
+        <targetState>
+          <transitionNodeConnectsToStates Id="67b23849-131f-4d24-a3f7-c033877982c2">
+            <stateMoniker name="/SprinklerActivated/IDLE" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="8b798374-7c4c-433b-9580-ad4275eebd43">
+      <transitionNode Id="38f9cf16-0c8b-4790-89f0-47954d44456f" x="1291.125" y="538.75" expression="(counter&gt;=3) &amp;&amp; (needSprinkler != sprinkler)">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ba2b99f6-679b-47d6-8859-4e079153db57">
+            <stateMoniker name="/SprinklerActivated/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="199f5920-8360-4dbc-acca-2ff06115b20a">
+      <transitionNode Id="a4c1db0d-63e5-4b8e-8988-1123a1da3fe4" x="787" y="718.74999999999989" expression="(counter&lt;3) &amp;&amp; (needSprinkler != sprinkler)">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d1d52e03-f7be-48ec-a03d-abb5d5011c5d">
+            <stateMoniker name="/SprinklerActivated/DETECT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

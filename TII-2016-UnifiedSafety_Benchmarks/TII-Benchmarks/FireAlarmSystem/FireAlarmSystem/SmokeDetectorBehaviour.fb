@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="d388844e-7a7d-4428-a6b3-644ab93b5d43" name="SmokeDetectorBehaviour" organization="User-PC" date="2013-06-17" author="User" modelType="Stochastic">
+  <states>
+    <functionBlockModelHasStates Id="c26b56f5-0c34-4cbe-abb5-34c19910aa7e">
+      <state Id="fb806d46-31c1-4a6d-b169-55a86f8b0af9" name="SMOKE_CHECK" comments="Models probability for 2 times a year fire incident." x="393.75" y="525" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f5bcc588-4d91-4422-8e26-413ccc955d0d">
+            <probabilisticTransitionNodeMoniker Id="330c29b5-fab9-4c19-abaf-fdfc2ff4f897" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="ab8d4745-054e-45fc-aab1-cccf8665336e">
+            <probabilisticTransitionNodeMoniker Id="3e79b856-ce42-4f53-9343-45fbee69f6c8" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="6e3505ec-c0ba-4579-83f7-c8a9ac9c375c">
+      <state Id="247bd7ff-c23f-4442-baf5-dbaca4d2ec7d" name="DETECTED" x="437.5" y="175" isInitial="false">
+        <actionSet>
+          <actionLink Id="cd2c49db-8770-4642-981f-03bff9285a75">
+            <actionSetMoniker Id="65df69b0-dad4-4ccf-a02e-9a3054fa11f0" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0a0c43e1-9373-4d2f-9184-03b74d4aa39a">
+            <transitionNodeMoniker Id="e5dcc9d9-b048-4c09-8477-916a19ec7c46" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="ee8ba0ce-a780-4b66-a52a-89ee150e9b25">
+      <state Id="c83cac5b-8286-4fce-8cfa-c7e46b647fd7" name="NOTDETECTED" x="393.75" y="875" isInitial="false">
+        <actionSet>
+          <actionLink Id="7cffa396-13de-4794-82e5-d4a3c9ddbd57">
+            <actionSetMoniker Id="f8df78f4-bf97-4bc2-a5a6-eaf5460b8d28" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="23fac2dc-3011-4300-80d4-81ff03d1e291">
+            <transitionNodeMoniker Id="bb28793d-adb9-4d49-8dd3-1e466c8d19e7" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="d1037a6d-3413-4cb7-98e0-e38495bf6ffb">
+      <actionSet Id="65df69b0-dad4-4ccf-a02e-9a3054fa11f0" x="831.25" y="175">
+        <actionItems>
+          <actionSetHasActionItems Id="2777164f-97d1-484e-82c9-6d1f3495c678">
+            <actionAlgorithm Id="86d83a11-2373-441b-b0cb-999f630b5fc0">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="2e7c5985-9273-4e52-b9db-f26ec355739e">
+                  <algorithmMoniker name="/SmokeDetectorBehaviour/setDetection" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="41783e66-1372-4272-aede-328bc5b5bd35">
+            <actionEvent Id="bde106fd-7bee-4aca-8c86-a3e17ee9d210">
+              <event>
+                <actionEventReferencesEvent Id="17843577-6225-4376-adf9-1d018474d79c">
+                  <eventMoniker name="/SmokeDetectorBehaviour/SmokeDetectorBehaviour/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="be1fad32-d505-477d-833c-e06952b285ad">
+      <actionSet Id="f8df78f4-bf97-4bc2-a5a6-eaf5460b8d28" x="875" y="875">
+        <actionItems>
+          <actionSetHasActionItems Id="95d1f2cb-d8ba-4f2f-b7ef-d774bc6bd5e1">
+            <actionAlgorithm Id="0862e3b7-29d3-4df6-ba7f-874a2e7c6383">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="555fd6bd-f2c9-425d-940c-a832e6beb156">
+                  <algorithmMoniker name="/SmokeDetectorBehaviour/unsetDetection" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="91a71ce2-19ca-463c-8248-8640e633e109">
+            <actionEvent Id="5e2dc67a-bd7d-4efa-99ad-578567b1a74f">
+              <event>
+                <actionEventReferencesEvent Id="02ff08d0-d3b7-4b73-b432-16161b86b667">
+                  <eventMoniker name="/SmokeDetectorBehaviour/SmokeDetectorBehaviour/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="3b0c9ed6-6170-4187-a959-38a111981e31">
+      <algorithm Id="9f1e256f-7e68-4e56-afb5-909c8b266831" name="setDetection" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="47b0dcac-44d8-4e49-ba43-a12753e48ebf">
+      <algorithm Id="72d4a30c-d65b-4cca-b204-a4f772c27bec" name="unsetDetection" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="573d4442-afb6-4b1d-9965-16fff7f5c732">
+      <functionBlockInterface Id="e35bc83d-20ec-47ef-a929-ecab8f7a91ae" name="SmokeDetectorBehaviour" x="437.5" y="175" modelType="Stochastic">
+        <events>
+          <functionBlockHasEvents Id="7465685d-04f9-4d7c-86c1-12942553305d">
+            <event Id="e3d66bac-436c-401d-996e-8a68ebfb390d" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d93163cc-0068-4bc0-9985-b733c28b02f0">
+            <event Id="093e86aa-5c32-411e-aaae-5741df5824d2" name="output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="d0873c4c-7ca7-41a6-8736-276a9162f9d5">
+            <variable Id="cfd44b66-7cfb-45d6-bf21-c33474b2b2b8" name="failed" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="52f2c5f3-0a5e-4045-9408-b4b7ddebd086">
+            <variable Id="da9fb88b-9c4d-4f8c-a587-93435fef2837" name="detected" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="b93eda19-e60b-49af-895c-cdc621c1778b">
+            <inputEventPort Id="e4b12ae2-0502-4b51-9414-e37374ceb144">
+              <targetPort>
+                <association Id="89ce83d1-9d3b-4e04-b635-a09867697922">
+                  <inputVariablePortMoniker Id="d87c5211-4303-4a59-b7b8-3d01223a8e0f" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="1a8f61db-27ac-4aa8-9c79-a49b74906d60">
+                  <eventMoniker name="/SmokeDetectorBehaviour/SmokeDetectorBehaviour/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e7fd2423-db9f-4385-87b6-89a295758795">
+            <outputEventPort Id="28a08f62-e8b4-48d4-8c7c-69d7230d79a2">
+              <targetPort>
+                <association Id="9ad3342a-55ae-45f8-96b8-01c388a0939c">
+                  <outputVariablePortMoniker Id="dc29f2c4-6fac-418c-bbd6-fa578a12fe4e" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="dbb987fe-8aa9-4ef1-afae-9475c7bbde9c">
+                  <eventMoniker name="/SmokeDetectorBehaviour/SmokeDetectorBehaviour/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="897a8d52-a815-4502-8b01-b4b528d86aa9">
+            <inputVariablePort Id="d87c5211-4303-4a59-b7b8-3d01223a8e0f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="b719983a-ae25-4fd4-b64c-7279058ca8a0">
+                  <variableMoniker name="/SmokeDetectorBehaviour/SmokeDetectorBehaviour/failed" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="b20f9713-f87b-4316-9df6-62601ab42993">
+            <outputVariablePort Id="dc29f2c4-6fac-418c-bbd6-fa578a12fe4e">
+              <variable>
+                <outputVariablePortReferencesVariable Id="292fa056-eb94-4c4d-8b08-594201204b6b">
+                  <variableMoniker name="/SmokeDetectorBehaviour/SmokeDetectorBehaviour/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="2b103037-b240-4951-b4f5-1a012aed7bc2">
+      <transitionNode Id="bb28793d-adb9-4d49-8dd3-1e466c8d19e7" x="700" y="700" expression="!failed">
+        <targetState>
+          <transitionNodeConnectsToStates Id="5f2194c5-15c4-4ffb-98fc-2c88b2602eb6">
+            <stateMoniker name="/SmokeDetectorBehaviour/SMOKE_CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="5eee42fd-6a3f-4c36-926c-7de0ad93d286">
+      <transitionNode Id="e5dcc9d9-b048-4c09-8477-916a19ec7c46" x="700" y="350" expression="!failed">
+        <targetState>
+          <transitionNodeConnectsToStates Id="1f004e25-4698-4531-a8db-c0b94bc215a5">
+            <stateMoniker name="/SmokeDetectorBehaviour/SMOKE_CHECK" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="495544f9-0a7b-4f42-be8a-4f000f2111ea">
+      <probabilisticTransitionNode Id="330c29b5-fab9-4c19-abaf-fdfc2ff4f897" x="218.75" y="350" probability="6.342E-10">
+        <targetState>
+          <transitionNodeConnectsToStates Id="b83aa239-dde1-4566-89d3-f0e7797b34b9">
+            <stateMoniker name="/SmokeDetectorBehaviour/DETECTED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="1f7ddde7-d94e-4443-9811-faf823e15a21">
+      <probabilisticTransitionNode Id="3e79b856-ce42-4f53-9343-45fbee69f6c8" x="186.32202669978142" y="700" probability="0.9999999993658">
+        <targetState>
+          <transitionNodeConnectsToStates Id="bb02d795-b2f7-4af5-82b4-095eb5ec4bb1">
+            <stateMoniker name="/SmokeDetectorBehaviour/NOTDETECTED" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </probabilisticTransitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

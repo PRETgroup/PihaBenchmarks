@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="5a6e4867-496e-4fdf-8b1f-431d4516797c" name="AlarmBehaviour" organization="User-PC" date="2013-06-27" author="User">
+  <states>
+    <functionBlockModelHasStates Id="be7b5431-140b-47a1-b41f-033f33563065">
+      <state Id="a179c5b3-7c68-4a29-bb43-f5396b1be93f" name="OFF" x="918.75" y="350" isInitial="true">
+        <actionSet>
+          <actionLink Id="d27613fb-3916-4442-a0d8-a45cfe2d6056">
+            <actionSetMoniker Id="8e8fa231-004d-420f-9539-ed504a79adaa" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="1bb69806-3dc5-4f4b-a5ca-927461dbdd51">
+            <transitionNodeMoniker Id="8e49b050-a8ec-4910-a2dc-743498e5e900" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="d67d37ed-c2fa-4cbf-8c9c-6660d2deba1d">
+      <state Id="b2afcf23-565c-4d66-a360-979cff9d9a0d" name="ON" x="918.75" y="831.25" isInitial="false">
+        <actionSet>
+          <actionLink Id="604ea14c-b8a8-4e6a-834b-439d29d54cca">
+            <actionSetMoniker Id="4f4e9931-377b-4018-a409-a8e3f4b2a237" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="6c885b24-5b64-472a-b268-3ac3dd05a7ae">
+            <transitionNodeMoniker Id="13d39103-351d-42c2-9e5c-417ecb25d277" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="0d5fdb70-6def-447f-8e67-29f1900e3ae3">
+      <actionSet Id="4f4e9931-377b-4018-a409-a8e3f4b2a237" x="1211.0091111063955" y="831.25">
+        <actionItems>
+          <actionSetHasActionItems Id="b0bb9452-5df6-411b-acd7-768acb19e149">
+            <actionEvent Id="b7041dd0-4839-4bf6-a2a0-c775f5f9b6f0">
+              <event>
+                <actionEventReferencesEvent Id="7a3c6daf-2b40-42ff-83b8-bb5055f01e1a">
+                  <eventMoniker name="/AlarmBehaviour/AlarmBehaviour/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="d9e2ce89-ab15-49a8-ae87-fdb94a399953">
+            <actionAlgorithm Id="b74f3720-3454-4818-a557-24d2aff802c6">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="5a622f2e-8bb4-4fca-ad0a-b8ee466f2879">
+                  <algorithmMoniker name="/AlarmBehaviour/setAlarm" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="722231d0-7a8c-4bbc-810b-a9c96eb44089">
+      <actionSet Id="8e8fa231-004d-420f-9539-ed504a79adaa" x="1221.3057419657705" y="350">
+        <actionItems>
+          <actionSetHasActionItems Id="8acfdd59-abcf-4771-a826-0a2ef1d0643f">
+            <actionEvent Id="6b869a86-9ee9-454d-bed3-4cf958ae4411">
+              <event>
+                <actionEventReferencesEvent Id="eb258b19-34cd-41fa-87ae-9c440eeb00fd">
+                  <eventMoniker name="/AlarmBehaviour/AlarmBehaviour/update" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="9a380134-efed-4596-966d-44e7ee2fde3a">
+            <actionAlgorithm Id="d3ccd4ac-666c-49a8-849a-ef4dc66ae0f9">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="d89e7c11-1421-47f6-9394-809f22e53324">
+                  <algorithmMoniker name="/AlarmBehaviour/unsetAlarm" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="721e50ce-1b7f-4ab8-abfe-4c52ab87b1d6">
+      <algorithm Id="1044b52b-e382-4a88-8f7e-54048672f410" name="setAlarm" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="f49e0961-97e7-498b-b0ba-4a60605ce79d">
+      <algorithm Id="65de1748-45a4-4ba6-b756-8fcb6cb49a6b" name="unsetAlarm" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="0ac571eb-c293-4e33-b402-45bd7c706af0">
+      <functionBlockInterface Id="64e30840-a63e-4e01-9708-626283145df7" name="AlarmBehaviour" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="e0ff7a3a-7399-4be7-a602-76ff98147ab2">
+            <event Id="c582aa5e-b2c9-4131-b05a-da7f5d8e64fc" name="reload" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6013ece0-e262-46a2-b74b-7556eea1b926">
+            <event Id="161de197-276c-411e-a426-9a2daa272bbd" name="update" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="0376c2b4-4035-4fb8-8332-4b00f2f95dc5">
+            <variable Id="0bffddf7-3c0e-4861-85fc-25f63647e82c" name="status" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="da36c958-d7f6-43e1-9b13-56ed92013725">
+            <variable Id="20cab649-798b-47d0-bf1b-4915307a9c2f" name="isSound" scope="Output" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="3f11937d-e971-4396-94c5-6e3522ae119a">
+            <inputEventPort Id="e207805c-cdc6-48b4-9825-c823cd7dc869">
+              <targetPort>
+                <association Id="58b3da8d-c113-45c4-aaab-1393f0abcb7e">
+                  <inputVariablePortMoniker Id="0d23af57-c3ef-4e6e-976d-b7ed33921721" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="1c12d8bb-76aa-415f-97f6-678c11ba4b94">
+                  <eventMoniker name="/AlarmBehaviour/AlarmBehaviour/reload" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="33f79311-0bb6-4722-9d79-19a73640f226">
+            <outputEventPort Id="30b13938-6f3e-4158-876d-6d6fc0a8926e">
+              <targetPort>
+                <association Id="d15f6e50-c697-4a00-a7fe-805ef2865993">
+                  <outputVariablePortMoniker Id="71ceab1e-3e75-44db-baec-57dd10b01ede" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="b8dc5abb-3d21-403c-b811-c9d47245a0d4">
+                  <eventMoniker name="/AlarmBehaviour/AlarmBehaviour/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="d4717e87-45b6-4e83-a5c1-19969f7f511d">
+            <inputVariablePort Id="0d23af57-c3ef-4e6e-976d-b7ed33921721">
+              <variable>
+                <inputVariablePortReferencesVariable Id="068713f9-a0e5-4f94-a267-51a6d3e7791a">
+                  <variableMoniker name="/AlarmBehaviour/AlarmBehaviour/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="389ba8e4-8053-4bfa-963d-fa9daec40d3b">
+            <outputVariablePort Id="71ceab1e-3e75-44db-baec-57dd10b01ede">
+              <variable>
+                <outputVariablePortReferencesVariable Id="e61b1ca6-1207-48b8-a4e1-b22ff5324210">
+                  <variableMoniker name="/AlarmBehaviour/AlarmBehaviour/isSound" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="408094ee-445f-4315-b88e-7bac3ec964e0">
+      <transitionNode Id="8e49b050-a8ec-4910-a2dc-743498e5e900" x="306.25" y="525" event="reload" expression="status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="49f0dacc-08a9-4fbb-b958-7bfcec9928fc">
+            <stateMoniker name="/AlarmBehaviour/ON" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="4d3712e8-b510-46ee-94fd-9ad46915d248">
+      <transitionNode Id="13d39103-351d-42c2-9e5c-417ecb25d277" x="1093.75" y="568.75" event="reload" expression="!status">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a11f2241-c75d-4efa-9932-fcb57ddd7440">
+            <stateMoniker name="/AlarmBehaviour/OFF" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

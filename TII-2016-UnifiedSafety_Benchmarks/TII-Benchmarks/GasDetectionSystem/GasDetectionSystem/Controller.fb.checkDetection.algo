@@ -1,0 +1,1 @@
+me->ventilation = (me->sensor1 || me->sensor2);

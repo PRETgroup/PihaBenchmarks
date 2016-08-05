@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="7a35aa97-3761-4664-adb0-6c9736f2e1b5" name="PlantModel" organization="User-PC" date="2013-05-15" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="8cd9878e-bb58-4227-a667-640400f18295">
+      <functionBlockInterface Id="86df6d8a-5604-419c-9150-3cc829c82e30" name="PlantModel" x="1575" y="568.75" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="9bfcb684-2504-45cc-851f-8fb6ae53daf3">
+            <event Id="ee860b74-a305-4e42-9694-0c3dc5663d44" name="output" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="8c406a19-2a42-4aee-ae40-04d00f21f4e4">
+            <event Id="7358df64-9156-4b03-8d34-8f2701c2dd82" name="srcChanged" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d4ba38fa-71fe-49f0-8347-3e401d8fbe8d">
+            <event Id="049e20b3-8d35-4b27-a345-a6f4701826eb" name="plcFailure" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b756f653-d8ef-42d0-ba6a-3ff61975a327">
+            <event Id="d744ba25-ed67-4700-bac6-2b76449b8132" name="update" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="b4ffdeeb-22a9-433f-8f21-93f51491deb0">
+            <variable Id="a0eba045-8f79-42bc-92be-ac8eaab6b9ff" name="oValue" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c3f14684-44ad-4740-b75b-811b92ae9470">
+            <variable Id="57c21926-edf5-427b-bf16-a3ef14639ea4" name="pressure" scope="Output" type="INT" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c3a69c76-2654-4e69-87ea-f4bcf9664810">
+            <variable Id="5d515c21-bc48-4cbf-a081-80488615ab63" name="valveCtrl" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="fc0347e2-f6f2-4e89-97c4-ab6ded8fc1d9">
+            <inputEventPort Id="67c18dc8-2e54-45f3-b6de-95db4a771e77">
+              <proxyTargetPorts>
+                <proxyConnection Id="11bc6057-ac53-42a9-9b20-202d61aff98d">
+                  <inputEventPortMoniker Id="3a5521dd-74f1-4616-8617-99ea71a9b497" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <inputEventPortReferencesEvent Id="80813dd9-a223-47db-9a5e-2f61cf973594">
+                  <eventMoniker name="/PlantModel/PlantModel/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="6eb47a32-217c-4530-be82-fb29b3506ea0">
+            <outputEventPort Id="daa0af91-c0c1-40f0-a426-9f70500dbf75">
+              <proxyTargetPorts>
+                <proxyConnection Id="ce6d5aac-c99d-4be2-804a-971b56ca94db">
+                  <outputEventPortMoniker Id="27ec9b4f-d4d2-4822-8c83-5fc793f208b7" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="cf56330f-5a23-4dc8-9cdb-0bd79920894b">
+                  <eventMoniker name="/PlantModel/PlantModel/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="496ab633-1b98-4a29-b4a6-9da5fd8de529">
+            <outputEventPort Id="26aed5c3-0c37-4e1c-b833-6e67a8373764">
+              <proxyTargetPorts>
+                <proxyConnection Id="8455f9a7-f3c4-4921-b905-cbfed01c99fd">
+                  <outputEventPortMoniker Id="9e6a7dc2-02bd-4ca8-8a02-21ab063256f9" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="755b2b0b-2416-4575-8512-3f6ced2f0fbc">
+                  <eventMoniker name="/PlantModel/PlantModel/srcChanged" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1c29c149-62b2-4cab-8d02-b176b4a0bff5">
+            <outputEventPort Id="6d4a97bd-147e-4568-981d-646b1a2f23f1">
+              <proxyTargetPorts>
+                <proxyConnection Id="d3399068-9f63-4c13-a618-4d0b44cca3bf">
+                  <outputEventPortMoniker Id="fd8a776d-e091-4a28-bef0-6be17a58d386" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="d63e3c9d-aee8-496a-bdad-4fb209a4aff4">
+                  <eventMoniker name="/PlantModel/PlantModel/plcFailure" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="5ef08eaf-fe08-40a1-947c-4a3931b91412">
+            <inputVariablePort Id="a03dc87c-61db-4d39-85be-b1f0e507d9ae">
+              <proxyTargetPorts>
+                <proxyConnection Id="6661584a-5aa9-4beb-a5b4-222ffe72cdb9">
+                  <inputVariablePortMoniker Id="054e9050-3771-425b-87cd-3bc5971d8560" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <inputVariablePortReferencesVariable Id="019d72ab-cc11-4d26-8d14-b8b283ffd2f3">
+                  <variableMoniker name="/PlantModel/PlantModel/valveCtrl" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="fba891de-a35b-4a35-84b1-57499b106c3c">
+            <outputVariablePort Id="6057d268-3039-43bb-bc85-4a20325bf2de">
+              <proxyTargetPorts>
+                <proxyConnection Id="f954ea2c-50df-4897-913e-491e67e10563">
+                  <outputVariablePortMoniker Id="5e6452bc-afac-4c42-b2a1-2fd88d9d8eab" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="18b2325d-544b-4d7f-b4b7-08e8b3a9ed3e">
+                  <variableMoniker name="/PlantModel/PlantModel/oValue" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="6b2b12d1-fa50-4fac-b504-0a135175bc13">
+            <outputVariablePort Id="09f7326a-ab24-4431-9632-e535d221c00a">
+              <proxyTargetPorts>
+                <proxyConnection Id="242a4405-e0a0-42f8-a701-f5d0346f35dd">
+                  <outputVariablePortMoniker Id="e7c2e40a-7a31-424d-8d39-44c96a2f13f6" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="c052a69f-37bd-4294-b94f-58dabd3e331f">
+                  <variableMoniker name="/PlantModel/PlantModel/pressure" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="9876da05-0b37-426c-a9fc-7dc701d4e48e">
+      <functionBlockReference Id="ce0f46dd-c7d5-4ed5-b548-fcef59b306bf" name="fail1" x="1137.5" y="962.5" modelType="Stochastic" creationMode="Resource" referencedFile="FI_Failure.fb">
+        <events>
+          <functionBlockHasEvents Id="2a7d7634-a04c-4203-b753-4d4a8c13171c">
+            <eventRef Id="7848b238-7c14-4f0c-9f89-4434fd2ae5a4" name="failed" scope="Output" referencedID="d6e799f9-ff2e-4410-9b7d-563542ca7457" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="b807afd6-dfb7-418c-9d01-95375df816cd">
+            <outputEventPort Id="1d9e6bff-0a8c-4474-9ab8-70841c99cb2d">
+              <wireTargetPorts>
+                <wireConnection Id="ff7e67fa-2f4e-48c8-b50a-2e8cea47adc8" unitDelayed="false">
+                  <inputEventPortMoniker Id="fe9b392a-7e32-4729-a7a2-b2c5e2d7804c" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="ebec55a5-1050-4957-804f-1068491ac0f5">
+                  <eventRefMoniker name="/PlantModel/fail1/failed" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="a75b927f-337e-4f80-ab1e-4d5a6489f985">
+      <functionBlockReference Id="df59a1ba-527c-46fd-8a36-826c8e4e26b6" name="source" x="568.75" y="1093.75" creationMode="Resource" referencedFile="BoilerSource.fb">
+        <events>
+          <functionBlockHasEvents Id="030603ba-86ae-4094-91a9-eadcfe79fb99">
+            <eventRef Id="0a995e11-3c7b-4240-9c24-a27920d6b8ae" name="changed" scope="Output" referencedID="04406457-ab25-44ed-827d-0a921df8f846" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="175d4bbf-ada9-4fb5-a117-7eb2c577870d">
+            <variableRef Id="7a940318-0c63-45ae-a197-b533026c2735" name="pressure" scope="Output" initialValue="0" type="INT" referencedID="c8425563-c3e9-493f-a489-f67739a70975" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="87cbcfe4-7005-49dd-bc96-e9151c0b9e1d">
+            <variableRef Id="d52b8800-c691-4386-b900-894e3ed5511b" name="flow_1" scope="Output" initialValue="false" referencedID="b4600d43-90a4-48dd-9845-bbf72984d3f1" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e620e157-a943-4a1d-8121-a130ef7791df">
+            <variableRef Id="6af10158-18c6-4508-888e-0cc98e9bcb1b" name="flow_2" scope="Output" initialValue="false" referencedID="19c9a2e5-f56e-4eb9-b7c7-45f17ea14cf0" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="c765de3b-8b3c-48c6-a22e-7cfb5c2776cf">
+            <outputEventPort Id="9e6a7dc2-02bd-4ca8-8a02-21ab063256f9">
+              <wireTargetPorts>
+                <wireConnection Id="80b011fd-e6b9-4838-b1be-a9adcb313b1b" unitDelayed="false">
+                  <inputEventPortMoniker Id="9b9eae0c-8ac4-4473-9e11-1fded93444c0" />
+                </wireConnection>
+                <wireConnection Id="e9b581bb-33d1-4820-87f1-353cde54ac92" unitDelayed="false">
+                  <inputEventPortMoniker Id="98db0ef0-be99-4df1-afc0-8f3ca4acb939" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="2fd859a2-760f-4cdf-a2d9-76644afef811">
+                  <eventRefMoniker name="/PlantModel/source/changed" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="46e83836-301e-4872-bd1b-ec52a2b237a4">
+            <outputVariablePort Id="27127ff8-0961-4abd-bb59-93ec830f44e6">
+              <wireTargetPorts>
+                <wireConnection Id="f7beb2cc-23fc-4a4b-96fb-ce6a4918a626" unitDelayed="false">
+                  <inputVariablePortMoniker Id="b34f6a67-aa32-43f7-b3ef-b9ed04aeb378" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="eab65b57-4565-4eeb-a166-4e3ce0d08c1e">
+                  <variableRefMoniker name="/PlantModel/source/flow_1" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="534d571e-dd37-4d9c-bb4b-b39cb882b8ad">
+            <outputVariablePort Id="cb5893d6-125e-48a7-9db5-04e8b6329739">
+              <wireTargetPorts>
+                <wireConnection Id="5a0e8727-be75-4d22-b9ef-0695fe5a93e2" unitDelayed="false">
+                  <inputVariablePortMoniker Id="c0048855-4858-4e5c-861d-0de09b2b4ec8" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="cc1f7086-8064-425c-b11b-8c07a8c15f84">
+                  <variableRefMoniker name="/PlantModel/source/flow_2" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="b6d06e71-3460-4b63-aa96-1ac9d159c2df">
+            <outputVariablePort Id="e7c2e40a-7a31-424d-8d39-44c96a2f13f6">
+              <variable>
+                <outputVariablePortReferencesVariable Id="4dbd8b5b-2e4c-4e0f-af8a-603043d0c83a">
+                  <variableRefMoniker name="/PlantModel/source/pressure" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="4ce77831-a8e2-450d-b304-0ee83565ab61">
+      <functionBlockReference Id="3bbdf663-aab4-4650-8780-4513d9d2c935" name="compFI_2" x="1618.75" y="1575" creationMode="Resource" referencedFile="FlowIndicator_F.fb">
+        <events>
+          <functionBlockHasEvents Id="c5f04024-9733-4761-a45f-3e6ac3747747">
+            <eventRef Id="c67d13a2-dfe4-425d-b2b8-6ee8738ec2a0" name="input" scope="Input" referencedID="cba9e7d4-a306-497b-85f4-6c366b76cce8" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f4b539c7-2101-441f-bc06-08ea9a6fb69d">
+            <eventRef Id="0b0afdb3-d0bd-471d-a612-eec47f5907a2" name="failed" scope="Input" referencedID="c052d1e3-543c-418d-8d87-46b55a04c38c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="11355e52-8c9f-46bd-b7af-f7e3895c1a55">
+            <eventRef Id="e3074762-5013-4b81-9169-9cc4eb999a90" name="output" scope="Output" referencedID="6c119509-874a-4afb-a022-09ab1f9be22b" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="a70b87d7-bc20-4342-85fa-b8344b922d6a">
+            <variableRef Id="288b08b8-b574-4bf1-a1f7-f571f637e4cc" name="value" scope="Input" referencedID="6787c5de-c57b-48f5-a1aa-9e5e6205a368" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="e188f9dc-f952-41e0-9e6c-768af0f463b9">
+            <variableRef Id="40d39031-3a5c-4bbc-9d66-da676ba25891" name="oValue" scope="Output" referencedID="0a5fa67f-9f89-4d97-b774-0339efcee0de" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="e8aecf45-d9b9-40cc-a9bd-8d0bf4428d0f">
+            <inputEventPort Id="9b9eae0c-8ac4-4473-9e11-1fded93444c0">
+              <event>
+                <inputEventPortReferencesEvent Id="5b013a47-fff1-4732-9699-72430943385b">
+                  <eventRefMoniker name="/PlantModel/compFI_2/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="8c7c2961-5065-4ed3-a3b0-5c60d05a379c">
+            <inputEventPort Id="8a0ac862-80cf-4b26-a6ab-ad9a9e0b8fe1">
+              <event>
+                <inputEventPortReferencesEvent Id="179afe21-964f-4de0-bd37-3dcb27b3e7fe">
+                  <eventRefMoniker name="/PlantModel/compFI_2/failed" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="84819ffc-e755-4656-956f-86dbf10eb999">
+            <outputEventPort Id="edc2ec63-4bba-400f-bec0-7932e4049cd5">
+              <wireTargetPorts>
+                <wireConnection Id="ff1a3958-71e8-41b6-a8de-a72717d549b0" unitDelayed="false">
+                  <inputEventPortMoniker Id="b5666241-55cb-4136-a6db-baf000561afb" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="22a41be4-361e-440a-80eb-f6e15019feed">
+                  <eventRefMoniker name="/PlantModel/compFI_2/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="e0b32567-9b6a-40d3-8a2a-bfc083acbbee">
+            <inputVariablePort Id="c0048855-4858-4e5c-861d-0de09b2b4ec8">
+              <variable>
+                <inputVariablePortReferencesVariable Id="80d8442b-087b-4a57-bb35-7fd9896a5598">
+                  <variableRefMoniker name="/PlantModel/compFI_2/value" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="05db36e9-95ce-4c0c-8943-1fed2cbf0cff">
+            <outputVariablePort Id="1b7117ff-a4a8-4469-84ad-62f211fc6714">
+              <wireTargetPorts>
+                <wireConnection Id="7427bec3-9065-44d8-a4b6-611d5c03469e" unitDelayed="false">
+                  <inputVariablePortMoniker Id="e199ffdf-4a82-4356-89d7-6f3b0fea6848" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="30f38142-b776-42bb-b1d9-a5713aa7ecbc">
+                  <variableRefMoniker name="/PlantModel/compFI_2/oValue" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="52a4a96a-1c4d-43bf-b8ba-28d701351a01">
+      <functionBlockReference Id="3770dce2-5e19-48ac-a51f-f61b380ec342" name="fail2" x="1137.5" y="1662.5" modelType="Stochastic" creationMode="Resource" referencedFile="FI_Failure.fb">
+        <events>
+          <functionBlockHasEvents Id="0036ea5a-c6dc-499e-8c56-a57f9e8e5d11">
+            <eventRef Id="ac401789-0d1f-4616-a6af-46759f46083f" name="failed" scope="Output" referencedID="d6e799f9-ff2e-4410-9b7d-563542ca7457" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="74498ed6-69e5-4aeb-91e4-773d2369e0b4">
+            <outputEventPort Id="9e387a9d-9343-4330-8105-7f93ea3a9d13">
+              <wireTargetPorts>
+                <wireConnection Id="987118ac-f297-443f-a4e4-ca31f7497225" unitDelayed="false">
+                  <inputEventPortMoniker Id="8a0ac862-80cf-4b26-a6ab-ad9a9e0b8fe1" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="260d33d2-1c5c-4cc0-84bf-b30ed879997f">
+                  <eventRefMoniker name="/PlantModel/fail2/failed" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="177f51be-c304-423f-9f70-2d608f121781">
+      <functionBlockReference Id="78f3aca9-6719-4bf7-b45e-710567b11717" name="flow_1oo2" x="2318.75" y="1006.25" creationMode="Resource" referencedFile="OrValue.fb">
+        <events>
+          <functionBlockHasEvents Id="ae383923-b8e4-4fac-8e4c-f3b35950998a">
+            <eventRef Id="b135b05b-b504-4aec-af05-e84a44310c6b" name="input1" scope="Input" referencedID="c74299d5-3527-4d80-aa2a-7da7b3ec37f4" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="053bda3c-5413-4fef-9284-5068fb95a6cc">
+            <eventRef Id="ff63a1df-e9a9-488f-a1ee-ea8e55f14024" name="output" scope="Output" referencedID="6ae3c7e4-9594-4e6c-992d-ed5849a82cd6" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e502f195-12b3-465a-8ba2-eac82937c173">
+            <eventRef Id="d9269b02-cc10-4fd6-adf7-391fcab2cb30" name="input2" scope="Input" referencedID="8cefccef-1f8e-418a-935d-c344cbfbc07d" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="c1fb21dc-0ef8-4a2e-aa4a-4e93d64ccbb1">
+            <variableRef Id="698dc8f1-a58e-4334-9d22-4338a8f9f9a5" name="value1" scope="Input" initialValue="false" referencedID="7718709c-a8da-4367-9cd4-7766bd725147" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="2f27ec14-dcc9-45ff-8df3-a6c02db40fed">
+            <variableRef Id="8b9935ad-08e0-42c3-abcd-7cae78742ef3" name="value2" scope="Input" initialValue="false" referencedID="d042de86-d4fe-4c2e-b72d-44beaa771d94" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="edaa2617-9b78-45ea-962a-a7c0a90e02bf">
+            <variableRef Id="e3423657-6f1a-4d87-908f-024cc8afee3a" name="oValue" scope="Output" initialValue="false" referencedID="cee80090-6135-429f-b662-f398aacf8a0e" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="13a35317-f1cb-46e3-9d0a-267c92e4f987">
+            <inputEventPort Id="ec69d79a-eada-449d-9b0e-a37cbcb41d27">
+              <event>
+                <inputEventPortReferencesEvent Id="b1468f01-6e3b-4c19-a1a4-bfa8c76b88ed">
+                  <eventRefMoniker name="/PlantModel/flow_1oo2/input1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="3c480441-1d11-4f68-8505-2c1ba0b54dd8">
+            <inputEventPort Id="b5666241-55cb-4136-a6db-baf000561afb">
+              <event>
+                <inputEventPortReferencesEvent Id="b3e7d26b-085d-45ed-9d83-2b319fb97154">
+                  <eventRefMoniker name="/PlantModel/flow_1oo2/input2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="91dbd5e0-51ff-4e8c-b10f-690ac1f21749">
+            <outputEventPort Id="27ec9b4f-d4d2-4822-8c83-5fc793f208b7">
+              <event>
+                <outputEventPortReferencesEvent Id="5e9d4819-c934-4d15-a807-5782f0676e6a">
+                  <eventRefMoniker name="/PlantModel/flow_1oo2/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7a9833f5-cf59-445a-98ab-592b5d30c9b5">
+            <inputVariablePort Id="b6600849-84bd-49e3-977a-b0f904cf5b17">
+              <variable>
+                <inputVariablePortReferencesVariable Id="064632c4-9eb9-453f-bde1-365741845067">
+                  <variableRefMoniker name="/PlantModel/flow_1oo2/value1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="76fb5d90-100f-4150-a921-bd673f27afd5">
+            <inputVariablePort Id="e199ffdf-4a82-4356-89d7-6f3b0fea6848">
+              <variable>
+                <inputVariablePortReferencesVariable Id="63f63307-7b7f-49ae-a16b-463c336c784f">
+                  <variableRefMoniker name="/PlantModel/flow_1oo2/value2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="cdf0d3f9-1ca3-42ed-a3a1-f8933cda3ac8">
+            <outputVariablePort Id="5e6452bc-afac-4c42-b2a1-2fd88d9d8eab">
+              <variable>
+                <outputVariablePortReferencesVariable Id="75143e54-19d3-4a8c-af06-514751356bfe">
+                  <variableRefMoniker name="/PlantModel/flow_1oo2/oValue" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="e606264a-695a-4c27-b4a5-496c8768aeb8">
+      <functionBlockReference Id="0e53acdf-f06d-4341-a029-324057375b00" name="compFI_1" x="1662.5" y="918.75" creationMode="Resource" referencedFile="FlowIndicator_F.fb">
+        <events>
+          <functionBlockHasEvents Id="c5c526fb-c602-4b1c-915d-083e5447a1df">
+            <eventRef Id="21363ee0-51e6-4bb6-ac2a-fdd8ae8208e6" name="input" scope="Input" referencedID="cba9e7d4-a306-497b-85f4-6c366b76cce8" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a87ab384-996a-4263-a655-40bbac1cf8d0">
+            <eventRef Id="a8a40b14-12ff-4f64-b3de-8a68149e2a2e" name="failed" scope="Input" referencedID="c052d1e3-543c-418d-8d87-46b55a04c38c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="378304cd-a8ae-4256-9249-8b2b27ea4f37">
+            <eventRef Id="7fc2d793-8c54-4203-88db-13ac96eb6fe4" name="output" scope="Output" referencedID="6c119509-874a-4afb-a022-09ab1f9be22b" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="46c7ce74-3543-4293-bb77-4af80688e5a9">
+            <variableRef Id="f7969afb-7df3-4d36-81b2-1a9afe39c848" name="value" scope="Input" referencedID="6787c5de-c57b-48f5-a1aa-9e5e6205a368" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="7a89950e-ba79-4cfd-98ef-f354f425ad35">
+            <variableRef Id="fb0fe776-f416-4101-bf67-4467587cf486" name="oValue" scope="Output" referencedID="0a5fa67f-9f89-4d97-b774-0339efcee0de" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d3620f26-63ed-4a75-be3e-47e55704c2eb">
+            <inputEventPort Id="98db0ef0-be99-4df1-afc0-8f3ca4acb939">
+              <event>
+                <inputEventPortReferencesEvent Id="2b32420b-ba12-4826-bd17-8169d4250422">
+                  <eventRefMoniker name="/PlantModel/compFI_1/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c649d5c1-51f5-41b9-a997-ac02760c6489">
+            <inputEventPort Id="fe9b392a-7e32-4729-a7a2-b2c5e2d7804c">
+              <event>
+                <inputEventPortReferencesEvent Id="15338462-62e9-4d64-b2fd-28834c339761">
+                  <eventRefMoniker name="/PlantModel/compFI_1/failed" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="dad77b65-db6d-4913-8126-6383f394534d">
+            <outputEventPort Id="4b5c4769-9f62-410f-88bf-e07378210bab">
+              <wireTargetPorts>
+                <wireConnection Id="3b9d6d24-ee4e-44ce-b920-f406dbeba665" unitDelayed="false">
+                  <inputEventPortMoniker Id="ec69d79a-eada-449d-9b0e-a37cbcb41d27" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="d7154c9a-af58-46fd-8fc3-910f981fbb44">
+                  <eventRefMoniker name="/PlantModel/compFI_1/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="9f166e9c-7a38-49c6-93d5-ff642fdd11bf">
+            <inputVariablePort Id="b34f6a67-aa32-43f7-b3ef-b9ed04aeb378">
+              <variable>
+                <inputVariablePortReferencesVariable Id="0589c934-e032-48b9-a6a9-39d274cfc789">
+                  <variableRefMoniker name="/PlantModel/compFI_1/value" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="66a8efec-a5d6-4b5c-8873-cc7f31f54174">
+            <outputVariablePort Id="75b9195c-9bef-463d-9c9b-1cebe108a7c2">
+              <wireTargetPorts>
+                <wireConnection Id="5fa23018-38b8-45ae-a1be-5e504792cac6" unitDelayed="false">
+                  <inputVariablePortMoniker Id="b6600849-84bd-49e3-977a-b0f904cf5b17" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="ab92869a-f8e2-4374-82b1-defa0087ff37">
+                  <variableRefMoniker name="/PlantModel/compFI_1/oValue" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="373ee63c-67e0-43bd-a0c0-6ab714db8645">
+      <functionBlockReference Id="542b5efe-77e6-400e-b48d-e949af07d72f" name="plc" x="2362.5" y="1750" modelType="Stochastic" creationMode="Resource" referencedFile="PLC.fb">
+        <events>
+          <functionBlockHasEvents Id="a642d1d3-2774-4340-b684-903e49b860e0">
+            <eventRef Id="c6046bd8-27c8-4442-af10-fe48aee2cecf" name="plcFailure" scope="Output" referencedID="0f02db0b-c818-4de7-bce5-d6f6f0d57569" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3ac2ffcf-a043-420d-9fac-233e68de4b9d">
+            <outputEventPort Id="fd8a776d-e091-4a28-bef0-6be17a58d386">
+              <event>
+                <outputEventPortReferencesEvent Id="9fba27cc-dcf2-4dee-8129-79cab86d4c38">
+                  <eventRefMoniker name="/PlantModel/plc/plcFailure" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="58d9d3d3-7030-40f0-bc95-9a2575cdbb25">
+      <functionBlockReference Id="1da7aac3-881b-444b-805e-f261da32c428" name="valve" x="612.5" y="1837.5" modelType="Stochastic" creationMode="Resource" referencedFile="Valve.fb">
+        <events>
+          <functionBlockHasEvents Id="070bb553-5adb-4d2d-9d0b-18c037565cff">
+            <eventRef Id="57440299-c5ca-4823-8f29-0d7d0fe12d22" name="update" scope="Input" referencedID="36ff64e7-88e0-47c6-a74e-df988a4c8783" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="22009866-5714-4b50-b448-b7e083f89c6d">
+            <variableRef Id="2d6cb155-f2af-4b61-bb9c-999aa4fbfab3" name="status" scope="Input" referencedID="0ef60934-a2a6-418c-ba0d-47a778d1d8f3" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="c22ce99c-68e4-4f05-9809-c21ef5f485f5">
+            <inputEventPort Id="3a5521dd-74f1-4616-8617-99ea71a9b497">
+              <event>
+                <inputEventPortReferencesEvent Id="8511c07d-c75c-495d-8d76-f50a4e605f21">
+                  <eventRefMoniker name="/PlantModel/valve/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="2e5b5987-98c7-402e-8195-7a9efdf65316">
+            <inputVariablePort Id="054e9050-3771-425b-87cd-3bc5971d8560">
+              <variable>
+                <inputVariablePortReferencesVariable Id="a440d4a3-b284-4ab7-9332-70a558495255">
+                  <variableRefMoniker name="/PlantModel/valve/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

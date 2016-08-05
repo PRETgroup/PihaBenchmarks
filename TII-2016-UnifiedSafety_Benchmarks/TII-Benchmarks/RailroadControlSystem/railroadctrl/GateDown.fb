@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="c4046eee-5e99-4b95-abbd-7e35b8275a29" name="GateDown" organization="User-PC" date="06/26/2013 19:21:55" author="User" modelType="Observer">
+  <states>
+    <functionBlockModelHasStates Id="01ac897f-f9d6-40a4-8b2e-b89a01cb37ec">
+      <state Id="93749efa-d598-414c-b386-e2188c633020" name="OUT" x="1050" y="262.5" isInitial="true">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="bcf3ca03-f541-40c3-8695-48e7d4ab686a">
+            <transitionNodeMoniker Id="17c871f2-018f-45c8-8470-a0c3e0b625d9" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="89dac482-cb55-4e0a-bf16-28682556b277">
+      <state Id="1ae9abce-8280-4996-a4f1-c9ed2237c388" name="ENTER" x="1006.25" y="875" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="dd6db92a-2386-4b82-af62-971526a36eef">
+            <transitionNodeMoniker Id="d269bcf9-a9b4-40c3-9cb7-7ffd64ae7b13" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="b155e1b5-02ed-4625-9870-5e21639fc04d">
+      <state Id="afd707c6-0321-4bdb-a84f-53249ffb926b" name="Violation" x="350" y="1487.5" isInitial="false" />
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="5f92039f-8cbc-4d63-ad2a-514235f478b1">
+      <state Id="bd08ecb1-e089-459c-aae4-b5f6d99409c0" name="GOINGDOWN" x="1006.25" y="1400" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="d96038a8-5bb7-4ffd-a9d9-d1d31186ff20">
+            <transitionNodeMoniker Id="6b58088d-29e8-4c51-a630-887793b67c83" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="4d18d5e2-7fd1-4566-8399-bf4a11d0d960">
+            <transitionNodeMoniker Id="57dcc5a1-b483-4ec5-ba3c-c5988c8dd194" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="dabf4547-73c9-4a65-8b93-f6e5ee6c98fc">
+            <transitionNodeMoniker Id="0a161bd1-c567-4ab2-9d19-f41d200de4a3" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0e657424-ac11-4d00-8e8c-c7f54cf29a25">
+            <transitionNodeMoniker Id="4a2168fb-1051-4110-8834-aca09acb171d" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="a69a3208-6a03-423b-af8e-54274aece0dc">
+      <state Id="5bf54d91-e420-4306-8fd3-b65c5d707179" name="DOWN" x="1050" y="1268.75" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="0383dc56-01d5-442e-b668-3ab4c6d03b73">
+            <transitionNodeMoniker Id="52313965-a37c-47e4-8373-1ec8c57b826f" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="97b84542-311d-49d3-9ef2-039f22956d17">
+            <transitionNodeMoniker Id="35ebc3bf-2809-4820-b9f4-05a9381fed75" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="c0a6b480-d39b-4791-ba66-d974e72c7b16">
+            <transitionNodeMoniker Id="87f0d0af-9302-4e25-8bf4-000d6f9ec7ce" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="22e29814-15b5-47cd-a20b-f8a4329af519">
+      <state Id="ac6a71a4-be34-4c67-b547-c04bd24fa364" name="APPROACH" x="962.5" y="568.75" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="6061b5c2-8965-4b09-a8d9-427234da2b53">
+            <transitionNodeMoniker Id="23e899f7-1557-4548-876b-6311e537fd85" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="68724a72-23e2-4341-bc73-d3b05d7617cd">
+      <state Id="1dbcbbd2-e244-491e-acdd-17ec96dddd94" name="SHOULDLOWER" x="1006.25" y="1137.5" isInitial="false">
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="f3dc9abe-d311-4d12-82cf-7eac3084bf8f">
+            <transitionNodeMoniker Id="54198f79-d012-4c7d-9b74-b46328f61029" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="786a54b8-8086-4f3f-9fcb-fa2edb1ffac7">
+            <transitionNodeMoniker Id="ac251f8d-7cf3-46d0-a0db-2d344dbf2f76" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="7f4a82b4-5481-4943-a108-f112fec9e89c">
+      <functionBlockInterface Id="f4b1bc76-0054-4b4b-980f-1a4d735672f0" name="GateDown" x="525" y="175" modelType="Observer">
+        <events>
+          <functionBlockHasEvents Id="315f22af-0181-42cc-9729-6e11c2b88776">
+            <event Id="cbd80277-5051-4d82-8eb3-a9f699d0d593" name="approach" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="533befff-8aae-461e-ba68-61b3bd63c911">
+            <event Id="15c942e5-5167-4a22-a9b5-fcc88aeb60b4" name="exited" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="2fb2f3f9-44b9-4e4f-8734-c71c5cdc8ce0">
+            <event Id="6a1348a2-70d1-49e3-a10a-f06a51559624" name="status" scope="Input" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f5c8f037-6d28-40c9-8c86-b10f3651518b">
+            <variable Id="58125fbd-410c-4b62-bb1c-75b356f7f6a0" name="down" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a7da9b0e-e154-48f2-8d91-65fa5b801bbf">
+            <variable Id="b41e12a0-a191-43d4-a721-e88074198e86" name="goingDown" scope="Input" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="6f294a7a-2fe8-4337-aa1e-ab0e65fe1745">
+            <inputEventPort Id="1a53d5d6-072e-4c5f-94b7-718173ebf9b3">
+              <event>
+                <inputEventPortReferencesEvent Id="2791c56e-08c4-4457-b68c-ac6a480178ff">
+                  <eventMoniker name="/GateDown/GateDown/approach" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d41b7336-e33d-4e68-8580-78bdb6bebccb">
+            <inputEventPort Id="56ad18b5-d064-427c-9406-b3d8eef6588a">
+              <targetPort>
+                <association Id="cd29386c-a131-4681-97a1-7d48c8ed5253">
+                  <inputVariablePortMoniker Id="05813e32-3bb6-4b49-a157-9facc621d063" />
+                </association>
+                <association Id="5abc5020-cfa6-4506-afaa-ef8b8fcc30da">
+                  <inputVariablePortMoniker Id="1f5ac051-f14a-426e-bd03-a403cc741100" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="8901ad76-eed6-4354-bf17-852cc6adb995">
+                  <eventMoniker name="/GateDown/GateDown/status" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c8460a03-f5fc-4e7a-a94c-42fd80ad3ce6">
+            <inputEventPort Id="1d4d6472-6433-4274-b02e-97343830f3f9">
+              <event>
+                <inputEventPortReferencesEvent Id="57ac71b5-90a3-4acb-913c-4b29438e8fc9">
+                  <eventMoniker name="/GateDown/GateDown/exited" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="16dfa2db-ac00-4e13-9307-adf6cb4e4125">
+            <inputVariablePort Id="05813e32-3bb6-4b49-a157-9facc621d063">
+              <variable>
+                <inputVariablePortReferencesVariable Id="1b308342-44fa-4b07-a795-db575aaaf7be">
+                  <variableMoniker name="/GateDown/GateDown/down" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="caa85a20-0a77-4c88-acb8-a712267b54d6">
+            <inputVariablePort Id="1f5ac051-f14a-426e-bd03-a403cc741100">
+              <variable>
+                <inputVariablePortReferencesVariable Id="acc7b344-b81c-45f1-a8cc-bd23f81ac5e4">
+                  <variableMoniker name="/GateDown/GateDown/goingDown" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0d3e23ae-ee9e-4841-8331-50cfdf8f5d5a">
+      <transitionNode Id="6b58088d-29e8-4c51-a630-887793b67c83" x="1400" y="656.25" event="exited">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f1b34844-e128-4d8e-998a-7a168b21f917">
+            <stateMoniker name="/GateDown/OUT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="24ba804e-8e80-4a5e-bd98-03a1ea891961">
+      <transitionNode Id="57dcc5a1-b483-4ec5-ba3c-c5988c8dd194" x="1312.5" y="1050" expression="goingDown">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a8f12a40-fe7e-446b-b227-58dc08704cd8">
+            <stateMoniker name="/GateDown/GOINGDOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="ee22192f-2385-45e4-b3a6-19ba81106b57">
+      <transitionNode Id="4a2168fb-1051-4110-8834-aca09acb171d" x="743.75" y="918.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d9d74443-57a2-4cf6-924e-7386f90571bb">
+            <stateMoniker name="/GateDown/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="bff9fb11-32ee-4797-b527-1ab6588725bf">
+      <transitionNode Id="35ebc3bf-2809-4820-b9f4-05a9381fed75" x="1050" y="1443.75" expression="down">
+        <targetState>
+          <transitionNodeConnectsToStates Id="9e359ddd-4093-4506-a4ee-78981baee342">
+            <stateMoniker name="/GateDown/DOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="c47d8244-e4de-44cd-a40f-7fe6a35513be">
+      <transitionNode Id="52313965-a37c-47e4-8373-1ec8c57b826f" x="1793.75" y="1006.25" event="exited">
+        <targetState>
+          <transitionNodeConnectsToStates Id="45d66187-27ca-46c3-8318-05964d1190f9">
+            <stateMoniker name="/GateDown/OUT" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="20fed8dc-107b-4386-aa21-078a733e3979">
+      <transitionNode Id="0a161bd1-c567-4ab2-9d19-f41d200de4a3" x="962.5" y="1093.75" expression="down">
+        <targetState>
+          <transitionNodeConnectsToStates Id="d1a8c044-e5d3-4649-84d6-157232188c09">
+            <stateMoniker name="/GateDown/DOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="dd25178c-62db-47e4-a30e-23f3104a364a">
+      <transitionNode Id="87f0d0af-9302-4e25-8bf4-000d6f9ec7ce" x="700" y="1137.5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="f53e4441-d083-429a-a6a2-443d7cf2bdd6">
+            <stateMoniker name="/GateDown/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="63d7a247-5291-486c-8a38-727c34879079">
+      <transitionNode Id="17c871f2-018f-45c8-8470-a0c3e0b625d9" x="1009.25" y="423.625" event="approach">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0d2a1453-a54a-4a29-b17e-1fe89a78e52d">
+            <stateMoniker name="/GateDown/APPROACH" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="0a05d711-8a04-469f-81f9-d66bfdb8a687">
+      <transitionNode Id="23e899f7-1557-4548-876b-6311e537fd85" x="986.375" y="719.875">
+        <targetState>
+          <transitionNodeConnectsToStates Id="09fb7b30-dca4-45d5-b5d6-3cff2e1e0f23">
+            <stateMoniker name="/GateDown/ENTER" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="89345158-8e36-43c1-b17a-492a213a788e">
+      <transitionNode Id="d269bcf9-a9b4-40c3-9cb7-7ffd64ae7b13" x="1006.25" y="988.24999999999989">
+        <targetState>
+          <transitionNodeConnectsToStates Id="87e47765-c065-4499-8f45-5b94dd281fd9">
+            <stateMoniker name="/GateDown/SHOULDLOWER" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="b631be39-20b6-4564-959d-e692812f788b">
+      <transitionNode Id="54198f79-d012-4c7d-9b74-b46328f61029" x="1006.25" y="1278.75" expression="goingDown || down">
+        <targetState>
+          <transitionNodeConnectsToStates Id="ead61434-ed6d-4abf-8d85-04416220c1f3">
+            <stateMoniker name="/GateDown/GOINGDOWN" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="dfe7df9e-758a-49af-9400-842f35df8997">
+      <transitionNode Id="ac251f8d-7cf3-46d0-a0db-2d344dbf2f76" x="631.125" y="1284.75">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0f1e433f-84cf-4be1-a225-ab52c230882c">
+            <stateMoniker name="/GateDown/Violation" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

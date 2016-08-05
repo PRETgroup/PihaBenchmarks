@@ -1,0 +1,2 @@
+me->reachedCounter = 0;
+me->exitCounter = 0;

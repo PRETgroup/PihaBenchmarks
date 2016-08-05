@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{92B81AF7-8D03-46D0-9C71-430DAE7A074E}") = "FireAlarmSystem", "FireAlarmSystem\FireAlarmSystem.bproj", "{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Deploy|gnu = Deploy|gnu
+		OpenRTM|gnu = OpenRTM|gnu
+		Remote|gnu = Remote|gnu
+		Run|gnu = Run|gnu
+		Simulation|gnu = Simulation|gnu
+		Verification|gnu = Verification|gnu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Deploy|gnu.ActiveCfg = Deploy|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Deploy|gnu.Build.0 = Deploy|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.OpenRTM|gnu.ActiveCfg = OpenRTM|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.OpenRTM|gnu.Build.0 = OpenRTM|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Remote|gnu.ActiveCfg = Remote|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Remote|gnu.Build.0 = Remote|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Run|gnu.ActiveCfg = Run|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Run|gnu.Build.0 = Run|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Simulation|gnu.ActiveCfg = Simulation|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Simulation|gnu.Build.0 = Simulation|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Verification|gnu.ActiveCfg = Verification|gnu
+		{3F848C4C-5A87-4F5A-BC55-8030B8007EA5}.Verification|gnu.Build.0 = Verification|gnu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

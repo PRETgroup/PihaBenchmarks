@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<functionBlockModel Id="c6aef0e3-b4f0-4898-9c99-fd888a7de8b7" name="VentilatorD" organization="User-PC" date="2013-07-01" author="User">
+  <states>
+    <functionBlockModelHasStates Id="e59c6041-0c74-4d50-b54b-1243e0acab50">
+      <state Id="f1ed9ebd-eaf4-46fa-b273-6cd19b730ea6" name="OFF" x="350" y="437.5" isInitial="true">
+        <actionSet>
+          <actionLink Id="ff2e20b0-6319-4f4b-adf2-c6c27e96d9d3">
+            <actionSetMoniker Id="9e0b1b54-b4d4-40c1-a3f8-506a1a22c2f9" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="ea253a68-39c9-436f-bca1-f2b7d404a6d7">
+            <transitionNodeMoniker Id="d033bcaf-cf15-4893-a165-b111cd2c0688" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="a62bceec-051d-412f-9fe0-352cc30ca398">
+      <state Id="1c3fda7d-5370-45ad-a250-752067bc0e3c" name="ON" x="350" y="787.5" isInitial="false">
+        <actionSet>
+          <actionLink Id="a5d03d6e-a938-4dc0-8f28-10326a5f38cb">
+            <actionSetMoniker Id="e990e619-c624-4bf8-b55e-d2badbb67736" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="60f50d6e-c0fc-499e-8099-2179344f2719">
+            <transitionNodeMoniker Id="78092cf4-a79e-47e7-8dd6-80d59ca631c8" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+    <functionBlockModelHasStates Id="c4ec7a67-afaa-47c0-85e0-c7a30f01b431">
+      <state Id="9e585c12-82b5-4359-b95d-674338d38e04" name="WAIT_ON" x="1137.5" y="1050" isInitial="false">
+        <actionSet>
+          <actionLink Id="5b088133-15ab-4f95-9326-629c59aff1c7">
+            <actionSetMoniker Id="06f8536b-31d7-4875-b3d8-164489dde798" />
+          </actionLink>
+        </actionSet>
+        <fromTransitionNodes>
+          <stateConnectsToTransitionNodes Id="b4901fff-de63-4643-8fb5-b6adb2088c71">
+            <transitionNodeMoniker Id="7cd47eb8-a1bb-493e-b757-b110835b0965" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="92941fbc-f585-431a-b389-b920b30956d4">
+            <transitionNodeMoniker Id="251f2b69-0907-4133-a47b-33c842c9f5f9" />
+          </stateConnectsToTransitionNodes>
+          <stateConnectsToTransitionNodes Id="79b95b91-e3de-449a-90ce-7ebb2474384c">
+            <transitionNodeMoniker Id="49affa39-1575-4e8f-8c0f-e4eb97e0528f" />
+          </stateConnectsToTransitionNodes>
+        </fromTransitionNodes>
+      </state>
+    </functionBlockModelHasStates>
+  </states>
+  <actionSets>
+    <functionBlockModelHasActionSets Id="7a475c66-dd39-477a-94ba-d23bd4828cca">
+      <actionSet Id="9e0b1b54-b4d4-40c1-a3f8-506a1a22c2f9" x="743.75" y="568.75">
+        <actionItems>
+          <actionSetHasActionItems Id="1dbf5ae1-712e-44a9-81e3-f5d8e7fc85e1">
+            <actionAlgorithm Id="9f10bfd1-a974-4ef6-8dcd-643b86791cc8">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="5183ba93-fa94-4706-b7e8-0bed3a2b3c9a">
+                  <algorithmMoniker name="/VentilatorD/turnOff" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="ca26c21a-f861-488c-9dbd-a607a459347f">
+            <actionEvent Id="94980fb7-9e93-4f14-90a2-6a198fe45d47">
+              <event>
+                <actionEventReferencesEvent Id="9517712a-f433-4cfc-8e75-331d13058a3a">
+                  <eventMoniker name="/VentilatorD/VentilatorD/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="aeab5863-59ef-431e-a1b7-b8cf84ba76e5">
+            <actionAlgorithm Id="bbf6350e-7335-42ce-8bdf-11aa4ef8078f">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="a60aa71d-3fe8-40ab-940b-dbb250bb3e02">
+                  <algorithmMoniker name="/VentilatorD/resetCount" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="040e5a5e-e966-4764-b331-1e2fe2a53167">
+      <actionSet Id="e990e619-c624-4bf8-b55e-d2badbb67736" x="743.75" y="1487.5">
+        <actionItems>
+          <actionSetHasActionItems Id="2ae86f90-3fd2-49f0-a739-c1eba5ac9fdd">
+            <actionAlgorithm Id="24dba798-d10c-42c9-a475-8a302e65a3cd">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="fe9bf462-c4b1-4c94-9bf4-feec11d8fd87">
+                  <algorithmMoniker name="/VentilatorD/turnOn" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="9f0ee457-6ae5-4310-a72b-4a57e08e5e7d">
+            <actionEvent Id="268a3226-1cc2-4780-b5ae-490f728138b5">
+              <event>
+                <actionEventReferencesEvent Id="c0763cca-8530-4062-9aaa-adf482a4f564">
+                  <eventMoniker name="/VentilatorD/VentilatorD/output" />
+                </actionEventReferencesEvent>
+              </event>
+            </actionEvent>
+          </actionSetHasActionItems>
+          <actionSetHasActionItems Id="ed115351-c031-4a1b-8bd3-4d54803ba3e5">
+            <actionAlgorithm Id="84de8754-3ba4-4632-9710-f582c83d67cb">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="9ef19312-c877-43df-97b0-d6e14afa5ec7">
+                  <algorithmMoniker name="/VentilatorD/resetCount" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+    <functionBlockModelHasActionSets Id="fbea01ae-188d-4667-916c-59f4a5555272">
+      <actionSet Id="06f8536b-31d7-4875-b3d8-164489dde798" x="1618.75" y="1050">
+        <actionItems>
+          <actionSetHasActionItems Id="3f0f3dc5-60e1-462c-a64e-5a8c5ce410b4">
+            <actionAlgorithm Id="4c084d71-2627-4117-adcd-97ceee70b19b">
+              <algorithm>
+                <actionAlgorithmReferencesAlgorithm Id="a76ad215-9b01-4a1f-bccf-01308d892cf4">
+                  <algorithmMoniker name="/VentilatorD/countUp" />
+                </actionAlgorithmReferencesAlgorithm>
+              </algorithm>
+            </actionAlgorithm>
+          </actionSetHasActionItems>
+        </actionItems>
+      </actionSet>
+    </functionBlockModelHasActionSets>
+  </actionSets>
+  <algorithms>
+    <functionBlockModelHasAlgorithms Id="dcef2b5b-fa99-4868-b813-0c7c11b11606">
+      <algorithm Id="54f8cd80-2c2a-4f42-977b-b5f39a504716" name="turnOn" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="1b8e00e3-9d4d-4f3a-82f6-95d2382586f9">
+      <algorithm Id="2c389bab-ced6-4fde-81bd-7aedcc69ecc2" name="turnOff" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="16dc33b0-9cf9-471d-9cd5-c92219c5f6c2">
+      <algorithm Id="cccb7a70-c586-4182-96bd-10355183ce25" name="countUp" />
+    </functionBlockModelHasAlgorithms>
+    <functionBlockModelHasAlgorithms Id="99d21fb0-b2cc-4cf0-8687-2c65fb68587a">
+      <algorithm Id="553cb5a4-5db1-4ad8-9b57-6b4d5a55bf15" name="resetCount" />
+    </functionBlockModelHasAlgorithms>
+  </algorithms>
+  <functionBlockInterface>
+    <functionBlockModelHasFunctionBlockInterface Id="02919b94-7653-4fd4-b7de-df0b7f084bb1">
+      <functionBlockInterface Id="384a2fc2-b401-43e5-b780-04d71239bec4" name="VentilatorD" x="1400" y="481.25">
+        <events>
+          <functionBlockHasEvents Id="cb2aa628-dac0-4c82-b7ef-e89d68bc0719">
+            <event Id="12c83ad1-f5a4-4e05-9862-82ff10345ece" name="input" scope="Input" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="b2998c1f-8ece-470a-a8ca-573da5632df1">
+            <event Id="d6da9b45-be30-4da5-b607-0e46d5af2278" name="output" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="0f251a20-c701-4bf1-bf24-9d58125be039">
+            <variable Id="aa02c014-3325-4183-a9f7-d326406a013f" name="power" scope="Input" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="36397911-bc09-49c0-a3fb-3db7caaff407">
+            <variable Id="2186f99d-b18d-40e9-812e-6404d6393300" name="ventilation" scope="Output" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="767245fc-d05e-4792-9c9b-26d59fa0d342">
+            <variable Id="a5c51515-11d9-4d75-b0a9-22c2f5ba41af" name="counter" scope="Internal" initialValue="0" type="INT" minimumValue="0" maximumValue="5" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="9070bacc-4f0f-429e-b980-fdbf8697dfbc">
+            <inputEventPort Id="a8f6204c-ca86-4b9a-83a7-ab91aff1bc18">
+              <targetPort>
+                <association Id="bb07baf3-9ab1-4ecf-89fa-9fb5c0dbebd8">
+                  <inputVariablePortMoniker Id="e2b65de8-3182-4cba-a813-bb1226c983bc" />
+                </association>
+              </targetPort>
+              <event>
+                <inputEventPortReferencesEvent Id="8e589df1-df03-4a60-a193-62c93e267ddd">
+                  <eventMoniker name="/VentilatorD/VentilatorD/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0f85a13e-4eec-4506-be95-12bca7e12589">
+            <outputEventPort Id="f8650185-3c1c-493b-94ef-0b54399b8224">
+              <targetPort>
+                <association Id="9321dbaf-6a36-4057-a145-8dc95f0593a2">
+                  <outputVariablePortMoniker Id="b9985bd4-a8f8-4d42-9bd3-da98c0f7e19d" />
+                </association>
+              </targetPort>
+              <event>
+                <outputEventPortReferencesEvent Id="271c8a04-78ef-4a17-90ba-af236deccc6a">
+                  <eventMoniker name="/VentilatorD/VentilatorD/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="4dbe77dd-68ad-4056-882e-632d7eed1b8b">
+            <inputVariablePort Id="e2b65de8-3182-4cba-a813-bb1226c983bc">
+              <variable>
+                <inputVariablePortReferencesVariable Id="d272bc78-46b7-4071-b72f-a279d9e3e144">
+                  <variableMoniker name="/VentilatorD/VentilatorD/power" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="d4068dee-2e62-4511-93a3-1f5ca1ab315e">
+            <outputVariablePort Id="b9985bd4-a8f8-4d42-9bd3-da98c0f7e19d">
+              <variable>
+                <outputVariablePortReferencesVariable Id="03b835ed-8b3f-4dfe-bb42-9648e31edfef">
+                  <variableMoniker name="/VentilatorD/VentilatorD/ventilation" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockInterface>
+    </functionBlockModelHasFunctionBlockInterface>
+  </functionBlockInterface>
+  <transitionNodes>
+    <functionBlockModelHasTransitionNodes Id="59abff98-050f-445f-aca7-a0a6e9c80ce9">
+      <transitionNode Id="d033bcaf-cf15-4893-a165-b111cd2c0688" x="350" y="618.5" event="input" expression="power">
+        <targetState>
+          <transitionNodeConnectsToStates Id="41aeba3c-2454-4ab8-bd40-3ad95ff31512">
+            <stateMoniker name="/VentilatorD/ON" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="607e8cd1-a67d-48d0-8a26-e89f77b19207">
+      <transitionNode Id="78092cf4-a79e-47e7-8dd6-80d59ca631c8" x="668.76043057441711" y="699" event="input" expression="!power">
+        <targetState>
+          <transitionNodeConnectsToStates Id="0717d58a-e4bc-4e4c-b2db-c9d07adf7447">
+            <stateMoniker name="/VentilatorD/WAIT_ON" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="f2620dd8-cc5f-4143-af46-bebd2fb12963">
+      <transitionNode Id="251f2b69-0907-4133-a47b-33c842c9f5f9" x="659.76043057441711" y="511" expression="counter ==5">
+        <targetState>
+          <transitionNodeConnectsToStates Id="914ff7a5-7ef2-4df0-be97-9c1516c5c9ca">
+            <stateMoniker name="/VentilatorD/OFF" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="3778e8ad-6fe9-42f7-bee7-ad790843c7ff">
+      <transitionNode Id="7cd47eb8-a1bb-493e-b757-b110835b0965" x="691.76043057441711" y="710" event="input" expression="power">
+        <targetState>
+          <transitionNodeConnectsToStates Id="a5d12d6e-4b91-442c-a2ba-b943e50081f3">
+            <stateMoniker name="/VentilatorD/ON" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+    <functionBlockModelHasTransitionNodes Id="293fd4ab-369f-4e6e-9721-9129f606688b">
+      <transitionNode Id="49affa39-1575-4e8f-8c0f-e4eb97e0528f" x="1059.5" y="1089">
+        <targetState>
+          <transitionNodeConnectsToStates Id="14e6dc15-fc7e-465c-8a35-d27589dee9f8">
+            <stateMoniker name="/VentilatorD/WAIT_ON" />
+          </transitionNodeConnectsToStates>
+        </targetState>
+      </transitionNode>
+    </functionBlockModelHasTransitionNodes>
+  </transitionNodes>
+</functionBlockModel>

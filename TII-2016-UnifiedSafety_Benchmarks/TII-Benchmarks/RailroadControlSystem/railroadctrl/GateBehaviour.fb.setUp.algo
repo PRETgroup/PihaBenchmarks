@@ -1,0 +1,6 @@
+me->down = false;
+me->up = true;
+me->goingUp = false;
+me->goingDown = false;
+me->downCounter = 0;
+me->upCounter = 0;

@@ -1,0 +1,846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="9b98c088-b269-4acc-9fe3-af334de0d029" name="System" organization="User-PC" date="2013-06-15" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="4e5fbbe2-ab50-4e80-89f8-7ebd5da16a79">
+      <functionBlockInterface Id="ca6bbf66-8937-4bc7-855d-9bb5bb7d30a0" name="System" x="656.25" y="175" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="3c206ead-6449-445a-8bf3-448ad98a2621">
+      <functionBlockReference Id="883e1a22-f234-46bd-b12b-360e99af27e8" name="ctl" x="2056.25" y="2362.5" creationMode="Resource" referencedFile="Controller.fb">
+        <events>
+          <functionBlockHasEvents Id="579a918d-3d15-46c5-882c-42f20322a60d">
+            <eventRef Id="919d1915-e646-453a-b556-da6828c96729" name="check" scope="Input" referencedID="55c6b875-2285-47a9-bba6-fcf66400a68c" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="f9c774f4-4adb-4ecb-b861-70f0af42f67a">
+            <eventRef Id="5da045f1-71fe-4d29-8c1d-e8f0e63ba9ce" name="trigger" scope="Output" referencedID="4874aa57-9335-4ff7-ba9e-d817437efecd" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="468bb46d-36f7-4698-9871-ecc0898580c2">
+            <eventRef Id="d19f10e6-009a-45d6-8498-d8df327272c2" name="reset" scope="Input" referencedID="9335bd77-b2ab-4a57-b3d1-dd1401a6f31f" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="453e29c5-99c1-4638-9adc-a4f19a4c537f">
+            <variableRef Id="c3d4c2cf-3c46-4914-9dbf-8c0245c54963" name="d0F1Z1" scope="Input" referencedID="fd1ee8e8-ab95-4876-8963-17bf46128cb4" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="19fb0f7d-c7c3-43b2-bf81-7b734a623b95">
+            <variableRef Id="2951eae8-5c13-44ff-a188-aed45f44d9cf" name="d0F1Z2" scope="Input" referencedID="d1844e66-025a-4eb7-92e5-b6eec86745fb" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="76c985da-72a5-4c52-b1aa-1d8a37241bd3">
+            <variableRef Id="b5e1149a-06be-40af-aac9-8ad2c0332db4" name="d0F1Z3" scope="Input" referencedID="3ee5d02c-6f8d-406c-b5c8-095c36541c17" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c4257513-f3bf-46ac-8d68-35a330760807">
+            <variableRef Id="40d931b4-eb1c-460c-963d-26a4d3bd317d" name="d0F1Z4" scope="Input" referencedID="9a91855b-718b-416d-9540-6c0971b6fe13" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="31af4821-0e5b-4530-b7c9-77b062751364">
+            <variableRef Id="13fd38f8-88b0-4484-9a72-8509aa82c1bc" name="alarm" scope="Output" referencedID="752ec413-6cc5-4f1a-95db-a8648b920dc9" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ed90befb-a57b-4508-9f9d-02a3b5902c9a">
+            <variableRef Id="f5301483-5d1e-4b20-b643-153e00a34a47" name="sprinkle" scope="Output" referencedID="d71b8b5c-6e7f-4b33-a819-bda910080654" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="a04981bc-744b-44d0-81f7-f1b31db50dcc">
+            <variableRef Id="c1f8ebb7-b4b5-4514-a44b-efcfd9aff796" name="manPull" scope="Input" referencedID="8225440e-130a-407f-9014-6a8cd63d038b" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="67f3b047-3391-4ec3-b020-f3193ecb38ac">
+            <inputEventPort Id="b0f190de-8257-4f78-82ae-e34c9d354b91">
+              <event>
+                <inputEventPortReferencesEvent Id="e966b649-5db5-44de-bd5d-517d0932338f">
+                  <eventRefMoniker name="/System/ctl/reset" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c61a1ad8-e90b-4caf-9c46-bb28e2af631a">
+            <inputEventPort Id="b8834e21-2382-4723-a0f9-e1afd9d9c807">
+              <event>
+                <inputEventPortReferencesEvent Id="96423e61-9fda-49b3-a9b3-65b068b4c6b4">
+                  <eventRefMoniker name="/System/ctl/check" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="52d75d97-9499-4891-9730-29727ce4fc15">
+            <outputEventPort Id="13d8983e-8710-4471-ac05-171efc7bc4a0">
+              <wireTargetPorts>
+                <wireConnection Id="62b86ebf-378e-4ef9-b763-bb9567f42f76" unitDelayed="false">
+                  <inputEventPortMoniker Id="0c99bc79-f19d-4476-916b-16a91c76ff86" />
+                </wireConnection>
+                <wireConnection Id="b8273248-f191-43d8-9701-0ddd9133b916" unitDelayed="false">
+                  <inputEventPortMoniker Id="97973d1e-2727-41f3-8e69-d13ba410bb2e" />
+                </wireConnection>
+                <wireConnection Id="a01dc8cd-3fff-4bc1-a736-5b81d2933648" unitDelayed="false">
+                  <inputEventPortMoniker Id="ce457009-d12d-4ff8-8b55-eb0a380aff63" />
+                </wireConnection>
+                <wireConnection Id="421ba8c0-d00a-48c9-8266-e7a058ee07d4" unitDelayed="false">
+                  <inputEventPortMoniker Id="9de0df66-d327-45b8-aaa5-5e9321c0802a" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="e14c0efa-5ef1-4ba6-aeae-958c10316c0d">
+                  <eventRefMoniker name="/System/ctl/trigger" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="c17406f9-8204-478f-83df-e8d894a9e8c2">
+            <inputVariablePort Id="63a5e5d6-1be0-428e-8c4e-96dfdea02561">
+              <variable>
+                <inputVariablePortReferencesVariable Id="d6778e96-58dd-4939-b348-9b4d19dc1371">
+                  <variableRefMoniker name="/System/ctl/d0F1Z1" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="0d67830a-e352-4fda-b98a-74e314b45f7d">
+            <inputVariablePort Id="db7b5ce2-59a3-4dba-b5b8-07926e65ce4f">
+              <variable>
+                <inputVariablePortReferencesVariable Id="62676853-f807-4e42-a0ab-49234d93a6f4">
+                  <variableRefMoniker name="/System/ctl/d0F1Z2" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="41c358fa-4722-4104-a94e-f9a80097e5f4">
+            <inputVariablePort Id="b63eb046-f306-410a-95d4-1b8c7a3292d2">
+              <variable>
+                <inputVariablePortReferencesVariable Id="f9090e8c-943d-4bcc-8606-ae91dd14566a">
+                  <variableRefMoniker name="/System/ctl/d0F1Z3" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="82aad22c-16d7-4b77-a63a-d020c8dd6910">
+            <inputVariablePort Id="17c9dfea-801e-4499-908d-b771e79d360c">
+              <variable>
+                <inputVariablePortReferencesVariable Id="8aa47cf5-30c5-4fa5-90a2-0fe1cce90e2a">
+                  <variableRefMoniker name="/System/ctl/d0F1Z4" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="7610f66d-f2a6-466d-a31e-42ecab959fb9">
+            <inputVariablePort Id="c0b583e8-91b1-4c04-98f4-76108f0a76f9">
+              <variable>
+                <inputVariablePortReferencesVariable Id="c3c407fd-3ee8-47c1-8511-82af09383586">
+                  <variableRefMoniker name="/System/ctl/manPull" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="323ed581-ffc6-4b5e-b10a-317eb0d73f05">
+            <outputVariablePort Id="c8263319-1a40-4e72-8f72-b71b8da4e4bd">
+              <wireTargetPorts>
+                <wireConnection Id="07cf0ce7-07e7-4907-b353-9c1e5009ae93" unitDelayed="false">
+                  <inputVariablePortMoniker Id="87d050f9-00c8-4624-bd21-920cfb6dbbf0" />
+                </wireConnection>
+                <wireConnection Id="6da642f8-8061-4110-9bc8-0c9fcc49c1d1" unitDelayed="false">
+                  <inputVariablePortMoniker Id="6eeb0243-d141-423b-966f-101d02bcdb3d" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="9da35bab-c418-4466-9244-eeae13c4686c">
+                  <variableRefMoniker name="/System/ctl/alarm" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="040267a5-0cb6-41cf-acc4-a4a0bd3d6149">
+            <outputVariablePort Id="8256fc13-ee75-4f33-85c4-7f506cadcfcb">
+              <wireTargetPorts>
+                <wireConnection Id="41e99f98-2850-4a2c-b67a-59dadb612784" unitDelayed="false">
+                  <inputVariablePortMoniker Id="cb5cbd5a-ca11-4717-90e8-9dcf1c3ceb75" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="b4f44d29-b0df-4922-bd9d-2315887c14b6">
+                  <variableRefMoniker name="/System/ctl/sprinkle" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="4378226d-1275-434c-b6fe-f630e4879078">
+      <functionBlockReference Id="903ee03c-27cd-4f94-aa44-440972a51730" name="mr" x="2100" y="1837.5" modelType="Stochastic" creationMode="Resource" referencedFile="ManualReset.fb">
+        <events>
+          <functionBlockHasEvents Id="215d7a6e-6e39-4e86-9716-afda819aaafa">
+            <eventRef Id="e47832ed-475c-4e5f-9334-81961ee6420b" name="set" scope="Input" referencedID="89e24206-582e-43fa-8c9f-6e329acecd1e" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5e66f2a6-fe8d-4754-add3-b955601be8df">
+            <eventRef Id="2021a047-4af3-461e-9f21-a673c2961f73" name="doReset" scope="Output" referencedID="59a931ac-d4be-40bb-bdda-6596e325dc58" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="f4fce5d4-c88a-43c8-b0ad-484a624d6316">
+            <inputEventPort Id="0c99bc79-f19d-4476-916b-16a91c76ff86">
+              <event>
+                <inputEventPortReferencesEvent Id="e549aba9-4478-42a1-b762-41b5a1f3b853">
+                  <eventRefMoniker name="/System/mr/set" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="36902c85-0f4e-4950-b0bf-adf6eff65028">
+            <outputEventPort Id="a6eef91d-5163-4f6a-ae2a-7237be3662de">
+              <wireTargetPorts>
+                <wireConnection Id="64d8312d-6996-43f4-ae64-fd9d12125a83" unitDelayed="false">
+                  <inputEventPortMoniker Id="b0f190de-8257-4f78-82ae-e34c9d354b91" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="06179711-e5f4-40a1-a7b0-888dacfa4a9f">
+                  <eventRefMoniker name="/System/mr/doReset" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="e0fed49b-600c-4cfb-81f3-4d787e6a1ef2">
+      <functionBlockReference Id="fe55eaac-2950-49f9-a996-ddba7a40dd1c" name="pull" x="2143.75" y="1268.75" modelType="Stochastic" creationMode="Resource" referencedFile="FirePull.fb">
+        <events>
+          <functionBlockHasEvents Id="caf1bbdb-7130-4378-92ce-cc159058848b">
+            <eventRef Id="a732c1ad-a9f8-4951-ba5d-4f753c841dbe" name="update" scope="Output" referencedID="2c352652-2be6-4abf-b680-e477ac77bf1e" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="08c85226-3e02-4b96-96f2-88ead17ba996">
+            <variableRef Id="97dcb4a9-9368-4479-9df1-9051d5a47b79" name="status" scope="Output" referencedID="c0159be3-426c-4a85-a05a-673622cf78b5" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e8d89912-cd96-4b66-8a0c-70faf2a1c864">
+            <outputEventPort Id="b526d570-d2bc-459b-9178-420f5fd73774">
+              <wireTargetPorts>
+                <wireConnection Id="b32b66db-2a2a-43a8-8a18-a3fee610fe11" unitDelayed="false">
+                  <inputEventPortMoniker Id="b8834e21-2382-4723-a0f9-e1afd9d9c807" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="c078605c-7008-488b-a367-b0566c6c4d22">
+                  <eventRefMoniker name="/System/pull/update" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="585bdbb2-47bb-43db-abfc-1568062b7fc6">
+            <outputVariablePort Id="4a3286b6-32f2-42de-84b8-f4f324197c46">
+              <wireTargetPorts>
+                <wireConnection Id="c14bd846-e912-4850-8ceb-4e2a0d5dd308" unitDelayed="false">
+                  <inputVariablePortMoniker Id="c0b583e8-91b1-4c04-98f4-76108f0a76f9" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="01e9dbd6-b788-42d6-9efb-d3fb81162e50">
+                  <variableRefMoniker name="/System/pull/status" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="c8b8b7ec-143f-42cd-9c7a-2338edf50881">
+      <functionBlockReference Id="50855b77-ff67-49a6-a8a9-4befb6ae580e" name="df0" x="262.5" y="1093.7499999999989" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorFailure.fb">
+        <events>
+          <functionBlockHasEvents Id="3cf70e9d-cceb-48dc-90d9-f8e597f38ca6">
+            <eventRef Id="f885d732-8e66-4859-8064-184f8857a712" name="output" scope="Output" referencedID="e1397a8b-e650-4307-9ab7-be5c98d0b8c4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="135095c0-380d-4e1d-9974-090fce9fce0c">
+            <variableRef Id="e0cd63d4-971e-4f35-8c90-7ef5793e3438" name="failed" scope="Output" referencedID="18087442-a03d-43ad-afd5-9cf1356f6985" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0700d7f2-5dd7-4966-9a06-d5504fcb06dd">
+            <outputEventPort Id="429e31ec-4df1-4835-9a6b-9d7afe02fd26">
+              <wireTargetPorts>
+                <wireConnection Id="1df8f705-3c3e-41e5-9cbb-ea0f50d8e8e4" unitDelayed="false">
+                  <inputEventPortMoniker Id="7a663775-5d0f-46b8-90ea-81f78e027109" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="5c1013e8-81e3-4938-ba70-e905a93821a8">
+                  <eventRefMoniker name="/System/df0/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="53d13f2d-08b9-4434-a634-4c8db63306b7">
+            <outputVariablePort Id="5ab28971-2540-4f3f-9a62-169e2700743e">
+              <wireTargetPorts>
+                <wireConnection Id="bd797b2a-3f17-40ee-9667-61e07154a034" unitDelayed="false">
+                  <inputVariablePortMoniker Id="6c0f25a8-2257-4b10-97e3-d673c4c6d4b8" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="788dfdd2-10a8-4602-bedc-338030d7ec5a">
+                  <variableRefMoniker name="/System/df0/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="061a5c12-3e28-4ef7-a1a3-19e346feff2d">
+      <functionBlockReference Id="402dbc95-d4a9-4254-875e-f37088168f00" name="db0" x="962.5" y="1093.7499999999989" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="68188b4a-772a-456a-814e-252363ec58db">
+            <eventRef Id="7c05e1c9-c322-49f1-9ddc-eaeac560edeb" name="input" scope="Input" referencedID="e3d66bac-436c-401d-996e-8a68ebfb390d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="10b1df91-cbe2-42da-b42b-b7425bf86c0e">
+            <eventRef Id="f5af948f-804d-4c53-8382-6eca3b54e509" name="output" scope="Output" referencedID="093e86aa-5c32-411e-aaae-5741df5824d2" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="24644796-9d04-4ac0-b876-b649f13f916e">
+            <variableRef Id="ec884d61-a74e-4ca2-96f7-c07881ab50a0" name="failed" scope="Input" referencedID="cfd44b66-7cfb-45d6-bf21-c33474b2b2b8" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="be0223a0-415d-4254-a594-2074db4fbe4c">
+            <variableRef Id="8330416c-c0a8-4d79-8a6c-02c41e11b9bd" name="detected" scope="Output" referencedID="da9fb88b-9c4d-4f8c-a587-93435fef2837" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="b79eb6f0-ec61-47eb-af1f-e9e17ef0067f">
+            <inputEventPort Id="7a663775-5d0f-46b8-90ea-81f78e027109">
+              <event>
+                <inputEventPortReferencesEvent Id="4d4738b4-f582-45da-b52e-397944bdd5ca">
+                  <eventRefMoniker name="/System/db0/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="32bf74ae-37c6-4713-9bee-f0c29f4210bc">
+            <outputEventPort Id="2ccadb40-c0ca-4c42-8050-185ba2d0dc8c">
+              <wireTargetPorts>
+                <wireConnection Id="bedaf447-3708-4d46-b38f-00081d3d0fcb" unitDelayed="false">
+                  <inputEventPortMoniker Id="b8834e21-2382-4723-a0f9-e1afd9d9c807" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="8c3e4eca-3f0b-4e64-810b-d7cb9217a35a">
+                  <eventRefMoniker name="/System/db0/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="27220d91-8bcf-401a-a23d-2f3596aa27fd">
+            <inputVariablePort Id="6c0f25a8-2257-4b10-97e3-d673c4c6d4b8">
+              <variable>
+                <inputVariablePortReferencesVariable Id="bdef7f08-5f51-4ee7-9155-2ef64be36b8a">
+                  <variableRefMoniker name="/System/db0/failed" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="fba89691-d14b-4898-b482-d74550abfbf0">
+            <outputVariablePort Id="7220363a-3a14-478e-8afb-5869f46239ed">
+              <wireTargetPorts>
+                <wireConnection Id="b620a2bd-fa38-48c1-bca3-3eccd5c96670" unitDelayed="false">
+                  <inputVariablePortMoniker Id="63a5e5d6-1be0-428e-8c4e-96dfdea02561" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="f55099d4-7a64-4eec-8084-0a23c156dd9d">
+                  <variableRefMoniker name="/System/db0/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="dde401aa-c9e3-42a4-a198-b2f1d711769b">
+      <functionBlockReference Id="a5899e0b-c75b-4684-8061-f37a6b7ced31" name="df1" x="262.5" y="1618.75" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorFailure.fb">
+        <events>
+          <functionBlockHasEvents Id="270dd81d-7d63-40ff-90ba-3448b00f723a">
+            <eventRef Id="a484854c-806f-4649-886d-1531bf2071b2" name="output" scope="Output" referencedID="e1397a8b-e650-4307-9ab7-be5c98d0b8c4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="e7bc6450-c9f9-44a0-b11b-8283cf469ee6">
+            <variableRef Id="39bb7a88-5505-4983-87c5-a7bb864c3cd3" name="failed" scope="Output" referencedID="18087442-a03d-43ad-afd5-9cf1356f6985" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="282b6b19-45fa-4d53-9e28-d64a88bc1b9f">
+            <outputEventPort Id="7bc2f63e-3b65-4f50-8963-ca9db8a6aca8">
+              <wireTargetPorts>
+                <wireConnection Id="c4ecfeea-0131-4360-ad2e-cc358deccd14" unitDelayed="false">
+                  <inputEventPortMoniker Id="a473d75c-a9e7-477e-97e0-7be39ebde0ef" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="c5410f5e-7edf-48e5-9592-a8f6b5864b7a">
+                  <eventRefMoniker name="/System/df1/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="f3695511-df5f-4fa5-91dc-dd69828fece4">
+            <outputVariablePort Id="5aedd85f-19fc-4a54-bb62-59966715871c">
+              <wireTargetPorts>
+                <wireConnection Id="6391f2ec-88b4-4eee-9258-44515e794ae3" unitDelayed="false">
+                  <inputVariablePortMoniker Id="f458d0ff-abec-46fb-a22b-4293727063c4" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="a1433692-e6df-4911-9fcf-b00c1fa272f6">
+                  <variableRefMoniker name="/System/df1/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="82ae1370-b601-469c-a183-2703cee11620">
+      <functionBlockReference Id="6292e7c5-6f22-454d-9b4a-c6f6edd47d3c" name="db1" x="962.5" y="1618.75" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="9a4bd592-2efc-4be5-88b2-c0222e51cb3a">
+            <eventRef Id="cd65cbe1-5ac3-41f8-8f5d-072056693b79" name="input" scope="Input" referencedID="e3d66bac-436c-401d-996e-8a68ebfb390d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="c11e0579-1039-4c88-977d-b36c28aa4d41">
+            <eventRef Id="4ca88948-8b8b-4412-97a1-ba2de272888f" name="output" scope="Output" referencedID="093e86aa-5c32-411e-aaae-5741df5824d2" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="3a475af3-fcf7-47ac-8825-c709e4a1584e">
+            <variableRef Id="9fc9472a-65d5-44b2-8a1d-21e63f3f4505" name="failed" scope="Input" referencedID="cfd44b66-7cfb-45d6-bf21-c33474b2b2b8" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="c31339a2-8939-4122-8420-39eb2f21b5dc">
+            <variableRef Id="e2ed549b-73db-4b90-a8d6-30dc70a40d5e" name="detected" scope="Output" referencedID="da9fb88b-9c4d-4f8c-a587-93435fef2837" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="ab8ebc57-b967-4f2c-bd76-fca41a5f1b6a">
+            <inputEventPort Id="a473d75c-a9e7-477e-97e0-7be39ebde0ef">
+              <event>
+                <inputEventPortReferencesEvent Id="e39d91c2-5178-42dd-ae53-6d30fd78235e">
+                  <eventRefMoniker name="/System/db1/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="b322560f-4972-4f76-b470-bb41e50e7133">
+            <outputEventPort Id="5961d099-b36d-4440-92fd-4f8a1023c43c">
+              <wireTargetPorts>
+                <wireConnection Id="7b5802d0-aed9-4214-a5c2-8a1e07599ae7" unitDelayed="false">
+                  <inputEventPortMoniker Id="b8834e21-2382-4723-a0f9-e1afd9d9c807" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="3daa7c54-8002-4009-a0d4-f67534e4af28">
+                  <eventRefMoniker name="/System/db1/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="3fed120b-9d6d-47d4-9b10-e86367f4c8a3">
+            <inputVariablePort Id="f458d0ff-abec-46fb-a22b-4293727063c4">
+              <variable>
+                <inputVariablePortReferencesVariable Id="597df67f-b9b6-4b6f-bb02-c48cd8162e07">
+                  <variableRefMoniker name="/System/db1/failed" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="00dbb6a4-89aa-4b12-851c-745021c74683">
+            <outputVariablePort Id="9fae1644-cfb3-4ed2-b32b-f284a34599a9">
+              <wireTargetPorts>
+                <wireConnection Id="91b709e2-c18f-445e-aacd-7c90dd21f4c5" unitDelayed="false">
+                  <inputVariablePortMoniker Id="db7b5ce2-59a3-4dba-b5b8-07926e65ce4f" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="714c943d-5da5-4e18-a385-693c160b0eb2">
+                  <variableRefMoniker name="/System/db1/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="ce2ff6c2-db7b-46e7-b328-4491544c9931">
+      <functionBlockReference Id="1fb5e91d-c082-409a-98fc-9c2390d9aac6" name="df2" x="262.5" y="2143.75" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorFailure.fb">
+        <events>
+          <functionBlockHasEvents Id="c53a8037-385e-4fb6-a130-1b83c5bd6777">
+            <eventRef Id="165c864c-fe14-4ddb-975b-717b9a7edd45" name="output" scope="Output" referencedID="e1397a8b-e650-4307-9ab7-be5c98d0b8c4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="b0792364-8986-4b8b-8e94-80b8019d82b1">
+            <variableRef Id="5cb9b7f2-2b2e-4737-9358-95601a1a668a" name="failed" scope="Output" referencedID="18087442-a03d-43ad-afd5-9cf1356f6985" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="2dabac70-d6c5-46a8-a2aa-0a295f8fbdaa">
+            <outputEventPort Id="0b5db855-4414-44ef-a0a9-d548dd46c68d">
+              <wireTargetPorts>
+                <wireConnection Id="9b2a6079-4d82-4be3-b409-12b8bd9854b4" unitDelayed="false">
+                  <inputEventPortMoniker Id="3a20a24a-d1fb-4f02-b2b9-12ba1eea8c00" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="df1e870c-6ebb-4fd1-a507-c1b3b53f3c10">
+                  <eventRefMoniker name="/System/df2/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="cd94485d-c930-4be7-9d41-2d9057cad9ce">
+            <outputVariablePort Id="f79f8632-c21e-452a-95c5-27368671c4ce">
+              <wireTargetPorts>
+                <wireConnection Id="dc369c7c-3cfb-4af5-815b-b49826ebb9d5" unitDelayed="false">
+                  <inputVariablePortMoniker Id="c8f098d4-9443-433a-af5c-a8911c230ead" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="b6f44399-beab-4754-9fbb-ee61004b43be">
+                  <variableRefMoniker name="/System/df2/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="9525d7b4-a8c7-4c1e-9ecd-2bbf7603cd20">
+      <functionBlockReference Id="3c8f9976-cb8c-49ba-8599-e19102a11432" name="db2" x="962.5" y="2143.75" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="b4723634-bcef-4c5a-93b6-8c9e80f58d54">
+            <eventRef Id="876db638-4f89-4f1f-8c4f-d433a8b158d5" name="input" scope="Input" referencedID="e3d66bac-436c-401d-996e-8a68ebfb390d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a7c279ea-6a9f-425a-85d9-2ee9417355a2">
+            <eventRef Id="7f616ae7-b01e-4e62-95b6-126ab56fd1a2" name="output" scope="Output" referencedID="093e86aa-5c32-411e-aaae-5741df5824d2" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="5d31a062-c095-47ae-a9bf-1d6b3538a3e1">
+            <variableRef Id="5d508920-a4d1-459e-a65a-7f22f1d2cd44" name="failed" scope="Input" referencedID="cfd44b66-7cfb-45d6-bf21-c33474b2b2b8" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="ad901738-b29b-4950-b8a3-21231c1572f6">
+            <variableRef Id="2ca1723c-13e8-417d-a6f4-d56e391fe35b" name="detected" scope="Output" referencedID="da9fb88b-9c4d-4f8c-a587-93435fef2837" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="b85c0ef4-f89f-4ad0-b913-275888fed0eb">
+            <inputEventPort Id="3a20a24a-d1fb-4f02-b2b9-12ba1eea8c00">
+              <event>
+                <inputEventPortReferencesEvent Id="7c22f476-06cc-4480-8874-a8ba83727a14">
+                  <eventRefMoniker name="/System/db2/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="a11d6b10-63fe-4e48-887b-687f47de7e88">
+            <outputEventPort Id="fa7bee5d-bbaa-48b1-88c7-647eae44b80d">
+              <wireTargetPorts>
+                <wireConnection Id="356634cd-f46a-4de0-af5a-254d2aec89dd" unitDelayed="false">
+                  <inputEventPortMoniker Id="b8834e21-2382-4723-a0f9-e1afd9d9c807" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="a3a5d22a-de70-4f9c-ab69-7d0228b26565">
+                  <eventRefMoniker name="/System/db2/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="223fbc92-375a-43bd-b443-eaf0917ac479">
+            <inputVariablePort Id="c8f098d4-9443-433a-af5c-a8911c230ead">
+              <variable>
+                <inputVariablePortReferencesVariable Id="04f831bd-67ee-4f31-9127-7e9607727973">
+                  <variableRefMoniker name="/System/db2/failed" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="d9a964fa-53d3-45b3-b65b-34df922d1562">
+            <outputVariablePort Id="9264233c-dad1-4107-9dfb-9c4b56da8fc7">
+              <wireTargetPorts>
+                <wireConnection Id="73d3ea21-4d7e-422a-886b-ff409cb9a172" unitDelayed="false">
+                  <inputVariablePortMoniker Id="b63eb046-f306-410a-95d4-1b8c7a3292d2" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="9eca2c34-cd1e-4ef8-b54a-97921669fa21">
+                  <variableRefMoniker name="/System/db2/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="f3326fbb-2ebf-4287-a5f0-32201698d409">
+      <functionBlockReference Id="af1723ce-ce81-4ca8-97e2-912c8af2eb94" name="df3" x="262.5" y="2668.75" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorFailure.fb">
+        <events>
+          <functionBlockHasEvents Id="51fdc336-df8c-4149-936d-e22aadd6c74b">
+            <eventRef Id="a5289e7e-4594-40aa-a64a-ec13ec8865ee" name="output" scope="Output" referencedID="e1397a8b-e650-4307-9ab7-be5c98d0b8c4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="ca7827dd-fde8-4039-8ecd-ed21c855d91f">
+            <variableRef Id="c0235aaf-e399-4628-9992-aa57ba4b4874" name="failed" scope="Output" referencedID="18087442-a03d-43ad-afd5-9cf1356f6985" />
+          </functionBlockHasVariables>
+        </variables>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="66e1c2c3-8be9-4934-b694-da1c4b6bb6a1">
+            <outputEventPort Id="ecc53cb2-fe50-4e72-b38f-3cc598922f7b">
+              <wireTargetPorts>
+                <wireConnection Id="b9681409-a59f-439a-b800-cef0b8d0cc9f" unitDelayed="false">
+                  <inputEventPortMoniker Id="67644bc5-38b9-449c-bda4-1ef1898a779e" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="4f9e434f-e722-4abe-b922-f84c32aea493">
+                  <eventRefMoniker name="/System/df3/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="9878698e-49b8-40dc-9fa4-dc179628cbda">
+            <outputVariablePort Id="5ef4ead4-d2b1-4b74-91c1-6a1cd29f02ce">
+              <wireTargetPorts>
+                <wireConnection Id="455dd6b5-6fed-4ab6-a1a4-b6420e40edab" unitDelayed="false">
+                  <inputVariablePortMoniker Id="34b91452-5495-47b9-9596-5afb8aa0c134" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="d10e9e6c-c877-412c-a6d7-f4a6626514fe">
+                  <variableRefMoniker name="/System/df3/failed" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="4dc3f971-caa1-4c5d-991a-161435471dfd">
+      <functionBlockReference Id="383f9a34-6a53-4b84-b4cd-8212356a81f6" name="db3" x="962.5" y="2668.75" modelType="Stochastic" creationMode="Resource" referencedFile="SmokeDetectorBehaviour.fb">
+        <events>
+          <functionBlockHasEvents Id="30deee7c-35a0-4450-8e6c-7c4af1b777de">
+            <eventRef Id="b494247e-4b5d-4a2d-93aa-8b7bb68c2f6b" name="input" scope="Input" referencedID="e3d66bac-436c-401d-996e-8a68ebfb390d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6711bcaa-2002-4c30-8e87-405d34922aa8">
+            <eventRef Id="0e950a31-3dc4-47d0-9aea-d9ed2516a717" name="output" scope="Output" referencedID="093e86aa-5c32-411e-aaae-5741df5824d2" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="c2dcf0b4-5aeb-435f-80fc-a0c7990ca1f3">
+            <variableRef Id="1c41e5fb-18da-49ff-9bcc-590a26f26776" name="failed" scope="Input" referencedID="cfd44b66-7cfb-45d6-bf21-c33474b2b2b8" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="2bdd1a3b-56d4-4d5c-bae1-17a9837b79fe">
+            <variableRef Id="7f7a8105-5354-4a75-9397-ea81329f7797" name="detected" scope="Output" referencedID="da9fb88b-9c4d-4f8c-a587-93435fef2837" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="18d8fbde-6429-4a08-8ebc-98751d8a589f">
+            <inputEventPort Id="67644bc5-38b9-449c-bda4-1ef1898a779e">
+              <event>
+                <inputEventPortReferencesEvent Id="96078156-3969-4634-bc90-2c6af95f1549">
+                  <eventRefMoniker name="/System/db3/input" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1d4413a6-4fca-468d-8876-423247441c2a">
+            <outputEventPort Id="60a4e961-a7d2-479f-a830-30b2b0cfb188">
+              <wireTargetPorts>
+                <wireConnection Id="2d81b099-08a1-4a34-a9b6-70baad4ca24e" unitDelayed="false">
+                  <inputEventPortMoniker Id="b8834e21-2382-4723-a0f9-e1afd9d9c807" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="75722b58-f7c9-434d-bf0e-aabda72e3c89">
+                  <eventRefMoniker name="/System/db3/output" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="869c9d1b-e436-40c1-af64-12d3d3473d91">
+            <inputVariablePort Id="34b91452-5495-47b9-9596-5afb8aa0c134">
+              <variable>
+                <inputVariablePortReferencesVariable Id="8fe16725-742f-43ef-a68a-c687cafbaaa1">
+                  <variableRefMoniker name="/System/db3/failed" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="fc5c0abd-485b-43fd-9772-0d304f27e9d6">
+            <outputVariablePort Id="adb4136b-9cc3-4c30-8304-cf68994ec586">
+              <wireTargetPorts>
+                <wireConnection Id="9cbc91d7-4dc2-4185-96a8-5b5da533556e" unitDelayed="false">
+                  <inputVariablePortMoniker Id="17c9dfea-801e-4499-908d-b771e79d360c" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="9a034005-c15a-4379-bdfa-6b0effa0c574">
+                  <variableRefMoniker name="/System/db3/detected" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="0eb0795b-7a90-4649-ac55-e0d70e7eff87">
+      <functionBlockReference Id="a8c82baa-df98-47eb-a7ae-78d38442f089" name="a1" x="2931.25" y="1312.5" modelType="Stochastic" creationMode="Resource" referencedFile="Alarm.fb">
+        <events>
+          <functionBlockHasEvents Id="1b3ec374-9801-4437-90d0-f61862b61642">
+            <eventRef Id="12e534e5-6b60-44dc-a2e7-ed6b1c67b60b" name="update" scope="Input" referencedID="af70c503-8086-41ed-a725-fd5b70841788" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="8c40ac16-7e3e-4532-853c-d62e33380090">
+            <variableRef Id="37697f95-7c9b-41e9-881f-827d0cf8041a" name="status" scope="Input" referencedID="0c50a7f2-e74c-4aa2-bcc9-2b5dd1859efc" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="f6d0355c-b850-4984-9e70-bfad706f306b">
+            <inputEventPort Id="97973d1e-2727-41f3-8e69-d13ba410bb2e">
+              <event>
+                <inputEventPortReferencesEvent Id="909320be-6ab8-450d-8e3d-b15385d50aba">
+                  <eventRefMoniker name="/System/a1/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="788d15f0-d7d2-4ca7-a856-bc49a8c8c01a">
+            <inputVariablePort Id="87d050f9-00c8-4624-bd21-920cfb6dbbf0">
+              <variable>
+                <inputVariablePortReferencesVariable Id="27d69927-dc0d-4e36-b7b4-9dc4f79acf1a">
+                  <variableRefMoniker name="/System/a1/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="864daf1a-3b0f-446f-9554-df9b06780cbc">
+      <functionBlockReference Id="2682a7bc-a575-447c-9088-434d7b0292e1" name="a2" x="2931.25" y="1881.25" modelType="Stochastic" creationMode="Resource" referencedFile="Alarm.fb">
+        <events>
+          <functionBlockHasEvents Id="ac491742-44f7-4f0b-aba2-94818473787d">
+            <eventRef Id="283aaa67-166b-4ad8-bf21-511111713dec" name="update" scope="Input" referencedID="af70c503-8086-41ed-a725-fd5b70841788" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="7ce669f4-f64e-4429-845e-f58800c0720c">
+            <variableRef Id="0cb82cab-5f8e-4119-9d5c-09a827262422" name="status" scope="Input" referencedID="0c50a7f2-e74c-4aa2-bcc9-2b5dd1859efc" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="0e198d9b-d8c8-43ec-8ddf-5a9bbeeb0c41">
+            <inputEventPort Id="ce457009-d12d-4ff8-8b55-eb0a380aff63">
+              <event>
+                <inputEventPortReferencesEvent Id="3fe0a537-9916-4508-a111-3e39d3dd15d0">
+                  <eventRefMoniker name="/System/a2/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="4c20c2cc-e53a-4f79-afb5-081e9ebbeae5">
+            <inputVariablePort Id="6eeb0243-d141-423b-966f-101d02bcdb3d">
+              <variable>
+                <inputVariablePortReferencesVariable Id="03b7dfaa-50c8-4eac-9d93-2425495500cf">
+                  <variableRefMoniker name="/System/a2/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="9852ebfa-f031-44f2-9b36-8894bc0e1341">
+      <functionBlockReference Id="f222eedf-6e70-4cce-8da8-886cf95cdbb1" name="v1" x="2931.25" y="2537.5" modelType="Stochastic" creationMode="Resource" referencedFile="Valve.fb">
+        <events>
+          <functionBlockHasEvents Id="dc8ba67b-7750-46fc-9ebb-a201426fe151">
+            <eventRef Id="185fb16f-4f64-4c3a-b390-9f8214f9f6d5" name="update" scope="Input" referencedID="36ff64e7-88e0-47c6-a74e-df988a4c8783" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="39fa98d7-7c62-4c32-a270-69896008de74">
+            <variableRef Id="6ecf2728-e003-4e40-b63a-7a066a834a3e" name="status" scope="Input" referencedID="0ef60934-a2a6-418c-ba0d-47a778d1d8f3" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="9dced64b-4216-43e4-94db-7e1aa755e30b">
+            <inputEventPort Id="9de0df66-d327-45b8-aaa5-5e9321c0802a">
+              <event>
+                <inputEventPortReferencesEvent Id="f50caf96-43f1-4c99-bb1f-a33beab0d685">
+                  <eventRefMoniker name="/System/v1/update" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="3050999f-3bb9-4ce5-aa24-c559934cdcda">
+            <inputVariablePort Id="cb5cbd5a-ca11-4717-90e8-9dcf1c3ceb75">
+              <variable>
+                <inputVariablePortReferencesVariable Id="fe34fb62-c95a-4e79-9837-2b9e442445b5">
+                  <variableRefMoniker name="/System/v1/status" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

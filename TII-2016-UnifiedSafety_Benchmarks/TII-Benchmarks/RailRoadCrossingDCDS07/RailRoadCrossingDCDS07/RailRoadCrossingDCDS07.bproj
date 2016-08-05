@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Run</Configuration>
+    <Platform Condition="'$(Platform)' == ''">gnu</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2d334fc6-bf6a-45d1-a0ba-9e0890c2dc66}</ProjectGuid>
+    <ProjectType>BlokIDE Project</ProjectType>
+    <ProjectTypeGuids>{92B81AF7-8D03-46D0-9C71-430DAE7A074E}</ProjectTypeGuids>
+    <RootNamespace>BlokIDENamespace</RootNamespace>
+    <AssemblyName>BlokIDEAssemblyName</AssemblyName>
+    <OutputFormat>CCode</OutputFormat>
+    <MaxStringLength>32</MaxStringLength>
+    <Name>RailRoadCrossingDCDS07</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'OpenRTM'">
+    <CompilationMode>OpenRTM</CompilationMode>
+    <OutputPath>Generated\OpenRTM\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Deploy'">
+    <CompilationMode>Deploy</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>arm-uclinux-elf-gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Remote'">
+    <CompilationMode>Remote</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Run'">
+    <CompilationMode>Run</CompilationMode>
+    <OutputPath>Generated\Run\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Verification'">
+    <CompilationMode>Verify</CompilationMode>
+    <OutputPath>Generated\Verification\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <ExecuteMakeScript>false</ExecuteMakeScript>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Simulation'">
+    <CompilationMode>Simulate</CompilationMode>
+    <OutputPath>Generated\Simulation\</OutputPath>
+    <CodeSortingMode>None</CodeSortingMode>
+    <CompilerName>gcc</CompilerName>
+    <ExecuteMakeScript>true</ExecuteMakeScript>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="TrainModel.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RadioLink.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crossing.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="System.cfb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TrainEvents.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Signal.fb">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SafetyObserver.fb">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="SafetyObserver.fb.inCCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SafetyObserver.fb</DependentUpon>
+      <LinkedIntoProjectAt>inCCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SafetyObserver.fb.incSCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SafetyObserver.fb</DependentUpon>
+      <LinkedIntoProjectAt>incSCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="SafetyObserver.fb.resetCounters.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>SafetyObserver.fb</DependentUpon>
+      <LinkedIntoProjectAt>resetCounters.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrainEvents.fb.IncExitCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrainEvents.fb</DependentUpon>
+      <LinkedIntoProjectAt>IncExitCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrainEvents.fb.IncReachCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrainEvents.fb</DependentUpon>
+      <LinkedIntoProjectAt>IncReachCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrainEvents.fb.resetCounters.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrainEvents.fb</DependentUpon>
+      <LinkedIntoProjectAt>resetCounters.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrainModel.fb.IncCloseCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrainModel.fb</DependentUpon>
+      <LinkedIntoProjectAt>IncCloseCounter.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrainModel.fb.IncSecCounter.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrainModel.fb</DependentUpon>
+      <LinkedIntoProjectAt>countUp.algo</LinkedIntoProjectAt>
+    </Content>
+    <Content Include="TrainModel.fb.resetCounters.algo">
+      <SubType>Content</SubType>
+      <DependentUpon>TrainModel.fb</DependentUpon>
+      <LinkedIntoProjectAt>resetCount.algo</LinkedIntoProjectAt>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(TimeMePath)\UoA.IEC61499.Compiler.targets" />
+</Project>

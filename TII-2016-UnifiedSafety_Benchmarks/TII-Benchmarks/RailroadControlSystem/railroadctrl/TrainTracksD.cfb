@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="39e436d5-a6db-448a-a9f2-b8998df1a520" name="TrainTracksD" organization="User-PC" date="2013-06-30" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="daf01a31-3a3f-48e6-b2b2-cdbbb9d68ecf">
+      <functionBlockInterface Id="57c620aa-a9d5-45ff-b2a5-a6bb0677da35" name="TrainTracksD" x="175" y="175" modelType="Composite">
+        <events>
+          <functionBlockHasEvents Id="51c049e9-f467-47e1-bd41-41e58021c7ed">
+            <event Id="2a671067-41c9-4e29-8bdf-d268ede248e7" name="approaching" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="94c347ab-94ca-4e43-9525-7e067b3de438">
+            <event Id="368cd031-683c-4379-9e4e-31da6b3bf35b" name="inR" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="95abc1ce-cff7-4d51-bafe-d08a82d9402b">
+            <event Id="9338cfe7-e9cb-4a97-8f97-a0ea033d9ee0" name="inI" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="985ef9a4-d4cf-4dba-a974-6436a78625d7">
+            <event Id="ee3d5991-927c-46fd-ac67-c84766b36688" name="exited" scope="Output" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="9f744a00-ccf0-4c9e-8148-7861fbc80ce6">
+            <event Id="cadc7549-c96e-4312-9b3d-1b6cf5d4ddfe" name="enter" scope="Output" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0f8a416b-89b1-4484-b623-9a929e023071">
+            <outputEventPort Id="4f37ab7d-e102-498e-af56-9b4a81d8b236">
+              <proxyTargetPorts>
+                <proxyConnection Id="d495078f-7528-4302-9465-aa65dc1b2925">
+                  <outputEventPortMoniker Id="35adb023-f6a1-4d35-8cf5-b2e5b7342bd6" />
+                </proxyConnection>
+                <proxyConnection Id="96dd9550-f840-47ef-8fe3-614438d504e2">
+                  <outputEventPortMoniker Id="e48f2d10-d4b9-42b0-ab7e-a0589f528518" />
+                </proxyConnection>
+                <proxyConnection Id="c804810c-5b50-419d-9f48-52e42d810fef">
+                  <outputEventPortMoniker Id="24edf6e5-29d0-4e30-9df1-8627f7ed8145" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="63fa440b-6c01-4434-8f9e-1e5a350d830d">
+                  <eventMoniker name="/TrainTracksD/TrainTracksD/approaching" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="1220250d-9401-4351-a4d7-5841a70eda3b">
+            <outputEventPort Id="aa7a2302-b152-41b4-a65a-939fd78473a6">
+              <proxyTargetPorts>
+                <proxyConnection Id="957ca6c5-262b-4b0c-9531-a6d204ed9340">
+                  <outputEventPortMoniker Id="16844b20-89ff-403f-9c37-9a87f7441146" />
+                </proxyConnection>
+                <proxyConnection Id="b1fc8560-d908-4bf1-bf8b-120dc7543d67">
+                  <outputEventPortMoniker Id="6c5f0e5f-b518-44fb-af90-e428a4278bd8" />
+                </proxyConnection>
+                <proxyConnection Id="4309775f-f502-41e4-9a21-d4c8fd61e786">
+                  <outputEventPortMoniker Id="45def5a4-6d06-4220-acc6-8f98cda623ce" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="844f1b74-8de9-4efe-a5ca-261a0349d023">
+                  <eventMoniker name="/TrainTracksD/TrainTracksD/enter" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="af027930-115a-41d2-83b5-44700a228bfe">
+            <outputEventPort Id="d348df90-dae3-4e46-b193-ec769fc08cc2">
+              <proxyTargetPorts>
+                <proxyConnection Id="1ed9ae63-49d7-4417-b064-33e71aeac086">
+                  <outputEventPortMoniker Id="e4b4c714-49c4-4bc0-9864-2c2cd8463300" />
+                </proxyConnection>
+                <proxyConnection Id="69c98897-4088-44fe-9305-e56e2ea3cae1">
+                  <outputEventPortMoniker Id="7e11eb38-712d-4449-9790-f932055ce196" />
+                </proxyConnection>
+                <proxyConnection Id="6436e532-2829-4a44-8032-9379cfdcab1a">
+                  <outputEventPortMoniker Id="5e6c051d-399f-42b2-ad05-6232bb4a457c" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="06e045e6-1da5-445f-9cbc-ed24fea91a59">
+                  <eventMoniker name="/TrainTracksD/TrainTracksD/inR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="c0ec559f-122c-48b5-b77b-2b8c76a21f2c">
+            <outputEventPort Id="f21f6655-d33c-4266-8afe-a2f62b4d6b3b">
+              <proxyTargetPorts>
+                <proxyConnection Id="b700bcd0-59cf-4083-b1fe-146ec74d9a82">
+                  <outputEventPortMoniker Id="775dd613-0d80-49b0-8f1f-9fb231d34475" />
+                </proxyConnection>
+                <proxyConnection Id="8ac5acca-c747-4079-b421-8fa51a157e8e">
+                  <outputEventPortMoniker Id="9c2369a0-adf9-4728-8c72-452b126f59ea" />
+                </proxyConnection>
+                <proxyConnection Id="157414e0-fdbb-4c2a-8a75-31996c93edca">
+                  <outputEventPortMoniker Id="34d25976-a895-4c18-b521-a9d78d3b0e61" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="d4334ea5-bdab-4e9f-9147-0d9ba9a88e7b">
+                  <eventMoniker name="/TrainTracksD/TrainTracksD/inI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5dbe6ad1-8e4a-48b3-b6e1-613eb2a3a476">
+            <outputEventPort Id="dbc80458-18fa-4ff1-8040-acd8dcde0dc6">
+              <proxyTargetPorts>
+                <proxyConnection Id="ad83238f-e365-43bf-bece-cdec430b122c">
+                  <outputEventPortMoniker Id="a273a17f-5cbe-406a-942a-e69ed8ab8ee7" />
+                </proxyConnection>
+                <proxyConnection Id="27a26927-2977-4935-86e2-326137a90f00">
+                  <outputEventPortMoniker Id="75eef68b-8e9c-4498-a1b6-2f9300d25e1d" />
+                </proxyConnection>
+                <proxyConnection Id="80ee72e4-bf16-4945-98b4-3e547e554241">
+                  <outputEventPortMoniker Id="f1bd989a-8daa-4708-836e-3b1bd9061699" />
+                </proxyConnection>
+              </proxyTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="c7681058-1029-426c-9b97-a59aa6abffe7">
+                  <eventMoniker name="/TrainTracksD/TrainTracksD/exited" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockInterface>
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="369d598f-c7e8-480c-8918-4a122faa39fb">
+      <functionBlockReference Id="5b91f5f3-5a8e-49a1-b6ae-9003bad47c9f" name="trains" x="262.5" y="175" creationMode="Resource" referencedFile="TrainApproach.fb">
+        <events>
+          <functionBlockHasEvents Id="3f1dd8f7-789d-4567-bf77-d54d7e022930">
+            <eventRef Id="34d46fe0-fffd-4a55-8c5f-b2c83c333a42" name="exited0" scope="Input" referencedID="7e6362ab-58b3-4523-ad62-116df360d023" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="a80990d0-f955-44cf-814c-1e6fed9ad37d">
+            <eventRef Id="bf28a59e-128d-4ab5-b753-4c61877a8685" name="approaching0" scope="Output" referencedID="77d7e894-3c50-4389-b6a9-9dcb4e8caf81" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="7fd20e76-a920-4edc-af89-646cdde08124">
+            <eventRef Id="adcf7a5a-305a-4796-9274-6dffa5c2d532" name="approaching1" scope="Output" referencedID="b738814f-4acc-4c5c-b6c6-f1afb0d78781" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="05c157ae-ab02-4fae-8e0d-fb8afa3eace0">
+            <eventRef Id="f3229d33-b7f4-4f16-8b90-f4830667e214" name="approaching2" scope="Output" referencedID="3103649f-d02c-4947-89a1-0fc55ae65ff7" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="dfc6647d-b0e9-4493-b110-5efb01cc9361">
+            <eventRef Id="dc593a5d-b144-4f71-904e-a705719c30e4" name="exited1" scope="Input" referencedID="1af533a6-9e5c-4b4d-8776-c99737b95df4" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5ed243eb-d366-4e5b-99f6-9810d3c8ce08">
+            <eventRef Id="6e604b42-fb82-4a94-986a-98049902b6e2" name="exited2" scope="Input" referencedID="3a1bc5d7-a5e9-4693-aa57-0d495d74a57d" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="3c3cdd81-2425-4391-9dfa-e6254a6072be">
+            <inputEventPort Id="72450f04-f5b1-4f5f-828f-58b240f049e1">
+              <event>
+                <inputEventPortReferencesEvent Id="e3602f7b-0344-44cd-a0e3-48ecdb904775">
+                  <eventRefMoniker name="/TrainTracksD/trains/exited0" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="eea2fdd5-0218-45cf-8af5-a5fa5082a698">
+            <inputEventPort Id="4f9141f5-6f52-4b0b-90e2-6a8b427ae439">
+              <event>
+                <inputEventPortReferencesEvent Id="9c9ecfcb-c139-47b8-9407-9a7d7fecb694">
+                  <eventRefMoniker name="/TrainTracksD/trains/exited1" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="6f3776fe-3243-4edf-8ed5-ba34fed226b8">
+            <inputEventPort Id="ffc6d196-f181-4b7b-ba15-2d66816137c7">
+              <event>
+                <inputEventPortReferencesEvent Id="c74725ea-6e3e-410a-a9d1-02af03ced9cc">
+                  <eventRefMoniker name="/TrainTracksD/trains/exited2" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="54c20eba-8c6b-4094-b207-a858a80a0dbc">
+            <outputEventPort Id="35adb023-f6a1-4d35-8cf5-b2e5b7342bd6">
+              <wireTargetPorts>
+                <wireConnection Id="f7c41779-64fe-4269-83d7-7cb58a2bbff2" unitDelayed="false">
+                  <inputEventPortMoniker Id="e4436c3f-53ac-4dd2-b43d-3c4909bfdc3f" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="5e0b5dbf-b84a-4aae-83c9-352f96089ff3">
+                  <eventRefMoniker name="/TrainTracksD/trains/approaching0" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="265a036f-c6f8-452a-9b40-b3f136cb3283">
+            <outputEventPort Id="e48f2d10-d4b9-42b0-ab7e-a0589f528518">
+              <wireTargetPorts>
+                <wireConnection Id="79654686-5354-413d-aedc-f5f7bedd1fdf" unitDelayed="false">
+                  <inputEventPortMoniker Id="f358bac9-5033-44ba-be55-337f7e217d23" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="f2239700-1134-4149-9195-1199c7fd48c5">
+                  <eventRefMoniker name="/TrainTracksD/trains/approaching1" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="87c48895-a2b5-4484-9cf7-658651d315df">
+            <outputEventPort Id="24edf6e5-29d0-4e30-9df1-8627f7ed8145">
+              <wireTargetPorts>
+                <wireConnection Id="a8a37639-7801-43dc-b35f-362d0bee96e4" unitDelayed="false">
+                  <inputEventPortMoniker Id="830fb0f9-b4ce-4f3b-9fc9-f1b4e62cb7ce" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="2353f848-d6af-4339-8ad0-926e6b8d8750">
+                  <eventRefMoniker name="/TrainTracksD/trains/approaching2" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="9f863bee-e7a2-4a28-9c5c-b61d98908446">
+      <functionBlockReference Id="511debb6-7af4-464c-819b-ee7660c9e50f" name="track0" x="1268.75" y="175" creationMode="Resource" referencedFile="TrackBehaviourD.fb">
+        <events>
+          <functionBlockHasEvents Id="404ebf4b-1fb4-4790-af00-18c422b89ce3">
+            <eventRef Id="d6ea55ba-8304-442c-88c8-c5bf1a6aff25" name="approach" scope="Input" referencedID="11fdb21e-c64e-453f-9dfa-3d582c912942" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="cd451944-aa7e-4d01-bdaa-e0e3dc3ee407">
+            <eventRef Id="d392646e-8d06-4570-a32c-4218de5a50c4" name="enterR" scope="Output" referencedID="6b818b6d-0b91-4094-8733-b7435f119327" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="58d58b11-63d4-477a-9eb0-87441048fd15">
+            <eventRef Id="23c943df-03db-4b6d-a68a-0ff8320ce305" name="enterI" scope="Output" referencedID="9b14bbe7-6cca-4256-ba7a-5f8dfdc4e4ab" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6a04370d-1c44-46c9-a1ec-a5729753cdff">
+            <eventRef Id="0a29e79e-2e27-4c69-acb1-1b5535086985" name="inR" scope="Output" referencedID="49da1888-14d8-4e99-9ad0-3a027c80fa91" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="ebbc6da8-aac9-4139-bfde-bd7aa713fac1">
+            <eventRef Id="e30e2820-d84a-4c08-b9ac-346a702219db" name="inI" scope="Output" referencedID="541976c4-3f84-4268-b34c-642ac899eb96" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="718bf0ef-758d-445a-a4c2-5b301be2e8ae">
+            <eventRef Id="bdfb4274-01d9-43b7-b6ea-0da104774b02" name="exited" scope="Output" referencedID="b7d6abf0-bf20-419e-9371-835c0f7c77e3" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="d824de0c-2c2c-4a15-aacf-cf76826d60ef">
+            <inputEventPort Id="e4436c3f-53ac-4dd2-b43d-3c4909bfdc3f">
+              <event>
+                <inputEventPortReferencesEvent Id="d811b370-96e4-4b38-b262-ff5d910d6b84">
+                  <eventRefMoniker name="/TrainTracksD/track0/approach" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5249b1b3-f10c-4ca5-b8df-0d73d9adea6d">
+            <outputEventPort Id="16844b20-89ff-403f-9c37-9a87f7441146">
+              <event>
+                <outputEventPortReferencesEvent Id="1ec0d0a5-7723-49ac-a74e-9a181616108e">
+                  <eventRefMoniker name="/TrainTracksD/track0/enterR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="23c44b35-f6da-4f95-990f-e714d3683553">
+            <outputEventPort Id="8cb078e4-9f24-42d9-b7b4-489285f6f3be">
+              <event>
+                <outputEventPortReferencesEvent Id="675c5510-68cd-4094-8005-06a1cf864696">
+                  <eventRefMoniker name="/TrainTracksD/track0/enterI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f550ad5a-e2db-443f-b8e4-5d693abfc643">
+            <outputEventPort Id="7e11eb38-712d-4449-9790-f932055ce196">
+              <event>
+                <outputEventPortReferencesEvent Id="f06281f3-0a25-4d2d-8af2-d6b80ad45a7e">
+                  <eventRefMoniker name="/TrainTracksD/track0/inR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="f235e049-1d4e-4391-a083-09088cf7e201">
+            <outputEventPort Id="9c2369a0-adf9-4728-8c72-452b126f59ea">
+              <event>
+                <outputEventPortReferencesEvent Id="5d6feec0-a502-4d1b-9aed-310411e40f5c">
+                  <eventRefMoniker name="/TrainTracksD/track0/inI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8f4869bd-2b8d-47ea-8270-4e4dbf7773b7">
+            <outputEventPort Id="a273a17f-5cbe-406a-942a-e69ed8ab8ee7">
+              <wireTargetPorts>
+                <wireConnection Id="750ce1d4-caf3-4d26-a701-cca17ee37d08" unitDelayed="false">
+                  <inputEventPortMoniker Id="72450f04-f5b1-4f5f-828f-58b240f049e1" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="37a39629-f042-4c86-991b-6e8fee9300cc">
+                  <eventRefMoniker name="/TrainTracksD/track0/exited" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="9064ecce-d4b1-4ea5-8745-8487219662f2">
+      <functionBlockReference Id="f51fea04-285c-44d5-8169-38f788fda650" name="track2" x="306.25" y="918.75" creationMode="Resource" referencedFile="TrackBehaviourD.fb">
+        <events>
+          <functionBlockHasEvents Id="cb7ed5cc-9277-4567-8163-e78e0fd0b9d0">
+            <eventRef Id="bf4dccf3-6f4a-4265-85b3-daa00016c817" name="approach" scope="Input" referencedID="11fdb21e-c64e-453f-9dfa-3d582c912942" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="32f97434-8d84-458a-9fea-af1a1091f24f">
+            <eventRef Id="d7cc3a40-4bc0-4fea-b671-46e90693f765" name="enterR" scope="Output" referencedID="6b818b6d-0b91-4094-8733-b7435f119327" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="9864b5af-4422-4498-9142-1c81b7dade53">
+            <eventRef Id="99275d37-4f1b-4892-9d71-f8e1c290582b" name="enterI" scope="Output" referencedID="9b14bbe7-6cca-4256-ba7a-5f8dfdc4e4ab" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d373f182-54d7-467a-8d9c-19a04509d3d8">
+            <eventRef Id="009eb8dd-4c9b-4e82-b86e-d86eabb6d53e" name="inR" scope="Output" referencedID="49da1888-14d8-4e99-9ad0-3a027c80fa91" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="78fa3a90-e9eb-4cb3-839d-d9b30c5baf5e">
+            <eventRef Id="5cc48a23-6b97-4a88-a31c-fefc7567f32e" name="inI" scope="Output" referencedID="541976c4-3f84-4268-b34c-642ac899eb96" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d949470a-bf33-4b10-a4a0-a7da83e6e666">
+            <eventRef Id="e16b7dfb-0e74-4b6b-bc06-9fec85580a1e" name="exited" scope="Output" referencedID="b7d6abf0-bf20-419e-9371-835c0f7c77e3" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="83241b02-c913-4a72-816f-e366c60e3d90">
+            <inputEventPort Id="830fb0f9-b4ce-4f3b-9fc9-f1b4e62cb7ce">
+              <event>
+                <inputEventPortReferencesEvent Id="bf71f1c8-f060-421e-a292-0d298d267ee0">
+                  <eventRefMoniker name="/TrainTracksD/track2/approach" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="efd6c02f-9290-4c1e-8558-4fb3fba49607">
+            <outputEventPort Id="45def5a4-6d06-4220-acc6-8f98cda623ce">
+              <event>
+                <outputEventPortReferencesEvent Id="ef04a431-18fe-4ad7-8b23-d26834415e01">
+                  <eventRefMoniker name="/TrainTracksD/track2/enterR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="0f345a95-097a-48b7-a033-292223709eea">
+            <outputEventPort Id="3dfcc297-a523-46b3-9f41-5b7c87003d9e">
+              <event>
+                <outputEventPortReferencesEvent Id="d733d582-bdb4-4a07-9f0d-ede9e4d2101a">
+                  <eventRefMoniker name="/TrainTracksD/track2/enterI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="b140b2c7-8e57-4387-b385-4742c4aa13cb">
+            <outputEventPort Id="5e6c051d-399f-42b2-ad05-6232bb4a457c">
+              <event>
+                <outputEventPortReferencesEvent Id="8c692901-5674-4b62-ba2c-5f7fe1c2339d">
+                  <eventRefMoniker name="/TrainTracksD/track2/inR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="2033b3ea-2855-49eb-bd82-4a77a6616989">
+            <outputEventPort Id="34d25976-a895-4c18-b521-a9d78d3b0e61">
+              <event>
+                <outputEventPortReferencesEvent Id="e5667add-a1af-4a06-8779-aa7b4fa274fd">
+                  <eventRefMoniker name="/TrainTracksD/track2/inI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="dcd30e83-978d-4cf5-bd98-3eb15f4c8f85">
+            <outputEventPort Id="f1bd989a-8daa-4708-836e-3b1bd9061699">
+              <wireTargetPorts>
+                <wireConnection Id="2680ff6e-fc11-4007-84cc-7391f9f42601" unitDelayed="false">
+                  <inputEventPortMoniker Id="ffc6d196-f181-4b7b-ba15-2d66816137c7" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="020e25aa-4571-43a9-b50c-bcc3abeacea2">
+                  <eventRefMoniker name="/TrainTracksD/track2/exited" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="1808e36d-79bf-4b38-a75d-411abcd3780f">
+      <functionBlockReference Id="012ac636-9792-4190-9771-0ecac1da1224" name="track1" x="1268.75" y="918.75" creationMode="Resource" referencedFile="TrackBehaviourD.fb">
+        <events>
+          <functionBlockHasEvents Id="7d657bd2-07e9-41eb-b75b-0e72f7c97cfc">
+            <eventRef Id="283b3df8-24dc-4f05-8386-a0f73771d132" name="approach" scope="Input" referencedID="11fdb21e-c64e-453f-9dfa-3d582c912942" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d38a6e6f-56e2-42cd-9875-56a618f137f3">
+            <eventRef Id="e8e127cf-4a1a-4645-a7b2-db0f22568cf7" name="enterR" scope="Output" referencedID="6b818b6d-0b91-4094-8733-b7435f119327" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4eeba53f-8d6a-411e-bef9-be224ba7f3e7">
+            <eventRef Id="8d9318b6-682a-408c-85ef-472c7229ac09" name="enterI" scope="Output" referencedID="9b14bbe7-6cca-4256-ba7a-5f8dfdc4e4ab" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="262e6b46-f59d-487c-81c1-3bdd83690bb1">
+            <eventRef Id="06f30563-1c2e-4532-b25c-e15c08194306" name="inR" scope="Output" referencedID="49da1888-14d8-4e99-9ad0-3a027c80fa91" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="e30830a5-a025-44d8-8bb3-16b9ec78ec36">
+            <eventRef Id="c4f76b81-0e4d-4f9b-97b0-6b26548bfb7e" name="inI" scope="Output" referencedID="541976c4-3f84-4268-b34c-642ac899eb96" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="db84ca38-798a-4539-a4f6-128289354f4b">
+            <eventRef Id="8bff6d3a-0cad-4aaa-99e9-195487f776d6" name="exited" scope="Output" referencedID="b7d6abf0-bf20-419e-9371-835c0f7c77e3" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="e6bca9af-2067-49b5-a6fa-a2e8fde4c1b3">
+            <inputEventPort Id="f358bac9-5033-44ba-be55-337f7e217d23">
+              <event>
+                <inputEventPortReferencesEvent Id="0b07954d-ad00-4628-b1c4-42edc38d9860">
+                  <eventRefMoniker name="/TrainTracksD/track1/approach" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3cd5b5b8-5461-43c7-b2e6-e9e980f472f2">
+            <outputEventPort Id="6c5f0e5f-b518-44fb-af90-e428a4278bd8">
+              <event>
+                <outputEventPortReferencesEvent Id="8467a57a-9cbf-4397-92ee-f92a56f83dc8">
+                  <eventRefMoniker name="/TrainTracksD/track1/enterR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="4ab3e109-f283-466b-8417-cc09543b2fb8">
+            <outputEventPort Id="481803ec-6f2a-493b-8db6-3d9edb38dccf">
+              <event>
+                <outputEventPortReferencesEvent Id="f261b4ec-3ec3-4b47-970e-11aef0684f2b">
+                  <eventRefMoniker name="/TrainTracksD/track1/enterI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="8d94d4f5-2a28-4809-8159-d5acfd4c1cf4">
+            <outputEventPort Id="e4b4c714-49c4-4bc0-9864-2c2cd8463300">
+              <event>
+                <outputEventPortReferencesEvent Id="259ccdb3-a22b-4b86-bbba-f50752ff12e1">
+                  <eventRefMoniker name="/TrainTracksD/track1/inR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="5e9cf167-aae1-4e3b-a196-08795d22dc65">
+            <outputEventPort Id="775dd613-0d80-49b0-8f1f-9fb231d34475">
+              <event>
+                <outputEventPortReferencesEvent Id="16ac1533-1894-4c22-9be8-7c27eab62109">
+                  <eventRefMoniker name="/TrainTracksD/track1/inI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3fbde48f-0fa5-4251-8636-72e3eb7b2a84">
+            <outputEventPort Id="75eef68b-8e9c-4498-a1b6-2f9300d25e1d">
+              <wireTargetPorts>
+                <wireConnection Id="373be17e-1aac-4be7-915b-6a30d06a78ce" unitDelayed="false">
+                  <inputEventPortMoniker Id="4f9141f5-6f52-4b0b-90e2-6a8b427ae439" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="3d51ceed-629e-4f17-b310-5a0c3dc4fe35">
+                  <eventRefMoniker name="/TrainTracksD/track1/exited" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

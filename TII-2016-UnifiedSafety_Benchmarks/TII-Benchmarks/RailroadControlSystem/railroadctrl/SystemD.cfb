@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<compositeFunctionBlockModel Id="6e4a8336-06fa-40c7-a3ae-ea126b707624" name="SystemD" organization="User-PC" date="2013-06-30" author="User" modelType="Composite">
+  <functionBlockInterface>
+    <cFBModelHasFBInterface Id="a4a95945-743e-4515-a207-62d9148fdd26">
+      <functionBlockInterface Id="de45d544-eee5-46e9-aae0-2c8c2dc007d2" name="SystemD" x="918.75" y="437.5" modelType="Composite" />
+    </cFBModelHasFBInterface>
+  </functionBlockInterface>
+  <functionBlockReferences>
+    <cFBModelHasFBReferences Id="a428d4c0-5904-41a5-8a67-19c4d4e7e904">
+      <functionBlockReference Id="60cd9c77-0f16-4e5c-b884-43522d5d8b81" name="controller" x="1443.75" y="656.25" creationMode="Resource" referencedFile="Controller.fb">
+        <events>
+          <functionBlockHasEvents Id="ade2f6d9-d734-4a6e-9718-79859e7a14d6">
+            <eventRef Id="e84ae965-c7bd-42f0-a962-a0950e65922a" name="inR" scope="Input" referencedID="d0f8ae0b-49d4-4c8b-a664-e4e2aa195d8e" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="5edc4713-eed8-4390-836a-b462886a6444">
+            <eventRef Id="1f336600-4f55-441a-adb5-07e73a58ba58" name="inI" scope="Input" referencedID="8f0a8b19-6e1d-405c-9e91-7d5518f470b8" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="7987f12f-3390-4fac-9a60-c0635b997ec3">
+            <eventRef Id="cfb27e04-0b3f-4af4-a819-a918a9fa5606" name="exited" scope="Input" referencedID="daaa528c-a276-4d0b-9114-df925ea7ac68" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="940b8ab5-e29d-417f-b17b-01e3fca4b34e">
+            <eventRef Id="2f2acce6-f285-4b46-9680-f9e958d7267e" name="failure" scope="Input" referencedID="4c3cd63c-e33c-4871-b423-90448923f88d" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="d444f95f-7f23-4232-86fe-c4d770cb5faa">
+            <eventRef Id="e7b44d38-7d2a-4d99-945e-0ac957d2ca8b" name="raise" scope="Output" referencedID="526eb554-c110-4194-93f7-b6fb3391aa65" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4f679847-5712-409f-9239-bf82aa010541">
+            <eventRef Id="8b41e123-820d-407e-b623-796989359ba6" name="lower" scope="Output" referencedID="0c8d451e-7aac-4da6-849a-029fcd90dc73" />
+          </functionBlockHasEvents>
+        </events>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="8de7b8dd-b39f-4680-a263-bcede416adeb">
+            <inputEventPort Id="3dfaa692-3b83-4d58-b824-889e279628ab">
+              <event>
+                <inputEventPortReferencesEvent Id="2d814a86-42e2-4c47-9154-3bfb18a8df81">
+                  <eventRefMoniker name="/SystemD/controller/inR" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="d2836595-20ff-473e-8048-5327d6a976ae">
+            <inputEventPort Id="336fd64a-2f07-4136-81df-c31d0a886a18">
+              <event>
+                <inputEventPortReferencesEvent Id="b35d37a4-694d-4411-abb6-1396f9e7ff03">
+                  <eventRefMoniker name="/SystemD/controller/inI" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c0bf892d-67e8-42b0-b1fa-94ca424d96d0">
+            <inputEventPort Id="76688ad4-ba9d-4ea4-9135-5829e1e77d04">
+              <event>
+                <inputEventPortReferencesEvent Id="1f86f86a-daab-43da-8c15-d4f8e8116953">
+                  <eventRefMoniker name="/SystemD/controller/exited" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="3d1d70a0-d635-43e4-9357-ac58f85450cb">
+            <inputEventPort Id="d5dc0d2d-6706-4e12-94b9-bf0eeba89198">
+              <event>
+                <inputEventPortReferencesEvent Id="11fa1dc8-472c-4c32-9a66-714c16e05743">
+                  <eventRefMoniker name="/SystemD/controller/failure" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="2212d3e7-e63d-4754-9dc6-4c7f6684e2af">
+            <outputEventPort Id="a6c2be7d-4537-467d-b83d-c3ef45341235">
+              <wireTargetPorts>
+                <wireConnection Id="7f45e00f-c831-4043-a12d-75600252594e" unitDelayed="false">
+                  <inputEventPortMoniker Id="1b0e8a4e-6bc9-492d-a6f0-3c791a05f2df" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="abcf4b1c-f7ff-4129-9e33-9d0dd1c1d75f">
+                  <eventRefMoniker name="/SystemD/controller/raise" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="4178765d-4203-4868-a934-e52a2e1b41c1">
+            <outputEventPort Id="2cbda33e-cf09-42c6-92a0-eed72f4b0a8a">
+              <wireTargetPorts>
+                <wireConnection Id="281c247d-513f-4f3b-ab08-c5d7a5d3a789" unitDelayed="false">
+                  <inputEventPortMoniker Id="2b27e5e2-1626-4f2c-9c5f-67b5226a44e1" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="951f264d-c74e-4a73-b1db-87de019eea4d">
+                  <eventRefMoniker name="/SystemD/controller/lower" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="196e031c-f874-4fd5-a782-403cdd3ff2fd">
+      <functionBlockReference Id="2c06c1f2-c17f-404e-aec3-586fc401c599" name="trainTracks" x="787.5" y="612.5" modelType="Composite" creationMode="Resource" referencedFile="TrainTracksD.cfb">
+        <events>
+          <functionBlockHasEvents Id="80eaa07a-f9c7-4214-bee7-19adc700ca96">
+            <eventRef Id="a63a0c60-225b-4919-b229-de06b46662d5" name="approaching" scope="Output" referencedID="2a671067-41c9-4e29-8bdf-d268ede248e7" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="cb76a791-48fc-4276-9024-8aa609e3a42b">
+            <eventRef Id="5f2f6a00-9c70-4962-8656-e403a80249bb" name="inR" scope="Output" referencedID="368cd031-683c-4379-9e4e-31da6b3bf35b" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="6a78d7b1-4463-436a-87f4-e7e3064a23e0">
+            <eventRef Id="aa7f1f69-3dfe-4dd9-a514-e41b7d35a176" name="inI" scope="Output" referencedID="9338cfe7-e9cb-4a97-8f97-a0ea033d9ee0" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="812499a2-1f46-49d0-a677-e1e7208f53ed">
+            <eventRef Id="cd323b0e-bf0f-4582-9664-c8f311846eac" name="exited" scope="Output" referencedID="ee3d5991-927c-46fd-ac67-c84766b36688" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="7a7ab6ac-3a5f-4d93-94e4-3044c7a24833">
+            <eventRef Id="c54283ec-53e0-4bd5-a7cc-7dbe92c94da8" name="enter" scope="Output" referencedID="cadc7549-c96e-4312-9b3d-1b6cf5d4ddfe" />
+          </functionBlockHasEvents>
+        </events>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="ca55bfdd-809f-456f-85ec-7943e65973cd">
+            <outputEventPort Id="40ed90e0-3909-42b8-b1aa-b864fe9924f5">
+              <wireTargetPorts>
+                <wireConnection Id="b5e1983e-0646-4379-a916-88b6d257e62b" unitDelayed="false">
+                  <inputEventPortMoniker Id="2c48b6d1-81c8-43cf-9467-595474b01722" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="9fd37c5d-4f87-4d65-9e2e-8e9c49249351">
+                  <eventRefMoniker name="/SystemD/trainTracks/approaching" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e86d1212-e14a-46ca-b97c-0afd7db08262">
+            <outputEventPort Id="95341b9a-3f8e-4918-a8f4-bac2205050cb">
+              <event>
+                <outputEventPortReferencesEvent Id="b2507b84-d5f8-4b90-b7f6-edeb6d4f7b87">
+                  <eventRefMoniker name="/SystemD/trainTracks/enter" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="421cebcd-37ae-4f70-873f-6f4c0db91982">
+            <outputEventPort Id="a482988e-05de-4d28-b3c2-db9d1759575b">
+              <wireTargetPorts>
+                <wireConnection Id="7f64b5e6-4b3e-4d79-b349-4302e2574a95" unitDelayed="false">
+                  <inputEventPortMoniker Id="3dfaa692-3b83-4d58-b824-889e279628ab" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="a025513e-41d9-4b5f-a28c-87e1dd0041ba">
+                  <eventRefMoniker name="/SystemD/trainTracks/inR" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="91f3f751-a75a-4368-b037-d64441e8f997">
+            <outputEventPort Id="84336be2-53c6-43cf-9d3b-a84972022c3d">
+              <wireTargetPorts>
+                <wireConnection Id="b7a73efc-4fce-433f-906e-277fc6ae473b" unitDelayed="false">
+                  <inputEventPortMoniker Id="336fd64a-2f07-4136-81df-c31d0a886a18" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="8adae54f-1751-4b7c-b1de-d9e784434f8d">
+                  <eventRefMoniker name="/SystemD/trainTracks/inI" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+          <functionBlockHasOutputEventPorts Id="3ed8ab84-4020-482b-bc73-8cefb7661186">
+            <outputEventPort Id="fe4c49fa-9e52-4852-a7b9-400236f21f8c">
+              <wireTargetPorts>
+                <wireConnection Id="ab944346-b474-48b3-b261-bbd4db3a6753" unitDelayed="false">
+                  <inputEventPortMoniker Id="76688ad4-ba9d-4ea4-9135-5829e1e77d04" />
+                </wireConnection>
+                <wireConnection Id="3b3d5587-da60-4849-acb8-64de359bf61a" unitDelayed="false">
+                  <inputEventPortMoniker Id="6bd3fd95-2f00-4a93-a091-748268e8a5cc" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="1dcc4e8d-2235-4250-bd08-b401c6873050">
+                  <eventRefMoniker name="/SystemD/trainTracks/exited" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="004801c5-2cf1-497d-b50e-2b7572053936">
+      <functionBlockReference Id="2e85311f-6567-4de7-9bf1-abba3c510af1" name="gate" x="2056.25" y="656.25" creationMode="Resource" referencedFile="GateBehaviourD.fb">
+        <events>
+          <functionBlockHasEvents Id="f3e28c33-25ec-4042-b837-91265a5014cc">
+            <eventRef Id="02457f8e-d5d1-45f1-bd25-b340b0f7a984" name="raise" scope="Input" referencedID="33d296d8-e897-4eec-946e-a24834d3a0df" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="912c3fc6-c2b1-4204-ba42-8c72305ccb98">
+            <eventRef Id="bc826a90-2169-4ebe-b994-bb357f0e1035" name="lower" scope="Input" referencedID="c2ad8921-cd55-4cf4-81ef-f434f1477e1a" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0c6ce4c1-0bb9-43a2-a71f-e0f5672f37ac">
+            <eventRef Id="50a7fbc8-6d6a-44de-9d7a-275fc94f206a" name="status" scope="Output" referencedID="520eaec5-9a63-4daf-95d5-362446b413e6" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="92f96efe-5eca-4dae-9591-b142e0d614d9">
+            <variableRef Id="6f454942-9298-4990-bd72-d1ab0802def5" name="down" scope="Output" referencedID="8c12d3f6-8c2a-409e-adbd-7b9be4f769c3" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="de114c38-4af6-4b1b-b8b4-45bdafb1bea4">
+            <variableRef Id="0475321e-03ab-40f4-bbb6-96aea179c126" name="up" scope="Output" referencedID="c0e51db1-5168-41d8-a88f-fd1047df4360" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="6a1a1c17-8eb7-4feb-b87f-8c299babd6ea">
+            <variableRef Id="5dc72dd2-4ab3-49fb-96f0-42797da777e3" name="goingDown" scope="Output" referencedID="5364c270-d1b8-4bf5-8162-2ee612252469" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="94f9d395-eda5-45c3-9fce-0e575dd2c68f">
+            <variableRef Id="729bda6f-e15d-4063-8608-b8fb3c8fa540" name="goingUp" scope="Output" referencedID="8c38437b-3e69-46e9-ba0d-13dce3c9ab1f" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="99cb4cb5-9ba9-4983-a085-78754ee91f3e">
+            <inputEventPort Id="1b0e8a4e-6bc9-492d-a6f0-3c791a05f2df">
+              <event>
+                <inputEventPortReferencesEvent Id="76a9789a-fdae-48e8-a59c-40052db3c8b2">
+                  <eventRefMoniker name="/SystemD/gate/raise" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="3c93b2b7-f4fe-459f-a026-bcc9775713d9">
+            <inputEventPort Id="2b27e5e2-1626-4f2c-9c5f-67b5226a44e1">
+              <event>
+                <inputEventPortReferencesEvent Id="b7b83c21-69e0-40ca-a809-1c16ea9b85b9">
+                  <eventRefMoniker name="/SystemD/gate/lower" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <outputEventPorts>
+          <functionBlockHasOutputEventPorts Id="e715ba3b-25fc-4aca-b691-c3eab67d449e">
+            <outputEventPort Id="334a4a83-14e8-4376-8b2d-f94248b371a2">
+              <wireTargetPorts>
+                <wireConnection Id="6b51e871-48f4-4350-9ffd-cdbd7856386b" unitDelayed="false">
+                  <inputEventPortMoniker Id="69ad138a-617e-4f49-9195-270aabe359e7" />
+                </wireConnection>
+              </wireTargetPorts>
+              <event>
+                <outputEventPortReferencesEvent Id="d1fbc427-8f35-4aef-a055-0c1bca296bc5">
+                  <eventRefMoniker name="/SystemD/gate/status" />
+                </outputEventPortReferencesEvent>
+              </event>
+            </outputEventPort>
+          </functionBlockHasOutputEventPorts>
+        </outputEventPorts>
+        <outputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="b226026f-987f-4dd4-8a56-b96aa1aa55bf">
+            <outputVariablePort Id="5848552d-2523-4df7-af18-f58930ea2ce5">
+              <wireTargetPorts>
+                <wireConnection Id="3be70699-fe8e-41a2-8718-767735738b7a" unitDelayed="false">
+                  <inputVariablePortMoniker Id="b525ac71-d105-4436-8c81-4df22010ce00" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="5da5a9c4-845a-4df8-919f-b52040de1290">
+                  <variableRefMoniker name="/SystemD/gate/down" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="9d982c4b-9996-4635-83b8-d0f7e45c9bd0">
+            <outputVariablePort Id="a994b305-c9c9-4de1-bece-3a0808a28798">
+              <variable>
+                <outputVariablePortReferencesVariable Id="fdbdf25e-1b89-47e5-9e72-38cf7076eed3">
+                  <variableRefMoniker name="/SystemD/gate/up" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="e2c30c53-9656-4d02-b289-d401542e0956">
+            <outputVariablePort Id="a32f6318-d458-4aff-8552-34bef864a5dd">
+              <wireTargetPorts>
+                <wireConnection Id="4d39a891-6ca3-4b4f-a88c-7ff267c4e599" unitDelayed="false">
+                  <inputVariablePortMoniker Id="2fa7003e-7ffa-42fa-996f-2b2abdfeff84" />
+                </wireConnection>
+              </wireTargetPorts>
+              <variable>
+                <outputVariablePortReferencesVariable Id="fff8ed36-bf43-49a6-ae87-a5f1656951cd">
+                  <variableRefMoniker name="/SystemD/gate/goingDown" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+          <functionBlockHasOutputVariablePorts Id="69f2c13e-42e6-445a-ba07-f0e88c3e8de5">
+            <outputVariablePort Id="0fda77cb-42f1-4c80-8a25-2141f11a07ea">
+              <variable>
+                <outputVariablePortReferencesVariable Id="19cb6bd8-3d44-4565-bf71-961a6f0a8366">
+                  <variableRefMoniker name="/SystemD/gate/goingUp" />
+                </outputVariablePortReferencesVariable>
+              </variable>
+            </outputVariablePort>
+          </functionBlockHasOutputVariablePorts>
+        </outputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+    <cFBModelHasFBReferences Id="0720284b-2b18-4101-b915-f929a5e53744">
+      <functionBlockReference Id="44105e95-c665-4779-91ca-9ea10978449e" name="observer" x="2712.5" y="612.5" modelType="Observer" creationMode="Resource" referencedFile="GateDown.fb">
+        <events>
+          <functionBlockHasEvents Id="316829ce-9c6b-4690-ad58-092c6b4f108d">
+            <eventRef Id="58824475-b87f-4e95-b476-32daef245914" name="approach" scope="Input" referencedID="cbd80277-5051-4d82-8eb3-a9f699d0d593" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="4ed5884e-eb8d-4ead-918c-7af68784b9ec">
+            <eventRef Id="dbae2103-7ec9-4283-9ab2-701bf14f3a1c" name="status" scope="Input" referencedID="6a1348a2-70d1-49e3-a10a-f06a51559624" />
+          </functionBlockHasEvents>
+          <functionBlockHasEvents Id="0b025787-9517-46d0-8903-2c4550b92eec">
+            <eventRef Id="ae9e9aa8-c242-479f-976e-b530677e3fb4" name="exited" scope="Input" referencedID="15c942e5-5167-4a22-a9b5-fcc88aeb60b4" />
+          </functionBlockHasEvents>
+        </events>
+        <variables>
+          <functionBlockHasVariables Id="f1e23a21-05bb-4c9a-99ca-9cfe2b1a1d4c">
+            <variableRef Id="00ad5a11-d26d-4678-95f2-4fb0c4eb79cd" name="down" scope="Input" referencedID="58125fbd-410c-4b62-bb1c-75b356f7f6a0" />
+          </functionBlockHasVariables>
+          <functionBlockHasVariables Id="1a151341-4322-4361-85c6-6bff38a05e3d">
+            <variableRef Id="3370ad55-05ca-4828-92d6-22ee9f4217dc" name="goingDown" scope="Input" referencedID="b41e12a0-a191-43d4-a721-e88074198e86" />
+          </functionBlockHasVariables>
+        </variables>
+        <inputEventPorts>
+          <functionBlockHasInputEventPorts Id="2264c8c7-c8dd-4e8a-8115-ca6682edcf16">
+            <inputEventPort Id="2c48b6d1-81c8-43cf-9467-595474b01722">
+              <event>
+                <inputEventPortReferencesEvent Id="808d6bb7-9254-4e20-8f24-b8085d53b704">
+                  <eventRefMoniker name="/SystemD/observer/approach" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="8fa44c1a-10e7-4fcc-aac4-9cbee3c4a5bc">
+            <inputEventPort Id="69ad138a-617e-4f49-9195-270aabe359e7">
+              <event>
+                <inputEventPortReferencesEvent Id="0c074425-f224-4c0d-b774-283d0c4ca72a">
+                  <eventRefMoniker name="/SystemD/observer/status" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+          <functionBlockHasInputEventPorts Id="c8d36aca-7e46-4dec-9a15-03a90dbc618d">
+            <inputEventPort Id="6bd3fd95-2f00-4a93-a091-748268e8a5cc">
+              <event>
+                <inputEventPortReferencesEvent Id="59e115d8-a18a-4fc9-af0b-5795a177e42c">
+                  <eventRefMoniker name="/SystemD/observer/exited" />
+                </inputEventPortReferencesEvent>
+              </event>
+            </inputEventPort>
+          </functionBlockHasInputEventPorts>
+        </inputEventPorts>
+        <inputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="41204d46-a5bb-4b98-a428-0616774eec04">
+            <inputVariablePort Id="b525ac71-d105-4436-8c81-4df22010ce00">
+              <variable>
+                <inputVariablePortReferencesVariable Id="523aefc0-5b8d-4e1c-b4de-75f1bbf53c77">
+                  <variableRefMoniker name="/SystemD/observer/down" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+          <functionBlockHasInputVariablePorts Id="c0e3ec51-2835-4b94-8ad3-d9d67271b666">
+            <inputVariablePort Id="2fa7003e-7ffa-42fa-996f-2b2abdfeff84">
+              <variable>
+                <inputVariablePortReferencesVariable Id="ebcfcdc0-a8db-4754-bd3b-7dc27c2cefa3">
+                  <variableRefMoniker name="/SystemD/observer/goingDown" />
+                </inputVariablePortReferencesVariable>
+              </variable>
+            </inputVariablePort>
+          </functionBlockHasInputVariablePorts>
+        </inputVariablePorts>
+      </functionBlockReference>
+    </cFBModelHasFBReferences>
+  </functionBlockReferences>
+</compositeFunctionBlockModel>

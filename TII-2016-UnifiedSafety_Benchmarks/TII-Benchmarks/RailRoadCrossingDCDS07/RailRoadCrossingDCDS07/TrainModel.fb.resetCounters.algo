@@ -1,0 +1,2 @@
+me->closeCounter = 0;
+me->secureCounter = 0;
